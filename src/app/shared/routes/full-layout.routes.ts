@@ -6,5 +6,9 @@ export const FULL_ROUTES: Routes = [
   {
     path: 'MainPage',
     loadChildren: './main-page/main-page.module#MainPageModule'
+  },
+  {
+    path:'DashBoard',
+    loadChildren:'./dashboard/dashboard.module#DashboardModule'
   }
 ];

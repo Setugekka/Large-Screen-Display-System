@@ -8,7 +8,7 @@ export const FULL_ROUTES: Routes = [
     loadChildren: './main-page/main-page.module#MainPageModule'
   },
   {
-    path:'DashBoard',
-    loadChildren:'./dashboard/dashboard.module#DashboardModule'
+    path:'MyProfile',
+    loadChildren:'./my-profile/my-profile.module#MyProfileModule'
   }
 ];

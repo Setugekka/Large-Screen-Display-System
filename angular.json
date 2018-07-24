@@ -38,12 +38,14 @@
               "node_modules/@swimlane/ngx-datatable/release/index.css",
               "node_modules/@swimlane/ngx-datatable/release/assets/icons.css",
               "src/assets/css/demo.css",
-              "src/assets/sass/app.scss"
+              "src/assets/sass/app.scss",
+              "src/assets/css/owl.carousel.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/perfect-scrollbar.jquery.min.js",
-              "node_modules/echarts/dist/echarts.js"
+              "node_modules/echarts/dist/echarts.js",
+              "src/assets/js/owl.carousel.js"
             ]
           },
           "configurations": {

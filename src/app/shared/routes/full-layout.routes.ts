@@ -6,5 +6,9 @@ export const FULL_ROUTES: Routes = [
   {
     path: 'MainPage',
     loadChildren: './main-page/main-page.module#MainPageModule'
+  },
+  {
+    path:'MyProfile',
+    loadChildren:'./my-profile/my-profile.module#MyProfileModule'
   }
 ];

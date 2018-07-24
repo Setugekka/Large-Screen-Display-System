@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SharedModule} from './shared/shared.module';
+import { DashboardModule} from './dashboard/dashboard.module';
 import { AppRoutingModule } from './/app-routing.module';
 import { FullLayoutComponent } from './layouts/full-layout/full-layout.component';
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
@@ -18,7 +19,8 @@ import { ContentLayoutComponent } from './layouts/content-layout/content-layout.
     BrowserModule,
     NgbModule.forRoot(),
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

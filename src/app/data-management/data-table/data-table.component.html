@@ -1,0 +1,17 @@
+<div class="card">
+<table datatable class="row-border hover" [dtOptions]="dtOptions" id="myTable">
+  <thead>
+  <tr>
+    <td *ngFor="let a of head">{{a}}</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of data;let i = index" (click)="clicked(row)" >
+    <td *ngFor="let a of row" class="edit">{{a}}</td>
+  </tr>
+  </tbody>
+</table>
+<app-message *ngIf="click===true" [data]="edit" [head]="head" [(ngModel)] ="edit" [click]="message_click"></app-message>
+<button (deleteConfirm)="onDeleteConfirm($event)">上传数据</button>
+</div>
+

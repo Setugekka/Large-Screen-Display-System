@@ -1,0 +1,13 @@
+<section class="file-browser">
+  <div class="card">
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <fieldset class="form-group">
+        <label for="basicInputFile">导入文件</label>
+        <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="basicInputFile">
+      </fieldset>
+    </div>
+  </div>
+  </div>
+</section>
+<app-data-table *ngIf="click===true" [data] = inputdata></app-data-table>

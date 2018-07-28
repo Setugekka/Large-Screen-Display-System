@@ -20,7 +20,10 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/ckplayer.swf",
+              "src/language.xml",
+              "src/style.xml"
             ],
             "styles": [
               "src/styles.css",
@@ -54,7 +57,8 @@
               "node_modules/datatables.net-buttons/js/buttons.colVis.js",
               "node_modules/datatables.net-buttons/js/buttons.flash.js",
               "node_modules/datatables.net-buttons/js/buttons.html5.js",
-              "node_modules/datatables.net-buttons/js/buttons.print.js"
+              "node_modules/datatables.net-buttons/js/buttons.print.js",
+              "src/assets/ckplayer/ckplayer.js"
             ]
           },
           "configurations": {

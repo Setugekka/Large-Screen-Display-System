@@ -20,7 +20,10 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/ckplayer.swf",
+              "src/language.xml",
+              "src/style.xml"
             ],
             "styles": [
               "src/styles.css",
@@ -40,12 +43,24 @@
               "src/assets/css/demo.css",
               "src/assets/sass/app.scss",
               "src/assets/css/owl.carousel.css"
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/perfect-scrollbar.jquery.min.js",
               "node_modules/echarts/dist/echarts.js",
               "src/assets/js/owl.carousel.js"
+              "node_modules/echarts/map/js/china.js",
+              "node_modules/echarts/dist/extension/bmap.js",
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "node_modules/jszip/dist/jszip.js",
+              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+              "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+              "node_modules/datatables.net-buttons/js/buttons.flash.js",
+              "node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "node_modules/datatables.net-buttons/js/buttons.print.js",
+              "src/assets/ckplayer/ckplayer.js"
             ]
           },
           "configurations": {

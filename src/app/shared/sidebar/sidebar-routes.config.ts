@@ -59,7 +59,7 @@ export const ROUTES: RouteInfo[] = [
     isExternalLink: false,
     submenu: [
       { path: '/', title: '视频数据配置', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '大屏展示', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/Video/Display', title: '大屏展示', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
@@ -71,9 +71,9 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/', title: 'excel导入', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '增删查改', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '操作日志', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DataManagement/InputFile', title: 'excel导入', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DataManagement/EditData', title: '数据管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DataManagement/OperationLog', title: '操作日志', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {

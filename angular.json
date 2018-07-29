@@ -46,7 +46,7 @@
               "node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/perfect-scrollbar.jquery.min.js",
               "node_modules/echarts/dist/echarts.js",
               "node_modules/echarts/map/js/china.js",

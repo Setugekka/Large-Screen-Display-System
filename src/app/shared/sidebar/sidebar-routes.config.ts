@@ -5,14 +5,19 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '/MainPage',
     title: '数据展示面板',
-    icon: 'ft-home',
+    icon: 'ft-sliders',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/', title: '总体数据概览面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '各数据详细统计分析面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Overview', title: '总体数据概览面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Reservoir', title: '水库数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Weather', title: '气象数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Highway', title: '公路状况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Equipment', title: '应急装备数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Staff', title: '应急人员数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DashBoard/Material', title: '应急物资数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
     ]
   },
   {

@@ -15,4 +15,8 @@ export const FULL_ROUTES: Routes = [
     path: 'Video',
     loadChildren: './video/video.module#VideoModule'
   },
+  {
+    path:'MyProfile',
+    loadChildren:'./my-profile/my-profile.module#MyProfileModule'
+  }
 ];

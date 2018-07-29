@@ -1,0 +1,7 @@
+<div class="card" *ngIf="click===true">
+  <label *ngFor="let a of head;let i = index">{{a}}:
+    <input type="text" value = {{data[i]}} [(ngModel)] ="data[i]" >
+  </label>
+  <button (click)="edit()">确定修改</button>
+</div>
+

@@ -8,6 +8,14 @@ export const FULL_ROUTES: Routes = [
     loadChildren: './main-page/main-page.module#MainPageModule'
   },
   {
+    path: 'DataManagement',
+    loadChildren: './data-management/data-management.module#DataManagementModule'
+  },
+  {
+    path: 'Video',
+    loadChildren: './video/video.module#VideoModule'
+  },
+  {
     path:'MyProfile',
     loadChildren:'./my-profile/my-profile.module#MyProfileModule'
   }

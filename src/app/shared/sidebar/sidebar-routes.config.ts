@@ -23,7 +23,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '应急事件',
-    icon: 'ft-home',
+    icon: 'ft-file-text',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
@@ -36,7 +36,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '应急辅助决策',
-    icon: 'ft-home',
+    icon: 'ft-compass',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
@@ -52,7 +52,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '视频会商',
-    icon: 'ft-home',
+    icon: 'ft-video',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
@@ -65,7 +65,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '应急数据管理',
-    icon: 'ft-home',
+    icon: 'ft-server',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
@@ -79,20 +79,20 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '系统管理',
-    icon: 'ft-home',
+    icon: 'ft-settings',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/', title: '权限控制', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '用户信息维护', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/SystemManagement/AccessControl', title: '权限控制', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/SystemManagement/UserManagement', title: '用户信息维护', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
     title: '个人信息管理',
-    icon: 'ft-home',
+    icon: 'ft-edit',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
@@ -106,7 +106,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: '个性化大屏展示配置',
-    icon: 'ft-home',
+    icon: 'ft-airplay',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',

@@ -1,3 +1,31 @@
 <p>
   equipment works!
 </p>
+<div class="row">
+  <div class="col-sm-12">
+    <input type='text' style='padding:8px;margin:15px auto;width:30%;' placeholder='Type to filter the name column...' (keyup)='updateFilter($event)'
+    />
+    <ngx-datatable #table class='bootstrap' [columns]="columns" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+                   [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
+    </ngx-datatable>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div echarts [options]="xianoption" class="demo-chart"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div echarts [options]="zhuoption" class="demo-chart"></div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-body">
+    <div echarts [options]="bingoption" class="demo-chart"></div>
+  </div>
+</div>

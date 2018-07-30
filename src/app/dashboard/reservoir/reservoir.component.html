@@ -1,3 +1,30 @@
 <p>
   reservoir works!
 </p>
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">地区选择</h4>
+  </div>
+  <div class="card-body">
+    <div class="card-block">
+      <select class="custom-select d-block w-25" id="customSelect">
+        <option selected>地区选择</option>
+        <option value="1">沈阳</option>
+        <option value="2">鞍山</option>
+        <option value="3">铁岭</option>
+      </select>
+      </div>
+    </div>
+  </div>
+<div class="card">
+  <div class="card-body">
+    <div echarts [options]="option" class="demo-chart" (chartInit)="onChartInit($event)"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div echarts [options]="chartoption" class="demo-chart"></div>
+  </div>
+</div>
+

@@ -2,6 +2,9 @@
   width:60%;
   margin:0 auto;
 }
+.w3ls_main_grid{
+  height: 50px;
+}
 .agileits_w3layouts_main_grid_left,.w3_agileits_main_grid_right{
   width:48.3%;
 }
@@ -16,7 +19,7 @@
   padding:2em;
 }
 .agileinfo_main_grid{
-  background:url('img/1.jpg') no-repeat 0px 0px;
+  background:url('../../../assets/weather/1.jpg') no-repeat 0px 0px;
   background-size:cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -29,7 +32,7 @@
   -ms-border-radius: 20px;
 }
 .agileinfo_main_grid1{
-  background:url(img/2.jpg) no-repeat 0px 0px;
+  background:url(../../../assets/weather/2.jpg) no-repeat 0px 0px;
   background-size:cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,7 +45,7 @@
   -ms-border-radius: 20px;
 }
 .agileinfo_main_grid2{
-  background:url(img/4.jpg) no-repeat 0px 0px;
+  background:url(../../../assets/weather/4.jpg) no-repeat 0px 0px;
   background-size:cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -55,7 +58,7 @@
   -ms-border-radius: 20px;
 }
 .agileinfo_main_grid3{
-  background:url(img/3.jpg) no-repeat 0px 0px;
+  background:url(../../../assets/weather/3.jpg) no-repeat 0px 0px;
   background-size:cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

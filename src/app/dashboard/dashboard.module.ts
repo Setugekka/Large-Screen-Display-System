@@ -9,13 +9,17 @@ import { EquipmentComponent } from './equipment/equipment.component';
 import { StaffComponent } from './staff/staff.component';
 import { MaterialComponent } from './material/material.component';
 
-import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    Ng2SmartTableModule
+    NgxEchartsModule,
+    NgbModule,
+    NgxDatatableModule
   ],
   declarations: [OverviewComponent, WeatherComponent, ReservoirComponent, HighwayComponent, EquipmentComponent, StaffComponent, MaterialComponent]
 })

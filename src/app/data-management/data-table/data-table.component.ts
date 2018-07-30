@@ -10,6 +10,7 @@ export class DataTableComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   head = [];
   edit = [];
+  editing = {};
   click = false;
   message_click = true;
   @Input() data;
@@ -21,7 +22,7 @@ export class DataTableComponent implements OnInit {
     };
     this.head = this.data[0];
     this.data.splice(0, 1);
-    console.log(this.head);
+    console.log(this.data);
   }
   onDeleteConfirm(event) {
     if (window.confirm('Are you sure you want to apply?')) {

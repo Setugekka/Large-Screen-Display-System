@@ -5,11 +5,17 @@
     <td *ngFor="let a of head">{{a}}</td>
   </tr>
   </thead>
-  <tbody>
-  <tr *ngFor="let row of data;let i = index" (click)="clicked(row)" >
-    <td *ngFor="let a of row" class="edit">{{a}}</td>
+
+    <tbody>
+    <tr *ngFor="let row of data;let i = index" (click)="clicked(row)"  >
+    <td *ngFor="let a of row;let j = index" class="edit" (dblclick)="editing[i + '-' + j] = true">
+      <span *ngIf="!editing[i + '-' + j]"> {{a}}</span>
+      <input autofocus *ngIf="editing[i + '-' + j]" type="text" [value]="a" [(ngModel)] ="row[j]" (blur)="editing[i + '-' + j] = false "/>
+    </td>
+
   </tr>
-  </tbody>
+    </tbody>
+
 </table>
 <app-message *ngIf="click===true" [data]="edit" [head]="head" [(ngModel)] ="edit" [click]="message_click"></app-message>
 <button (deleteConfirm)="onDeleteConfirm($event)">上传数据</button>

@@ -30,7 +30,7 @@ export const ROUTES: RouteInfo[] = [
     isExternalLink: false,
     submenu: [
       { path: '/', title: '应急事件展示', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '应急事件报表生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/EmergencyEvent/GenerateReport', title: '应急事件报表生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {

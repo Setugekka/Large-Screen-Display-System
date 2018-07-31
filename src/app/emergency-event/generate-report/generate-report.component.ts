@@ -11,14 +11,14 @@ export class GenerateReportComponent implements OnInit {
   newReport:Report=new Report();
   isSuccessful:string;
   fileAddress:string;
-  constructor(private eeService:EmergencyEventService,private router:Router) { }
+  constructor(private eeService:EmergencyEventService) { }
 
   ngOnInit() {
 
   }
   onClick(report:Report){
-    this.fileAddress="http://localhost:5000/download/"
-    this.eeService.generateReportApi(this.newReport).subscribe(res => this.isSuccessful = res['success'])
+    this.fileAddress="http://localhost:5000/download/";
+    this.eeService.generateReportApi(this.newReport).subscribe(res => this.isSuccessful = res['success']);//成功返回true,失败返回false
 
   }
 

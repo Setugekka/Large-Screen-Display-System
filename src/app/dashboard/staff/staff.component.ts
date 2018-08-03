@@ -10,7 +10,7 @@ export class StaffComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $.getScript('./assets/js/staff_test.js')
+    $.getScript('./assets/js/display_map.js');
   }
 
 }

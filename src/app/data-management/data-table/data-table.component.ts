@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-
 @Component({
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
@@ -8,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class DataTableComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
+  title = 'app';
   head = [];
   edit = [];
   editing = {};

@@ -1,5 +1,30 @@
-<div>
-<div id="video1" class="video" style="width:500px;float:left"></div>
-<div id="video2" class="video" style="width:500px;float:left;margin-top: 0px;margin-left: 20px"></div>
-<div id="video3" class="video" style="width:500px;float:left;margin-top: 0px;margin-left: 20px"></div>
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">地区选择</h4>
+  </div>
+  <div class="card-body">
+    <div class="card-block">
+      <select #customSelect class="custom-select d-block w-25" id="customSelect" [ngModel]="index" (ngModelChange)="index=$event;choose()" >
+        <option selected  value="0" >地区选择</option>
+        <option value="1" >沈阳</option>
+        <option value="2" >鞍山</option>
+        <option value="3" >铁岭</option>
+      </select>
+    </div>
+  </div>
 </div>
+
+<div style="width:15%;float: left">
+  <div  *ngIf="index==='0' || index==='1'" class="card" style="margin-top: 0px" >
+    <div  id="video1" class="video" style="margin: auto" ></div>
+  </div>
+  <div *ngIf="number==='0' || number==='2'" class="card" style="margin-top: 20px">
+    <div id="video2" class="video" style="margin: auto"  ></div>
+  </div>
+  <div *ngIf="number==='0' || number==='3'" class="card" style="margin-top: 20px">
+<div id="video3" class="video" style="margin: auto"  ></div>
+  </div>
+</div>
+
+<div id="map" style="width:65%;float:right;height:1000px;z-index:-100;margin-top: 100px"></div>
+

@@ -8,8 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatchHeightModule } from '../shared/directives/match-height.directive';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import {DataTablesModule} from 'angular-datatables';
+import { DataTablesModule} from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -33,7 +35,7 @@ import { MessageComponent} from './message/message.component';
     NgxEchartsModule,
     Ng2SmartTableModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
   ],
   declarations: [EditDataComponent, InputFileComponent, OperationLogComponent, DataTableComponent, MessageComponent],
 })

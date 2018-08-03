@@ -25,10 +25,10 @@ export const FULL_ROUTES: Routes = [
     path: 'SystemManagement',
     loadChildren: './system-management/system-management.module#SystemManagementModule'
   },
-  // {
-  //   path:'MyProfile',
-  //   loadChildren:'./my-profile/my-profile.module#MyProfileModule'
-  // }
+  {
+    path:'MyProfile',
+    loadChildren:'./my-profile/my-profile.module#MyProfileModule'
+  },
   {
     path:'EmergencyEvent',
     loadChildren:'./emergency-event/emergency-event.module#EmergencyEventModule'

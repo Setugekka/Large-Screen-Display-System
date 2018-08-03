@@ -1,5 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
+import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
+@Component({
+  selector: 'ngbd-modal-content',
+  template: `
+    <div class="modal-header">
+      <h4 class="modal-title">Hi there!</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Hello, {{name}}!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
+  `
+})
+export class NgbdModalContent {
+  @Input() name;
+
+  constructor(public activeModal: NgbActiveModal) {}
+}
 
 @Component({
   selector: 'app-user-management',
@@ -23,7 +47,7 @@ export class UserManagementComponent implements OnInit {
         filter: false,
         type:'html',
         valuePrepareFunction:function (cell,row) {
-          return '<a href="javascript:void(0)">'+cell+'</a>'
+          return '<a href="javascript:void(0)" title="'+cell+'" class="user_link">'+cell+'</a>'
         }
       },
       email: {
@@ -41,6 +65,7 @@ export class UserManagementComponent implements OnInit {
       deleteButtonContent: '<i class="ft-x danger font-medium-1 mr-2"></i>'
     }
   };
+
   data = [
     {
       id: 1,
@@ -109,14 +134,36 @@ export class UserManagementComponent implements OnInit {
       email: 'Rey.Padberg@rosamond.biz',
     },
   ];
-  constructor() {
+  closeResult: string;
+  constructor(private modalService: NgbModal) {
     this.source = new LocalDataSource(this.data);
+  };
+  open(o) {
+    const modalRef = this.modalService.open(NgbdModalContent);
+    modalRef.result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+    modalRef.componentInstance.name = o.attr('title');
   }
 
-
+// This function is used in open
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 
   ngOnInit() {
-    $.getScript('./assets/js/usermanagement-test.js')
+    var instance=this;
+    $(".user_table").on('click','.user_link',function () {
+      instance.open($(this))
+    })
   }
 
 }

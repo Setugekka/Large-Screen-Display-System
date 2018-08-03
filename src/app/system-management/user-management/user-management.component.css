@@ -1,0 +1,7 @@
+.user_link{
+  color: #1e6bb8!important;
+  cursor: pointer!important;
+}
+.user_link:hover{
+  text-decoration: underline!important;
+}

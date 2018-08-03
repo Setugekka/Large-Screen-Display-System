@@ -8,7 +8,7 @@
 
 // 本图作者：参考秋雁南飞的《投票统计》一图，网址：http://gallery.echartsjs.com/editor.html?c=xrJU-aE-LG
 var name_title = "摄像头数量分布图"
-var subname = '测试数据集'
+//var subname = '测试数据集'
 var nameColor = " rgb(55, 75, 113)"
 var name_fontFamily = '等线'
 var subname_fontSize = 30
@@ -94,7 +94,7 @@ var convertData = function(data) {
 option = {
   title: {
     text: name_title,
-    subtext: subname,
+    padding: 0,
     x: 'center',
     textStyle: {
       color: nameColor,
@@ -148,7 +148,7 @@ option = {
   //     }
   // },
   visualMap: {
-    show: true,
+    show: false,
     min: 0,
     max: 200,
     left: 'left',

@@ -71,7 +71,7 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/DataManagement/InputFile', title: 'excel导入', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DataManagement/InputFile', title: '导入数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/DataManagement/EditData', title: '数据管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/DataManagement/OperationLog', title: '操作日志', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]

@@ -1,13 +1,92 @@
-<section class="file-browser">
-  <div class="card">
-  <div class="row">
-    <div class="col-lg-6 col-md-12">
-      <fieldset class="form-group">
-        <label for="basicInputFile">导入文件</label>
-        <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="basicInputFile">
-      </fieldset>
+<div class="row justify-content-md-center" *ngIf="!click===true">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center">
+        <h4 class="card-title" id="basic-layout-form">录入数据</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="ft-user"></i> 操作人员信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput1">姓名</label>
+                    <input type="text" id="projectinput1" class="form-control"  name="fname">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput2">员工编号</label>
+                    <input type="text" id="projectinput2" class="form-control"  name="lname">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="issueinput3">操作日期</label>
+                    <input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput4">联系电话</label>
+                    <input type="text" id="projectinput4" class="form-control"  name="phone">
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="form-section"><i class="ft-file-text"></i> 数据信息</h4>
+
+              <div class="form-group">
+                <label for="companyName">所属地区</label>
+                <input type="text" id="companyName" class="form-control"  name="company">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput5">数据类型</label>
+                    <select id="projectinput5" name="interested" class="form-control">
+                      <option value="none" selected="" disabled="">数据类型</option>
+                      <option value="design">气象</option>
+                      <option value="development">公路</option>
+                      <option value="illustration">水库</option>
+                      <option value="branding">人员</option>
+                      <option value="video">物资</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput4">数据量</label>
+                    <input type="text" id="counts" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>选择文件</label>
+                <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="basicInputFile">
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> Cancel
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary">
+                <i class="fa fa-check-square-o"></i> Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</section>
-<app-data-table *ngIf="click===true" [data] = inputdata></app-data-table>
+</div>
+<app-data-table *ngIf="click===true"[data] = inputdata [datatable_click]="click" ></app-data-table>

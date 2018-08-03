@@ -1,5 +1,74 @@
+<div class="row" matchHeight="card">
+<div class="col-xl-3 col-lg-6 col-12">
+  <div class="card">
+    <div class="card-body">
+      <div class="px-3 py-3">
+        <div class="media">
+          <div class="media-body text-left">
+            <h3 class="mb-1 success">张一</h3>
+            <span>当前用户</span>
+          </div>
+          <div class="media-right align-self-center">
+            <i class="icon-user success font-large-2 float-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-xl-3 col-lg-6 col-12">
+  <div class="card">
+    <div class="card-body">
+      <div class="px-3 py-3">
+        <div class="media">
+          <div class="media-body text-left">
+            <h3 class="mb-1 primary">16</h3>
+            <span>日志总数</span>
+          </div>
+          <div class="media-right align-self-center">
+            <i class="icon-book-open primary font-large-2 float-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="col-xl-3 col-lg-6 col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="px-3 py-3">
+          <div class="media">
+            <div class="media-body text-left">
+              <h3 class="mb-1 warning">10</h3>
+              <span>个人修改次数</span>
+            </div>
+            <div class="media-right align-self-center">
+              <i class="icon-bubbles warning font-large-2 float-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="px-3 py-3">
+          <div class="media">
+            <div class="media-body text-left">
+              <h3 class="mb-1 danger">4</h3>
+              <span>管理员总数</span>
+            </div>
+            <div class="media-right align-self-center">
+              <i class="icon-direction danger font-large-2 float-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <section id="basic-datatable" class="mb-3">
-  <div echarts [options] = "chartOption"  class="demo-chart"></div>
   <div class="row">
     <div class="col-12">
       <div class="content-header">操作日志</div>
@@ -10,7 +79,7 @@
       <input type='text' style='padding:8px;margin:15px auto;width:30%;' placeholder='搜索...' (keyup)='updateFilter($event)'
       />
       <ngx-datatable #table class='bootstrap' [columns]="columns" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
-                     [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
+                     [rowHeight]="'auto'" [limit]="9" [rows]='rows'>
       </ngx-datatable>
     </div>
   </div>

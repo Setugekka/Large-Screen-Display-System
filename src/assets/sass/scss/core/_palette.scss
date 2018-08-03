@@ -13,7 +13,7 @@
 @import "../mixins/colors";
 
 // usage: color("name_of_color", "type_of_color")
-// to avoid to repeating map-get($colors, ...)
+// to avoid to repeating videodata-setting-get($colors, ...)
 
 @function color-function($color, $type) {
   @if map-has-key($colors, $color) {
@@ -247,7 +247,7 @@
     background-color: $color_value;
   }
   input:focus ~ .bg-#{$color}{  // TODO: Need to check input-type sibling border color issue(form>input-groups)
-    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .21rem $color_value; 
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .21rem $color_value;
   }
   .border-#{$color} {
     border: 1px solid $color_value;

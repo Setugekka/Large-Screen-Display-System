@@ -70,42 +70,100 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-9" id="chart-panel" >
+<div class="row" style="background-color: #154e90">
+  <div class="col-7" id="chart-panel" >
 </div>
-  <div class="col-3" style="float: right;height: 600px;width: 500px;background-color: #154e90" >
-    <div style="background-color: rgba(147, 235, 248, .2);border-color: rgba(147, 235, 248, 1);border-radius:5px;border-style:solid; border-width:1px;">
-      <h3 style="color:#fff">当前选中城市：</h3>
-      <h3 id="msc" style="color:#fff"> 辽宁 </h3>
+  <div class="col-5" style="height: 600px;background-color: #154e90" >
+    <div style="margin-top: 50px">
+      <h4 id="msc" style="color:#fff;font-weight: bold"> 辽宁 </h4>
     </div>
-
-    <div style="margin-top: 5px;background-color: rgba(147, 235, 248, .2);border-color: rgba(147, 235, 248, 1);border-radius:5px;border-style:solid; border-width:1px;">
-      <h4 style="color:#fff">当前水库水位：</h4>
-      <div class="row">
-        <h4 style="color: #fff" id="sample" class="col-3"></h4>
-        <div class="item-container col-9">
-          <div class="item-1"></div>
-          <div class="item-2"></div>
-          <div class="item-3"></div>
-          <div class="item-4"></div>
-          <div class="item-5"></div>
+    <div class="row" style="padding-right: 5px">
+      <div class="col-4" style="height: 200px;padding:0px;background-color: rgba(147, 235, 248, .2);border-color: rgba(147, 235, 248, 1);border-radius:5px;border-style:solid; border-width:1px;">
+        <div style="line-height: 40px;height: 40px;padding-left:10px;padding-right:10px;color:#fff;background-color: rgba(47,167,250,0.5);">物资&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100</div>
+        <div echarts [options]="option" style="height: 160px"></div>
       </div>
-
+      <div class="col-4" style="height: 200px;padding:0px;background-color: rgba(147, 235, 248, .2);border-color: rgba(147, 235, 248, 1);border-radius:5px;border-style:solid; border-width:1px;">
+        <div style="line-height: 40px;height: 40px;padding-left:10px;padding-right:10px;color:#fff;background-color: rgba(47,167,250,0.5);">人员&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100</div>
+        <div echarts [options]="option" style="height: 160px"></div>
       </div>
-      <h4 style="color:#fff">当前气象状况：</h4>
-      <h4 style="color: #fff" >晴<i class="ft-sun"></i></h4>
-      <h4 style="color:#fff">当前公路情况：</h4>
-      <h4 style="color: #fff" >畅通</h4>
-      <h4 style="color:#fff">当前应急物资：</h4>
-      <h4 style="color: #fff" >100</h4>
-      <h4 style="color:#fff">当前应急人员：</h4>
-      <h4 style="color: #fff" >50<i class="icon-user" style="float: right"></i><i class="icon-user" style="float: right"></i></h4>
-      <h4 style="color:#fff">当前应急装备：</h4>
-      <h4 style="color: #fff">80  <i class="icon-social-dropbox" style="float: right"></i></h4>
-
+      <div class="col-4" style="height: 200px;padding:0px;background-color: rgba(147, 235, 248, .2);border-color: rgba(147, 235, 248, 1);border-radius:5px;border-style:solid; border-width:1px;">
+        <div style="line-height: 40px;height: 40px;padding-left:10px;padding-right:10px;color:#fff;background-color: rgba(47,167,250,0.5);">装备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100</div>
+        <div echarts [options]="option" style="height: 160px"></div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 15px">
+      <div class="col-6">
+      <li style="list-style-type: square;color: #fff;font-size: 20px">应急数据</li>
+        <div class="row" style="margin-top: 15px">
+          <div class="col-7">
+            <div style="color: #fff">当前应急装备</div>
+            <div style="font-size: 30px;color:#81d4fa">135</div>
+          </div>
+          <div class="col-5" style="position:relative;margin: 20px auto">
+            <div style="position:absolute;margin: auto">
+              <i class="icon-social-dropbox" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+              <i class="icon-social-dropbox" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+              <i class="icon-social-dropbox" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 15px">
+          <div class="col-7">
+            <div style="color: #fff">当前应急人员</div>
+            <div style="font-size: 30px;color:#81d4fa">35</div>
+          </div>
+          <div class="col-5" style="position:relative;margin: 20px auto">
+            <div style="position:absolute;margin: auto;">
+              <i class="icon-user" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+              </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 15px">
+          <div class="col-7">
+            <div style="color: #fff">当前应急物资</div>
+            <div style="font-size: 30px;color:#81d4fa">66</div>
+          </div>
+          <div class="col-5" style="position:relative;margin: 20px auto">
+            <div style="position:absolute;margin: auto">
+              <i class="icon-layers" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+              <i class="icon-layers" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <li style="list-style-type: square;color: #fff;font-size: 20px">基础数据</li>
+        <div class="row" style="margin-top: 25px">
+          <div class="col-6">
+            <div style="color: #fff">水库水位</div>
+            <div style="font-size: 30px;color:#81d4fa">24m</div>
+          </div>
+          <div class="col-6" style="margin: 5px auto;padding: 0px">
+            <div class="item-container">
+              <div class="item-1"></div>
+              <div class="item-2"></div>
+              <div class="item-3"></div>
+              <div class="item-4"></div>
+              <div class="item-5"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 25px">
+          <div class="col-6">
+            <div style="color: #fff">气象状况</div>
+            <div style="font-size: 30px;color:#81d4fa">晴</div>
+          </div>
+          <div class="col-6" style="position:relative;margin: 20px auto">
+            <div style="position:absolute;margin: auto;">
+              <i class="ft-sun" style="float: right;color: #81d4fa;font-size: 25px;text-decoration: underline"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 </div>
+
 
 

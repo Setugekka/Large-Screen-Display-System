@@ -10,18 +10,21 @@ import { FullLayoutComponent } from './layouts/full-layout/full-layout.component
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FullLayoutComponent,
     ContentLayoutComponent,
+
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     AppRoutingModule,
     SharedModule,
-    DashboardModule
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

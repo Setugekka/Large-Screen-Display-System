@@ -10,8 +10,10 @@
 */
  $(document).ready( function(){
 
-
     var $sidebar = $('.app-sidebar'),
+    Obj=new Object();
+    Obj.image="./assets/img/sidebar-bg/1.jpg"
+    $sidebar.data(Obj)
     $sidebar_content = $('.sidebar-content'),
     $sidebar_img = $sidebar.data('image'),
     $sidebar_img_container = $('.sidebar-background'),
@@ -84,7 +86,7 @@
             }
         });
 
-        
+
 
         setTimeout(function() {
             $children.addClass('is-shown');

@@ -11,11 +11,17 @@ import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-
           <button type="button" class="close" (click)="activeModal.dismiss('Cross click')" >×</button>
         </div>
         <div class="modal-body">
-            <label for="projectinput4" *ngFor="let a of head;let i = index">{{a}}:
-              <input class="form-control round" type="text" value = {{data[i]}} [(ngModel)] ="data[i]" >
-            </label>
+          <div class="form-group row" *ngFor="let a of head;let i = index">
+
+            <label class="col-md-3 label-control" for="projectinput1" ><i class= {{icons[i]}} style="color:#009DA0"></i>  {{a}}:</label>
+
+            <div class="col-md-9">
+              <input type="text"  value = {{data[i]}} class="form-control"  name="fname"  [(ngModel)] ="data[i]">
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-raised btn-xs btn-danger" (click)="activeModal.dismiss('Cross click')">取消</button>
           <button type="button" class="btn btn-raised btn-primary btn-xs" (click)="activeModal.dismiss('Cross click')">确定</button>
         </div>
       </div>
@@ -25,6 +31,18 @@ import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-
 export class NgbdModalContentComponent {
   @Input() head;
   @Input() data;
+  icons = [
+    'fa fa-road',
+    'fa fa-home',
+    'fa fa-user',
+    'fa fa-tag',
+    'fa fa-flag',
+    'fa fa-star',
+    'fa fa-user',
+    'fa fa-star-o',
+    'fa fa-list-alt',
+    'fa fa-search',
+    'fa fa-clock-o'];
   constructor(public activeModal: NgbActiveModal) { }
 }
 
@@ -100,7 +118,6 @@ export class DataTableComponent implements OnInit {
     };
     this.head = this.data[0];
     this.data.splice(0, 1);
-    console.log(this.data);
   }
 
 }

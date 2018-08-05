@@ -7,7 +7,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DisplayComponent } from './display/display.component';
-import { VideodataSettingComponent, NgbdModalContentComponent  } from './videodata-setting/videodata-setting.component';
+import { VideodataSettingComponent } from './videodata-setting/videodata-setting.component';
 
 @NgModule({
   imports: [
@@ -18,7 +18,6 @@ import { VideodataSettingComponent, NgbdModalContentComponent  } from './videoda
     NgbModule,
     ReactiveFormsModule
   ],
-  declarations: [DisplayComponent, VideodataSettingComponent, NgbdModalContentComponent],
-  entryComponents: [NgbdModalContentComponent]
+  declarations: [DisplayComponent, VideodataSettingComponent],
 })
 export class VideoModule { }

@@ -112,6 +112,7 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
+      { path: '/ScreenDisplay/LargeScreen', title: '数据面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/', title: '数据框显示项目', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/', title: '显示的地区', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/', title: '视频接入设置', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },

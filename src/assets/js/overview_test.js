@@ -55,7 +55,7 @@ echarts.extendsMap = function (id, opt) {
   var defaultOpt = {
     mapName: 'china', // 地图展示
     goDown: false, // 是否下钻
-    bgColor: '#404a59', // 画布背景色
+    // bgColor: '#404a59', // 画布背景色
     activeArea: [], // 区域高亮,同echarts配置项
     data: [],
     // 下钻回调(点击的地图名、实例对象option、实例对象)
@@ -558,7 +558,7 @@ $.getJSON('./assets/json/'+liaoning.adcode+'.json', function (geoJson) {
   echarts.registerMap('辽宁', geoJson);
   echarts.registerMap('china',chinaJson)
   var myChart = echarts.extendsMap('chart-panel', {
-    bgColor: '#154e90', // 画布背景色
+    // bgColor: '#154e90', // 画布背景色
     mapName: '辽宁', // 地图名
     goDown: true, // 是否下钻
     // 下钻回调

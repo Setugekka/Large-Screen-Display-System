@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import {DashboardModule} from "../../dashboard/dashboard.module";
 import {SystemManagementModule} from "../../system-management/system-management.module";
+import {ScreenDisplayModule} from '../../screen-display/screen-display.module';
 
 // Route for content layout without sidebar, navbar and footer for pages like Login, Registration etc...
 
@@ -26,11 +27,15 @@ export const FULL_ROUTES: Routes = [
     loadChildren: './system-management/system-management.module#SystemManagementModule'
   },
   {
-    path:'MyProfile',
-    loadChildren:'./my-profile/my-profile.module#MyProfileModule'
+    path: 'MyProfile',
+    loadChildren: './my-profile/my-profile.module#MyProfileModule'
   },
   {
-    path:'EmergencyEvent',
-    loadChildren:'./emergency-event/emergency-event.module#EmergencyEventModule'
+    path: 'EmergencyEvent',
+    loadChildren: './emergency-event/emergency-event.module#EmergencyEventModule'
+  },
+  {
+    path: 'ScreenDisplay',
+    loadChildren: './screen-display/screen-display.module#ScreenDisplayModule'
   }
 ];

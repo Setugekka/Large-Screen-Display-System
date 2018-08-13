@@ -1,3 +1,57 @@
-<p>
-  personnel works!
-</p>
+<div class="module module-panel">
+  <div class="module-header">应急人员信息</div>
+  <div class="module-body">
+    <div class="module-panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="person_detail col-9"><i class="icon-user mr-2"></i>应急专家队伍</div>
+          <div class="person_detail col-3">{{p_expert}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="module-panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="person_detail col-9"><i class="icon-user mr-2"></i>应急抢修队伍</div>
+          <div class="person_detail col-3">{{p_repair}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="module-panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="person_detail col-9"><i class="icon-user mr-2"></i>应急基干分队</div>
+          <div class="person_detail col-3">{{p_manager}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="module module-panel">
+  <div class="module-header">应急人员分布</div>
+  <div class="module-body">
+    <div echarts [options]="pie_option" style="height: 200px"></div>
+  </div>
+</div>
+
+<div class="module module-panel">
+  <div class="module-header">应急专家信息</div>
+  <div class="module-body">
+    <div echarts [options]="bar_option_expert" style="height: 200px"></div>
+  </div>
+</div>
+
+<div class="module module-panel">
+  <div class="module-header">应急抢修队伍信息</div>
+  <div class="module-body">
+    <div echarts [options]="bar_option_repair" style="height: 200px"></div>
+  </div>
+</div>
+
+<div class="module module-panel">
+  <div class="module-header">应急基干分队信息</div>
+  <div class="module-body">
+    <div echarts [options]="bar_option_manager" style="height: 200px"></div>
+  </div>
+</div>

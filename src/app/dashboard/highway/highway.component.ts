@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $:any;
+declare var $: any;
 @Component({
   selector: 'app-highway',
   templateUrl: './highway.component.html',
@@ -8,11 +8,9 @@ declare var $:any;
 export class HighwayComponent implements OnInit {
 
   constructor() {
-
   }
 
   ngOnInit() {
-
   }
 
 

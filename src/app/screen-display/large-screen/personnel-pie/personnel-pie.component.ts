@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ScreenDisplayService} from '../../screen-display.service';
+import {EventEmitterService} from '../event-emitter.service';
 
 @Component({
   selector: 'app-personnel-pie',
@@ -46,7 +47,7 @@ export class PersonnelPieComponent implements OnInit {
     ]
   };
   private current_city = null;
-  constructor(private service: ScreenDisplayService) { }
+  constructor(private service: ScreenDisplayService, public emitService: EventEmitterService) { }
 
   ngOnInit() {
     this.service.CountExpert(this.current_city).then(r => {
@@ -92,6 +93,13 @@ export class PersonnelPieComponent implements OnInit {
           };;
         });
       });
+    });
+    this.emitService.eventEmit.subscribe((value: any) => {
+      // if(value == "userList") {
+      //   // 这里就可以调取接口，刷新userList列表数据
+      //   alert("收到了，我立马刷新列表");
+    // }
+      console.log("person pie 收到消息 内容为  " + value);
     });
   }
 

@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {ScreenDisplayRoutingModule} from './screen-display-routing.module';
 import {LargeScreenComponent} from './large-screen/large-screen.component';
+import { EventEmitterService} from './large-screen/event-emitter.service';
 import {PersonnelComponent} from './large-screen/personnel/personnel.component';
 import {GeneratorBarComponent} from './large-screen/generator-bar/generator-bar.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -16,11 +17,13 @@ import { PersonnelPieComponent } from './large-screen/personnel-pie/personnel-pi
 import { PExpertBarComponent } from './large-screen/p-expert-bar/p-expert-bar.component';
 import { PRepairBarComponent } from './large-screen/p-repair-bar/p-repair-bar.component';
 import { PManagerBarComponent } from './large-screen/p-manager-bar/p-manager-bar.component';
+import { MapComponent } from './large-screen/map/map.component';
 
 
 @NgModule({
   providers: [
-    ScreenDisplayService
+    ScreenDisplayService,
+    EventEmitterService
   ],
   imports: [
     CommonModule,
@@ -41,6 +44,7 @@ import { PManagerBarComponent } from './large-screen/p-manager-bar/p-manager-bar
     PExpertBarComponent,
     PRepairBarComponent,
     PManagerBarComponent,
+    MapComponent,
   ],
 })
 export class ScreenDisplayModule {

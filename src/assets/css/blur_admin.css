@@ -1,7 +1,7 @@
 /*test*/
 .body-bg {
   position: fixed;
-  background: url("/assets/img/blur-bg.jpg") center center no-repeat;
+  background: url("/assets/image/large_screen_background.jpg") center center no-repeat;
   background-size: cover
 }
 .body-bg {

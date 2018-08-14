@@ -19,7 +19,7 @@ export class PersonnelComponent implements OnInit {
     legend: {
       orient: 'horizontal',
       data:['专家','抢修队伍','基干分队'],
-      textStyle:{color:'#68c29d'}
+      textStyle:{color:'#95ffff'}
     },
     series: [
       {
@@ -39,9 +39,9 @@ export class PersonnelComponent implements OnInit {
           }
         },
         data:[
-          {value:this.p_expert, name:'专家',itemStyle:{color:'#e48684'}},
-          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#94dc8f'}},
-          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#a7c7ff'}}
+          {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
+          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
+          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
         ]
       },
     ]
@@ -63,7 +63,7 @@ export class PersonnelComponent implements OnInit {
         legend: {
           orient: 'horizontal',
           data:['专家','抢修队伍','基干分队'],
-          textStyle:{color:'#68c29d'}
+          textStyle:{color:'#95ffff'}
         },
         series: [
           {
@@ -83,13 +83,13 @@ export class PersonnelComponent implements OnInit {
               }
             },
             data:[
-              {value:this.p_expert, name:'专家',itemStyle:{color:'#e48684'}},
-              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#94dc8f'}},
-              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#a7c7ff'}}
+              {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
+              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
+              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
             ]
           },
         ]
-      };
+      };;
     });
     this.service.CountRepair(this.current_city).then(r => {
       this.p_repair = r.data;
@@ -101,7 +101,7 @@ export class PersonnelComponent implements OnInit {
         legend: {
           orient: 'horizontal',
           data:['专家','抢修队伍','基干分队'],
-          textStyle:{color:'#68c29d'}
+          textStyle:{color:'#95ffff'}
         },
         series: [
           {
@@ -121,13 +121,13 @@ export class PersonnelComponent implements OnInit {
               }
             },
             data:[
-              {value:this.p_expert, name:'专家',itemStyle:{color:'#e48684'}},
-              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#94dc8f'}},
-              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#a7c7ff'}}
+              {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
+              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
+              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
             ]
           },
         ]
-      };
+      };;
     });
     this.service.CountManager(this.current_city).then(r => {
       this.p_manager = r.data;
@@ -139,7 +139,7 @@ export class PersonnelComponent implements OnInit {
         legend: {
           orient: 'horizontal',
           data:['专家','抢修队伍','基干分队'],
-          textStyle:{color:'#68c29d'}
+          textStyle:{color:'#95ffff'}
         },
         series: [
           {
@@ -159,13 +159,13 @@ export class PersonnelComponent implements OnInit {
               }
             },
             data:[
-              {value:this.p_expert, name:'专家',itemStyle:{color:'#e48684'}},
-              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#94dc8f'}},
-              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#a7c7ff'}}
+              {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
+              {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
+              {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
             ]
           },
         ]
-      };
+      };;
     });
     this.service.GetExpertDist(this.current_city).then(r => {
       const data = this.change_bar_data(r.value_list, r.class_list);
@@ -195,8 +195,8 @@ export class PersonnelComponent implements OnInit {
         yAxis: {
           name: '人数',
           type : 'value',
-          nameTextStyle:{color:'#68c29d'},
-          axisLabel:{color:'#68c29d'}
+          nameTextStyle:{color:'#95ffff'},
+          axisLabel:{color:'#95ffff'}
         },
         series: [
           {
@@ -222,8 +222,8 @@ export class PersonnelComponent implements OnInit {
             label: {
               normal: {
                 show: false,
-                position: 'top'
-                color:'#68c29d'
+                position: 'top',
+                color:'#95ffff'
               }
             },
             itemStyle: {
@@ -231,9 +231,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#a5f6cf'},
-                    {offset: 0.5, color: '#00f0ac'},
-                    {offset: 1, color: '#00f0ac'}
+                    {offset: 0, color: '#83bff6'},
+                    {offset: 0.5, color: '#188df0'},
+                    {offset: 1, color: '#188df0'}
                   ]
                 )
               },
@@ -241,9 +241,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#00eba2'},
-                    {offset: 0.7, color: '#00eba2'},
-                    {offset: 1, color: '#a5f6cf'}
+                    {offset: 0, color: '#2378f7'},
+                    {offset: 0.7, color: '#2378f7'},
+                    {offset: 1, color: '#83bff6'}
                   ]
                 )
               }
@@ -281,8 +281,8 @@ export class PersonnelComponent implements OnInit {
         yAxis: {
           name: '人数',
           type : 'value',
-          nameTextStyle:{color:'#68c29d'},
-          axisLabel:{color:'#68c29d'}
+          nameTextStyle:{color:'#95ffff'},
+          axisLabel:{color:'#95ffff'}
         },
         series: [
           {
@@ -309,7 +309,7 @@ export class PersonnelComponent implements OnInit {
               normal: {
                 show: false,
                 position: 'top',
-                color:'#68c29d'
+                color:'#95ffff'
               }
             },
             itemStyle: {
@@ -317,9 +317,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#a5f6cf'},
-                    {offset: 0.5, color: '#00f0ac'},
-                    {offset: 1, color: '#00f0ac'}
+                    {offset: 0, color: '#83bff6'},
+                    {offset: 0.5, color: '#188df0'},
+                    {offset: 1, color: '#188df0'}
                   ]
                 )
               },
@@ -327,9 +327,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#00eba2'},
-                    {offset: 0.7, color: '#00eba2'},
-                    {offset: 1, color: '#a5f6cf'}
+                    {offset: 0, color: '#2378f7'},
+                    {offset: 0.7, color: '#2378f7'},
+                    {offset: 1, color: '#83bff6'}
                   ]
                 )
               }
@@ -367,8 +367,8 @@ export class PersonnelComponent implements OnInit {
         yAxis: {
           name: '人数',
           type : 'value',
-          nameTextStyle:{color:'#68c29d'},
-          axisLabel:{color:'#68c29d'}
+          nameTextStyle:{color:'#95ffff'},
+          axisLabel:{color:'#95ffff'}
         },
         series: [
           {
@@ -395,7 +395,7 @@ export class PersonnelComponent implements OnInit {
               normal: {
                 show: false,
                 position: 'top',
-                color:'#68c29d'
+                color:'#95ffff'
               }
             },
             itemStyle: {
@@ -403,9 +403,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#a5f6cf'},
-                    {offset: 0.5, color: '#00f0ac'},
-                    {offset: 1, color: '#00f0ac'}
+                    {offset: 0, color: '#83bff6'},
+                    {offset: 0.5, color: '#188df0'},
+                    {offset: 1, color: '#188df0'}
                   ]
                 )
               },
@@ -413,9 +413,9 @@ export class PersonnelComponent implements OnInit {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#00eba2'},
-                    {offset: 0.7, color: '#00eba2'},
-                    {offset: 1, color: '#a5f6cf'}
+                    {offset: 0, color: '#2378f7'},
+                    {offset: 0.7, color: '#2378f7'},
+                    {offset: 1, color: '#83bff6'}
                   ]
                 )
               }

@@ -74,15 +74,20 @@
 
 <div class="row">
   <div class="card-deck col-lg-12">
-    <div class="card panel panel-blur col-lg-7">
+    <div class="card col-lg-4">
       <div class="card-body">
         <!--<app-generator-bar></app-generator-bar>-->
         <app-generator-pie></app-generator-pie>
       </div>
     </div>
-    <div class="card panel panel-blur col-lg-5">
+    <div class="card panel panel-blur col-lg-4">
       <div class="card-body">
         <app-repaircar-bar></app-repaircar-bar>
+      </div>
+    </div>
+    <div class="card panel panel-blur col-lg-4">
+      <div class="card-body">
+        <app-generator-bar></app-generator-bar>
       </div>
     </div>
   </div>
@@ -91,3 +96,7 @@
 <app-repaircar-timeline></app-repaircar-timeline>
 <app-generator-radar></app-generator-radar>
 
+
+<app-urgent-material-tree></app-urgent-material-tree>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button>

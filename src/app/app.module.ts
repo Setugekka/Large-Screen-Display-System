@@ -28,6 +28,6 @@ import { ContentLayoutComponent } from './layouts/content-layout/content-layout.
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

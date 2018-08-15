@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal,NgbActiveModal} from '@ng-bootstrap/ng-bootstrap'
+import {DetailviewComponent} from "./detailview/detailview.component";
 
 @Component({
   selector: 'app-large-screen',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LargeScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService:NgbModal) { }
 
   ngOnInit() {
   }
-
+  open(){
+    const modalRef = this.modalService.open(DetailviewComponent);
+    modalRef.componentInstance.name='Bo Xu'
+  }
 }

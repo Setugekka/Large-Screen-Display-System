@@ -1,0 +1,22 @@
+.module-1 {
+   border: none;
+   position: relative;
+   margin-bottom: 15px;
+   background: url("/assets/image/module-1.png") center no-repeat;
+   background-size:100% 100%;
+   -webkit-transition: none;
+   transition: none;
+   /*background-position: 0px -90px;*/
+ }
+
+.background {
+  background: url("/assets/image/large_screen_background.jpg") center center no-repeat;
+  background-size:cover;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  z-index: -1;
+  width: 100%
+}

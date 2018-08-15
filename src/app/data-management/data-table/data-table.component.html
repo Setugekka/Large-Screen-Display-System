@@ -1,23 +1,47 @@
-<div class="card">
-<table datatable class="row-border hover" [dtOptions]="dtOptions" id="myTable">
+<div *ngIf="click===false">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="content-header mb-3">当前文件数据</div>
+    </div>
+  </div>
+<div class="card" style="text-align: center">
+<table datatable class="row-border hover table-striped" [dtOptions]="dtOptions"  id="myTable">
   <thead>
   <tr>
     <td *ngFor="let a of head">{{a}}</td>
   </tr>
   </thead>
-
     <tbody>
-    <tr *ngFor="let row of data;let i = index" (click)="clicked(row)"  >
+    <tr *ngFor="let row of data;let i = index" (click)="setTimeout(openContent(row,head))"  >
     <td *ngFor="let a of row;let j = index" class="edit" (dblclick)="editing[i + '-' + j] = true">
       <span *ngIf="!editing[i + '-' + j]"> {{a}}</span>
       <input autofocus *ngIf="editing[i + '-' + j]" type="text" [value]="a" [(ngModel)] ="row[j]" (blur)="editing[i + '-' + j] = false "/>
     </td>
-
   </tr>
     </tbody>
-
 </table>
-<app-message *ngIf="click===true" [data]="edit" [head]="head" [(ngModel)] ="edit" [click]="message_click"></app-message>
-<button (deleteConfirm)="onDeleteConfirm($event)">上传数据</button>
+  <div style="text-align: center">
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">保存数据</button>
+  </div>
 </div>
+<div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card-block">
+        <ng-template #content let-c="close" let-d="dismiss">
+          <div class="modal-header">
+            <h4 class="modal-title">提示消息</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>数据保存成功&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-raised" (click)="c('Close click')">确定</button>
+          </div>
+        </ng-template>
+      </div>
+</div>
+</div>
+<app-input-file *ngIf="click===true" ></app-input-file>
 

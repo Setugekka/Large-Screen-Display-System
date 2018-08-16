@@ -23,6 +23,7 @@ import { StuffCircleComponent} from './large-screen/stuff-circle/stuff-circle.co
 import {MaterialCircleComponent} from './large-screen/material-circle/material-circle.component';
 
 
+
 @NgModule({
   providers: [
     ScreenDisplayService,
@@ -51,6 +52,7 @@ import {MaterialCircleComponent} from './large-screen/material-circle/material-c
     EquipmentCircleComponent,
     StuffCircleComponent,
     MaterialCircleComponent
+
   ],
 })
 export class ScreenDisplayModule {

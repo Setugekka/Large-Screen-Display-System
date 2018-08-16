@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ScreenDisplayService} from '../../screen-display.service';
 import {toUnicode} from "punycode";
+import {EventEmitterService} from '../event-emitter.service';
 declare var echarts: any;
 @Component({
   selector: 'app-p-expert-bar',
@@ -10,9 +11,16 @@ declare var echarts: any;
 export class PExpertBarComponent implements OnInit {
   private bar_option_expert: any;
   private current_city = null;
-  constructor(private service: ScreenDisplayService) { }
+  constructor(private service: ScreenDisplayService, public emitService: EventEmitterService) { }
 
   ngOnInit() {
+    this.emitService.eventEmit.subscribe((value: any) => {
+      // if(value == "userList") {
+      //   // 这里就可以调取接口，刷新userList列表数据
+      //   alert("收到了，我立马刷新列表");
+      // }
+      console.log("expert bar 收到消息 内容为  " + value);
+    });
     this.service.GetExpertDist(this.current_city).then(r => {
       const data = this.change_bar_data(r.value_list, r.class_list);
       this.bar_option_expert={

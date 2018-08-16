@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {ScreenDisplayRoutingModule} from './screen-display-routing.module';
 import {LargeScreenComponent} from './large-screen/large-screen.component';
+import { EventEmitterService} from './large-screen/event-emitter.service';
 import {PersonnelComponent} from './large-screen/personnel/personnel.component';
 import {GeneratorBarComponent} from './large-screen/generator-bar/generator-bar.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -20,11 +21,17 @@ import { UrgentMaterialTreeComponent } from './large-screen/urgent-material-tree
 import { DetailviewComponent } from './large-screen/detailview/detailview.component';
 import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
 import {DataTablesModule} from "angular-datatables";
+import { MapComponent } from './large-screen/map/map.component';
+import { EquipmentCircleComponent} from './large-screen/equipment-circle/equipment-circle.component';
+import { StuffCircleComponent} from './large-screen/stuff-circle/stuff-circle.component';
+import {MaterialCircleComponent} from './large-screen/material-circle/material-circle.component';
+
 
 
 @NgModule({
   providers: [
-    ScreenDisplayService
+    ScreenDisplayService,
+    EventEmitterService
   ],
   entryComponents:[DetailviewComponent],
   imports: [
@@ -50,6 +57,10 @@ import {DataTablesModule} from "angular-datatables";
     PManagerBarComponent,
     UrgentMaterialTreeComponent,
     DetailviewComponent,
+    MapComponent,
+    EquipmentCircleComponent,
+    StuffCircleComponent,
+    MaterialCircleComponent
   ],
 
 })

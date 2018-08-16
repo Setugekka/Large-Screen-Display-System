@@ -8,5 +8,7 @@ export const Urls = {
   GetExpertDist: host + '/p_expert/distribution_by_major_city',
   GetRepairDist: host + '/p_repair/distribution_by_major_city',
   GetManagerDist: host + '/p_manager/distribution_by_major_city',
-
+  GetAllEquipment: host + '/m_equipment/get_all',
+  GetAllStuff: host + '/m_stuff/get_all',
+  GetAllMaterial: host + '/m_material/get_all',
 };

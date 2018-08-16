@@ -18,6 +18,10 @@ import { PExpertBarComponent } from './large-screen/p-expert-bar/p-expert-bar.co
 import { PRepairBarComponent } from './large-screen/p-repair-bar/p-repair-bar.component';
 import { PManagerBarComponent } from './large-screen/p-manager-bar/p-manager-bar.component';
 import { MapComponent } from './large-screen/map/map.component';
+import { EquipmentCircleComponent} from './large-screen/equipment-circle/equipment-circle.component';
+import { StuffCircleComponent} from './large-screen/stuff-circle/stuff-circle.component';
+import {MaterialCircleComponent} from './large-screen/material-circle/material-circle.component';
+
 
 
 @NgModule({
@@ -45,6 +49,10 @@ import { MapComponent } from './large-screen/map/map.component';
     PRepairBarComponent,
     PManagerBarComponent,
     MapComponent,
+    EquipmentCircleComponent,
+    StuffCircleComponent,
+    MaterialCircleComponent
+
   ],
 })
 export class ScreenDisplayModule {

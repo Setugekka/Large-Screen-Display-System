@@ -510,7 +510,6 @@ export class GeneratorBarComponent implements OnInit {
   }
   onChartClick(event){
     this.dtOptions={
-
       language: {     // 语言设置
         'paginate': {
           'first':      '首页',
@@ -530,7 +529,6 @@ export class GeneratorBarComponent implements OnInit {
         'url': '',
         'loadingRecords': '载入中...',
       },
-
       ajax:url_main+'/generator/getbyCity/'+event.name,
       columns:[
         {title:'序号',data:'Id'},

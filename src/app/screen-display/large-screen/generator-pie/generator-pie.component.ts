@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {url_main} from '../config'
 import {componentRefresh} from "@angular/core/src/render3/instructions";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {DetailviewComponent} from "../detailview/detailview.component"
 @Component({
   selector: 'app-generator-pie',
   templateUrl: './generator-pie.component.html',
@@ -15,8 +17,9 @@ export class GeneratorPieComponent implements OnInit {
   Dict_temp:any;
   scale:number;
   rich: any;
-  constructor(private http:HttpClient) { }
 
+  dtOptions:any;
+  constructor(private http:HttpClient,private modalService:NgbModal) { }
   ngOnInit() {
 
     //获取按容量分布数据
@@ -414,5 +417,48 @@ export class GeneratorPieComponent implements OnInit {
         };
       })
     }
+  }
+  onChartClick(event){
+    this.dtOptions={
+
+      language: {     // 语言设置
+        'paginate': {
+          'first':      '首页',
+          'last':       '末页',
+          'next':       '下一页',
+          'previous':   '上一页'
+        },
+        'zeroRecords':    '没有查询到匹配的数据',
+        'search': '搜索:',
+        'emptyTable':     '当前文件夹为空',
+        'processing': '处理中...',
+        'lengthMenu': '显示 _MENU_ 项结果',
+        'info': '显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项',
+        'infoEmpty': '显示第 0 至 0 项结果，共 0 项',
+        'infoFiltered': '(由 _MAX_ 项结果过滤)',
+        'infoPostFix': '',
+        'url': '',
+        'loadingRecords': '载入中...',
+      },
+
+      ajax:url_main+'/generator/getbyCity/'+event.name,
+      columns:[
+        {title:'序号',data:'Id'},
+        {title:'管理单位',data:'Department'},
+        {title:'型号',data:'Type'},
+        {title:'容量（千瓦）',data:'Capacity'},
+        {title:'出厂时间',data:'Date_Production'},
+        {title:'生产厂家',data:'Factory'},
+        {title:'联系人',data:'Contact'},
+        {title:'联系电话',data:'Phone'},
+        {title:'存放地点',data:'Position'},
+        {title:'调用情况',data:'Condition'}
+      ],
+
+
+    }
+    const modalRef = this.modalService.open(DetailviewComponent,{windowClass:'myCustomModalClass'}) //myCustomModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    modalRef.componentInstance.dOptions = this.dtOptions;
+
   }
 }

@@ -17,6 +17,10 @@ import { PersonnelPieComponent } from './large-screen/personnel-pie/personnel-pi
 import { PExpertBarComponent } from './large-screen/p-expert-bar/p-expert-bar.component';
 import { PRepairBarComponent } from './large-screen/p-repair-bar/p-repair-bar.component';
 import { PManagerBarComponent } from './large-screen/p-manager-bar/p-manager-bar.component';
+import { UrgentMaterialTreeComponent } from './large-screen/urgent-material-tree/urgent-material-tree.component';
+import { DetailviewComponent } from './large-screen/detailview/detailview.component';
+import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
+import {DataTablesModule} from "angular-datatables";
 import { MapComponent } from './large-screen/map/map.component';
 import { EquipmentCircleComponent} from './large-screen/equipment-circle/equipment-circle.component';
 import { StuffCircleComponent} from './large-screen/stuff-circle/stuff-circle.component';
@@ -29,11 +33,14 @@ import {MaterialCircleComponent} from './large-screen/material-circle/material-c
     ScreenDisplayService,
     EventEmitterService
   ],
+  entryComponents:[DetailviewComponent],
   imports: [
     CommonModule,
     ScreenDisplayRoutingModule,
     NgxEchartsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModalModule,
+    DataTablesModule
   ],
   declarations: [
     LargeScreenComponent,
@@ -48,12 +55,14 @@ import {MaterialCircleComponent} from './large-screen/material-circle/material-c
     PExpertBarComponent,
     PRepairBarComponent,
     PManagerBarComponent,
+    UrgentMaterialTreeComponent,
+    DetailviewComponent,
     MapComponent,
     EquipmentCircleComponent,
     StuffCircleComponent,
     MaterialCircleComponent
-
   ],
+
 })
 export class ScreenDisplayModule {
 }

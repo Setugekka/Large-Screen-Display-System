@@ -44,7 +44,9 @@ export class PExpertBarComponent implements OnInit {
         xAxis: {
           type : 'category',
           splitLine: {show: false},
-          data : data.class_list
+          data : data.class_list,
+          nameTextStyle:{color:'#95ffff'},
+          axisLabel:{color:'#95ffff'}
         },
         yAxis: {
           name: '人数',
@@ -81,15 +83,25 @@ export class PExpertBarComponent implements OnInit {
               }
             },
             itemStyle: {
+              // normal: {
+              //   color: new echarts.graphic.LinearGradient(
+              //     0, 0, 0, 1,
+              //     [
+              //       {offset: 0, color: '#83bff6'},
+              //       {offset: 0.5, color: '#188df0'},
+              //       {offset: 1, color: '#188df0'}
+              //     ]
+              //   )
+              // },
               normal: {
-                color: new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1,
-                  [
-                    {offset: 0, color: '#83bff6'},
-                    {offset: 0.5, color: '#188df0'},
-                    {offset: 1, color: '#188df0'}
-                  ]
-                )
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                  offset: 0,
+                  color: '#00fcae'
+                }, {
+                  offset: 1,
+                  color: '#006388'
+                }]),
+                opacity: 1,
               },
               emphasis: {
                 color: new echarts.graphic.LinearGradient(

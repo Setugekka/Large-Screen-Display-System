@@ -42,9 +42,8 @@ export class UrgentMaterialTreeComponent implements OnInit {
             data: [res['data']],
 
             top: '5%',
-            left: '7%',
-            bottom: '2%',
-            right: '60%',
+            left: '15%',
+            width:'70%',
 
             symbolSize: 7,
             initialTreeDepth:1,

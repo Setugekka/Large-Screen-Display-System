@@ -17,13 +17,13 @@
         <app-personnel-pie></app-personnel-pie>
       </div>
   </div>
-    
+
   <div class="col-7 card">
     <div class="row" >
       <div class="col-7">
         <app-map></app-map>
       </div>
-      <div class="col-5" style="color: #95ffff;">
+      <div class="col-5 module" style="color: #95ffff;">
         <div class="row mt-5">
           <div class="col-8" style="font-size: 18px">应急状态</div>
           <div class="col-4" style="font-size: 25px;font-weight: bold;color: #eeff41">C</div>
@@ -42,21 +42,22 @@
         </div>
       </div>
     </div>
-    <div class="row" style="height: 300px;overflow: auto">
+    <div class="row" style="height: 300px;">
       <div class="col-4">
-        <div class="module-header">应急装备</div>
+        <div class="module-header">基干装备</div>
         <app-equipment-circle></app-equipment-circle>
       </div>
-      <div class="col-4 module">
+      <div class="col-4">
         <div class="module-header">抢修材料</div>
         <app-material-circle></app-material-circle>
       </div>
       <div class="col-4">
+        <div class="module-header">抢修物资</div>
         <app-stuff-circle></app-stuff-circle>
       </div>
 
     </div>
-    <div class="row">
+    <div class="row module">
       <div class="col-lg-12">
         <app-repaircar-timeline></app-repaircar-timeline>
       </div>
@@ -65,22 +66,24 @@
   </div>
 
   <div class="col-3 card">
-    <div class="row card">
+    <div class="row card module">
       <app-generator-bar></app-generator-bar>
     </div>
-    <div class="row card">
+    <div class="row card module">
       <app-generator-pie></app-generator-pie>
     </div>
-    <div class="row card">
+    <div class="row card module">
       <app-generator-radar></app-generator-radar>
     </div>
-    <div class="row card">
+    <div class="row card module">
       <app-repaircar-bar></app-repaircar-bar>
     </div>
   </div>
   </div>
 </div>
-<div class="row" style="height:200px;width:180%;background-color: #0ABC76"></div>
+<div class="row card" style="height:auto;width:180%;">
+  <app-message-scatter></app-message-scatter>
+</div>
 <div class="row card" style="width: 180%;height: 300px" >
   <app-urgent-material-tree></app-urgent-material-tree>
 </div>

@@ -53,7 +53,7 @@ export class MapComponent implements OnInit {
         id:0,
         map: 'liaoning',
         // roam: true,
-        zoom: 1,
+        zoom: 1.2,
         label: {
           normal: {
             show: true,

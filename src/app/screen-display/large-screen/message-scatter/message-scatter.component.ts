@@ -55,7 +55,7 @@ export class MessageScatterComponent implements OnInit {
         },
       },
       xAxis: {
-        splitNumber: 12,
+        splitNumber: 24,
         type: 'time',
         // max: function() {
         //   const Dates = new Date();

@@ -39,9 +39,9 @@ export class PersonnelPieComponent implements OnInit {
           }
         },
         data:[
-          {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
-          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
-          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
+          {value:this.p_expert, name:'专家',itemStyle:{color:'#f6f701'}},
+          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#09c2f6'}},
+          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#f505a4'}}
         ]
       },
     ]
@@ -84,13 +84,13 @@ export class PersonnelPieComponent implements OnInit {
                   }
                 },
                 data:[
-                  {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
-                  {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
-                  {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
+                  {value:this.p_expert, name:'专家',itemStyle:{color:'#f6f701'}},
+                  {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#09c2f6'}},
+                  {value:this.p_manager, name:'基干分队',itemStyle:{color:'#f505a4'}}
                 ]
               },
             ]
-          };;
+          };
         });
       });
     });

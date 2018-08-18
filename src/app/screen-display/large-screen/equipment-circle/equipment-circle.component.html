@@ -1,6 +1,6 @@
 <div class="module module-panel">
   <div class="module-header"></div>
   <div class="module-body">
-    <div echarts [options]="option" style="height: 420px"></div>
+    <div echarts [options]="option"  (chartClick)="onChartClick($event)" style="height: 300px"></div>
   </div>
 </div>

@@ -23,6 +23,7 @@ export class GeneratorBarComponent implements OnInit {
   className:any;
   dtOptions:DataTables.Settings={};
   Records:Array<string>;
+  model_title:any;
   constructor(private http:HttpClient,private modalService:NgbModal) { }
 
   ngOnInit() {
@@ -542,11 +543,11 @@ export class GeneratorBarComponent implements OnInit {
         {title:'存放地点',data:'Position'},
         {title:'调用情况',data:'Condition'}
       ],
-
-
-    }
+    };
+    this.model_title = '发电车辆详细信息';
     const modalRef = this.modalService.open(DetailviewComponent,{windowClass:'myCustomModalClass'}) //myCustomModalClass自定义模态框大小，该css类写在了全局样式style.css中
     modalRef.componentInstance.dOptions = this.dtOptions;
+    modalRef.componentInstance.model_title = this.model_title;
 
   }
 }

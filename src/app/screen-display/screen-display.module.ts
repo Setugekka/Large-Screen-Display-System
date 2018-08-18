@@ -31,7 +31,7 @@ import {MaterialCircleComponent} from './large-screen/material-circle/material-c
 @NgModule({
   providers: [
     ScreenDisplayService,
-    EventEmitterService
+    EventEmitterService,
   ],
   entryComponents:[DetailviewComponent],
   imports: [

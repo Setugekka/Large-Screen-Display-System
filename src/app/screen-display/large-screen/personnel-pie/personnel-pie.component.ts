@@ -16,11 +16,11 @@ export class PersonnelPieComponent implements OnInit {
       trigger: 'item',
       formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: {
-      orient: 'horizontal',
-      data:['专家','抢修队伍','基干分队'],
-      textStyle:{color:'#95ffff'}
-    },
+    // legend: {
+    //   orient: 'horizontal',
+    //   data:['专家','抢修队伍','基干分队'],
+    //   textStyle:{color:'#95ffff'}
+    // },
     series: [
       {
         name:'人员分布',
@@ -39,9 +39,9 @@ export class PersonnelPieComponent implements OnInit {
           }
         },
         data:[
-          {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
-          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
-          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
+          {value:this.p_expert, name:'专家',itemStyle:{color:'#f505a4'}},
+          {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#babc0c'}},
+          {value:this.p_manager, name:'基干分队',itemStyle:{color:'#0b9ec8'}}
         ]
       },
     ]
@@ -61,11 +61,11 @@ export class PersonnelPieComponent implements OnInit {
               trigger: 'item',
               formatter: "{a} <br/>{b}: {c} ({d}%)"
             },
-            legend: {
-              orient: 'horizontal',
-              data:['专家','抢修队伍','基干分队'],
-              textStyle:{color:'#95ffff'}
-            },
+            // legend: {
+            //   orient: 'horizontal',
+            //   data:['专家','抢修队伍','基干分队'],
+            //   textStyle:{color:'#95ffff'}
+            // },
             series: [
               {
                 name:'人员分布',
@@ -84,9 +84,9 @@ export class PersonnelPieComponent implements OnInit {
                   }
                 },
                 data:[
-                  {value:this.p_expert, name:'专家',itemStyle:{color:'#61fcff'}},
-                  {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#52a5ff'}},
-                  {value:this.p_manager, name:'基干分队',itemStyle:{color:'#4e76ff'}}
+                  {value:this.p_expert, name:'专家',itemStyle:{color:'#f505a4'}},
+                  {value:this.p_repair, name:'抢修队伍',itemStyle:{color:'#babc0c'}},
+                  {value:this.p_manager, name:'基干分队',itemStyle:{color:'#0b9ec8'}}
                 ]
               },
             ]

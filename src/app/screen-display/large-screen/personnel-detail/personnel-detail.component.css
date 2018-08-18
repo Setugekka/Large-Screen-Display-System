@@ -1,0 +1,37 @@
+
+.module {
+  border: none;
+  position: relative;
+  margin-bottom: 15px;
+  background: url("/assets/image/module-1.png") center no-repeat;
+  background-size:100% 100%;
+  -webkit-transition: none;
+  transition: none;
+}
+.module-header{
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-top: 5px;
+  color: #05f1f8;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+}
+.module-panel {
+  margin-left: 15px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 5px 0 rgba(171, 224, 255, 0.25);
+  -webkit-transition: none;
+  transition: none;
+}
+.person_detail{
+  color: #95ffff;
+  font-size: 10px;
+}
+.module-body{
+  width: 100%;
+  color: #68c29d;
+}

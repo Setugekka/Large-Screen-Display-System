@@ -36,7 +36,7 @@ export class EquipmentCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6),
+          cx: api.value(6)+ 20,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },
@@ -92,7 +92,7 @@ export class EquipmentCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6),
+          cx: api.value(6) +20,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },
@@ -123,7 +123,7 @@ export class EquipmentCircleComponent implements OnInit {
         .sort(function(a, b) {
           return b.value - a.value;
         })
-      d3.pack().size([500 - 2, 400 - 2])
+      d3.pack().size([260 - 2, 260 - 2])
         .padding(4.5)(this.root);
       let maxDepth = 0;
       const nodeAll = this.root.descendants();

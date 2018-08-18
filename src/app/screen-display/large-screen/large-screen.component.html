@@ -1,134 +1,89 @@
-<!--<div class="row">-->
+<div class="row" style="height: auto;width: 180%">
+  <div class="card-deck col-12 pl-0 pr-0">
+  <div class="col-2 card">
+    <div class="module">
+      <app-personnel-detail></app-personnel-detail>
+    </div>
+      <div class="module">
+        <app-p-expert-bar></app-p-expert-bar>
+      </div>
+      <div class="module">
+        <app-p-manager-bar></app-p-manager-bar>
+      </div>
+      <div class="module ">
+        <app-p-repair-bar></app-p-repair-bar>
+      </div>
+      <div class="module">
+        <app-personnel-pie></app-personnel-pie>
+      </div>
+  </div>
 
-  <!--<div class="col-xl-3 col-lg-6 col-md-6 col-12">-->
-    <!--<div class="panel-blur panel">-->
-      <!--<div class="card-body">-->
-        <!--<div class="card-block pt-2 pb-0">-->
-          <!--<div class="media">-->
-            <!--<div class="media-body white text-left">-->
-              <!--<h3 class="font-large-1 mb-0">正常</h3>-->
-              <!--<span>水位状态</span>-->
-            <!--</div>-->
-            <!--<div class="media-right white text-right">-->
-              <!--<i class="icon-pie-chart font-large-1"></i>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="col-xl-3 col-lg-6 col-md-6 col-12">-->
-    <!--<div class="panel-blur panel">-->
-      <!--<div class="card-body">-->
-        <!--<div class="card-block pt-2 pb-0">-->
-          <!--<div class="media">-->
-            <!--<div class="media-body white text-left">-->
-              <!--<h3 class="font-large-1 mb-0">晴</h3>-->
-              <!--<span>天气</span>-->
-            <!--</div>-->
-            <!--<div class="media-right white text-right">-->
-              <!--<i class="icon-bulb font-large-1"></i>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-
-  <!--<div class="col-xl-3 col-lg-6 col-md-6 col-12">-->
-    <!--<div class="panel-blur panel">-->
-      <!--<div class="card-body">-->
-        <!--<div class="card-block pt-2 pb-0">-->
-          <!--<div class="media">-->
-            <!--<div class="media-body white text-left">-->
-              <!--<h3 class="font-large-1 mb-0">125</h3>-->
-              <!--<span>人员</span>-->
-            <!--</div>-->
-            <!--<div class="media-right white text-right">-->
-              <!--<i class="icon-graph font-large-1"></i>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="col-xl-3 col-lg-6 col-md-6 col-12">-->
-    <!--<div class="panel-blur panel">-->
-      <!--<div class="card-body">-->
-        <!--<div class="card-block pt-2 pb-0">-->
-          <!--<div class="media">-->
-            <!--<div class="media-body white text-left">-->
-              <!--<h3 class="font-large-1 mb-0">300</h3>-->
-              <!--<span>物资</span>-->
-            <!--</div>-->
-            <!--<div class="media-right white text-right">-->
-              <!--<i class="icon-wallet font-large-1"></i>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-
-<div class="row">
-  <div class="card-deck col-lg-12">
-    <div class="card col-lg-4">
-      <div class="card-body transparent">
-        <!--<app-generator-bar></app-generator-bar>-->
-        <app-generator-pie></app-generator-pie>
+  <div class="col-7 card">
+    <div class="row" >
+      <div class="col-7">
+        <app-map></app-map>
+      </div>
+      <div class="col-5 module" style="color: #95ffff;">
+        <div class="row mt-5">
+          <div class="col-8" style="font-size: 18px">应急状态</div>
+          <div class="col-4" style="font-size: 25px;font-weight: bold;color: #eeff41">C</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-8" style="font-size: 18px">应急人员</div>
+          <div class="col-4" style="font-size: 25px;font-weight: bold;color: #eeff41">200</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-8" style="font-size: 18px">应急物资</div>
+          <div class="col-4" style="font-size: 25px;font-weight: bold;color: #eeff41">200</div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-8" style="font-size: 18px">应急装备</div>
+          <div class="col-4" style="font-size: 25px;font-weight: bold;color: #eeff41">200</div>
+        </div>
       </div>
     </div>
-    <div class="card panel panel-blur col-lg-4">
-      <div class="card-body">
-        <app-repaircar-bar></app-repaircar-bar>
+    <div class="row" style="height: 300px;">
+      <div class="col-4">
+        <div class="module-header">基干装备</div>
+        <app-equipment-circle></app-equipment-circle>
       </div>
+      <div class="col-4">
+        <div class="module-header">抢修材料</div>
+        <app-material-circle></app-material-circle>
+      </div>
+      <div class="col-4">
+        <div class="module-header">抢修物资</div>
+        <app-stuff-circle></app-stuff-circle>
+      </div>
+
     </div>
-    <div class="card panel panel-blur col-lg-4">
-      <div class="card-body">
-        <app-generator-bar></app-generator-bar>
+    <div class="row module">
+      <div class="col-lg-12">
+        <app-repaircar-timeline></app-repaircar-timeline>
       </div>
+
     </div>
   </div>
+
+  <div class="col-3 card">
+    <div class="row card module">
+      <app-generator-bar></app-generator-bar>
+    </div>
+    <div class="row card module">
+      <app-generator-pie></app-generator-pie>
+    </div>
+    <div class="row card module">
+      <app-generator-radar></app-generator-radar>
+    </div>
+    <div class="row card module">
+      <app-repaircar-bar></app-repaircar-bar>
+    </div>
+  </div>
+  </div>
 </div>
-<!--<div class="row">-->
-  <!--<div class="card-deck col-lg-12">-->
-    <!--<div class="card panel panel-blur col-lg-7">-->
-      <!--<div class="card-body">-->
-        <!--&lt;!&ndash;<app-generator-bar></app-generator-bar>&ndash;&gt;-->
-        <!--<app-generator-pie></app-generator-pie>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="card panel panel-blur col-lg-5">-->
-      <!--<div class="card-body">-->
-        <!--<app-repaircar-bar></app-repaircar-bar>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-<!--<app-repaircar-timeline></app-repaircar-timeline>-->
-<!--<app-generator-radar></app-generator-radar>-->
-
-<app-map></app-map>
-<app-p-expert-bar></app-p-expert-bar>
-
-<div class="col-lg-5">
-<app-equipment-circle></app-equipment-circle>
+<div class="row card" style="height:auto;width:180%;">
+  <app-message-scatter></app-message-scatter>
 </div>
-<div class="col-lg-5">
-<app-material-circle></app-material-circle>
+<div class="row card" style="width: 180%;height: 300px" >
+  <app-urgent-material-tree></app-urgent-material-tree>
 </div>
-<div class="col-lg-5">
-<app-stuff-circle></app-stuff-circle>
-</div>
-<div class="col-lg-12">
-<app-message-scatter></app-message-scatter>
-</div>
-
-
-<app-urgent-material-tree></app-urgent-material-tree>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button>

@@ -75,14 +75,14 @@ export class PRepairBarComponent implements OnInit {
             },
             itemStyle: {
               normal: {
-                color: new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1,
-                  [
-                    {offset: 0, color: '#83bff6'},
-                    {offset: 0.5, color: '#188df0'},
-                    {offset: 1, color: '#188df0'}
-                  ]
-                )
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                  offset: 0,
+                  color: '#00fcae'
+                }, {
+                  offset: 1,
+                  color: '#006388'
+                }]),
+                opacity: 1,
               },
               emphasis: {
                 color: new echarts.graphic.LinearGradient(

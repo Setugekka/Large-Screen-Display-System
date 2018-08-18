@@ -41,7 +41,7 @@ export class EquipmentCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6) + 20,
+          cx: api.value(6)+ 20,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },
@@ -97,7 +97,7 @@ export class EquipmentCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6) + 20,
+          cx: api.value(6) +20,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },

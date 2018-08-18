@@ -32,7 +32,7 @@ import { MessageScatterComponent } from './large-screen/message-scatter/message-
 @NgModule({
   providers: [
     ScreenDisplayService,
-    EventEmitterService
+    EventEmitterService,
   ],
   entryComponents:[DetailviewComponent],
   imports: [

@@ -8,7 +8,8 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
 })
 export class DetailviewComponent implements OnInit {
   @Input() dOptions;
-  constructor(public activeModal:NgbActiveModal) { }
+  @Input() model_title;
+  constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
   }

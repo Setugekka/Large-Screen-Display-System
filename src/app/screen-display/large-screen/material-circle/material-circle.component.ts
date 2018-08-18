@@ -4,6 +4,9 @@ import { Observable, of } from 'rxjs';
 import { Urls} from '../../../shared/model/model.url';
 import * as d3 from 'd3';
 import {EventEmitterService} from '../event-emitter.service';
+import {DetailviewComponent} from '../detailview/detailview.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {url_main} from '../config';
 
 
 declare var echarts: any;
@@ -21,7 +24,9 @@ export class MaterialCircleComponent implements OnInit {
   private  fill = <any>{  };
   private  option: any;
   private  root = <any>{};
-  constructor(private http: Http, public emitService: EventEmitterService) { }
+  model_title:any;
+  dtOptions: DataTables.Settings = {};
+  constructor(private http: Http, public emitService: EventEmitterService, private modalService:NgbModal) { }
   GetAllMaterial(city= null):  any {
     const params = {
       'city': city
@@ -37,7 +42,7 @@ export class MaterialCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6),
+          cx: api.value(6)+ 20,
           cy: api.value(7)+10,
           r:  api.value(8)
         },
@@ -90,7 +95,7 @@ export class MaterialCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6),
+          cx: api.value(6) + 20 ,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },
@@ -121,7 +126,7 @@ export class MaterialCircleComponent implements OnInit {
         .sort(function(a, b) {
           return b.value - a.value;
         })
-      d3.pack().size([500 - 2, 400 - 2])
+      d3.pack().size([260, 260])
         .padding(4.5)(this.root);
       let maxDepth = 0;
       const nodeAll = this.root.descendants();
@@ -145,7 +150,8 @@ export class MaterialCircleComponent implements OnInit {
               node.x,
               node.y,
               node.r,
-              node.isLeaf
+              node.isLeaf,
+              node.data.City
             ],
             label: {
               normal: {
@@ -165,7 +171,8 @@ export class MaterialCircleComponent implements OnInit {
             node.x,
             node.y,
             node.r,
-            node.isLeaf
+            node.isLeaf,
+            node.data.City
           ],
           label: {
             normal: {
@@ -197,6 +204,7 @@ export class MaterialCircleComponent implements OnInit {
       this.option = {
         backgroundColor: 'transparent',
         title: {
+          show: false,
           text: '抢修物资',
           textStyle: {
             color: 'white',
@@ -280,7 +288,7 @@ export class MaterialCircleComponent implements OnInit {
           .sort(function(a, b) {
             return b.value - a.value;
           })
-        d3.pack().size([500 - 2, 400 - 2])
+        d3.pack().size([260, 260])
           .padding(4.5)(this.root);
         let maxDepth = 0;
         const nodeAll = this.root.descendants();
@@ -304,7 +312,8 @@ export class MaterialCircleComponent implements OnInit {
                 node.x,
                 node.y,
                 node.r,
-                node.isLeaf
+                node.isLeaf,
+                node.data.City
               ],
               label: {
                 normal: {
@@ -324,7 +333,8 @@ export class MaterialCircleComponent implements OnInit {
                 node.x,
                 node.y,
                 node.r,
-                node.isLeaf
+                node.isLeaf,
+                node.data.City
               ],
               label: {
                 normal: {
@@ -356,6 +366,7 @@ export class MaterialCircleComponent implements OnInit {
         this.option = {
           backgroundColor: 'transparent',
           title: {
+            show: false,
             text: '抢修物资',
             textStyle: {
               color: 'white',
@@ -424,6 +435,45 @@ export class MaterialCircleComponent implements OnInit {
         };
       });
     });
+  }
+  onChartClick(event) {
+    this.dtOptions = {
+      language: {     // 语言设置
+        'paginate': {
+          'first':      '首页',
+          'last':       '末页',
+          'next':       '下一页',
+          'previous':   '上一页'
+        },
+        'zeroRecords':    '没有查询到匹配的数据',
+        'search': '搜索:',
+        'emptyTable':     '当前文件夹为空',
+        'processing': '处理中...',
+        'lengthMenu': '显示 _MENU_ 项结果',
+        'info': '显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项',
+        'infoEmpty': '显示第 0 至 0 项结果，共 0 项',
+        'infoFiltered': '(由 _MAX_ 项结果过滤)',
+        'infoPostFix': '',
+        'url': '',
+        'loadingRecords': '载入中...',
+      },
+      ajax: url_main + '/m_material/get_data_by_city/' + event.value[10],
+      columns: [
+        {title:'序号',data:'Id'},
+        {title:'名称',data:'Name'},
+        {title:'数量',data:'Num'},
+        {title:'单位',data:'Unit'},
+        {title:'类型',data:'Type'},
+        {title:'存放位置',data:'Position'},
+        {title:'存放时间',data:'Time'},
+        {title:'保管人',data:'Keeper'},
+        {title:'联络方式',data:'Phone'},
+      ],
+    };
+    this.model_title = '抢修物资明细表';
+    const modalRef = this.modalService.open(DetailviewComponent,{windowClass:'myCustomModalClass'}) //myCustomModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    modalRef.componentInstance.dOptions = this.dtOptions;
+    modalRef.componentInstance.model_title = this.model_title;
   }
 
 

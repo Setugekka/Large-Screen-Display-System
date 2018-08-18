@@ -7,4 +7,5 @@
 
 .myCustomModalClass .modal-dialog{
   max-width: 1500px;
+  background-color: transparent;
 }

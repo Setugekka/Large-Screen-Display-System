@@ -75,7 +75,6 @@ export class GeneratorPieComponent implements OnInit {
       console.log(echartData)
       this.Pie_Option = {
         title : {
-
           text: '辽宁省发电车辆分布',
           subtext: '安质部编制',
           left:'center',
@@ -115,7 +114,7 @@ export class GeneratorPieComponent implements OnInit {
                 rich: {
                   a: {
                     //color: '#999',
-                    color:'#fff',
+                    color:'tranaparent',
                     lineHeight: 22,
                     align: 'center'
                   },

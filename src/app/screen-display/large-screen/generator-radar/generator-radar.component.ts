@@ -56,26 +56,30 @@ export class GeneratorRadarComponent implements OnInit {
           },
           axisLine: {
             lineStyle: {
-              color: 'rgba(238, 197, 102, 0.5)'
+              color: 'rgba(238, 197, 102, 0.9)'
             }
           }
         },
         series: [{
           name: '应急发电车能力分布',
-          lineStyle:{
+          lineStyle: {
             normal: {
-              width: 1,
-              opacity: 0.5
+              color: 'rgba(245, 166, 35, 1)',
+              width: 2
             }
           },
+          top : 10,
           itemStyle: {
             normal: {
-              color: '#F9713C'
+              color: 'rgba(245, 166, 35, 1)',
+              borderColor: 'rgba(245, 166, 35, 0.3)',
+              borderWidth: 10,
             }
           },
           areaStyle: {
             normal: {
-              opacity: 0.1
+              opacity: 1,
+              color: 'rgba(245, 166, 35, 0.4)'
             }
           },
           type: 'radar',

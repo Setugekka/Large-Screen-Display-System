@@ -89,9 +89,13 @@ export class GeneratorPieComponent implements OnInit {
         //    formatter: "{a} <br/>{b}: {c} ({d}%)"
         //},
         legend: {
+          show: false,
           orient: 'vertical',
           x: 'left',
-          data:this.City
+          data: this.City,
+          textStyle: {
+            color: 'white'
+          }
         },
         series: [
           {
@@ -221,7 +225,10 @@ export class GeneratorPieComponent implements OnInit {
           legend: {
             orient: 'vertical',
             x: 'left',
-            data:this.City
+            data:this.City,
+            textStyle: {
+              color: 'white'
+            }
           },
           series: [
             {
@@ -232,7 +239,7 @@ export class GeneratorPieComponent implements OnInit {
               label: {
                 normal: {
                   formatter: '{b|{b}：}{c}  {per|{d}%}  ',
-                  //backgroundColor: '#eee',
+                  // backgroundColor: '#eee',
                   borderColor: '#aaa',
                   borderWidth: 1,
                   borderRadius: 4,

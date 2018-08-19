@@ -76,12 +76,13 @@ export class MessageScatterComponent implements OnInit {
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#034079',
+            color: '#95ffff'
           }
+
         },
         axisLine: {
           lineStyle: {
-            color: '#034079'
+            color: '#95ffff'
           }
         },
       },
@@ -91,12 +92,12 @@ export class MessageScatterComponent implements OnInit {
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#034079'
+            color: '#95ffff'
           }
         },
         axisLine: {
           lineStyle: {
-            color: '#034079'
+            color: '#95ffff'
           }
         },
         scale: true

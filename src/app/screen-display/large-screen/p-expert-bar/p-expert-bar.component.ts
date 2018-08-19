@@ -19,7 +19,111 @@ export class PExpertBarComponent implements OnInit {
       //   // 这里就可以调取接口，刷新userList列表数据
       //   alert("收到了，我立马刷新列表");
       // }
-      console.log("expert bar 收到消息 内容为  " + value);
+      this.current_city=value;
+      this.service.GetExpertDist(this.current_city).then(r => {
+        const data = this.change_bar_data(r.value_list, r.class_list);
+        this.bar_option_expert={
+          tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+              type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            },
+            formatter: function (params) {
+              var tar;
+              if (params[1].value != '-') {
+                tar = params[1];
+              }
+              else {
+                tar = params[0];
+              }
+              return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
+            }
+          },
+          grid:{left:'20%'},
+          xAxis: {
+            type : 'category',
+            splitLine: {show: false},
+            data : data.class_list,
+            nameTextStyle:{color:'#95ffff'},
+            axisLabel:{color:'#95ffff'},
+            axisLine: {
+              lineStyle: {
+                color: '#95ffff'
+              }
+            },
+          },
+          yAxis: {
+            name: '人数',
+            type : 'value',
+            nameTextStyle:{color:'#95ffff'},
+            axisLabel:{color:'#95ffff'},
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: '#95ffff'
+              }
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#95ffff'
+              }
+            },
+          },
+          series: [
+            {
+              name:'统计',
+              type: 'bar',
+              stack: '总量',
+              itemStyle: {
+                normal: {
+                  barBorderColor: 'rgba(0,0,0,0)',
+                  color: 'rgba(0,0,0,0)'
+                },
+                emphasis: {
+                  barBorderColor: 'rgba(0,0,0,0)',
+                  color: 'rgba(0,0,0,0)'
+                }
+              },
+              data: data.under_data
+            },
+            {
+              name: '人数',
+              type: 'bar',
+              stack: '总量',
+              label: {
+                normal: {
+                  show: false,
+                  position: 'top',
+                  color:'#95ffff'
+                }
+              },
+              itemStyle: {
+                normal: {
+                  barBorderRadius: 5,
+                  color: new echarts.graphic.LinearGradient(
+                    0, 0, 0, 1,
+                    [
+                      {offset: 0, color: '#14c8d4'},
+                      {offset: 1, color: '#43eec6'}
+                    ]
+                  )
+                },
+                emphasis: {
+                  color: new echarts.graphic.LinearGradient(
+                    0, 0, 0, 1,
+                    [
+                      {offset: 0, color: '#43eec6'},
+                      {offset: 0.7, color: '#13c9d5'},
+                      {offset: 1, color: '#14c8d4'}
+                    ]
+                  )
+                }
+              },
+              data: data.data
+            },
+          ]
+        };
+      });
     });
     this.service.GetExpertDist(this.current_city).then(r => {
       const data = this.change_bar_data(r.value_list, r.class_list);
@@ -46,13 +150,30 @@ export class PExpertBarComponent implements OnInit {
           splitLine: {show: false},
           data : data.class_list,
           nameTextStyle:{color:'#95ffff'},
-          axisLabel:{color:'#95ffff'}
+          axisLabel:{color:'#95ffff'},
+          axisLine: {
+            lineStyle: {
+              color: '#95ffff'
+            }
+          },
+
         },
         yAxis: {
           name: '人数',
           type : 'value',
           nameTextStyle:{color:'#95ffff'},
-          axisLabel:{color:'#95ffff'}
+          axisLabel:{color:'#95ffff'},
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: '#95ffff'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#95ffff'
+            }
+          },
         },
         series: [
           {
@@ -83,33 +204,23 @@ export class PExpertBarComponent implements OnInit {
               }
             },
             itemStyle: {
-              // normal: {
-              //   color: new echarts.graphic.LinearGradient(
-              //     0, 0, 0, 1,
-              //     [
-              //       {offset: 0, color: '#83bff6'},
-              //       {offset: 0.5, color: '#188df0'},
-              //       {offset: 1, color: '#188df0'}
-              //     ]
-              //   )
-              // },
               normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                  offset: 0,
-                  color: '#00fcae'
-                }, {
-                  offset: 1,
-                  color: '#006388'
-                }]),
-                opacity: 1,
+                barBorderRadius: 5,
+                color: new echarts.graphic.LinearGradient(
+                  0, 0, 0, 1,
+                  [
+                    {offset: 0, color: '#14c8d4'},
+                    {offset: 1, color: '#43eec6'}
+                  ]
+                )
               },
               emphasis: {
                 color: new echarts.graphic.LinearGradient(
                   0, 0, 0, 1,
                   [
-                    {offset: 0, color: '#2378f7'},
-                    {offset: 0.7, color: '#2378f7'},
-                    {offset: 1, color: '#83bff6'}
+                    {offset: 0, color: '#43eec6'},
+                    {offset: 0.7, color: '#13c9d5'},
+                    {offset: 1, color: '#14c8d4'}
                   ]
                 )
               }

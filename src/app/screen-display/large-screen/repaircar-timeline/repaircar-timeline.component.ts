@@ -56,6 +56,7 @@ export class RepaircarTimelineComponent implements OnInit {
       this.Option = {
         baseOption: {
           timeline: {
+            bottom:0,
             // y: 0,
             axisType: 'category',
             // realtime: false,
@@ -97,16 +98,21 @@ export class RepaircarTimelineComponent implements OnInit {
           calculable : true,
           grid: {
             show:false,
-            top: 80,
-            bottom: 100
+            top: 5,
+            bottom:150
+
           },
           xAxis: [
             {
               'type':'category',
               'axisLabel':{'interval':0,color:'white'},
               'data':this.cityList,
-              splitLine: {show: false},
-              bottom: 50
+              axisLine: {
+                lineStyle: {
+                  color: '#95ffff'
+                }
+              },
+              splitLine: {show: false}
             }
           ],
           yAxis: [
@@ -121,6 +127,11 @@ export class RepaircarTimelineComponent implements OnInit {
               axisLabel:{
                 color:'#fff'
               },
+              axisLine: {
+                lineStyle: {
+                  color: '#95ffff'
+                }
+              },
              splitLine:{
                lineStyle: {
                  color: ['#fff'],
@@ -130,20 +141,30 @@ export class RepaircarTimelineComponent implements OnInit {
             }
           ],
           series: [
-            {name: '应急抢修车', type: 'bar',barWidth:10,barGap:0,itemStyle:{normal: {
-              barBorderRadius: [5, 5, 0, 0],
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 1, color: 'rgba(127, 128, 225, 0.7)'
-              },{
-                offset: 0.9, color: 'rgba(72, 73, 181, 0.7)'
-              },{
-                offset: 0.31, color: 'rgba(0, 208, 208, 0.7)'
-              },{
-                offset: 0.15, color: 'rgba(0, 208, 208, 0.7)'
-              }, {
-                offset: 0, color: 'rgba(104, 253, 255, 0.7)'
-              }], false),
-            },}},
+            {name: '应急抢修车', type: 'bar',barWidth:10,barGap:0,
+              itemStyle: {
+                normal: {
+                  barBorderRadius: 5,
+                  color: new echarts.graphic.LinearGradient(
+                    0, 0, 0, 1,
+                    [
+                      {offset: 0, color: '#14c8d4'},
+                      {offset: 1, color: '#43eec6'}
+                    ]
+                  )
+                },
+                emphasis: {
+                  color: new echarts.graphic.LinearGradient(
+                    0, 0, 0, 1,
+                    [
+                      {offset: 0, color: '#43eec6'},
+                      {offset: 0.7, color: '#13c9d5'},
+                      {offset: 1, color: '#14c8d4'}
+                    ]
+                  )
+                }
+              },
+            },
           ]
         },
         options:this.optionData

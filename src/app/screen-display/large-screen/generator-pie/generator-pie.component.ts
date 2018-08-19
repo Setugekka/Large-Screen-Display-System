@@ -90,12 +90,6 @@ export class GeneratorPieComponent implements OnInit {
         //},
         legend: {
           show: false,
-          orient: 'vertical',
-          x: 'left',
-          data: this.City,
-          textStyle: {
-            color: 'white'
-          }
         },
         series: [
           {
@@ -103,6 +97,7 @@ export class GeneratorPieComponent implements OnInit {
             type:'pie',
             radius: ['40%', '55%'],
             color: ['#c487ee', '#deb140', '#49dff0', '#034079', '#6f81da', '#00ffb4'],
+            avoidLabelOverlap:true,
             label: {
               normal: {
                 formatter: '{b|{b}：}{c}  {per|{d}%}  ',
@@ -155,6 +150,10 @@ export class GeneratorPieComponent implements OnInit {
                   fontWeight: 'bold'
                 }
               }
+            },
+            labelLine:{
+              length:50,
+              length2:30
             },
             data:this.dataPosition
           }

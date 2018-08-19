@@ -74,11 +74,15 @@ export class MessageScatterComponent implements OnInit {
         //   return Months + '-' + Day + '-' + Hours;
         // },
         splitLine: {
-          show: true
+          show: true,
+          lineStyle: {
+            color: '#95ffff'
+          }
+
         },
         axisLine: {
           lineStyle: {
-            color: 'white'
+            color: '#95ffff'
           }
         },
       },
@@ -86,11 +90,14 @@ export class MessageScatterComponent implements OnInit {
         type: 'category',
         data: ['沈阳','大连','鞍山','抚顺','本溪','丹东','锦州','营口','阜新','辽阳','盘锦','铁岭','朝阳','葫芦岛'],
         splitLine: {
-          show: true
+          show: true,
+          lineStyle: {
+            color: '#95ffff'
+          }
         },
         axisLine: {
           lineStyle: {
-            color: 'white'
+            color: '#95ffff'
           }
         },
         scale: true

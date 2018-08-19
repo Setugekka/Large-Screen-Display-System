@@ -34,7 +34,7 @@ export class RepaircarTimelineComponent implements OnInit {
           xAxis: [
             {
               'type':'category',
-              'axisLabel':{'interval':0,'rotate':40},
+              'axisLabel':{'interval':0,'rotate':50},
               'data':res['cartypeList'][item],
               splitLine: {show: false}
             }
@@ -74,6 +74,7 @@ export class RepaircarTimelineComponent implements OnInit {
               //   return (new Date(s)).getFullYear();
               // }
             },
+            bottom: 0,
             itemStyle:{
               color:'lightblue'
             },

@@ -163,6 +163,38 @@ export class GeneratorBarComponent implements OnInit {
                 },
               },
             },
+            // itemStyle: {//图形样式
+            //   normal: {
+            //     barBorderRadius: [5, 5, 0, 0],
+            //     // 蓝紫
+            //     // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            //     //   offset: 0,
+            //     //   color: '#1a98f8'
+            //     // }, {
+            //     //   offset: 1,
+            //     //   color: '#7049f0'
+            //     // }]),
+            //     // 蓝绿
+            //     // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            //     //   offset: 0,
+            //     //   color: '#96d668'
+            //     // }, {
+            //     //   offset: 1,
+            //     //   color: '#01babc'
+            //     // }])
+            //     // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            //     //   offset: 1, color: 'rgba(127, 128, 225, 0.7)'
+            //     // },{
+            //     //   offset: 0.9, color: 'rgba(72, 73, 181, 0.7)'
+            //     // },{
+            //     //   offset: 0.31, color: 'rgba(0, 208, 208, 0.7)'
+            //     // },{
+            //     //   offset: 0.15, color: 'rgba(0, 208, 208, 0.7)'
+            //     // }, {
+            //     //   offset: 0, color: 'rgba(104, 253, 255, 0.7)'
+            //     // }], false),
+            //   },
+            // },
             itemStyle: {
               normal: {
                 barBorderRadius: 5,
@@ -189,7 +221,7 @@ export class GeneratorBarComponent implements OnInit {
 
         ]
       };
-    })
+    });
   }
 
   refresh(city){

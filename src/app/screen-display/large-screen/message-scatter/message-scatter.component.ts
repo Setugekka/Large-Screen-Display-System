@@ -123,13 +123,23 @@ export class MessageScatterComponent implements OnInit {
             shadowBlur: 10,
             shadowColor: 'rgba(120, 36, 50, 0.5)',
             shadowOffsetY: 5,
-            color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
-              offset: 0,
-              color: 'rgb(251, 118, 123)'
-            }, {
-              offset: 1,
-              color: 'rgb(204, 46, 72)'
-            }])
+            color: {
+              type: 'radial',
+              x: 0.5,
+              y: 0.5,
+              r: 0.5,
+              colorStops: [{
+                offset: 0,
+                color: '#ae0876' // 0% 处的颜色
+              }, {
+                offset: 0.5,
+                color: '#cd0a8b' // 50% 处的颜色
+              }, {
+                offset: 1,
+                color: '#f505a4' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
           }
         }
       }, {
@@ -153,13 +163,30 @@ export class MessageScatterComponent implements OnInit {
             shadowBlur: 10,
             shadowColor: 'rgba(25, 100, 150, 0.5)',
             shadowOffsetY: 5,
-            color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
-              offset: 0,
-              color: 'rgb(129, 227, 238)'
-            }, {
-              offset: 1,
-              color: 'rgb(25, 183, 207)'
-            }])
+            // color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+            //   offset: 0,
+            //   color: 'rgb(129, 227, 238)'
+            // }, {
+            //   offset: 1,
+            //   color: 'rgb(25, 183, 207)'
+            // }])
+            color: {
+              type: 'radial',
+              x: 0.5,
+              y: 0.5,
+              r: 0.5,
+              colorStops: [{
+                offset: 0,
+                color: '#a7ac0e' // 0% 处的颜色
+              }, {
+                offset: 0.5,
+                color: '#babc0c' // 50% 处的颜色
+              }, {
+                offset: 1,
+                color: '#f6f701' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
           }
         }
       }]

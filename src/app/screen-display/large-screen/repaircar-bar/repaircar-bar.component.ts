@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {url_main} from '../config'
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {DetailviewComponent} from "../detailview/detailview.component"
+import {EventEmitterService} from "../event-emitter.service";
 declare var echarts:any;
 
 @Component({
@@ -19,7 +20,7 @@ export class RepaircarBarComponent implements OnInit {
   bar_option:any;
   className:any;
   dtOptions:any;
-  constructor(private http:HttpClient,private modalService:NgbModal) { }
+  constructor(private http:HttpClient,private modalService:NgbModal,public emitService: EventEmitterService) { }
 
   ngOnInit() {
     this.Repaircar_Count=[];
@@ -183,6 +184,13 @@ export class RepaircarBarComponent implements OnInit {
         ]
       };
     })
+    this.emitService.eventEmit.subscribe((value: any) => {
+      // if(value == "userList") {
+      //   // 这里就可以调取接口，刷新userList列表数据
+      //   alert("收到了，我立马刷新列表");
+      // }
+      this.refresh(value)
+    });
     //this.refresh('抚顺')
   }
   refresh(city){

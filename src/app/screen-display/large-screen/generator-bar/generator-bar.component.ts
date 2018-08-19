@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {url_main} from '../config'
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {DetailviewComponent} from "../detailview/detailview.component";
+import {EventEmitterService} from "../event-emitter.service";
 declare var echarts:any;
 
 @Component({
@@ -24,12 +25,17 @@ export class GeneratorBarComponent implements OnInit {
   dtOptions:DataTables.Settings={};
   Records:Array<string>;
   model_title:any;
-  constructor(private http:HttpClient,private modalService:NgbModal) { }
+  constructor(private http:HttpClient,private modalService:NgbModal,public emitService: EventEmitterService) { }
 
   ngOnInit() {
-
     this.Generator_Count=[];
     this.City = [];
+    this.emitService.eventEmit.subscribe((value: any) => {
+      // if(value == "userList") {
+      //   // 这里就可以调取接口，刷新userList列表数据
+      //   alert("收到了，我立马刷新列表");
+      // }
+    });
     this.http.get(url_main+'/generator/count/City').subscribe(res => {
       this.DataSeries=res;
       this.Generator_Count=[];

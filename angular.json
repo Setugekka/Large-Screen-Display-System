@@ -41,6 +41,7 @@
               "node_modules/@swimlane/ngx-datatable/release/index.css",
               "node_modules/@swimlane/ngx-datatable/release/assets/icons.css",
               "src/assets/css/demo.css",
+              "src/assets/css/blur_admin.css",
               "src/assets/sass/app.scss",
               "src/assets/css/owl.carousel.css",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css",

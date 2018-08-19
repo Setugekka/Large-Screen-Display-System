@@ -1,0 +1,14 @@
+<div class="modal-header">
+  <h4 class="modal-title" style="color: #009DA0">{{model_title}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <table datatable [dtOptions]="dOptions" class="row-border hover table-striped"></table>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-raised btn-raised btn-primary" (click)="activeModal.close('Close click')">
+    <i class="ft-x"></i>关闭
+  </button>
+</div>

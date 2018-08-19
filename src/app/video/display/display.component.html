@@ -1,5 +1,21 @@
-<div>
-<div id="video1" class="video" style="width:500px;float:left"></div>
-<div id="video2" class="video" style="width:500px;float:left;margin-top: 0px;margin-left: 20px"></div>
-<div id="video3" class="video" style="width:500px;float:left;margin-top: 0px;margin-left: 20px"></div>
+
+<div id="video" class="card"  style="width:25%;height:92%;float:left;margin-top: 0px;">
+  <div  *ngIf="index==='0' || index==='1'" class="card" style="margin-top: 0px;height:31%" >
+    <div  id="video1" class="video" style="width:98%;height:98%;margin: auto" ></div>
+  </div>
+  <div *ngIf="number==='0' || number==='2'" class="card" style="margin-top: 1%;height:31%">
+    <div id="video2" class="video" style="width:98%;height:98%;margin: auto"  ></div>
+  </div>
+  <div *ngIf="number==='0' || number==='3'" class="card" style="margin-top: 1%;height:31%">
+<div id="video3" class="video" style="width:98%;height:98%;margin: auto"  ></div>
+  </div>
 </div>
+<div id="outer" class="card" style="width:75%;float:right;height:835px;margin-top: 0px;background-color: #154e90">
+  <div ngbDropdown #myDrop1="ngbDropdown" style="background-color: #031845;height:40px;text-align: right">
+    <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">选择地区：</button>
+    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu2" id="district">
+    </div>
+  </div>
+    <div id="map" style="width:100%;margin-top: 0px"></div>
+</div>
+

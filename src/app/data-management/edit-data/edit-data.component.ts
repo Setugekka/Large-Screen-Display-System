@@ -12,8 +12,6 @@ import { LocalDataSource } from 'ng2-smart-table';
 export class EditDataComponent  {
 
   source: LocalDataSource;
-  filterSource: LocalDataSource;
-  alertSource: LocalDataSource;
 
   constructor() {
     this.source = new LocalDataSource(tableData.data); // create the source

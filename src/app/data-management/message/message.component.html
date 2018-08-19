@@ -1,7 +1,18 @@
-<div class="card" *ngIf="click===true">
-  <label *ngFor="let a of head;let i = index">{{a}}:
-    <input type="text" value = {{data[i]}} [(ngModel)] ="data[i]" >
-  </label>
-  <button (click)="edit()">确定修改</button>
+<div class="modal-dialog" *ngIf="click">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="edit()" >×</button>
+      <h4 class="modal-title">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+      <label *ngFor="let a of head;let i = index">{{a}}:
+        <input type="text" value = {{data[i]}} [(ngModel)] ="data[i]" >
+      </label>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="edit()">取消</button>
+      <button type="button" class="btn btn-default" (click)="edit()">确定</button>
+    </div>
+  </div>
 </div>
 

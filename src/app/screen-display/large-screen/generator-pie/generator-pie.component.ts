@@ -4,6 +4,7 @@ import {url_main} from '../config'
 import {componentRefresh} from "@angular/core/src/render3/instructions";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {DetailviewComponent} from "../detailview/detailview.component"
+import {EventEmitterService} from "../event-emitter.service";
 @Component({
   selector: 'app-generator-pie',
   templateUrl: './generator-pie.component.html',
@@ -19,8 +20,15 @@ export class GeneratorPieComponent implements OnInit {
   rich: any;
 
   dtOptions:any;
-  constructor(private http:HttpClient,private modalService:NgbModal) { }
+  constructor(private http:HttpClient,private modalService:NgbModal,public emitService: EventEmitterService) { }
   ngOnInit() {
+    this.emitService.eventEmit.subscribe((value: any) => {
+      // if(value == "userList") {
+      //   // 这里就可以调取接口，刷新userList列表数据
+      //   alert("收到了，我立马刷新列表");
+      // }
+      this.refresh(value)
+    });
 
     //获取按容量分布数据
     // this.http.get(url_main+'/generator/count/Capacity').subscribe(res =>{

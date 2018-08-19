@@ -74,7 +74,6 @@ export class RepaircarTimelineComponent implements OnInit {
               //   return (new Date(s)).getFullYear();
               // }
             },
-            bottom: 0,
             itemStyle:{
               color:'lightblue'
             },

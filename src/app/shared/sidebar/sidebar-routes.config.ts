@@ -3,121 +3,135 @@ import {RouteInfo} from './sidebar.metadata';
 // Sidebar menu Routes and data
 export const ROUTES: RouteInfo[] = [
   {
-    path: '/MainPage',
-    title: '数据展示面板',
+    path: '',
+    title: '应急组织体系',
     icon: 'ft-sliders',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/DashBoard/Overview', title: '总体数据概览面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Reservoir', title: '水库数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Weather', title: '气象数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Highway', title: '公路状况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Equipment', title: '应急装备数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Staff', title: '应急人员数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DashBoard/Material', title: '应急物资数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
-    ]
+      { path: '/EmergencyOrganization/ProvinceOrganization', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/EmergencyOrganization/CityOrganization', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      ]
   },
   {
-    path: '',
-    title: '应急事件',
+    path: '/EmergencyRegime/Institutions',
+    title: '应急制度体系',
     icon: 'ft-file-text',
-    class: 'has-sub',
+    class: '',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
-    submenu: [
-      { path: '/', title: '应急事件展示', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/EmergencyEvent/GenerateReport', title: '应急事件报表生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-    ]
+    submenu: []
   },
   {
     path: '',
-    title: '应急辅助决策',
+    title: '应急预案体系',
     icon: 'ft-compass',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/', title: '应急预案管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '人员调配', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '物资调配', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '装备调配', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '预测信息', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ContingencyPlan/ProvincePlan', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ContingencyPlan/CityPlan', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
-    title: '视频会商',
+    title: '应急培训演练体系',
     icon: 'ft-video',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/Video/VideodataSetting', title: '视频数据配置', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/Video/Display', title: '大屏展示', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TrainingExercises/ProvinceTraining', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TrainingExercises/CityTraining', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
-    title: '应急数据管理',
+    title: '应急科技支撑体系',
     icon: 'ft-server',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/DataManagement/InputFile', title: '导入数据', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DataManagement/EditData', title: '数据管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/DataManagement/OperationLog', title: '操作日志', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/D5000', title: 'D5000系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Weather', title: '气象系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Irrigation', title: '水利系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Earthquake', title: '地震系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Firecontrol', title: '消防系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Police', title: '公安系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Medical', title: '医疗系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/TechnicalSupport/Traffic', title: '路况系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
-    title: '系统管理',
+    title: '处置救援能力',
     icon: 'ft-settings',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/SystemManagement/AccessControl', title: '权限控制', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/SystemManagement/UserManagement', title: '用户信息维护', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急抢修队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急基干分队', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急专家队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '新闻舆情队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '外来施工队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
-    title: '个人信息管理',
+    title: '综合保障能力',
     icon: 'ft-edit',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/MyProfile/EditProfile', title: '个人信息维护', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/MyProfile/MyAuthority', title: '当前权限', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/MyProfile/OperationLog', title: '操作日志', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急车辆', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急装备', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '后勤保障物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急发电车', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急照明', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '', title: '应急发电机', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
     path: '',
-    title: '个性化大屏展示配置',
+    title: '舆情应对能力',
     icon: 'ft-airplay',
     class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/ScreenDisplay/LargeScreen', title: '数据面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '数据框显示项目', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '显示的地区', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '视频接入设置', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '图表选择', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-
+      { path: '', title: 'SG186舆情预测及应对方案生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/', title: '舆情应对处置措施', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
+    ]
+  },
+  {
+    path: '',
+    title: '预防监测和监控预警系统',
+    icon: 'ft-airplay',
+    class: 'has-sub',
+    badge: '',
+    badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
+    isExternalLink: false,
+    submenu: [
+      { path: '', title: '视频监控系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/', title: '视频传输系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/', title: '全省系统图', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/', title: '预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
 ];
+
+

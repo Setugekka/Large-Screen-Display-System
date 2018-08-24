@@ -11,4 +11,5 @@ export const Urls = {
   GetAllEquipment: host + '/m_equipment/get_all',
   GetAllStuff: host + '/m_stuff/get_all',
   GetAllMaterial: host + '/m_material/get_all',
+  GetOrganization:host+'/organization/get_list'
 };

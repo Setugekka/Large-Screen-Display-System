@@ -1,8 +1,4 @@
 import { Routes, RouterModule } from '@angular/router';
-import {DashboardModule} from "../../dashboard/dashboard.module";
-import {SystemManagementModule} from "../../system-management/system-management.module";
-import {ScreenDisplayModule} from '../../screen-display/screen-display.module';
-
 // Route for content layout without sidebar, navbar and footer for pages like Login, Registration etc...
 
 export const FULL_ROUTES: Routes = [
@@ -37,5 +33,41 @@ export const FULL_ROUTES: Routes = [
   {
     path: 'ScreenDisplay',
     loadChildren: './screen-display/screen-display.module#ScreenDisplayModule'
-  }
+  },
+  {
+    path: 'EmergencyOrganization',
+    loadChildren: './emergency-organization/emergency-organization.module#EmergencyOrganizationModule'
+  },
+  {
+    path: 'EmergencyRegime',
+    loadChildren: './emergency-regime/emergency-regime.module#EmergencyRegimeModule'
+  },
+  {
+    path: 'ContingencyPlan',
+    loadChildren: './contingency-plan/contingency-plan.module#ContingencyPlanModule'
+  },
+  {
+    path: 'TrainingExercises',
+    loadChildren: './training-exercises/training-exercises.module#TrainingExercisesModule'
+  },
+  {
+    path: 'TechnicalSupport',
+    loadChildren: './technical-support/technical-support.module#TechnicalSupportModule'
+  },
+  // {
+  //   path: 'DisposeRescue',
+  //   loadChildren: './dispose-rescue/dispose-rescue.module#DisposeRescueModule'
+  // },
+  // {
+  //   path: 'IntegratedSupportability',
+  //   loadChildren: './integrated-supportability/integrated-supportability.module#IntegratedSupportabilityModule'
+  // },
+  // {
+  //   path: 'PublicOpinionResponse',
+  //   loadChildren: './public-opinion-response/public-opinion-response.module#PublicOpinionResponseModule'
+  // },
+  // {
+  //   path: 'PreventionMonitoring',
+  //   loadChildren: './prevention-monitoring/prevention-monitoring.module#PreventionMonitoringModule'
+  // }
 ];

@@ -27,6 +27,7 @@ import { StuffCircleComponent} from './large-screen/stuff-circle/stuff-circle.co
 import {MaterialCircleComponent} from './large-screen/material-circle/material-circle.component';
 import { MessageScatterComponent } from './large-screen/message-scatter/message-scatter.component';
 import { ClockComponent } from './large-screen/clock/clock.component';
+import { MapExtendComponent } from './large-screen/map-extend/map-extend.component';
 
 
 
@@ -64,7 +65,8 @@ import { ClockComponent } from './large-screen/clock/clock.component';
     StuffCircleComponent,
     MaterialCircleComponent,
     MessageScatterComponent,
-    ClockComponent
+    ClockComponent,
+    MapExtendComponent
   ],
 
 })

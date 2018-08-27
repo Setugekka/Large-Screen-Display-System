@@ -9,3 +9,7 @@
   max-width: 1500px;
   background-color: transparent;
 }
+.FileModalClass .modal-dialog{
+  max-width: 800px;
+  background-color: transparent;
+}

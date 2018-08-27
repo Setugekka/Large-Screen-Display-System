@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FileviewComponent} from '../fileview/fileview.component';
+import {Http} from '@angular/http';
+import { Urls} from '../../shared/model/model.url';
 
 
 
@@ -13,47 +15,21 @@ declare var echarts: any;
 })
 
 export class InstitutionsComponent implements OnInit {
-  data = [{
-    "value": 3,
-    "name": "《中华人民共和国应急法》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国家级别'
-  }, {
-    "value": 3,
-    "name": "《中华人民共和国安全法》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国家级别'
-  }, {
-    "value": 2.5,
-    "name": "《国家能源监管局预案评审及备案细则》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国家能监局'
-  }, {
-    "value": 2,
-    "name": "《国家电网公司应急管理工作规定》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国网公司'
-  }, {
-    "value": 2,
-    "name": "《国家电网公司应急预案管理办法》",
-    'url': '/assets/pdf/test.pdf',
-  'classification': '国网公司'
-  }, {
-    "value": 2,
-    "name": "《国家电网公司应急预案评审及备案管理办法》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国网公司'
-  }, {
-    "value": 2,
-    "name": "《国家电网公司救援基干管理工作规定》",
-    'url': '/assets/pdf/test.pdf',
-    'classification': '国网公司'
-  }];
+  private  urls = Urls;
+  private  data = {};
   treemap_option: any;
-  constructor(private modalService: NgbModal) { }
+  GetInstitutions():  any {
+    const data = this.http.get(this.urls.GetInstitutions, )
+      .toPromise()
+      .then(response => response.json());
+    return data;
+  }
+  constructor(private modalService: NgbModal, private http: Http) { }
 
   ngOnInit() {
-    this.treemap_option = {
+    this.GetInstitutions().then(r => {
+      this.data = r
+      this.treemap_option = {
       title: {
         text: '应急预案体系',
         subtext: '',
@@ -113,9 +89,12 @@ export class InstitutionsComponent implements OnInit {
         data: this.data
       }]
     };
+  });
   }
   onChartClick(event) {
     const modalRef = this.modalService.open(FileviewComponent, {windowClass: 'FileModalClass'}); // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    modalRef.componentInstance.file_src = event.data['url'];
+    console.log(event.data['url']);
   }
 
 }

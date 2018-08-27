@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { Urls} from '../../shared/model/model.url';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-city-plan',
@@ -166,7 +169,8 @@ export class CityPlanComponent implements OnInit {
     }, {
       'name': '专项18'
     }];
-  links = [{
+  links = [
+    {
     'target': '专项1',
     'source': '整体预案体系',
     'category': '专项1'
@@ -239,6 +243,8 @@ export class CityPlanComponent implements OnInit {
     'source': '整体预案体系',
     'category': '专项18'
   }];
+  private name = '';  // 专项文件名称
+  private  urls = Urls;
   choosetown(city): any {
     this.city_name = city
     this.town_name = '请选择区县'
@@ -252,8 +258,30 @@ export class CityPlanComponent implements OnInit {
   choosentown(town): any {
     this.town_name = town;
   }
-
-  constructor() { }
+  onChartClick(event) {
+    this.name = event.name;
+    if (this.city_name === '请选择城市') {
+      alert('请选择城市');
+    } else if (this.town_name === '请选择区县') {
+      alert('请选择区县');
+    } else {
+      this.GetPlan(this.name).then(r => {
+        const url = 'http://localhost:4200/src' + r;
+        window.open(url);
+      });
+      console.log(this.name);
+    }
+  }
+  GetPlan(name= null):  any {
+    const params = {
+      'name': name
+    };
+    const data = this.http.get(this.urls.GetPlan, {params: params})
+      .toPromise()
+      .then(response => response.json());
+    return data;
+  }
+  constructor(private http: Http, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.option = {

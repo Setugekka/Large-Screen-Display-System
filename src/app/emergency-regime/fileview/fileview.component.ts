@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -6,8 +6,9 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './fileview.component.html',
   styleUrls: ['./fileview.component.css']
 })
+
 export class FileviewComponent implements OnInit {
-  file_src = '/assets/pdf/test.pdf';
+  @Input() file_src
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {

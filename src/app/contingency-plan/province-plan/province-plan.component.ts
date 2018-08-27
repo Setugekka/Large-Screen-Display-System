@@ -111,7 +111,8 @@ export class ProvincePlanComponent implements OnInit {
     'draggable': true,
     'category': '专项19',
     'url': '/assets/pdf/test.pdf'
-  }];
+  }
+  ];
   category = [
     {
       'name': '整体预案体系'
@@ -147,14 +148,16 @@ export class ProvincePlanComponent implements OnInit {
     'name': '专项15'
   }, {
     'name': '专项16'
-  },{
+  }, {
     'name': '专项17'
   }, {
     'name': '专项18'
-  },{
+  }, {
     'name': '专项19'
-  }];
-  links = [{
+  }
+  ];
+  links = [
+    {
     'target': '专项1',
     'source': '整体预案体系',
     'category': '专项1'
@@ -233,7 +236,11 @@ export class ProvincePlanComponent implements OnInit {
   },
     ];
 
-    constructor() { }
+  constructor() { }
+  onChartClick($event) {
+    console.log(event);
+    window.open('http://localhost:4200/src/assets/pdf/test.pdf');
+  }
 
   ngOnInit() {
       this.option = {

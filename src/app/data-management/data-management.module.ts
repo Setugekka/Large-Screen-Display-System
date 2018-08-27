@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataManagementRoutingModule} from './data-management-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ChartistModule} from 'ng-chartist';
@@ -37,7 +38,8 @@ import { MessageComponent} from './message/message.component';
     Ng2SmartTableModule,
     DataTablesModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileUploadModule
   ],
   declarations: [
     EditDataComponent,

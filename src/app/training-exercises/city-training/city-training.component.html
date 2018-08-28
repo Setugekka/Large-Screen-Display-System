@@ -1,12 +1,41 @@
 <div class="row">
 <div class="col-sm-12 col-md-6">
   <div ngbDropdown #myDrop1="ngbDropdown" style="background-color: #031845;height:40px;text-align: right">
-    <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">选择地区：</button>
-    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu2" id="district">
+    <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">{{selected}}</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" *ngFor="let town of selecteddata" (click)="choosetown(town)">{{town}}</button>
     </div>
-  </div>
-  <div id="map" style="height:600px;margin-top: 0px"></div>
+    </div>
+  <div echarts [options]="option" (chartClick)="onChartClick($event)" [loading]="!mapLoaded" style="height: 620px"></div>
 </div>
-  <div class="col-sm-12 col-md-6">
-  </div>
-</div>
+  <div class="col-sm-12 col-md-6" style="background-color: #142058">
+    <div echarts [options]="bar_option" style="height: 240px"></div>
+    <div class="card-block">
+        <div class="row">
+          <P style="font-size: 20px; color: white">已上交区县:</P>
+        </div>
+          <p>
+            <button class="btn btn-raised gradient-crystal-clear white" (click)='click()' *ngFor="let town of commited">{{town}}</button>
+          </p>
+        <div class="row">
+          <p style="font-size: 20px; color: white">未上交区县:</p>
+        </div>
+          <p>
+            <button class="btn btn-raised gradient-nepal white" (click)='click()' *ngFor="let town of uncommited">{{town}}</button>
+          </p>
+    </div>
+    <div class="card-block">
+      <div class="row">
+       <P style="font-size: 20px; color: white">{{title}}</P>
+      </div>
+      <div class="row">
+       <button class="btn btn-flat btn-warning" (click)="click()">点击查看详情>>></button>
+      </div>
+      </div>
+    </div>
+      </div>
+
+
+
+
+

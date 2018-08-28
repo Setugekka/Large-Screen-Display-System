@@ -10,13 +10,13 @@ declare var $: any;
 })
 export class MapComponent implements OnInit {
   mapLoaded = false;
-  private activeArea=[];
+  private activeArea = [];
   private levelColorMap = {
     '1': 'rgba(241, 109, 115, .8)',
     '2': 'rgba(255, 235, 59, .7)',
     '3': 'rgba(147, 235, 248, 1)'
   };
-  private data=[{name:"沈阳",value:10,level:1}];
+  private data = [{name:"沈阳",value:10,level:1}];
   private geoCoordMap = {
     '大连': [],
     '锦州': [],
@@ -42,15 +42,15 @@ export class MapComponent implements OnInit {
       this.mapLoaded=true;
       echarts.registerMap('liaoning', geoJson);
       const levelColorMap = this.levelColorMap;
-      this.chartoption={
-      tooltip:{
-        show:true,
+      this.chartoption = {
+      tooltip: {
+        show: true,
         trigger: 'item',
         showDelay: 0,
         transitionDuration: 0.2,
       },
       geo: [{
-        id:0,
+        id: 0,
         map: 'liaoning',
         // roam: true,
         zoom: 1.2,
@@ -67,7 +67,7 @@ export class MapComponent implements OnInit {
             }
           }
         },
-        selectedMode:'single',
+        selectedMode: 'single',
         itemStyle: {
           normal: {
             borderColor: 'rgba(147, 235, 248, 1)',
@@ -114,7 +114,7 @@ export class MapComponent implements OnInit {
                   }
                 }
               }
-            }
+            };
           } else {
             return {
               name: item,

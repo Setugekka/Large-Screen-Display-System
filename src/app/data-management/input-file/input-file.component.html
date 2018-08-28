@@ -1,4 +1,4 @@
-<div class="row justify-content-md-center" *ngIf="!click===true" style="background-image: url(assets/image/back.jpg)">
+<div class="row justify-content-md-center" *ngIf="!click===true" >
   <div class="col-md-6">
     <div class="card">
       <div class="card-header" style="text-align: center;background-color: #FFCC80">
@@ -14,7 +14,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="projectinput1" style="font-size: 16px">姓名</label>
-                    <input type="text" id="projectinput1" class="form-control"  name="fname">
+                    <input type="text" id="projectinput1" class="form-control"  name="fname" [value] ="input_name" [(ngModel)] ="input_name" readonly="readonly">
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -40,38 +40,60 @@
               </div>
 
               <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 数据信息</h4>
-
-              <div class="form-group">
-                <label for="companyName" style="font-size: 16px">所属地区</label>
-                <input type="text" id="companyName" class="form-control"  name="company">
-              </div>
-
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput5" style="font-size: 16px">数据类型</label>
-                    <select id="projectinput5" name="interested" class="form-control">
-                      <option value="none" selected="" disabled="">数据类型</option>
-                      <option value="design">气象</option>
-                      <option value="development">公路</option>
-                      <option value="illustration">水库</option>
-                      <option value="branding">人员</option>
-                      <option value="video">物资</option>
+                    <label for="projectinput5" style="font-size: 16px">物资类别</label>
+                    <select id="projectinput5" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
+                      <option value="" selected="" disabled="">物资类别</option>
+                      <option >生产</option>
+                      <option >照明</option>
+                      <option >发电</option>
+                      <option >保障</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput4" style="font-size: 16px">数据量</label>
+                    <label for="projectinput4" style="font-size: 16px">物资数量</label>
                     <input type="text" id="counts" class="form-control"  name="company">
                   </div>
                 </div>
               </div>
-
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="cities" style="font-size: 16px">所属城市</label>
+                    <select id="cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="town" style="font-size: 16px">所属区县</label>
+                    <select id="town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-md-6">
               <div class="form-group">
                 <label for="projectinput4" style="font-size: 16px">选择文件</label>
                 <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="basicInputFile">
+              </div>
+              </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput4" style="font-size: 16px">选择文件</label>
+                    <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -79,7 +101,7 @@
               <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
                 <i class="ft-x"></i> 取消
               </button>
-              <button type="button" class="btn btn-raised btn-raised btn-primary">
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
                 <i class="fa fa-check-square-o"></i> 保存
               </button>
             </div>

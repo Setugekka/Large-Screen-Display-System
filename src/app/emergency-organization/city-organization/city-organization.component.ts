@@ -182,26 +182,6 @@ export class CityOrganizationComponent implements OnInit {
 
   ngOnInit() {
     this.option = {
-    //   title: {
-    //     text: '组织结构图',
-    //     textAlign: 'center',
-    //     left: '50%',
-    //     top: '20',
-    //     textStyle: {
-    //       color: '#FFF',
-    //       fontWeight: 'normal',
-    //       fontSize: 36,
-    //     },
-    //     formatter: function() {
-    //       if (this.city_name === '请选择城市' ) {
-    //         return '辽宁省组织结构图';
-    //       } else if (this.town_name === '请选择区县') {
-    //         return '辽宁省' && this.city_name && '市组织结构图';
-    //       } else {
-    //         return '辽宁省' && this.city_name && '市' && this.town_name && '组织结构图';
-    //       }
-    //     }
-    //   },
       tooltip: {
         trigger: 'item',
         triggerOn: 'mousemove',
@@ -255,21 +235,6 @@ export class CityOrganizationComponent implements OnInit {
             }
           }
         },
-
-
-        /* leaves: {
-             label: {
-                 normal: {
-                     position: 'right',
-                     verticalAlign: 'middle',
-                     align: 'left'
-                 }
-             }
-         },*/
-
-        // expandAndCollapse: true,
-        // animationDuration: 550,
-        // animationDurationUpdate: 750
       }]
     };
   }

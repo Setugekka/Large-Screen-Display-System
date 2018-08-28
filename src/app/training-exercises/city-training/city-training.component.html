@@ -1,6 +1,6 @@
 <div class="row">
 <div class="col-sm-12 col-md-6">
-  <div ngbDropdown #myDrop1="ngbDropdown" style="background-color: #031845;height:40px;text-align: right">
+  <div ngbDropdown #myDrop1="ngbDropdown" style="background-color: transparent;height:40px;text-align: right">
     <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">{{selected}}</button>
     <div ngbDropdownMenu aria-labelledby="dropdownMenu2">
       <button class="dropdown-item" *ngFor="let town of selecteddata" (click)="choosetown(town)">{{town}}</button>
@@ -8,23 +8,25 @@
     </div>
   <div echarts [options]="option" (chartClick)="onChartClick($event)" [loading]="!mapLoaded" style="height: 620px"></div>
 </div>
-  <div class="col-sm-12 col-md-6" style="background-color: #142058">
-    <div echarts [options]="bar_option" style="height: 240px"></div>
+  <div class="col-md-6" style="background-color: transparent">
+    <div echarts [options]="bar_option" style="height: 220px"></div>
     <div class="card-block">
-        <div class="row">
+        <div class="row col-md-12" >
           <P style="font-size: 20px; color: white">已上交区县:</P>
         </div>
-          <p>
-            <button class="btn btn-raised gradient-crystal-clear white" (click)='click()' *ngFor="let town of commited">{{town}}</button>
-          </p>
+          <span *ngFor="let town of commited" style="margin:2px">
+            <button class="btn btn-raised gradient-crystal-clear white" (click)='click()' >{{town}}</button>
+          </span>
+      <div style="height: 30px"></div>
         <div class="row">
           <p style="font-size: 20px; color: white">未上交区县:</p>
         </div>
-          <p>
-            <button class="btn btn-raised gradient-nepal white" (click)='click()' *ngFor="let town of uncommited">{{town}}</button>
-          </p>
+          <span *ngFor="let town of uncommited" style="margin:2px">
+            <button class="btn btn-raised gradient-nepal white" (click)='unclick()' >{{town}}</button>
+          </span>
     </div>
     <div class="card-block">
+      <div style="height: 30px"></div>
       <div class="row">
        <P style="font-size: 20px; color: white">{{title}}</P>
       </div>

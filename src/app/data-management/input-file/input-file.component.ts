@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FileUploader} from "ng2-file-upload";
+import {FileUploader} from 'ng2-file-upload';
 import * as XLSX from 'xlsx';
 
 declare var $: any;
@@ -11,6 +11,15 @@ declare var $: any;
 export class InputFileComponent {
   inputdata = [];
   m_type = '';
+  r_type = '';
+  g_Capacity = '';
+  ex_education = '';
+  ma_education = '';
+  ex_Type = '';
+  re_Type = '';
+  ma_Type = '';
+  re_Position = '';
+  g_Capacity_list = ['30', '50', '68', '110', '125', '200', '255', '260', '300', '320', '360', '400', '450', '500' ];
   city_list = ['沈阳' , '大连', '鞍山', '抚顺', '本溪', '丹东' , '锦州', '营口', '阜新', '辽阳', '盘锦' , '铁岭', '朝阳', '葫芦岛', '省检修'];
   data1 = [
     {name:'沈阳',value:['和平区','浑南区','皇姑区','沈河区','大东区','铁西区','苏家屯区','沈北新区','于洪区','辽中区','新民市','康平县','法库县']},

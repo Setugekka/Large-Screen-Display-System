@@ -79,11 +79,11 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '', title: '应急抢修队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急基干分队', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急专家队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '新闻舆情队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '外来施工队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DisposeRescue/Repair', title: '应急抢修队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DisposeRescue/Manager', title: '应急基干分队', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DisposeRescue/Expert', title: '应急专家队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DisposeRescue/News', title: '新闻舆情队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/DisposeRescue/Worker', title: '外来施工队伍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
@@ -95,13 +95,13 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '', title: '应急物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急车辆', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急装备', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '后勤保障物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急发电车', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急照明', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '', title: '应急发电机', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/Material', title: '应急物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/Vehicle', title: '应急车辆', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/Equipment', title: '应急装备', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/LogisticsMaterial', title: '后勤保障物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/GeneratorCar', title: '应急发电车', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/Alternator', title: '应急照明', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/IntegratedSupportability/Lighting', title: '应急发电机', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
@@ -113,8 +113,8 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '', title: 'SG186舆情预测及应对方案生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '舆情应对处置措施', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
+      { path: '/PublicOpinionResponse/Status', title: 'SG186舆情预测及应对方案生成', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/PublicOpinionResponse/Management', title: '舆情应对处置措施', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
     ]
   },
   {
@@ -126,10 +126,10 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '', title: '视频监控系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '视频传输系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '全省系统图', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/', title: '预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/PreventionMonitoring/VideoSurveillance', title: '视频监控系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/PreventionMonitoring/VideoTransmission', title: '视频传输系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/PreventionMonitoring/SystemMap', title: '全省系统图', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/PreventionMonitoring/WarningSignals', title: '预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
 ];

@@ -54,20 +54,20 @@ export const FULL_ROUTES: Routes = [
     path: 'TechnicalSupport',
     loadChildren: './technical-support/technical-support.module#TechnicalSupportModule'
   },
-  // {
-  //   path: 'DisposeRescue',
-  //   loadChildren: './dispose-rescue/dispose-rescue.module#DisposeRescueModule'
-  // },
-  // {
-  //   path: 'IntegratedSupportability',
-  //   loadChildren: './integrated-supportability/integrated-supportability.module#IntegratedSupportabilityModule'
-  // },
-  // {
-  //   path: 'PublicOpinionResponse',
-  //   loadChildren: './public-opinion-response/public-opinion-response.module#PublicOpinionResponseModule'
-  // },
-  // {
-  //   path: 'PreventionMonitoring',
-  //   loadChildren: './prevention-monitoring/prevention-monitoring.module#PreventionMonitoringModule'
-  // }
+  {
+    path: 'DisposeRescue',
+    loadChildren: './dispose-rescue/dispose-rescue.module#DisposeRescueModule'
+  },
+  {
+    path: 'IntegratedSupportability',
+    loadChildren: './integrated-supportability/integrated-supportability.module#IntegratedSupportabilityModule'
+  },
+  {
+    path: 'PublicOpinionResponse',
+    loadChildren: './public-opinion-response/public-opinion-response.module#PublicOpinionResponseModule'
+  },
+  {
+    path: 'PreventionMonitoring',
+    loadChildren: './prevention-monitoring/prevention-monitoring.module#PreventionMonitoringModule'
+  }
 ];

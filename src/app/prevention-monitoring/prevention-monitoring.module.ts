@@ -1,10 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {HttpClientModule} from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { VgCoreModule } from 'videogular2/core';
+import { VgControlsModule } from 'videogular2/controls';
+import { VgOverlayPlayModule } from 'videogular2/overlay-play';
+import { VgBufferingModule } from 'videogular2/buffering';
+
+import {PreventionMonitoringRoutingModule} from "./prevention-monitoring-routing.module";
+import { VideoSurveillanceComponent } from './video-surveillance/video-surveillance.component';
+import { VideoTransmissionComponent } from './video-transmission/video-transmission.component';
+import { SystemMapComponent } from './system-map/system-map.component';
+import { WarningSignalsComponent } from './warning-signals/warning-signals.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    PreventionMonitoringRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgxEchartsModule,
+    NgbModule,
+    ReactiveFormsModule,
+
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
-  declarations: []
+  declarations: [VideoSurveillanceComponent, VideoTransmissionComponent, SystemMapComponent, WarningSignalsComponent]
 })
 export class PreventionMonitoringModule { }

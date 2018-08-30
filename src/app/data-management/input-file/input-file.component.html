@@ -1,71 +1,54 @@
-<div class="row justify-content-md-center" *ngIf="!click===true" >
+<div class="row " *ngIf="!click===true" >
   <div class="col-md-6">
     <div class="card">
       <div class="card-header" style="text-align: center;background-color: #FFCC80">
-        <h4 class="card-title" id="basic-layout-form" style="font-size: 28px">录入数据</h4>
+        <h4 class="card-title" id="ex_basic-layout-form" style="font-size: 28px">应急专家信息录入</h4>
         <p class="mb-0"></p>
       </div>
       <div class="card-body">
         <div class="px-3">
           <form class="form">
             <div class="form-body">
-              <h4 class="form-section"><i class="ft-user" style="color: #0CC27E;font-weight: bold"></i> 操作人员信息</h4>
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 专家信息</h4>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput1" style="font-size: 16px">姓名</label>
-                    <input type="text" id="projectinput1" class="form-control"  name="fname" [value] ="input_name" [(ngModel)] ="input_name" readonly="readonly">
+                    <label for="ex_Name" style="font-size: 16px">专家姓名</label>
+                    <input id="ex_Name" type="text" class="form-control" >
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput2" style="font-size: 16px">员工编号</label>
-                    <input type="text" id="projectinput2" class="form-control"  name="lname">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="issueinput3" style="font-size: 16px">操作日期</label>
-                    <input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="projectinput4" style="font-size: 16px">联系电话</label>
-                    <input type="text" id="projectinput4" class="form-control"  name="phone">
-                  </div>
-                </div>
-              </div>
-
-              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 数据信息</h4>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="projectinput5" style="font-size: 16px">物资类别</label>
-                    <select id="projectinput5" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
-                      <option value="" selected="" disabled="">物资类别</option>
-                      <option >生产</option>
-                      <option >照明</option>
-                      <option >发电</option>
-                      <option >保障</option>
+                    <label for="ex_Education" style="font-size: 16px">专家学历</label>
+                    <select id="ex_Education" name="interested" class="form-control" [ngModel]="ex_education" (ngModelChange)="ex_education=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >大专</option>
+                      <option >本科</option>
+                      <option >研究生</option>
+                      <option >博士</option>
                     </select>
                   </div>
                 </div>
-
+              </div>
+              <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput4" style="font-size: 16px">物资数量</label>
-                    <input type="text" id="counts" class="form-control"  name="company">
+                    <label for="ex_Type" style="font-size: 16px">专业类别</label>
+                    <select id="ex_Type" name="interested" class="form-control" [ngModel]="ex_Type" (ngModelChange)="ex_Type=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >电力</option>
+                      <option >管理</option>
+                      <option >后勤</option>
+                      <option >党政</option>
+                    </select>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="cities" style="font-size: 16px">所属城市</label>
-                    <select id="cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                    <label for="ex_cities" style="font-size: 16px">所属城市</label>
+                    <select id="ex_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
                       <option value="" selected="" disabled="">---未选择---</option>
                       <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
                     </select>
@@ -73,8 +56,270 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="town" style="font-size: 16px">所属区县</label>
-                    <select id="town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                    <label for="ex_town" style="font-size: 16px">所属区县</label>
+                    <select id="ex_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="re_basic-layout-form" style="font-size: 28px">应急抢修队伍信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 人员信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="re_Name" style="font-size: 16px">成员姓名</label>
+                    <input id="re_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="re_Type" style="font-size: 16px">专业类别</label>
+                    <select id="re_Type" name="interested" class="form-control" [ngModel]="re_Type" (ngModelChange)="re_Type=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >输电</option>
+                      <option >变电</option>
+                      <option >交通</option>
+                      <option >配电</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="re_Position" style="font-size: 16px">成员职务</label>
+                    <select id="re_Position" name="interested" class="form-control" [ngModel]="re_Position" (ngModelChange)="re_Position=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >队员</option>
+                      <option >队长</option>
+                      <option >司机</option>
+                      <option >负责人</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="re_cities" style="font-size: 16px">所属城市</label>
+                    <select id="re_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="re_town" style="font-size: 16px">所属区县</label>
+                    <select id="re_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row " *ngIf="!click===true" >
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="ma_basic-layout-form" style="font-size: 28px">应急救援基干队伍信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 人员信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="ma_Name" style="font-size: 16px">成员姓名</label>
+                    <input id="ma_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="ma_Education" style="font-size: 16px">成员学历</label>
+                    <select id="ma_Education" name="interested" class="form-control" [ngModel]="ma_education" (ngModelChange)="ma_education=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >大专</option>
+                      <option >本科</option>
+                      <option >研究生</option>
+                      <option >博士</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="ma_Type" style="font-size: 16px">专业类别</label>
+                    <select id="ma_Type" name="interested" class="form-control" [ngModel]="ma_Type" (ngModelChange)="ma_Type=$event;save()">
+                      <option value="" selected="" disabled="">---请选择---</option>
+                      <option >输电运检</option>
+                      <option >电气试验</option>
+                      <option >配电</option>
+                      <option >变电</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="ma_cities" style="font-size: 16px">所属城市</label>
+                    <select id="ma_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="ma_town" style="font-size: 16px">所属区县</label>
+                    <select id="ma_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row " *ngIf="!click===true" >
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="e_basic-layout-form" style="font-size: 28px">应急救援基干分队装备信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <!--<h4 class="form-section"><i class="ft-user" style="color: #0CC27E;font-weight: bold"></i> 操作人员信息</h4>-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-6">-->
+                  <!--<div class="form-group">-->
+                    <!--<label for="projectinput1" style="font-size: 16px">姓名</label>-->
+                    <!--<input type="text" id="projectinput1" class="form-control"  name="fname" [value] ="input_name" [(ngModel)] ="input_name" readonly="readonly">-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="row">-->
+                <!--<div class="col-md-6">-->
+                  <!--<div class="form-group">-->
+                    <!--<label for="issueinput3" style="font-size: 16px">操作日期</label>-->
+                    <!--<input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 装备信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_Name" style="font-size: 16px">品名</label>
+                    <input id="e_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="e_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_Type" style="font-size: 16px">类别</label>
+                    <select id="e_Type" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
+                      <option value="" selected="" disabled="">装备类别</option>
+                      <option >生产</option>
+                      <option >照明</option>
+                      <option >发电</option>
+                      <option >保障</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_Model" style="font-size: 16px">型号</label>
+                    <input type="text" id="e_Model" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_cities" style="font-size: 16px">所属城市</label>
+                    <select id="e_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="e_town" style="font-size: 16px">所属区县</label>
+                    <select id="e_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
                       <option value="" selected="" disabled="">---未选择---</option>
                       <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
                     </select>
@@ -84,14 +329,398 @@
               <div class="row">
               <div class="col-md-6">
               <div class="form-group">
-                <label for="projectinput4" style="font-size: 16px">选择文件</label>
-                <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="basicInputFile">
+                <label for="InputFile_excel" style="font-size: 16px">选择文件</label>
+                <input type="file" (change)="input($event)" multiple="false" class="form-control-file" id="InputFile_excel">
               </div>
               </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="projectinput4" style="font-size: 16px">选择文件</label>
-                    <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+                    <label for="InputFile_pdf" style="font-size: 16px">选择文件</label>
+                    <input id="InputFile_pdf" type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="m_basic-layout-form" style="font-size: 28px">应急抢修物资信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <!--<h4 class="form-section"><i class="ft-user" style="color: #0CC27E;font-weight: bold"></i> 操作人员信息</h4>-->
+              <!--<div class="row">-->
+              <!--<div class="col-md-6">-->
+              <!--<div class="form-group">-->
+              <!--<label for="projectinput1" style="font-size: 16px">姓名</label>-->
+              <!--<input type="text" id="projectinput1" class="form-control"  name="fname" [value] ="input_name" [(ngModel)] ="input_name" readonly="readonly">-->
+              <!--</div>-->
+              <!--</div>-->
+              <!--</div>-->
+              <!--<div class="row">-->
+              <!--<div class="col-md-6">-->
+              <!--<div class="form-group">-->
+              <!--<label for="issueinput3" style="font-size: 16px">操作日期</label>-->
+              <!--<input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">-->
+              <!--</div>-->
+              <!--</div>-->
+              <!--</div>-->
+
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 物资信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="m_Name" style="font-size: 16px">品名</label>
+                    <input id="m_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="m_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="m_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="m_Type" style="font-size: 16px">类别</label>
+                    <select id="m_Type" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
+                      <option value="" selected="" disabled="">物资类别</option>
+                      <option >生产</option>
+                      <option >照明</option>
+                      <option >发电</option>
+                      <option >保障</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="m_cities" style="font-size: 16px">所属城市</label>
+                    <select id="m_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="m_town" style="font-size: 16px">所属区县</label>
+                    <select id="m_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row " *ngIf="!click===true" >
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="s_basic-layout-form" style="font-size: 28px">应急抢修材料信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 材料信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="s_Name" style="font-size: 16px">品名</label>
+                    <input id="s_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="s_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="s_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="s_Type" style="font-size: 16px">类别</label>
+                    <select id="s_Type" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
+                      <option value="" selected="" disabled="">材料类别</option>
+                      <option >生产</option>
+                      <option >照明</option>
+                      <option >发电</option>
+                      <option >保障</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="s_cities" style="font-size: 16px">所属城市</label>
+                    <select id="s_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="s_town" style="font-size: 16px">所属区县</label>
+                    <select id="s_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="p_basic-layout-form" style="font-size: 28px">应急备品备件信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 物品信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="p_Name" style="font-size: 16px">品名</label>
+                    <input id="p_Name" type="text" class="form-control" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="p_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="p_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="p_Type" style="font-size: 16px">类别</label>
+                    <select id="p_Type" name="interested" class="form-control" [ngModel]="m_type" (ngModelChange)="m_type=$event;save()">
+                      <option value="" selected="" disabled="">物品类别</option>
+                      <option >生产</option>
+                      <option >照明</option>
+                      <option >发电</option>
+                      <option >保障</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="p_cities" style="font-size: 16px">所属城市</label>
+                    <select id="p_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="p_town" style="font-size: 16px">所属区县</label>
+                    <select id="p_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row " *ngIf="!click===true" >
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="r_basic-layout-form" style="font-size: 28px">应急抢修车信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 车辆信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="r_Type" style="font-size: 16px">车种</label>
+                    <select id="r_Type" name="interested" class="form-control" [ngModel]="r_type" (ngModelChange)="r_type=$event;save()">
+                      <option value="" selected="" disabled="">车辆类别</option>
+                      <option >轿车</option>
+                      <option >吉普</option>
+                      <option >客车</option>
+                      <option >货车</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="r_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="r_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="r_cities" style="font-size: 16px">所属城市</label>
+                    <select id="r_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="r_town" style="font-size: 16px">所属区县</label>
+                    <select id="r_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> 取消
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary"  (click)="save()">
+                <i class="fa fa-check-square-o"></i> 保存
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header" style="text-align: center;background-color: #FFCC80">
+        <h4 class="card-title" id="g_basic-layout-form" style="font-size: 28px">应急发电车信息录入</h4>
+        <p class="mb-0"></p>
+      </div>
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form">
+            <div class="form-body">
+              <h4 class="form-section"><i class="ft-file-text" style="color: #60D0E4;font-weight: bold"></i> 车辆信息</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="g_Name" style="font-size: 16px">类型</label>
+                    <input type="text" id="g_Name" class="form-control"  name="fname" value ="发电车" readonly="readonly">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="g_Capacity" style="font-size: 16px">容量</label>
+                    <select id="g_Capacity" name="interested" class="form-control" [ngModel]="g_Capacity" >
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let c of g_Capacity_list" [value]='c'>{{c}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="g_Num" style="font-size: 16px">数量</label>
+                    <input type="text" id="g_Num" class="form-control"  name="company">
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="g_cities" style="font-size: 16px">所属城市</label>
+                    <select id="g_cities" name="interested" class="form-control" [ngModel]="city_name" (ngModelChange)="select_city($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let city of city_list" [value]='city'>{{city}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="g_town" style="font-size: 16px">所属区县</label>
+                    <select id="g_town" name="interested" class="form-control" [ngModel]="town_name" (ngModelChange)="select_town($event)">
+                      <option value="" selected="" disabled="">---未选择---</option>
+                      <option *ngFor="let town of town_list" [value]='town'>{{town}}</option>
+                    </select>
                   </div>
                 </div>
               </div>

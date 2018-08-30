@@ -5,6 +5,7 @@ import { VideoSurveillanceComponent } from './video-surveillance/video-surveilla
 import { VideoTransmissionComponent } from './video-transmission/video-transmission.component';
 import { SystemMapComponent } from './system-map/system-map.component';
 import { WarningSignalsComponent } from './warning-signals/warning-signals.component';
+import {WarningDetailComponent} from './warning-detail/warning-detail.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,13 @@ const routes: Routes = [
           title: 'WarningSignals'
         }
       },
+      {
+        path: 'WarningDetail',
+        component: WarningDetailComponent,
+        data: {
+          title: 'WarningDetail'
+        }
+      },
     ]
   }
 ];
@@ -47,7 +55,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  exports:[
+  exports: [
     RouterModule,
   ],
 

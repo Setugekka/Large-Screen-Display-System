@@ -13,3 +13,7 @@
   max-width: 800px;
   background-color: transparent;
 }
+.WarningModalClass .modal-dialog{
+  max-width: 800px;
+  background-color: transparent;
+}

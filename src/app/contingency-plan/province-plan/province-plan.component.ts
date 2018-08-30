@@ -286,14 +286,15 @@ export class ProvincePlanComponent implements OnInit {
               }
             }
           },
-          "bottom": 80,
-          "data": this.data,
-          "categories": this.category,
-          "type": "graph",
-          "focusNodeAdjacency": true,
-          "force": {
-            "repulsion": 1000,
-            "edgeLength": [150, 300]
+          bottom: 80,
+          data: this.data,
+          categories: this.category,
+          type: 'graph',
+          focusNodeAdjacency: true,
+          force: {
+            repulsion: 1000,
+            edgeLength: [150, 300],
+            layoutAnimation: false,
           },
           "layout": "force",
           "symbolSize": [120, 30],

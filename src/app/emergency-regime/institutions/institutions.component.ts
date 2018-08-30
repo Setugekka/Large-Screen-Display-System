@@ -94,7 +94,6 @@ export class InstitutionsComponent implements OnInit {
   onChartClick(event) {
     const modalRef = this.modalService.open(FileviewComponent, {windowClass: 'FileModalClass'}); // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
     modalRef.componentInstance.file_src = event.data['url'];
-    console.log(event.data['url']);
   }
 
 }

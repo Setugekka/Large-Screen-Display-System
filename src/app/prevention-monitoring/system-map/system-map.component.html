@@ -3,8 +3,8 @@
     <span style="color: #00B5B8;font-size: 30px;font-weight: bold">当前预警数：</span>
     <div style="height: 30px"></div>
     <div class="row">
-      <span [@flyInOut]="num[0].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[0].value}} </span>
-      <span style="color: #00B5B8;font-size: 80px;font-weight: bold">,</span>
+      <span *ngIf="num[0].value != 0" [@flyInOut]="num[0].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[0].value}} </span>
+      <span *ngIf="num[0].value != 0" style="color: #00B5B8;font-size: 80px;font-weight: bold">,</span>
       <span [@flyInOut]="num[1].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[1].value}} </span>
       <span [@flyInOut]="num[2].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[2].value}} </span>
       <span [@flyInOut]="num[3].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[3].value}} </span>

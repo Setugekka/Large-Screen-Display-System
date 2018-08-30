@@ -14,6 +14,7 @@
   <span ngbDropdown>
   <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+    <button class="dropdown-item" (click)="return()">返回上级</button>
     <button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>
   </div>
     </span>

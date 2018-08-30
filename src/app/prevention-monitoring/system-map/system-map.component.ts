@@ -27,22 +27,23 @@ import {  trigger,  state,  style,  animate,  transition} from '@angular/animati
 })
 export class SystemMapComponent implements OnInit {
   private initdata=[
-    {name: '大连', value: 1},
-    {name: '锦州', value: 0},
-    {name: '葫芦岛', value: 0},
-    {name: '丹东', value: 0},
-    {name: '抚顺', value: 0},
-    {name: '沈阳', value: 0},
-    {name: '辽阳', value: 0},
-    {name: '铁岭', value: 0},
-    {name: '鞍山', value: 0},
-    {name: '盘锦', value: 0},
-    {name: '朝阳', value: 0},
-    {name: '营口', value: 0},
-    {name: '阜新', value: 0},
-    {name: '本溪', value: 0},
+    {name: '大连', value: 20},
+    {name: '锦州', value: 30},
+    {name: '葫芦岛', value: 25},
+    {name: '丹东', value: 40},
+    {name: '抚顺', value: 50},
+    {name: '沈阳', value: 30},
+    {name: '辽阳', value: 80},
+    {name: '铁岭', value: 10},
+    {name: '鞍山', value: 20},
+    {name: '盘锦', value: 30},
+    {name: '朝阳', value: 60},
+    {name: '营口', value: 20},
+    {name: '阜新', value: 10},
+    {name: '本溪', value: 30},
   ];
-  private pindata=[{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电"],visualMap: false,}];
+  private topdata1 = [];
+  private pindata = [{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电"],visualMap: false,}];
   private chartOption:any={};
   private echartsIntance:any;
   private socket = SocketIO('127.0.0.1:5000/LargeScreen');
@@ -63,11 +64,10 @@ export class SystemMapComponent implements OnInit {
     [ ['2018/08/19 10:00:00','沈阳',3,'紧急事件'],
       ['2018/08/20 10:00:00','大连',4,'紧急事件'],
       ['2018/08/20 01:18:18','辽阳',3,'一般事件']
-
     ]
   ];
-  private num = [
-    {name: 'num1', state: 'in', value: 1},
+  private num: any = [
+    {name: 'num1', state: 'in', value: 0},
     {name: 'num2', state: 'in', value: 1},
     {name: 'num3', state: 'in', value: 0},
     {name: 'num4', state: 'in', value: 1},
@@ -152,7 +152,7 @@ export class SystemMapComponent implements OnInit {
           realtime: false,
           calculable: true,
           inRange: {
-            color: ['lightskyblue','yellow', 'orangered']
+            color: ['#e0ffff', '#006edd']
           }
         },
 
@@ -268,8 +268,8 @@ export class SystemMapComponent implements OnInit {
     this.socket.on('my_response',e=>console.log(e.data))
     this.socket_test.on('my_response',e=>console.log(e.data, e.count))
     this.socket.on('update_option_system_map',e=>{
-      for (const i in this.initdata){
-        if(this.initdata[i].name==e.name){
+      for (const i in this.initdata) {
+        if (this.initdata[i].name==e.name) {
           this.initdata[i].value=this.initdata[i].value+50
         }
       }
@@ -305,7 +305,7 @@ export class SystemMapComponent implements OnInit {
           realtime: false,
           calculable: true,
           inRange: {
-            color: ['lightskyblue','yellow', 'orangered']
+            color: ['#e0ffff', '#006edd']
           }
         },
 
@@ -473,7 +473,8 @@ export class SystemMapComponent implements OnInit {
         },
         scale: true
       },
-      series: [{
+      series: [
+        {
         name: '紧急事件',
         data: this.data[1],
         type: 'scatter',
@@ -513,7 +514,8 @@ export class SystemMapComponent implements OnInit {
             }
           }
         }
-      }, {
+      },
+        {
         name: '一般事件',
         data: this.data[0],
         type: 'scatter',
@@ -560,7 +562,51 @@ export class SystemMapComponent implements OnInit {
             }
           }
         }
-      }]
+      },
+        {
+          name: 'Top',
+          type: 'effectScatter',
+          data: this.topdata1,
+          symbolSize: 20,
+          showEffectOn: 'render',
+          rippleEffect: {
+            brushType: 'stroke'
+          },
+          hoverAnimation: false,
+          label: {
+            normal: {
+              formatter: '{b}',
+              position: 'right',
+              show: true
+            }
+          },
+          itemStyle: {
+            normal: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [{
+                  offset: 0,
+                  color: '#ae0876' // 0% 处的颜色
+                }, {
+                  offset: 0.5,
+                  color: '#cd0a8b' // 50% 处的颜色
+                }, {
+                  offset: 1,
+                  color: '#f505a4' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
+            }
+          },
+          zlevel: 1
+        },
+      ]
     };
   }
   onChartInit(ec) {
@@ -602,7 +648,7 @@ export class SystemMapComponent implements OnInit {
           realtime: false,
           calculable: true,
           inRange: {
-            color: ['lightskyblue','yellow', 'orangered']
+            color: ['#e0ffff', '#006edd']
           }
         },
 

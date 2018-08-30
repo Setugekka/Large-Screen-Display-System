@@ -488,7 +488,7 @@ export class SystemMapComponent implements OnInit {
 
   showTooltip(){
     const cur_index=this.pindata.length-1
-    setInterval(()=> {
+    setTimeout(()=> {
       this.echartsIntance.dispatchAction({
         type: 'showTip',
         seriesIndex:1 ,//第几条series

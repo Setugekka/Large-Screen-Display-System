@@ -118,12 +118,13 @@ export class CityTrainingComponent implements OnInit {
         visualMap: {
           show: false,
           min: 0,
-          max: 500,
+          max: 100,
           left: 'left',
           text: ['高', '低'], // 文本，默认为数值文本
           calculable: true,
           seriesIndex: [1],
           inRange: {
+            color: ['#e0ffff', '#006edd'],
           }
         },
         geo: {
@@ -230,34 +231,34 @@ export class CityTrainingComponent implements OnInit {
           color: '#fff',
         }
       },
-      "xAxis": {
+      xAxis: {
         max: 50,
-        "splitLine": {
-          "show": false
+        splitLine: {
+          show: false
         },
-        "axisLine": {
-          "show": false
+        axisLine: {
+          show: false
         },
-        "axisLabel": {
-          "show": false
+        axisLabel: {
+          show: false
         },
-        "axisTick": {
-          "show": false
+        axisTick: {
+          show: false
         }
       },
-      "yAxis": [
+      yAxis: [
         {
-          "type": "category",
-          "inverse": false,
-          "data": [],
-          "axisLine": {
-            "show": false
+          type: 'category',
+          inverse: false,
+          data: [],
+          axisLine: {
+            show: false
           },
-          "axisTick": {
-            "show": false
+          axisTick: {
+            show: false
           },
-          "axisLabel": {
-            "show": false
+          axisLabel: {
+            show: false
           }
         }
       ],

@@ -43,7 +43,7 @@ export class InputFileComponent {
   input_name = 'niexin';
   click = false;
   public uploader: FileUploader = new FileUploader({
-    url: 'assets/pdf/2.pdf',
+    url: './src/assets/pdf',
     method: 'POST',
     itemAlias: 'uploadedfile'
   });

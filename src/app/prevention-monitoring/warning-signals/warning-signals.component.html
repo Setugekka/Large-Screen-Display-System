@@ -1,1 +1,10 @@
-<div echarts [options]="option" style="height: 600px"></div>
+<div class="row">
+  <span [@flyInOut]="num[0].state" style="color: #00B5B8;font-size: 50px;font-weight: bold">{{num[0].value}} </span>
+  <span style="color: #00B5B8;font-size: 50px;font-weight: bold">,</span>
+  <span [@flyInOut]="num[1].state" style="color: #00B5B8;font-size: 50px;font-weight: bold">{{num[1].value}} </span>
+  <span [@flyInOut]="num[2].state" style="color: #00B5B8;font-size: 50px;font-weight: bold">{{num[2].value}} </span>
+  <span [@flyInOut]="num[3].state" style="color: #00B5B8;font-size: 50px;font-weight: bold">{{num[3].value}} </span>
+</div>
+<div style="margin:20px">
+  <button (click)=click()>刷新数据</button>
+</div>

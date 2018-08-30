@@ -1,18 +1,18 @@
 <div class="card-block">
   <div class="row">
   <p>
-    <button class="btn btn-raised gradient-purple-bliss white" value="应急领导小组" (click)='click("应急领导小组")'>应急领导小组</button>
-    <button class="btn btn-raised gradient-crystal-clear white" value="安全应急办公室" (click)='click("安全应急办公室")'>安全应急办公室</button>
-    <button  class="btn btn-raised gradient-nepal white" value="稳定应急办公室" (click)='click("稳定应急办公室")'>稳定应急办公室</button>
+    <a style="margin: 3px" class="btn btn-raised gradient-purple-bliss white" value="应急领导小组" (click)='click("应急领导小组")'>应急领导小组</a>
+    <a style="margin: 3px" class="btn btn-raised gradient-crystal-clear white" value="安全应急办公室" (click)='click("安全应急办公室")'>安全应急办公室</a>
+    <a style="margin: 3px"  class="btn btn-raised gradient-nepal white" value="稳定应急办公室" (click)='click("稳定应急办公室")'>稳定应急办公室</a>
   </p>
     <div class="col-md-4 col-md-offset-8">
 <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle >{{city_name}}</button>
+  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
     <button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>
   </div>
   <span ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle >{{town_name}}</button>
+  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
     <button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>
   </div>

@@ -1,1 +1,20 @@
+<div class="row">
+  <div class="col-2">
+    <span style="color: #00B5B8;font-size: 30px;font-weight: bold">当前预警数：</span>
+    <div style="height: 30px"></div>
+    <div class="row">
+      <span [@flyInOut]="num[0].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[0].value}} </span>
+      <span style="color: #00B5B8;font-size: 80px;font-weight: bold">,</span>
+      <span [@flyInOut]="num[1].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[1].value}} </span>
+      <span [@flyInOut]="num[2].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[2].value}} </span>
+      <span [@flyInOut]="num[3].state" style="color: #00B5B8;font-size: 80px;font-weight: bold">{{num[3].value}} </span>
+    </div>
+  </div>
+  <div class="col-8">
 <div echarts [options]="chartOption" (chartClick)="onChartClick($event)" (chartInit)="onChartInit($event)" style="height: 600px"></div>
+  </div>
+</div>
+<div echarts [options]="scatter_option" style="height: 600px" (chartClick)="click($event)"></div>
+<div style="margin:20px">
+  <button (click)=click_tset()>刷新数据</button>
+</div>

@@ -1,11 +1,11 @@
 <div class="col-md-4 col-md-offset-8">
   <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle >{{city_name}}</button>
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>
     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
       <button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>
     </div>
     <span ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle >{{town_name}}</button>
+  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
     <button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>
   </div>

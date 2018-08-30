@@ -1,8 +1,8 @@
 <div class="row">
 <div class="col-sm-12 col-md-6">
   <div ngbDropdown #myDrop1="ngbDropdown" style="background-color: transparent;height:40px;text-align: right">
-    <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">{{selected}}</button>
-    <div ngbDropdownMenu aria-labelledby="dropdownMenu2">
+    <button class="btn btn-outline-primary" id="dropdownMenu2" ngbDropdownToggle style="color:white">{{selected}}</button>    <div ngbDropdownMenu aria-labelledby="dropdownMenu2">
+
       <button class="dropdown-item" *ngFor="let town of selecteddata" (click)="choosetown(town)">{{town}}</button>
     </div>
     </div>

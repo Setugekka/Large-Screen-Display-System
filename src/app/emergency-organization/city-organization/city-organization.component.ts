@@ -91,6 +91,9 @@ export class CityOrganizationComponent implements OnInit {
   choosentown(town): any {
     this.town_name = town;
   }
+  return(): any {
+    this.town_name = '请选择区县';
+  }
   GetOrgaization(group= null):  any {
     const params = {
       'group': group

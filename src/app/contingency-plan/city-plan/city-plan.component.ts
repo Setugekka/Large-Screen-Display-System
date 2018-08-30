@@ -272,6 +272,9 @@ export class CityPlanComponent implements OnInit {
       console.log(this.name);
     }
   }
+  return(): any {
+    this.town_name = '请选择区县';
+  }
   GetPlan(name= null):  any {
     const params = {
       'name': name

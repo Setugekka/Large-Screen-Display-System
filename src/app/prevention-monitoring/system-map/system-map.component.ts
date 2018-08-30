@@ -720,10 +720,9 @@ export class SystemMapComponent implements OnInit {
     console.log(event);
     const modalRef = this.modalService.open(WarningDetailComponent, {windowClass: 'WarningModalClass'});
   }
-
-  showTooltip() {
-    const cur_index = this.pindata.length - 1;
-    setInterval(()=> {
+  showTooltip(){
+    const cur_index=this.pindata.length-1
+    setTimeout(()=> {
       this.echartsIntance.dispatchAction({
         type: 'showTip',
         seriesIndex:1 ,//第几条series

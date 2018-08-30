@@ -84,6 +84,7 @@ export class StatusComponent implements OnInit {
         ]
       }
     })
+
     this.socket.on('my_response',e=>console.log(e.data))
     this.socket.on('update_option_public_option_status',e=>{
       for (let i in this.initdata){

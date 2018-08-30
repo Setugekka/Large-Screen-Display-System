@@ -42,8 +42,7 @@ export class SystemMapComponent implements OnInit {
     {name: '阜新', value: 10},
     {name: '本溪', value: 30},
   ];
-
-  private topdata1 = [];
+  private topdata1 = [['2018/08/19 12:38:08','本溪',2,'一般事件']];
   private topdata=[{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电"],visualMap: false,}];
   private pindata=[{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电","大连"],visualMap: false,}];
   private chartOption:any={};
@@ -368,6 +367,7 @@ export class SystemMapComponent implements OnInit {
       }
       this.pindata.push({"value":e.coord.concat([e.value,e.name]),visualMap:false});
       this.topdata[0]={"value":e.coord.concat(e.value),visualMap:false};
+
       this.chartOption={
         title: {
           text: '预警状态',
@@ -606,8 +606,10 @@ export class SystemMapComponent implements OnInit {
       this.showTooltip();
       if(e.type=="一般事件"){
         this.data[0].push(['2018/08/20 08:18:18',e.name,4,e.type])
+        this.topdata1[0]=['2018/08/20 08:18:18',e.name,4,e.type]
       }else {
         this.data[1].push(['2018/08/20 09:18:18',e.name,4,e.type])
+        this.topdata1[0]=['2018/08/20 09:18:18',e.name,4,e.type]
       }
       this.scatter_option = {
         backgroundColor: new echarts.graphic.RadialGradient(0, 0, 0, [{
@@ -664,94 +666,140 @@ export class SystemMapComponent implements OnInit {
           },
           scale: true
         },
-        series: [{
-          name: '紧急事件',
-          data: this.data[1],
-          type: 'scatter',
-          symbolSize: function (data) {
-            return data[2] * 8;
-          },
-          label: {
-            emphasis: {
-              show: true,
-              formatter: function (param) {
-                return param.data[1];
-              },
-              position: 'top'
-            }
-          },
-          itemStyle: {
-            normal: {
-              shadowBlur: 10,
-              shadowColor: 'rgba(120, 36, 50, 0.5)',
-              shadowOffsetY: 5,
-              color: {
-                type: 'radial',
-                x: 0.5,
-                y: 0.5,
-                r: 0.5,
-                colorStops: [{
-                  offset: 0,
-                  color: '#ae0876' // 0% 处的颜色
-                }, {
-                  offset: 0.5,
-                  color: '#cd0a8b' // 50% 处的颜色
-                }, {
-                  offset: 1,
-                  color: '#f505a4' // 100% 处的颜色
-                }],
-                globalCoord: false // 缺省为 false
+        series: [
+          {
+            name: '紧急事件',
+            data: this.data[1],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[2] * 8;
+            },
+            label: {
+              emphasis: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[1];
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(120, 36, 50, 0.5)',
+                shadowOffsetY: 5,
+                color: {
+                  type: 'radial',
+                  x: 0.5,
+                  y: 0.5,
+                  r: 0.5,
+                  colorStops: [{
+                    offset: 0,
+                    color: '#ae0876' // 0% 处的颜色
+                  }, {
+                    offset: 0.5,
+                    color: '#cd0a8b' // 50% 处的颜色
+                  }, {
+                    offset: 1,
+                    color: '#f505a4' // 100% 处的颜色
+                  }],
+                  globalCoord: false // 缺省为 false
+                }
               }
             }
-          }
-        }, {
-          name: '一般事件',
-          data: this.data[0],
-          type: 'scatter',
-          symbolSize: function (data) {
-            return (data[2]) * 8;
           },
-          label: {
-            emphasis: {
-              show: true,
-              formatter: function (param) {
-                return param.data[1];
-              },
-              position: 'top'
-            }
-          },
-          itemStyle: {
-            normal: {
-              shadowBlur: 10,
-              shadowColor: 'rgba(25, 100, 150, 0.5)',
-              shadowOffsetY: 5,
-              // color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
-              //   offset: 0,
-              //   color: 'rgb(129, 227, 238)'
-              // }, {
-              //   offset: 1,
-              //   color: 'rgb(25, 183, 207)'
-              // }])
-              color: {
-                type: 'radial',
-                x: 0.5,
-                y: 0.5,
-                r: 0.5,
-                colorStops: [{
-                  offset: 0,
-                  color: '#a7ac0e' // 0% 处的颜色
-                }, {
-                  offset: 0.5,
-                  color: '#babc0c' // 50% 处的颜色
-                }, {
-                  offset: 1,
-                  color: '#f6f701' // 100% 处的颜色
-                }],
-                globalCoord: false // 缺省为 false
+          {
+            name: '一般事件',
+            data: this.data[0],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return (data[2]) * 8;
+            },
+            label: {
+              emphasis: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[1];
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(25, 100, 150, 0.5)',
+                shadowOffsetY: 5,
+                // color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                //   offset: 0,
+                //   color: 'rgb(129, 227, 238)'
+                // }, {
+                //   offset: 1,
+                //   color: 'rgb(25, 183, 207)'
+                // }])
+                color: {
+                  type: 'radial',
+                  x: 0.5,
+                  y: 0.5,
+                  r: 0.5,
+                  colorStops: [{
+                    offset: 0,
+                    color: '#a7ac0e' // 0% 处的颜色
+                  }, {
+                    offset: 0.5,
+                    color: '#babc0c' // 50% 处的颜色
+                  }, {
+                    offset: 1,
+                    color: '#f6f701' // 100% 处的颜色
+                  }],
+                  globalCoord: false // 缺省为 false
+                }
               }
             }
-          }
-        }]
+          },
+          {
+            name: 'Top',
+            type: 'effectScatter',
+            data: this.topdata1,
+            symbolSize: 20,
+            showEffectOn: 'render',
+            rippleEffect: {
+              brushType: 'stroke'
+            },
+            hoverAnimation: false,
+            label: {
+              normal: {
+                formatter: '{b}',
+                position: 'right',
+                show: true
+              }
+            },
+            itemStyle: {
+              normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(120, 36, 50, 0.5)',
+                shadowOffsetY: 5,
+                color: {
+                  type: 'radial',
+                  x: 0.5,
+                  y: 0.5,
+                  r: 0.5,
+                  colorStops: [{
+                    offset: 0,
+                    color: '#ae0876' // 0% 处的颜色
+                  }, {
+                    offset: 0.5,
+                    color: '#cd0a8b' // 50% 处的颜色
+                  }, {
+                    offset: 1,
+                    color: '#f505a4' // 100% 处的颜色
+                  }],
+                  globalCoord: false // 缺省为 false
+                }
+              }
+            },
+            zlevel: 1
+          },
+        ]
       };
       this.click_tset()
     });

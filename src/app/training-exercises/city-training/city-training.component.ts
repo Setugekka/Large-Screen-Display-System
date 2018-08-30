@@ -65,7 +65,7 @@ export class CityTrainingComponent implements OnInit {
   private selected = '选择地区'; // 下拉框显示内容
   private title = '沈阳市最新应急演练计划'; // 文件栏标题
   private selected_city = '沈阳市';
-  private selecteddata = [];
+  private selecteddata = ['和平区','浑南区','皇姑区','沈河区','大东区','铁西区','苏家屯区','沈北新区','于洪区','辽中区','新民市','康平县','法库县'];
   private commited = ['和平区', '浑南区', '皇姑区', '沈河区' , '大东区', '铁西区' , '苏家屯区', '沈北新区' , '于洪区', '辽中区', '新民市', '康平县', '法库县'];        // 已上交区县列表
   private uncommited = ['全部上交'];      // 未上交区县列表
   private option = {};

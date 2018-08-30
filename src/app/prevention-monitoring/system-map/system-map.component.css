@@ -1,0 +1,24 @@
+.module {
+  border: none;
+  position: relative;
+  margin-bottom: 15px;
+  background: url("/assets/image/1-1b.png") center no-repeat;
+  background-size:100% 100%;
+  -webkit-transition: none;
+  transition: none;
+}
+.module-header{
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-top: 5px;
+  color: #05f1f8;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+.module-body{
+
+}
+.card{
+  background-color: unset;
+}

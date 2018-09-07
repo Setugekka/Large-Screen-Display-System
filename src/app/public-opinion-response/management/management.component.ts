@@ -19,8 +19,7 @@ export class ManagementComponent implements OnInit {
   }
   onClick(report:Report){
     this.fileAddress="http://localhost:5000/download/";
-    this.eeService.generateReportApi(this.newReport).subscribe(res => this.isSuccessful = res['success']);//成功返回true,失败返回false
-
+    this.eeService.generateReportApi(this.newReport).subscribe(res => this.isSuccessful = res['success']); // 成功返回true,失败返回false
   }
 
 }

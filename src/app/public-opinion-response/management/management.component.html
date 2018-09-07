@@ -1,53 +1,144 @@
+<!--<div class="row justify-content-md-center">-->
+  <!--<div class="col-md-6">-->
+    <!--<div class="card">-->
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title" id="bordered-layout-card-center">舆情应对处置措施填写</h4>-->
+        <!--<div class="alert alert-info" role="alert">-->
+          <!--<strong class="mb-0">请完善处置措施相关报表信息</strong>-->
+        <!--</div>-->
+
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="px-3">-->
+
+          <!--<form class="form form-horizontal form-bordered">-->
+            <!--<div class="form-body">-->
+              <!--<div class="form-group row">-->
+                <!--<label class="col-md-3 label-control" for="eventRegInput1">填报人姓名</label>-->
+                <!--<div class="col-md-9">-->
+                  <!--<input [(ngModel)]="newReport.name" type="text" id="eventRegInput1" class="form-control" placeholder="填报人姓名" name="fullname">-->
+                <!--</div>-->
+              <!--</div>-->
+
+              <!--<div class="form-group row">-->
+                <!--<label class="col-md-3 label-control" for="eventRegInput2">舆情应对</label>-->
+                <!--<div class="col-md-9">-->
+                  <!--<input [(ngModel)]="newReport.title" type="text" id="eventRegInput2" class="form-control" placeholder="事件名称" name="title">-->
+                <!--</div>-->
+              <!--</div>-->
+
+              <!--<div class="form-group row">-->
+                <!--<label class="col-md-3 label-control" for="eventRegInput3">填报单位</label>-->
+                <!--<div class="col-md-9">-->
+                  <!--<input [(ngModel)]="newReport.department" type="text" id="eventRegInput3" class="form-control" placeholder="填报单位" name="company">-->
+                <!--</div>-->
+              <!--</div>-->
+
+              <!--<div class="form-group row">-->
+                <!--<label class="col-md-3 label-control" for="eventRegInput4">主要内容</label>-->
+                <!--<div class="col-md-9">-->
+                  <!--<input [(ngModel)]="newReport.content" type="email" id="eventRegInput4" class="form-control" placeholder="主要内容" name="email">-->
+                <!--</div>-->
+              <!--</div>-->
+
+              <!--<div class="form-group row">-->
+                <!--<label class="col-md-3 label-control" for="eventRegInput5">联系方式</label>-->
+                <!--<div class="col-md-9">-->
+                  <!--<input [(ngModel)]="newReport.contact" type="tel" id="eventRegInput5" class="form-control" name="contact" placeholder="联系方式">-->
+                <!--</div>-->
+              <!--</div>-->
+
+
+            <!--</div>-->
+
+            <!--<div class="form-actions center">-->
+              <!--<button type="button" class="btn btn-raised btn-warning mr-1">-->
+                <!--<i class="ft-x"></i> 取消-->
+              <!--</button>-->
+              <!--<button (click)="onClick(newReport)"  type="button" class="btn btn-raised btn-primary mr-1">-->
+                <!--<i class="fa fa-check-square-o"></i> 提交-->
+              <!--</button>-->
+              <!--<a *ngIf="isSuccessful=='true'" href="{{fileAddress+newReport.title+'.docx'}}"  type="button" class="btn btn-raised btn-danger" download="{{newReport.title+'.docx'}}">-->
+                <!--<i class="ft-arrow-down"></i>下载报表-->
+              <!--</a>-->
+
+            <!--</div>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 <div class="row justify-content-md-center">
   <div class="col-md-6">
     <div class="card">
-      <div class="card-header">
-        <h4 class="card-title" id="bordered-layout-card-center">舆情应对处置措施填写</h4>
-        <div class="alert alert-info" role="alert">
-          <strong class="mb-0">请完善处置措施相关报表信息</strong>
-        </div>
-
+      <div class="card-header" >
+        <h4 class="card-title" id="striped-row-layout-card-center" style="color: #009DA0">舆情应对处置措施填写</h4>
+        <p class="mb-0"> 请完善处置措施相关报表信息</p>
       </div>
       <div class="card-body">
         <div class="px-3">
-
-          <form class="form form-horizontal form-bordered">
+          <form class="form form-horizontal striped-rows">
             <div class="form-body">
               <div class="form-group row">
                 <label class="col-md-3 label-control" for="eventRegInput1">填报人姓名</label>
                 <div class="col-md-9">
-                  <input [(ngModel)]="newReport.name" type="text" id="eventRegInput1" class="form-control" placeholder="填报人姓名" name="fullname">
+                  <div class="position-relative has-icon-left">
+                    <input [(ngModel)]="newReport.name" type="text" id="eventRegInput1" class="form-control" placeholder="填报人姓名" name="fullname">
+                    <div class="form-control-position">
+                      <i class="ft-user"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-3 label-control" for="eventRegInput2">舆情应对</label>
                 <div class="col-md-9">
-                  <input [(ngModel)]="newReport.title" type="text" id="eventRegInput2" class="form-control" placeholder="事件名称" name="title">
+                  <div class="position-relative has-icon-left">
+                    <input [(ngModel)]="newReport.title" type="text" id="eventRegInput2" class="form-control" placeholder="事件名称" name="title">
+                    <div class="form-control-position">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-3 label-control" for="eventRegInput3">填报单位</label>
                 <div class="col-md-9">
-                  <input [(ngModel)]="newReport.department" type="text" id="eventRegInput3" class="form-control" placeholder="填报单位" name="company">
+                  <div class="position-relative has-icon-left">
+                    <input [(ngModel)]="newReport.department" type="text" id="eventRegInput3" class="form-control" placeholder="填报单位" name="company">
+                    <div class="form-control-position">
+                      <i class="ft-message-square"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-3 label-control" for="eventRegInput4">主要内容</label>
                 <div class="col-md-9">
-                  <input [(ngModel)]="newReport.content" type="email" id="eventRegInput4" class="form-control" placeholder="主要内容" name="email">
+                  <div class="position-relative has-icon-left">
+                    <input [(ngModel)]="newReport.content" type="email" id="eventRegInput4" class="form-control" placeholder="主要内容" name="email">
+                    <div class="form-control-position">
+                      <i class="ft-file"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-group row">
                 <label class="col-md-3 label-control" for="eventRegInput5">联系方式</label>
                 <div class="col-md-9">
-                  <input [(ngModel)]="newReport.contact" type="tel" id="eventRegInput5" class="form-control" name="contact" placeholder="联系方式">
+                  <div class="position-relative has-icon-left">
+                    <input [(ngModel)]="newReport.contact" type="tel" id="eventRegInput5" class="form-control" name="contact" placeholder="联系方式">
+                    <div class="form-control-position">
+                      <i class="ft-phone"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
-
 
             </div>
 
@@ -55,13 +146,9 @@
               <button type="button" class="btn btn-raised btn-warning mr-1">
                 <i class="ft-x"></i> 取消
               </button>
-              <button (click)="onClick(newReport)"  type="button" class="btn btn-raised btn-primary mr-1">
-                <i class="fa fa-check-square-o"></i> 提交
+              <button type="button" class="btn btn-raised btn-primary">
+                <i class="fa fa-check-square-o"></i> 保存
               </button>
-              <a *ngIf="isSuccessful=='true'" href="{{fileAddress+newReport.title+'.docx'}}"  type="button" class="btn btn-raised btn-danger" download="{{newReport.title+'.docx'}}">
-                <i class="ft-arrow-down"></i>下载报表
-              </a>
-
             </div>
           </form>
         </div>

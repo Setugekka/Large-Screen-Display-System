@@ -188,11 +188,12 @@ export class EquipmentCircleComponent implements OnInit {
                 },
                 rich: {
                   type: {
-                    fontSize: 4,
+                    fontSize: 8,
+                    padding: [5, 0, 5, 0],
                     color: color1
                   },
                   numAll: {
-                    fontSize: 10,
+                    fontSize: 12,
                     padding: [5, 0, 5, 0],
                     color: color1
                   },
@@ -346,11 +347,12 @@ export class EquipmentCircleComponent implements OnInit {
                   },
                   rich: {
                     type: {
-                      fontSize: 4,
+                      fontSize: 8,
+                      padding: [5, 0, 5, 0],
                       color: color1
                     },
                     numAll: {
-                      fontSize: 10,
+                      fontSize: 12,
                       padding: [5, 0, 5, 0],
                       color: color1
                     },

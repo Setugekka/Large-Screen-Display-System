@@ -12,49 +12,43 @@ export class ProvinceOrganizationComponent implements OnInit {
   private  urls = Urls;
   private  data = {};         // 后台获取数据
   data1 = {
-    name: '省公司应急领导小组',
-    children: [{
-      name: '领导1',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
-        "selected": true, //当前选中
+    'name': '应急领导小组',
+    'children': [{
+      'name': '安全应急办公室',
+      'children': [{
+        'name': '项目管理中心',
       }, {
-        "name": '成员2',
+        'name': '电力调试控制中心',
       }, {
-        "name": '成员3',
+        'name': '安全监察质量部',
       }, {
-        "name": '成员4',
-      }, {
-        "name": '成员5',
+        'name': '办公中心',
       }]
     }, {
-      name: '领导2',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
+      'name': '稳定应急办公室',
+      'children': [{
+        'name': '运维检修部',
       }, {
-        "name": '成员2',
+        'name': '农电工作部',
       }, {
-        "name": '成员3',
+        'name': '信息通讯中心',
       }, {
-        "name": '成员4',
+        'name': '物资供应中心',
       }, {
-        "name": '成员5',
+        'name': '综合服务',
       }]
     }, {
-      name: '成员1',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
+      'name': '紧急灾难处理中心',
+      'children': [{
+        'name': '变电抢修',
       }, {
-        "name": '成员2',
+        'name': '二次抢修',
       }, {
-        "name": '成员3',
+        'name': '物资调配',
       }, {
-        "name": '成员4',
+        'name': '通讯中心',
       }, {
-        "name": '成员5',
+        'name': '医疗分队',
       }]
     }]
   }
@@ -71,13 +65,13 @@ export class ProvinceOrganizationComponent implements OnInit {
   click(value) {
     this.GetOrgaization(value).then(r => {
       this.data = r;
-      console.log(this.data)
+      // console.log(this.data)
       this.option = {
         tooltip: {
           trigger: 'item',
           triggerOn: 'mousemove',
           formatter: function(params) {
-            return params.data.create && `作者：${params.data.create}`;
+            return params.data.create && `负责人：${params.data.create}`;
           }
         },
         series: [{
@@ -152,7 +146,7 @@ export class ProvinceOrganizationComponent implements OnInit {
         trigger: 'item',
         triggerOn: 'mousemove',
         formatter: function(params) {
-          return params.data.create && `作者：${params.data.create}`;
+          return params.data.create && `负责人：${params.data.create}`;
         }
       },
       series: [{

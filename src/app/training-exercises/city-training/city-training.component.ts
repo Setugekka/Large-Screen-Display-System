@@ -388,7 +388,7 @@ export class CityTrainingComponent implements OnInit {
     this.selected = town;
   }
   click() {
-    window.open('http://localhost:4200/src/assets/pdf/test.pdf');
+    window.open('http://localhost:4200/src/assets/pdf/yl.pdf');
   }
   unclick() {
     alert('该地区尚未上交演练计划');

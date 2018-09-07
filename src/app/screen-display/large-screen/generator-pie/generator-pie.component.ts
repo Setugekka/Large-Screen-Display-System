@@ -171,7 +171,7 @@ export class GeneratorPieComponent implements OnInit {
     // this.refresh('抚顺')
   }
   refresh(city){
-    if (city == '辽宁'){
+    if (city == ''){
       this.http.get(url_main+'/generator/count/City').subscribe(res=>{
         this.dataPosition=[]
         this.City = []

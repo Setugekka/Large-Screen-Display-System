@@ -10,7 +10,7 @@ import { CONTENT_ROUTES } from './shared/routes/content-layout.routes';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'MainPage',
+    redirectTo: 'ScreenDisplay/LargeScreen',
     pathMatch: 'full',
   },
   { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: FULL_ROUTES },

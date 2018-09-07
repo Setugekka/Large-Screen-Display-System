@@ -36,213 +36,188 @@ export class CityPlanComponent implements OnInit {
       'draggable': true,
       'category': '整体预案体系',
       'url': '/assets/pdf/test.pdf'
-    },{
-      'name': '专项1',
+    }, {
+      'name': '台风',
       'draggable': true,
-      'category': '专项1',
+      'category': '自然灾害类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项2',
+      'name': '防汛',
       'draggable': true,
-      'category': '专项2',
+      'category': '自然灾害类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项3',
+      'name': '雨雪冰冻',
       'draggable': true,
-      'category': '专项3',
+      'category': '自然灾害类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项4',
+      'name': '地震',
       'draggable': true,
-      'category': '专项4',
+      'category': '自然灾害类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项5',
+      'name': '地质灾害',
       'draggable': true,
-      'category': '专项5',
+      'category': '自然灾害类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项6',
+      'name': '大面积停电',
       'draggable': true,
-      'category': '专项6',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项7',
+      'name': '人身伤亡',
       'draggable': true,
-      'category': '专项7',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项8',
+      'name': '交通事故',
       'draggable': true,
-      'category': '专项8',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项9',
+      'name': '设备事故',
       'draggable': true,
-      'category': '专项9',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项10',
+      'name': '生产火灾',
       'draggable': true,
-      'category': '专项10',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项11',
+      'name': '通信事故',
       'draggable': true,
-      'category': '专项11',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项12',
+      'name': '网络',
       'draggable': true,
-      'category': '专项12',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     },
     {
-      'name': '专项13',
+      'name': '环境污染',
       'draggable': true,
-      'category': '专项13',
+      'category': '事故灾难类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项14',
+      'name': '公共卫生',
       'draggable': true,
-      'category': '专项14',
+      'category': '公共卫生类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项15',
+      'name': '电力服务',
       'draggable': true,
-      'category': '专项15',
+      'category': '社会安全类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项16',
+      'name': '重要保电',
       'draggable': true,
-      'category': '专项16',
+      'category': '社会安全类',
       'url': '/assets/pdf/test.pdf'
     }, {
-      'name': '专项17',
+      'name': '群体事件',
       'draggable': true,
-      'category': '专项17',
+      'category': '社会安全类',
       'url': '/assets/pdf/test.pdf'
     },
     {
-      'name': '专项18',
+      'name': '新闻突发事件',
       'draggable': true,
-      'category': '专项18',
+      'category': '社会安全类',
       'url': '/assets/pdf/test.pdf'
-    }];
+    }
+  ];
   category = [
     {
       'name': '整体预案体系'
     },{
-      'name': '专项1'
+      'name': '自然灾害类'
     }, {
-      'name': '专项2'
+      'name': '事故灾难类'
     },{
-      'name': '专项3'
+      'name': '公共卫生类'
     }, {
-      'name': '专项4'
-    },{
-      'name': '专项5'
-    }, {
-      'name': '专项6'
-    },{
-      'name': '专项7'
-    }, {
-      'name': '专项8'
-    },{
-      'name': '专项9'
-    }, {
-      'name': '专项10'
-    },{
-      'name': '专项11'
-    }, {
-      'name': '专项12'
-    }, {
-      'name': '专项13'
-    }, {
-      'name': '专项14'
-    }, {
-      'name': '专项15'
-    }, {
-      'name': '专项16'
-    },{
-      'name': '专项17'
-    }, {
-      'name': '专项18'
-    }];
+      'name': '社会安全类'
+    }
+  ];
   links = [
     {
-    'target': '专项1',
-    'source': '整体预案体系',
-    'category': '专项1'
-  }, {
-    'target': '专项2',
-    'source': '整体预案体系',
-    'category': '专项2'
-  }, {
-    'target': '专项3',
-    'source': '整体预案体系',
-    'category': '专项3'
-  }, {
-    'target': '专项4',
-    'source': '整体预案体系',
-    'category': '专项4'
-  }, {
-    'target': '专项5',
-    'source': '整体预案体系',
-    'category': '专项5'
-  }, {
-    'target': '专项6',
-    'source': '整体预案体系',
-    'category': '专项6'
-  }, {
-    'target': '专项7',
-    'source': '整体预案体系',
-    'category': '专项7'
-  }, {
-    'target': '专项8',
-    'source': '整体预案体系',
-    'category': '专项8'
-  }, {
-    'target': '专项9',
-    'source': '整体预案体系',
-    'category': '专项9'
-  }, {
-    'target': '专项10',
-    'source': '整体预案体系',
-    'category': '专项10'
-  }, {
-    'target': '专项11',
-    'source': '整体预案体系',
-    'category': '专项11'
-  }, {
-    'target': '专项12',
-    'source': '整体预案体系',
-    'category': '专项12'
-  }, {
-    'target': '专项13',
-    'source': '整体预案体系',
-    'category': '专项13'
-  }, {
-    'target': '专项14',
-    'source': '整体预案体系',
-    'category': '专项14'
-  }, {
-    'target': '专项15',
-    'source': '整体预案体系',
-    'category': '专项15'
-  }, {
-    'target': '专项16',
-    'source': '整体预案体系',
-    'category': '专项16'
-  }, {
-    'target': '专项17',
-    'source': '整体预案体系',
-    'category': '专项17'
-  }, {
-    'target': '专项18',
-    'source': '整体预案体系',
-    'category': '专项18'
-  }];
+      'target': '台风',
+      'source': '整体预案体系',
+      'category': '自然灾害类'
+    }, {
+      'target': '防汛',
+      'source': '整体预案体系',
+      'category': '自然灾害类'
+    }, {
+      'target': '雨雪冰冻',
+      'source': '整体预案体系',
+      'category': '自然灾害类'
+    }, {
+      'target': '地震',
+      'source': '整体预案体系',
+      'category': '自然灾害类'
+    }, {
+      'target': '地质灾害',
+      'source': '整体预案体系',
+      'category': '自然灾害类'
+    }, {
+      'target': '大面积停电',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '人身伤亡',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '交通事故',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '设备事故',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '生产火灾',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '通信事故',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '网络',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '环境污染',
+      'source': '整体预案体系',
+      'category': '事故灾难类'
+    }, {
+      'target': '公共卫生',
+      'source': '整体预案体系',
+      'category': '公共卫生类'
+    }, {
+      'target': '电力服务',
+      'source': '整体预案体系',
+      'category': '社会安全类'
+    }, {
+      'target': '重要保电',
+      'source': '整体预案体系',
+      'category': '社会安全类'
+    }, {
+      'target': '群体事件',
+      'source': '整体预案体系',
+      'category': '社会安全类'
+    }, {
+      'target': '新闻突发事件',
+      'source': '整体预案体系',
+      'category': '社会安全类'
+    }
+  ];
   private name = '';  // 专项文件名称
   private  urls = Urls;
   choosetown(city): any {

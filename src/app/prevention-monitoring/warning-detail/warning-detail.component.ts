@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,10 +7,14 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./warning-detail.component.css']
 })
 export class WarningDetailComponent implements OnInit {
-
+  @Input() city;
+  @Input() message;
+  title = '';
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
+    this.title = this.city + '市最新预警'
+    console.log(this.city);
   }
 
 }

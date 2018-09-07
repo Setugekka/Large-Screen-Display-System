@@ -42,7 +42,7 @@ export class SystemMapComponent implements OnInit {
     {name: '阜新', value: 10},
     {name: '本溪', value: 30},
   ];
-  private topdata1 = [['2018/08/19 12:38:08','本溪',2,'一般事件']];
+  private topdata1 = [['2018/08/20 01:00:00','大连',4,'紧急事件']];
   private topdata=[{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电"],visualMap: false,}];
   private pindata=[{value:[121.62,38.92,"因道路施工，将于下午1点至3点区间停电","大连"],visualMap: false,}];
   private chartOption:any={};
@@ -54,7 +54,7 @@ export class SystemMapComponent implements OnInit {
       ['2018/08/19 12:38:08','本溪',2,'一般事件'],
       ['2018/08/19 16:18:18','沈阳',4,'一般事件'],
       ['2018/08/19 19:18:18','大连',2,'一般事件'],
-      ['2018/08/20 9:18:18','抚顺',3,'一般事件'],
+      ['2018/08/20 10:00:00','抚顺',3,'一般事件'],
       ['2018/08/20 02:38:08','葫芦岛',2,'一般事件'],
       ['2018/08/20 04:38:08','锦州',2,'一般事件'],
       ['2018/08/19 18:18:18','朝阳',4,'一般事件'],
@@ -120,8 +120,8 @@ export class SystemMapComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('assets/json/210000.json').subscribe(geoJson=>{
-      echarts.registerMap('辽宁',geoJson)
-      this.chartOption={
+      echarts.registerMap('辽宁', geoJson)
+      this.chartOption = {
         title: {
           text: '预警状态',
           textAlign: 'center',
@@ -770,7 +770,7 @@ export class SystemMapComponent implements OnInit {
               normal: {
                 formatter: '{b}',
                 position: 'right',
-                show: true
+                show: false
               }
             },
             itemStyle: {
@@ -962,7 +962,7 @@ export class SystemMapComponent implements OnInit {
             normal: {
               formatter: '{b}',
               position: 'right',
-              show: true
+              show: false
             }
           },
           itemStyle: {
@@ -1244,8 +1244,8 @@ export class SystemMapComponent implements OnInit {
 
   }
   click(event) {
-    console.log(event);
     const modalRef = this.modalService.open(WarningDetailComponent, {windowClass: 'WarningModalClass'});
+     modalRef.componentInstance.city = event.name;
   }
   showTooltip(){
     const cur_index=this.pindata.length-1

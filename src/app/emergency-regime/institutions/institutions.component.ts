@@ -31,7 +31,7 @@ export class InstitutionsComponent implements OnInit {
       this.data = r
       this.treemap_option = {
       title: {
-        text: '应急预案体系',
+        text: '应急制度体系',
         subtext: '',
         left: '50%',
         top: '20',

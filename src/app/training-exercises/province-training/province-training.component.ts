@@ -177,6 +177,6 @@ export class ProvinceTrainingComponent implements OnInit {
     };
   }
   click() {
-    window.open('http://localhost:4200/src/assets/pdf/test.pdf');
+    window.open('http://localhost:4200/src/assets/pdf/yl.pdf');
   }
 }

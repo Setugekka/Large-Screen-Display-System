@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {EventEmitterService} from '../event-emitter.service';
 declare var echarts: any;
 declare var $: any;
 @Component({
@@ -121,7 +122,7 @@ export class MapExtendComponent implements OnInit {
     lineColor: 'rgba(147, 235, 248, .8)'
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,public emitService: EventEmitterService) {
   }
 
   ngOnInit() {
@@ -579,8 +580,9 @@ export class MapExtendComponent implements OnInit {
           echarts.registerMap(params.name, response);
           this.resetOption(this.echartsIntance, this.cur_option, params.name);
         });
+        this.emit(params.name);
       }else {
-        this.emit(params.name)
+        this.emit(params.name);
       }
     }
   }
@@ -594,7 +596,12 @@ export class MapExtendComponent implements OnInit {
   //     $("#tooltip").html("悬浮窗内容");
   // })
  emit(city){
-    console.log(city)
+    if(city=='辽宁'){
+      this.emitService.eventEmit.emit('');
+    }
+    else{
+      this.emitService.eventEmit.emit(city);
+    }
  }
 }
 

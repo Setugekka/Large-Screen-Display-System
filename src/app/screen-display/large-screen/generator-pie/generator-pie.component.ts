@@ -171,7 +171,7 @@ export class GeneratorPieComponent implements OnInit {
     // this.refresh('抚顺')
   }
   refresh(city){
-    if (city == '辽宁'){
+    if (city == ''){
       this.http.get(url_main+'/generator/count/City').subscribe(res=>{
         this.dataPosition=[]
         this.City = []
@@ -217,7 +217,7 @@ export class GeneratorPieComponent implements OnInit {
           title : {
 
             text: '辽宁省发电车辆分布',
-            subtext: '纯属虚构',
+            subtext: '',
             left:'center',
             top:'46%',
             x:'center',

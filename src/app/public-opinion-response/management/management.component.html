@@ -146,9 +146,12 @@
               <button type="button" class="btn btn-raised btn-warning mr-1">
                 <i class="ft-x"></i> 取消
               </button>
-              <button type="button" class="btn btn-raised btn-primary">
+              <button type="button" (click)="onClick(newReport)"  class="btn btn-raised btn-primary">
                 <i class="fa fa-check-square-o"></i> 保存
-              </button>
+              </button>&nbsp;&nbsp;
+              <a *ngIf="isSuccessful=='true'" href="{{fileAddress+newReport.title+'.docx'}}"  type="button" class="btn btn-raised btn-danger" download="{{newReport.title+'.docx'}}">
+              <i class="ft-arrow-down"></i>下载报表
+              </a>
             </div>
           </form>
         </div>

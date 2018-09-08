@@ -16,6 +16,6 @@ export class EmergencyEventService {
 
   constructor(private http:HttpClient) { }
   generateReportApi(newReport:Report):Observable<Report>{
-    return this.http.post<Report>('http://localhost:5000/GenerateReportApi',newReport,httpOptions)
+    return this.http.post<Report>('http://localhost:5000/report/GenerateReportApi',newReport,httpOptions)
   }
 }

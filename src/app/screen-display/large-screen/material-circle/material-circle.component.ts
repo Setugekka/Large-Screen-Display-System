@@ -187,12 +187,12 @@ export class MaterialCircleComponent implements OnInit {
               },
               rich: {
                 type: {
-                  fontSize: 4,
+                  fontSize: 8,
+                  padding: [5, 0, 5, 0],
                   color: color1
                 },
                 numAll: {
-                  fontSize: 10,
-                  padding: [5, 0, 5, 0],
+                  fontSize: 12,
                   color: color1
                 },
               }
@@ -349,12 +349,12 @@ export class MaterialCircleComponent implements OnInit {
                   },
                   rich: {
                     type: {
-                      fontSize: 4,
+                      fontSize: 8,
+                      padding: [5, 0, 5, 0],
                       color: color1
                     },
                     numAll: {
-                      fontSize: 10,
-                      padding: [5, 0, 5, 0],
+                      fontSize: 12,
                       color: color1
                     },
                   }

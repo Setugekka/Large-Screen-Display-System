@@ -84,7 +84,7 @@ export class ProvincePlanComponent implements OnInit {
     'name': '公共卫生',
     'draggable': true,
     'category': '公共卫生类',
-    'url': '/assets/pdf/test.pdf'
+    'url': '/assets/pdf/ws.pdf'
   }, {
     'name': '电力服务',
     'draggable': true,
@@ -111,11 +111,11 @@ export class ProvincePlanComponent implements OnInit {
   category = [
     {
       'name': '整体预案体系'
-    },{
+    }, {
     'name': '自然灾害类'
   }, {
     'name': '事故灾难类'
-  },{
+  }, {
     'name': '公共卫生类'
   }, {
     'name': '社会安全类'
@@ -200,7 +200,7 @@ export class ProvincePlanComponent implements OnInit {
   constructor() { }
   onChartClick($event) {
     console.log(event);
-    window.open('http://localhost:4200/src/assets/pdf/test.pdf');
+    window.open('http://localhost:4200/src/assets/pdf/ws.pdf');
   }
 
   ngOnInit() {

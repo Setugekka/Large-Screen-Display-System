@@ -217,7 +217,7 @@ export class GeneratorPieComponent implements OnInit {
           title : {
 
             text: '辽宁省发电车辆分布',
-            subtext: '纯属虚构',
+            subtext: '',
             left:'center',
             top:'46%',
             x:'center',

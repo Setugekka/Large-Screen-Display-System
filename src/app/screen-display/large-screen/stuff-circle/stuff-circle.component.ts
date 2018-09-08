@@ -39,12 +39,12 @@ export class StuffCircleComponent implements OnInit {
 
   renderItem = function(params, api) {
     const textPosition = 'inside';
-    if(api.value(9)){
+    if (api.value(9)) {
       return {
         type: 'circle',
         shape: {
           cx: api.value(6) + 20,
-          cy: api.value(7)+10,
+          cy: api.value(7) + 10,
           r:  api.value(8)
         },
         z2: api.value(1) * 2,
@@ -92,7 +92,7 @@ export class StuffCircleComponent implements OnInit {
           lineWidth: 2
         })
       };
-    }else{
+    } else {
       return {
         type: 'circle',
         shape: {
@@ -188,12 +188,12 @@ export class StuffCircleComponent implements OnInit {
                 },
                 rich: {
                   type: {
-                    fontSize: 4,
+                    fontSize: 8,
+                    padding: [5, 0, 5, 0],
                     color: color1
                   },
                   numAll: {
-                    fontSize: 10,
-                    padding: [5, 0, 5, 0],
+                    fontSize: 12,
                     color: color1
                   },
                 }
@@ -350,12 +350,12 @@ export class StuffCircleComponent implements OnInit {
                   },
                   rich: {
                     type: {
-                      fontSize: 4,
+                      fontSize: 8,
+                      padding: [5, 0, 5, 0],
                       color: color1
                     },
                     numAll: {
-                      fontSize: 10,
-                      padding: [5, 0, 5, 0],
+                      fontSize: 12,
                       color: color1
                     },
                   }

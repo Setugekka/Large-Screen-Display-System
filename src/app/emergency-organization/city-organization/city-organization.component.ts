@@ -29,49 +29,43 @@ export class CityOrganizationComponent implements OnInit {
     {name:'锦州',value:['古塔区','凌河区','太和区','凌海市','北镇市','黑山县','义县]']},
   ];
   data_init = {
-    name: '应急领导小组',
-    children: [{
-      name: '领导1',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
-        "selected": true, //当前选中
+    'name': '沈阳市应急领导小组',
+    'children': [{
+      'name': '安全应急办公室',
+      'children': [{
+        'name': '项目管理中心',
       }, {
-        "name": '成员2',
+        'name': '电力调试控制中心',
       }, {
-        "name": '成员3',
+        'name': '安全监察质量部',
       }, {
-        "name": '成员4',
-      }, {
-        "name": '成员5',
+        'name': '办公中心',
       }]
     }, {
-      name: '领导2',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
+      'name': '稳定应急办公室',
+      'children': [{
+        'name': '运维检修部',
       }, {
-        "name": '成员2',
+        'name': '农电工作部',
       }, {
-        "name": '成员3',
+        'name': '信息通讯中心',
       }, {
-        "name": '成员4',
+        'name': '物资供应中心',
       }, {
-        "name": '成员5',
+        'name': '综合服务',
       }]
     }, {
-      name: '成员1',
-      children: [{
-        name: '成员1',
-        "create": "二珂",
+      'name': '紧急灾难处理中心',
+      'children': [{
+        'name': '变电抢修',
       }, {
-        "name": '成员2',
+        'name': '二次抢修',
       }, {
-        "name": '成员3',
+        'name': '物资调配',
       }, {
-        "name": '成员4',
+        'name': '通讯中心',
       }, {
-        "name": '成员5',
+        'name': '医疗分队',
       }]
     }]
   }
@@ -86,27 +80,16 @@ export class CityOrganizationComponent implements OnInit {
           this.town_list = i.value;
         }
       }
-      console.log(this.city_list);
-  }
-  choosentown(town): any {
-    this.town_name = town;
-  }
-  return(): any {
-    this.town_name = '请选择区县';
-  }
-  GetOrgaization(group= null):  any {
-    const params = {
-      'group': group
-    };
-    const data = this.http.get(this.urls.GetOrganization, {params: params})
-      .toPromise()
-      .then(response => response.json());
-    return data;
-  }
-  click(value) {
-    this.GetOrgaization(value).then(r => {
+    this.GetOrgaization('应急领导小组').then(r => {
       this.data = r;
-      console.log(this.data)
+      const a = this.data['name'];
+      console.log(r)
+      if (this.town_name !== '请选择区县') {
+        this.data['name'] = this.city_name + '市' + this.town_name + a;
+        console.log(this.town_name);
+      } else {
+        this.data['name'] = this.city_name + '市' + a;
+      }
       this.option = {
         tooltip: {
           trigger: 'item',
@@ -178,8 +161,190 @@ export class CityOrganizationComponent implements OnInit {
           // animationDurationUpdate: 750
         }]
       };
-    }),
-      console.log(value);
+    });
+
+  }
+  choosentown(town): any {
+    this.town_name = town;
+    this.GetOrgaization('应急领导小组').then(r => {
+      this.data = r;
+      const a = this.data['name'];
+      if (this.town_name !== '请选择区县') {
+        this.data['name'] = this.city_name + '市' + this.town_name + a;
+      } else {
+        this.data['name'] = this.city_name + '市' + a;
+      }
+
+      // console.log(this.data[name])
+      this.option = {
+        tooltip: {
+          trigger: 'item',
+          triggerOn: 'mousemove',
+          formatter: function(params) {
+            return params.data.create && `负责人：${params.data.create}`;
+          }
+        },
+        series: [{
+          type: 'tree',
+          name: 'tree2',
+          data: [this.data],
+          top: '0',
+          bottom: '22%',
+          right: '28%',
+          symbolSize: 20,
+          initialTreeDepth: 10,
+          label: {
+            normal: {
+              position: 'bottom',
+              verticalAlign: 'middle',
+              align: 'center',
+              textStyle: {
+                color: '#FFF',
+                fontWeight: 'normal',
+                fontSize: 20,
+              },
+              formatter: function(params) {
+                if (params.data.selected) {
+                  const str = '当前:'
+                  return `{box|${str}${params.data.name}}`;
+                } else {
+                  return `${params.data.name}`;
+                }
+
+              },
+              rich: {
+                box: {
+                  color: '#3FA7DC',
+                  fontSize: 20,
+                }
+              }
+            }
+          },
+
+          leaves: {
+            label: {
+              normal: {
+                position: 'right',
+                verticalAlign: 'middle',
+                align: 'left'
+              }
+            }
+          },
+
+
+          /* leaves: {
+               label: {
+                   normal: {
+                       position: 'right',
+                       verticalAlign: 'middle',
+                       align: 'left'
+                   }
+               }
+           },*/
+
+          // expandAndCollapse: true,
+          // animationDuration: 550,
+          // animationDurationUpdate: 750
+        }]
+      };
+    });
+  }
+  return(): any {
+    this.town_name = '请选择区县';
+  }
+  GetOrgaization(group= null):  any {
+    const params = {
+      'group': group
+    };
+    const data = this.http.get(this.urls.GetOrganization, {params: params})
+      .toPromise()
+      .then(response => response.json());
+    return data;
+  }
+  click(value) {
+    this.GetOrgaization(value).then(r => {
+      this.data = r;
+      const a = this.data['name'];
+      if (this.town_name !== '请选择区县') {
+        this.data['name'] = this.city_name + '市' + this.town_name + a;
+      } else {
+        this.data['name'] = this.city_name + '市' + a;
+      }
+
+      // console.log(this.data[name])
+      this.option = {
+        tooltip: {
+          trigger: 'item',
+          triggerOn: 'mousemove',
+          formatter: function(params) {
+            return params.data.create && `负责人：${params.data.create}`;
+          }
+        },
+        series: [{
+          type: 'tree',
+          name: 'tree2',
+          data: [this.data],
+          top: '0',
+          bottom: '22%',
+          right: '28%',
+          symbolSize: 20,
+          initialTreeDepth: 10,
+          label: {
+            normal: {
+              position: 'bottom',
+              verticalAlign: 'middle',
+              align: 'center',
+              textStyle: {
+                color: '#FFF',
+                fontWeight: 'normal',
+                fontSize: 20,
+              },
+              formatter: function(params) {
+                if (params.data.selected) {
+                  const str = '当前:'
+                  return `{box|${str}${params.data.name}}`;
+                } else {
+                  return `${params.data.name}`;
+                }
+
+              },
+              rich: {
+                box: {
+                  color: '#3FA7DC',
+                  fontSize: 20,
+                }
+              }
+            }
+          },
+
+          leaves: {
+            label: {
+              normal: {
+                position: 'right',
+                verticalAlign: 'middle',
+                align: 'left'
+              }
+            }
+          },
+
+
+          /* leaves: {
+               label: {
+                   normal: {
+                       position: 'right',
+                       verticalAlign: 'middle',
+                       align: 'left'
+                   }
+               }
+           },*/
+
+          // expandAndCollapse: true,
+          // animationDuration: 550,
+          // animationDurationUpdate: 750
+        }]
+      };
+    });
+      // console.log(value);
   }
   constructor(private http: Http) { }
 
@@ -189,7 +354,7 @@ export class CityOrganizationComponent implements OnInit {
         trigger: 'item',
         triggerOn: 'mousemove',
         formatter: function(params) {
-          return params.data.create && `作者：${params.data.create}`;
+          return params.data.create && `负责人：${params.data.create}`;
         }
       },
       series: [{

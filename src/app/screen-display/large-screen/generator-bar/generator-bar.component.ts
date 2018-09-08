@@ -231,7 +231,7 @@ export class GeneratorBarComponent implements OnInit {
   }
 
   refresh(city){
-    if (city =='辽宁'){
+    if (city ==''){
       this.http.get(url_main+'/generator/count/City').subscribe(res => {
         this.DataSeries=res;
         this.Generator_Count=[];

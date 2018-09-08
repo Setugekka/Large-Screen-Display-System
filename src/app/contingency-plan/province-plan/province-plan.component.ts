@@ -214,7 +214,7 @@ export class ProvincePlanComponent implements OnInit {
           }
         },
         title: {
-          text: '省公司应急制度体系',
+          text: '省公司应急预案体系',
           textAlign: 'center',
           left: '50%',
           top: '20',

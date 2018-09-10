@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ProvincePlanComponent} from './province-plan/province-plan.component';
 import {CityPlanComponent} from './city-plan/city-plan.component';
+import {WholePlanComponent} from './whole-plan/whole-plan.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,13 @@ const routes: Routes = [
       title: 'CityPlan'
     },
   },
+  {
+    path: 'WholePlan',
+    component: WholePlanComponent,
+    data: {
+      title: 'WholePlan'
+    }
+  }
 
 ];
 @NgModule({

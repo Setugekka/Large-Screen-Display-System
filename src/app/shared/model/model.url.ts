@@ -14,5 +14,7 @@ export const Urls = {
   GetOrganization: host + '/organization/get_list',
   GetInstitutions: host + '/institutions/get_all',
   GetPlan: host + '/plan/get_url',
-  GetResultList: host + '/training/get_result'
+  GetResultList: host + '/training/get_result',
+  GetCityList: host +  '/city/get_cityList',
+  GetAllPlan: host +  '/plan/get_all',
 };

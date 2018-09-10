@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {url_main} from '../config'
+import {url_main} from '../config';
 import {componentRefresh} from "@angular/core/src/render3/instructions";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {DetailviewComponent} from "../detailview/detailview.component"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {Urls} from '../../shared/model/model.url';
 import {Http} from '@angular/http';
 
@@ -346,9 +347,14 @@ export class CityOrganizationComponent implements OnInit {
     });
       // console.log(value);
   }
-  constructor(private http: Http) { }
+  constructor(private http: Http, public activatedRoute: ActivatedRoute, ) {
+  }
 
   ngOnInit() {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.city_name = params['Id'];
+      console.log(params);
+    });
     this.option = {
       tooltip: {
         trigger: 'item',

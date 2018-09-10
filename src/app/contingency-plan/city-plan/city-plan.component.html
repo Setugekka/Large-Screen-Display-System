@@ -1,16 +1,98 @@
-<div class="col-md-4 col-md-offset-8">
-  <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>
+<!--<div class="col-md-4 col-md-offset-8">-->
+  <!--<div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>-->
+    <!--<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>-->
+    <!--<div ngbDropdownMenu aria-labelledby="dropdownBasic1">-->
+      <!--<button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>-->
+    <!--</div>-->
+    <!--<span ngbDropdown>-->
+  <!--<button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>-->
+  <!--<div ngbDropdownMenu aria-labelledby="dropdownBasic2">-->
+    <!--<button class="dropdown-item" (click)="return()">返回上级</button>-->
+    <!--<button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>-->
+  <!--</div>-->
+    <!--</span>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="row" matchHeight ="card" >
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title mb-0">国网沈阳供电公司</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <div echarts [options]="option"  style="height: 980px;background-color: white;margin-top: 0px"></div>
+        </div>
+      </div>
     </div>
-    <span ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>
-  <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-    <button class="dropdown-item" (click)="return()">返回上级</button>
-    <button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>
   </div>
-    </span>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">辽宁省电力有限公司应急组织体系简介</h4>
+        <p>switch image to right of the content.</p>
+      </div>
+      <div class="card-body" style="height:980px;overflow-y: auto">
+        <div class="card-block">
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio,
+                vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                congue felis in faucibus. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div echarts [options]="option"  style="height:800px" (chartClick)="onChartClick($event)"></div>

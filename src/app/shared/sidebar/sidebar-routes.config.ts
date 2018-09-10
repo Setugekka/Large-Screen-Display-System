@@ -3,7 +3,7 @@ import {RouteInfo} from './sidebar.metadata';
 // Sidebar menu Routes and data
 export const ROUTES: RouteInfo[] = [
   {
-    path: '',
+    path: '/EmergencyOrganization/WholeOrganization',
     title: '应急组织体系',
     icon: 'ft-sliders',
     class: 'has-sub',
@@ -11,19 +11,22 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/EmergencyOrganization/ProvinceOrganization', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/EmergencyOrganization/WholeOrganization', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/EmergencyOrganization/CityOrganization', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       ]
   },
   {
-    path: '/EmergencyRegime/Institutions',
+    path: '',
     title: '应急制度体系',
     icon: 'ft-file-text',
-    class: '',
+    class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
-    submenu: []
+    submenu: [
+      { path: '/EmergencyRegime/WholeInstitution', title: '应急制度体系介绍', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/EmergencyRegime/Institutions', title: '应急制度体系', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+    ]
   },
   {
     path: '',
@@ -34,7 +37,7 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/ContingencyPlan/ProvincePlan', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ContingencyPlan/WholePlan', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/ContingencyPlan/CityPlan', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },

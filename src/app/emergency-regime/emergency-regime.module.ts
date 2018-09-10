@@ -7,6 +7,7 @@ import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { InstitutionsComponent } from './institutions/institutions.component';
 import { FileviewComponent } from './fileview/fileview.component';
+import { WholeInstitutionComponent } from './whole-institution/whole-institution.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { FileviewComponent } from './fileview/fileview.component';
     NgbModalModule
   ],
   entryComponents: [FileviewComponent],
-  declarations: [PdfViewerComponent, InstitutionsComponent, FileviewComponent]
+  declarations: [PdfViewerComponent, InstitutionsComponent, FileviewComponent, WholeInstitutionComponent]
 })
 export class EmergencyRegimeModule { }

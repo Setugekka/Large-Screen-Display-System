@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {ProvinceOrganizationComponent} from './province-organization/province-organization.component';
 import {CityOrganizationComponent} from './city-organization/city-organization.component';
+import {WholeOrganizationComponent} from './whole-organization/whole-organization.component';
 
 
 
@@ -21,7 +22,13 @@ const routes: Routes = [
       title: 'CityOrganization'
     },
   },
-
+  {
+    path: 'WholeOrganization',
+    component: WholeOrganizationComponent,
+    data: {
+      title: 'WholeOrganization'
+    }
+  }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

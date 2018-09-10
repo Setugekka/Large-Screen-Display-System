@@ -7,6 +7,7 @@ import {NgxEchartsModule} from 'ngx-echarts';
 
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WholePlanComponent } from './whole-plan/whole-plan.component';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModalModule
   ],
 
-  declarations: [ProvincePlanComponent, CityPlanComponent]
+  declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent]
 })
 export class ContingencyPlanModule { }

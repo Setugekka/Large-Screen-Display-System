@@ -24,7 +24,7 @@ export class EquipmentCircleComponent implements OnInit {
   private  option: any;
   private  root = <any>{};
   dtOptions: DataTables.Settings = {};
-  model_title:any;
+  model_title: any;
   constructor(private http: Http, public emitService: EventEmitterService, private modalService: NgbModal) { }
   GetAllEquipment(city= null):  any {
     const params = {
@@ -41,7 +41,7 @@ export class EquipmentCircleComponent implements OnInit {
       return {
         type: 'circle',
         shape: {
-          cx: api.value(6)+ 20,
+          cx: api.value(6) + 20,
           cy: api.value(7) + 10,
           r:  api.value(8)
         },
@@ -280,6 +280,7 @@ export class EquipmentCircleComponent implements OnInit {
       // }
       this.GetAllEquipment(value).then(r => {
         this.data = r;
+        console.log(r);
         this.root = d3.hierarchy(this.data)                 //
           .sum(function(d) {
             return d.Num;
@@ -293,7 +294,7 @@ export class EquipmentCircleComponent implements OnInit {
         const nodeAll = this.root.descendants();
         const nodes = nodeAll.filter(function(it) {
           return it.parent;
-        })
+        });
         const seriesData = nodes.map(function(node) {
           maxDepth = Math.max(maxDepth, node.depth);
           const color1 = '#ffffff';

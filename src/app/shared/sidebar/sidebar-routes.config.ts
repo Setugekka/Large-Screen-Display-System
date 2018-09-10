@@ -3,7 +3,7 @@ import {RouteInfo} from './sidebar.metadata';
 // Sidebar menu Routes and data
 export const ROUTES: RouteInfo[] = [
   {
-    path: '',
+    path: '/EmergencyOrganization/ProvinceOrganization',
     title: '应急组织体系',
     icon: 'ft-sliders',
     class: 'has-sub',
@@ -26,7 +26,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '',
+    path: '/ContingencyPlan/ProvincePlan',
     title: '应急预案体系',
     icon: 'ft-compass',
     class: 'has-sub',
@@ -39,7 +39,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '',
+    path: '/TrainingExercises/ProvinceTraining',
     title: '应急培训演练体系',
     icon: 'ft-video',
     class: 'has-sub',

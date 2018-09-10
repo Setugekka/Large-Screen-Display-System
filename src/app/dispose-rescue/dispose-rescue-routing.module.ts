@@ -5,7 +5,16 @@ import { ManagerComponent } from './manager/manager.component';
 import { ExpertComponent } from './expert/expert.component';
 import { NewsComponent } from './news/news.component';
 import { WorkerComponent } from './worker/worker.component';
+import {DrIndexComponent} from "./dr-index/dr-index.component";
+
 const routes: Routes = [
+  {
+    path: '',
+    component: DrIndexComponent,
+    data: {
+      title: ''
+    },
+  },
   {
     path: 'Expert',
     component: ExpertComponent,

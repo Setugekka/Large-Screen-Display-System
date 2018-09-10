@@ -68,7 +68,7 @@ import { MapExtendComponent } from './large-screen/map-extend/map-extend.compone
     ClockComponent,
     MapExtendComponent
   ],
-  exports:[DetailviewComponent]
+  exports:[DetailviewComponent,MapExtendComponent]
 
 })
 export class ScreenDisplayModule {

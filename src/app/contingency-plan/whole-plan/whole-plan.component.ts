@@ -48,7 +48,7 @@ export class WholePlanComponent implements OnInit {
   }
   click(event) {
     console.log(event.name);
-    this.router.navigate(['/EmergencyOrganization/CityOrganization', { queryParams: {Id: event.name}}]);
+    this.router.navigate(['/ContingencyPlan/CityPlan', {Id: event.name}]);
   }
   GetCityList():  any {
     const data = this.http.get(this.urls.GetCityList)
@@ -117,7 +117,7 @@ export class WholePlanComponent implements OnInit {
                 }
               },
               lineStyle: {
-                color: '#000',
+                color: '#fff',
                 width: 1,
                 type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
               }

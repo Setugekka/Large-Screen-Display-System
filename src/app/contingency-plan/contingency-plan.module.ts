@@ -4,6 +4,7 @@ import {ContingencyPlanRoutingModule} from './contingency-plan-routing.module';
 import { ProvincePlanComponent } from './province-plan/province-plan.component';
 import { CityPlanComponent } from './city-plan/city-plan.component';
 import {NgxEchartsModule} from 'ngx-echarts';
+import {HttpClientModule} from '@angular/common/http';
 
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -16,7 +17,8 @@ import { WholePlanComponent } from './whole-plan/whole-plan.component';
     NgxEchartsModule,
     ContingencyPlanRoutingModule,
     NgbModule,
-    NgbModalModule
+    NgbModalModule,
+    HttpClientModule
   ],
 
   declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent]

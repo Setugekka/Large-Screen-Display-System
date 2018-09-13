@@ -4,6 +4,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {FileviewComponent} from '../fileview/fileview.component';
 import {Http} from '@angular/http';
 import { Urls} from '../../shared/model/model.url';
+import {ActivatedRoute} from '@angular/router';
 
 
 
@@ -18,15 +19,21 @@ export class InstitutionsComponent implements OnInit {
   private  urls = Urls;
   private  data = {};
   treemap_option: any;
+  class = '';
   GetInstitutions():  any {
-    const data = this.http.get(this.urls.GetInstitutions, )
+    const params = {
+      'class': this.class
+    };
+    const data = this.http.get(this.urls.GetInstitutions, {params: params} )
       .toPromise()
       .then(response => response.json());
     return data;
   }
-  constructor(private modalService: NgbModal, private http: Http) { }
+  constructor(private modalService: NgbModal, private http: Http, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.class = this.activatedRoute.snapshot.paramMap.get('Id');
+    console.log(this.class);
     this.GetInstitutions().then(r => {
       this.data = r
       this.treemap_option = {
@@ -62,7 +69,7 @@ export class InstitutionsComponent implements OnInit {
             position: 'inside',
             textStyle: {
               color: '#fff',
-              fontSize: 16,
+              fontSize: 32,
             },
             formatter: function(params) {
                 return params.data['name'] + '\n\n' + params.data['classification'];
@@ -74,7 +81,7 @@ export class InstitutionsComponent implements OnInit {
             show: true,
             textStyle: {
               color: '#fff',
-              fontSize: 12,
+              fontSize: 32,
             },
             borderWidth: 1,
             borderColor: '#fff',

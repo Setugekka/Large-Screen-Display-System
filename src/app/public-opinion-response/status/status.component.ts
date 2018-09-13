@@ -149,7 +149,6 @@ export class StatusComponent implements OnInit {
       },
       axisLabel: {
         show: true,
-        interval:0,
         textStyle: {
           color: "#00c7ff",
         }

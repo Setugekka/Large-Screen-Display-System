@@ -3,8 +3,8 @@
     <div class="module-panel" *ngFor="let city of initdata">
       <div class="panel-body">
         <div class="row">
-          <div class="person_detail col-8"><i class="ft-circle mr-2"></i>{{city.name}}</div>
-          <div class="person_detail col-4">{{city.value}}</div>
+          <div class="person_detail col-8"><i class="ft-circle mr-2" style="color: white"></i>{{city.name}}</div>
+          <div class="person_detail col-4" style="color: yellow;font-weight: bold;font-size: 30px">{{city.value}}</div>
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
     <div echarts [options]="chartOption" style="height: 400px"></div>
   </div>
   <div class="col-4">
-    <div echarts [options]="zhuoption" style="height: 400px"></div>
+    <div echarts [options]="zhuoption" style="height: 350px"></div>
   </div>
 </div>
 <div class="row">

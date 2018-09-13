@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-4">
-    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module">
+    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
       <div class="chat-sidebar-content">
         <div id="users-list" class="list-group position-relative">
           <div class="users-list-padding">
@@ -46,43 +46,43 @@
               </div>
             </span>
             </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
-            <span class="media">
-              <span class="avatar avatar-md avatar-away">
-                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"
-                     alt="Generic placeholder image">
-                <i></i>
-              </span>
-              <div class="media-body">
-                <h6 class="list-group-item-heading">葫芦岛
-                  <span class="font-small-3 float-right primary">2:14 AM</span>
-                </h6>
-                <p class="list-group-item-text text-muted">
-                  <i class="ft-check font-small-2"></i> 绿色预警
-                  <span class="float-right primary">
-                    <i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>
-                    <span class="badge badge-pill badge-primary"></span>
-                  </span>
-                </p>
-              </div>
-            </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
-            <span class="media">
-              <span class="avatar avatar-md avatar-away">
-                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
-                     alt="Generic placeholder image">
-                <i></i>
-              </span>
-              <div class="media-body">
-                <h6 class="list-group-item-heading">锦州
-                  <span class="font-small-3 float-right primary">昨天</span>
-                </h6>
-                <p class="list-group-item-text text-muted">
-                  <i class="ft-check font-small-2"></i> 紫色预警</p>
-              </div>
-            </span>
-            </a>
+            <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat3')">-->
+            <!--<span class="media">-->
+              <!--<span class="avatar avatar-md avatar-away">-->
+                <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"-->
+                     <!--alt="Generic placeholder image">-->
+                <!--<i></i>-->
+              <!--</span>-->
+              <!--<div class="media-body">-->
+                <!--<h6 class="list-group-item-heading">葫芦岛-->
+                  <!--<span class="font-small-3 float-right primary">2:14 AM</span>-->
+                <!--</h6>-->
+                <!--<p class="list-group-item-text text-muted">-->
+                  <!--<i class="ft-check font-small-2"></i> 绿色预警-->
+                  <!--<span class="float-right primary">-->
+                    <!--<i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>-->
+                    <!--<span class="badge badge-pill badge-primary"></span>-->
+                  <!--</span>-->
+                <!--</p>-->
+              <!--</div>-->
+            <!--</span>-->
+            <!--</a>-->
+            <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat4')">-->
+            <!--<span class="media">-->
+              <!--<span class="avatar avatar-md avatar-away">-->
+                <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"-->
+                     <!--alt="Generic placeholder image">-->
+                <!--<i></i>-->
+              <!--</span>-->
+              <!--<div class="media-body">-->
+                <!--<h6 class="list-group-item-heading">锦州-->
+                  <!--<span class="font-small-3 float-right primary">昨天</span>-->
+                <!--</h6>-->
+                <!--<p class="list-group-item-text text-muted">-->
+                  <!--<i class="ft-check font-small-2"></i> 紫色预警</p>-->
+              <!--</div>-->
+            <!--</span>-->
+            <!--</a>-->
             <h3 style="color: white;font-weight: bold">未预警</h3>
             <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
             <span class="media">
@@ -143,7 +143,7 @@
     <app-map></app-map>
   </div>
   <div class="col-4">
-    <div class="card module" style="height: 600px">
+    <div class="module" style="height: 556px">
       <div class="card-header person_detail">预警详情</div>
       <div class="card-body person_detail">
         预警具体内容

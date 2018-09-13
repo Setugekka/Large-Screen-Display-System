@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-4">
-    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module">
+  <div class="col-4" style="color: unset;padding: 0">
+    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
       <div class="chat-sidebar-content">
         <div id="users-list" class="list-group position-relative">
           <div class="users-list-padding">
@@ -137,16 +137,23 @@
       </div>
     </div>
   </div>
-  <div class="col-4" (click)="clicktest">
+  <div class="col-4">
     <app-map></app-map>
   </div>
   <div class="col-4">
-    <div class="card module" style="height: 600px">
-      <div class="card-header person_detail">处置措施</div>
+    <div class="module" style="height: 654px">
+      <div class="card-header person_detail">舆情详情</div>
       <div class="card-body person_detail">
         处置措施具体内容
-        例子：{{detaildata}}
+        例子：
+        <div>{{a}}</div>
+        <div>{{b}}</div>
+        <div>{{c}}</div>
+        <div>{{d}}</div>
+        <div>{{e}}</div>
+        <div>{{detaildata}}</div>
       </div>
+
     </div>
   </div>
 </div>

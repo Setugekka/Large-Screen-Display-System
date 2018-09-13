@@ -10,6 +10,9 @@ declare var echarts: any;
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
+  private title;
+  private text;
+  private time;
   mapLoaded = false;
   city_list = ['沈阳', '大连', '鞍山'];
   private geoCoordMap = {
@@ -296,6 +299,20 @@ export class WeatherComponent implements OnInit {
 
         });
     });
+    this.httpClient.get('/api/ProService/servlet/wordProductAction?action=glfwzb').subscribe(res=>{
+      if (res['statue'] == 'success'){
+        const news=res['data'][0]
+        this.httpClient.get('/api/ProService/servlet/showWordContentAction?action=service&id='+news['id']).subscribe(res=>{
+          if(res['statue'] == 'success'){
+            this.title=res['title']
+            this.text=res['text']
+            this.time=res['datetime']
+          }
+        })
+      }
+    })
+
+
 }
 
 }

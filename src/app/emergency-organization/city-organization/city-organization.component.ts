@@ -180,6 +180,16 @@ export class CityOrganizationComponent implements OnInit {
   option: any;
   option_sankey: any;
   links = [];
+  private all_content = [
+    {name: '应急领导小组', value: '贯彻落实国家应急管理法律法规、方针政策及标准体系。。。'},
+    {name: '安全应急办公室', value: '安全应急办公室设在公司安质部。。。'},
+    {name: '稳定应急办公室', value: '稳定应急办公室设在公司办公室、负责公共卫生。。。'},
+    {name: '公司各部门', value: '各职能部门按照“谁主管、谁负责”原则。。。'},
+    {name: '公司各供电公司及单位', value: '公司各供电公司下设安全应急办公室和稳定应急办公室。。。'}
+
+];
+  private content = '贯彻落实国家应急管理法律法规、方针政策及标准体系。。。';
+  private chosen_name = '应急领导小组';
   private  urls = Urls;
   private  data = {};         // 后台获取数据
   choosetown(city): any {
@@ -516,6 +526,16 @@ export class CityOrganizationComponent implements OnInit {
     });
       // console.log(value);
   }
+  show_content(event) {
+    for (const i of this.all_content) {
+      if (i.name === event.data.source) {
+        this.chosen_name = event.data.source;
+        this.content = i.value;
+        console.log(i);
+      }
+    }
+    console.log(this.content);
+  }
   constructor(private http: Http, public activatedRoute: ActivatedRoute ) {
   }
 
@@ -525,10 +545,8 @@ export class CityOrganizationComponent implements OnInit {
       this.city_name = '沈阳';
       // console.log(this.city_name);
     }
-
-
     this.setup_link(this.data_all);
-    console.log(this.links);
+    // console.log(this.links);
     this.option_sankey = {
       series: {
         type: 'sankey',

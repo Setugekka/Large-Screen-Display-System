@@ -200,7 +200,7 @@ export class CityPlanComponent implements OnInit {
           },
           data: list,
           expandAndCollapse: true,
-          initialTreeDepth: 4,
+          initialTreeDepth: 2,
         }]
       };
     });

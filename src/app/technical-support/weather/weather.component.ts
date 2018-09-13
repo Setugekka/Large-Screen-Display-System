@@ -30,16 +30,16 @@ export class WeatherComponent implements OnInit {
 
   };
   data = [
-    {name: '沈阳市', value: ['100']},  // value值为不包括百分号的上交进度，实际值应为100%
+    {name: '沈阳市', value: ['90']},  // value值为不包括百分号的上交进度，实际值应为100%
     {name: '大连市', value: ['85']},
-    {name: '鞍山市', value: ['100']},
+    {name: '鞍山市', value: ['95']},
     {name: '抚顺市', value: ['50']},
     {name: '本溪市', value: ['80']},
     {name: '丹东市', value: ['90']},
-    {name: '盘锦市', value: ['100']},
+    {name: '盘锦市', value: ['98']},
     {name: '营口市', value: ['50']},
     {name: '葫芦岛市', value: ['60']},
-    {name: '朝阳市', value: ['100']},
+    {name: '朝阳市', value: ['99']},
     {name: '阜新市', value: ['88']},
     {name: '辽阳市', value: ['90']},
     {name: '铁岭市', value: ['90']},
@@ -63,7 +63,8 @@ export class WeatherComponent implements OnInit {
   };
 
   GetWeather(e) {
-    return e.value[3];
+    return e.name + ':' +  ' \n ' + '风向：' + e.value[3]
+                          +  ' \n ' + '风速：' + e.value[5];
   }
 
 
@@ -87,6 +88,11 @@ export class WeatherComponent implements OnInit {
                 // console.log(i.city);
                 if (city === i.city) {
                   this.data[a]['value'] = this.data[a]['value'].concat([i['fx1']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['fx2']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['fs1']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['fs2']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['temp1']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['temp2']]);
                   // console.log(a['value']);
                 }
               }

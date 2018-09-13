@@ -9,7 +9,7 @@ import {EventEmitterService} from "../../screen-display/large-screen/event-emitt
 })
 export class PmIndexComponent implements OnInit {
 
-  private detaildata;
+  private detaildata="预警是指在灾害或灾难以及其他需要提防的危险发生之前，根据以往的总结的规律或观测得到的可能性前兆，向相关部门发出紧急信号，报告危险情况，以避免危害在不知情或准备不足的的情况下发生，从而最大程度的减轻危害所造成的损失的行为。";
   constructor(private elRef:ElementRef,private router:Router) { }
 
   ngOnInit() {

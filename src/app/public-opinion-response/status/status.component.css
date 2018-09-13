@@ -18,7 +18,7 @@
   text-align: center;
 }
 .module-panel {
-  height: 18px;
+  height: 20px;
   margin: 5px;
   border: none;
   border-radius: 5px;
@@ -29,7 +29,8 @@
 }
 .person_detail{
   color: #95ffff;
-  font-size: 15px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .module-body{
   width: 100%;

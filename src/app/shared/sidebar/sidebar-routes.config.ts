@@ -149,7 +149,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: 'http://127.0.0.1:5000/form_entry_system',
+    path: 'http://127.0.0.1:5000/form_entry_system/index',
     title: '信息上报',
     icon: 'ft-airplay',
     class: '',

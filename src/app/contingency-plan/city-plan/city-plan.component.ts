@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Urls} from '../../shared/model/model.url';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-city-plan',
@@ -110,9 +111,13 @@ export class CityPlanComponent implements OnInit {
       .then(response => response.json());
     return data;
   }
-  constructor(private http: Http, private modalService: NgbModal) { }
+  constructor(private http: Http, private modalService: NgbModal, public activatedRoute: ActivatedRoute ) {}
 
   ngOnInit() {
+    this.city_name = this.activatedRoute.snapshot.paramMap.get('Id')
+    if (this.city_name === null)  {
+      this.city_name = '沈阳';
+    }
     this.GetAllPlan().then(r => {
       this.plan_list = r;
       const list = this.form_plan(this.plan_list)
@@ -159,7 +164,7 @@ export class CityPlanComponent implements OnInit {
           // nodePadding: 20,
           // layerPadding: 40,
           symbol: 'rectangle',
-          borderColor: 'black',
+          borderColor: 'white',
           itemStyle: {
             normal: {
               color: '#fff', // 节点背景色
@@ -182,7 +187,7 @@ export class CityPlanComponent implements OnInit {
                 },
               },
               lineStyle: {
-                color: '#000',
+                color: '#fff',
                 width: 1,
                 type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
               }

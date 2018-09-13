@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {isUndefined} from "util";
 import {WarningDetailComponent} from '../warning-detail/warning-detail.component';
-declare var echarts:any;
+declare var echarts: any;
 import {  trigger,  state,  style,  animate,  transition} from '@angular/animations';
 
 @Component({
@@ -26,7 +26,7 @@ import {  trigger,  state,  style,  animate,  transition} from '@angular/animati
   ]
 })
 export class SystemMapComponent implements OnInit {
-  private initdata=[
+  private initdata = [
     {name: '大连', value: 20},
     {name: '锦州', value: 30},
     {name: '葫芦岛', value: 25},

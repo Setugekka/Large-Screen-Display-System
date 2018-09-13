@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Urls} from '../../shared/model/model.url';
 import {Http} from '@angular/http';
@@ -13,6 +13,7 @@ export class CityOrganizationComponent implements OnInit {
   city_name = '沈阳'
   town_name = '请选择区县'
   town_list = ['和平区','浑南区','皇姑区','沈河区','大东区','铁西区','苏家屯区','沈北新区','于洪区','辽中区','新民市','康平县','法库县']
+  // 各个城市的区县
   data1 = [
     {name:'沈阳',value:['和平区','浑南区','皇姑区','沈河区','大东区','铁西区','苏家屯区','沈北新区','于洪区','辽中区','新民市','康平县','法库县']},
     {name:'大连',value:['中山区','西岗区','沙河口区','甘井子区','旅顺口区','金州区','普兰店区','瓦房店市','庄河市','长海县']},
@@ -29,6 +30,7 @@ export class CityOrganizationComponent implements OnInit {
     {name:'铁岭',value:['银州区','清河区','调兵山市','开原市','铁岭县','昌图县','西丰县']},
     {name:'锦州',value:['古塔区','凌河区','太和区','凌海市','北镇市','黑山县','义县]']},
   ];
+  // 初始树图（暂搁置）
   data_init = {
     'name': '沈阳市应急领导小组',
     'children': [{
@@ -70,7 +72,114 @@ export class CityOrganizationComponent implements OnInit {
       }]
     }]
   }
+  // 组织结构图层级元素
+  data_all = [{
+    name: '应急领导小组',
+    value: 1
+  }, {
+    name: '安全应急办公室',
+    value: 2
+  }, {
+    name: '稳定应急办公室',
+    value: 2
+  }, {
+    name: '办公室',
+    value: 3
+  }, {
+    name: '保卫部',
+    value: 3
+  }, {
+    name: '建设部',
+    value: 3
+  }, {
+    name: '电力调度控制中心',
+    value: 3
+  }, {
+    name: '运维检修部',
+    value: 3
+  }, {
+    name: '营销部',
+    value: 3
+  }, {
+    name: '信息通信分公司',
+    value: 3
+  }, {
+    name: '物资供应中心',
+    value: 3
+  }, {
+    name: '综合服务',
+    value: 3
+  }, {
+    name: '输电运检室',
+    value: 4
+  }, {
+    name: '变电运维室',
+    value: 4
+  }, {
+    name: '变电检修室',
+    value: 4
+  }, {
+    name: '配电运检室',
+    value: 4
+  }, {
+    name: '电缆运检室',
+    value: 4
+  }, {
+    name: '带电作业室',
+    value: 4
+  }, {
+    name: '和平客户服务分中心',
+    value: 4
+  }, {
+    name: '沈河客户服务分中心',
+    value: 4
+  }, {
+    name: '大东客户服务分中心',
+    value: 4
+  }, {
+    name: '皇姑客户服务分中心',
+    value: 4
+  }, {
+    name: '铁西客户服务分中心',
+    value: 4
+  }, {
+    name: '浑南客户服务分中心',
+    value: 4
+  }, {
+  name: '开发区客户服务分中心',
+  value: 4
+}, {
+  name: '国网新民市供电公司',
+    value: 4
+}, {
+  name: '国网沈阳市辽中区供电公司',
+    value: 4
+}, {
+  name: '国网沈阳市苏家屯区供电公司',
+  value: 4
+}, {
+  name: '国网沈阳市沈北新区供电公司',
+    value: 4
+}, {
+  name: '国网沈阳市于洪区供电公司',
+    value: 4
+}, {
+  name: '国网沈阳市法库县供电公司',
+    value: 4
+}, {
+  name: '国网康平县供电公司',
+    value: 4
+}, {
+  name: '国网沈阳市东陵区供电公司',
+    value: 4
+}];
+  data_1 = [];
+  data_2 = [];
+  data_3 = [];
+  data_4 = [];
   option: any;
+  option_sankey: any;
+  links = [];
   private  urls = Urls;
   private  data = {};         // 后台获取数据
   choosetown(city): any {
@@ -250,6 +359,66 @@ export class CityOrganizationComponent implements OnInit {
       };
     });
   }
+  setup_link(data): any {
+    for (const i of data) {
+      if (i) {
+        switch (i.value) {
+          case 1:
+            this.data_1.push(i);
+            break;
+          case 2:
+            this.data_2.push(i);
+            break;
+          case 3:
+            this.data_3.push(i);
+            break;
+          case 4:
+            this.data_4.push(i);
+            break;
+        }
+      }
+    }
+    for (const a of this.data_1) {
+      if (a) {
+        console.log(a);
+        for (const b of this.data_2) {
+          if (b) {
+            this.links.push({
+              source: a.name,
+              target: b.name,
+              value: 1,
+            });
+          }
+        }
+      }
+    }
+    for (const a of this.data_2) {
+      if (a) {
+        for (const b of this.data_3) {
+          if (b) {
+            this.links.push({
+              source: a.name,
+              target: b.name,
+              value: 1,
+            });
+          }
+        }
+      }
+    }
+    for (const a of this.data_3) {
+      if (a) {
+        for (const b of this.data_4) {
+          if (b) {
+            this.links.push({
+              source: a.name,
+              target: b.name,
+              value: 1,
+            });
+          }
+        }
+      }
+    }
+  }
   return(): any {
     this.town_name = '请选择区县';
   }
@@ -347,69 +516,44 @@ export class CityOrganizationComponent implements OnInit {
     });
       // console.log(value);
   }
-  constructor(private http: Http, public activatedRoute: ActivatedRoute, ) {
+  constructor(private http: Http, public activatedRoute: ActivatedRoute ) {
   }
 
   ngOnInit() {
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.city_name = params['Id'];
-      console.log(params);
-    });
-    this.option = {
-      tooltip: {
-        trigger: 'item',
-        triggerOn: 'mousemove',
-        formatter: function(params) {
-          return params.data.create && `负责人：${params.data.create}`;
-        }
-      },
-      series: [{
-        type: 'tree',
-        name: 'tree2',
-        data: [this.data_init],
-        top: '0',
-        bottom: '22%',
-        right: '28%',
-        symbolSize: 20,
-        initialTreeDepth: 10,
+    this.city_name = this.activatedRoute.snapshot.paramMap.get('Id')
+    if (this.city_name === null)  {
+      this.city_name = '沈阳';
+      // console.log(this.city_name);
+    }
+
+
+    this.setup_link(this.data_all);
+    console.log(this.links);
+    this.option_sankey = {
+      series: {
+        type: 'sankey',
+        layout: 'none',
+        data: this.data_all,
+        links: this.links,
+        itemStyle: {
+          normal: {
+            borderWidth: 1,
+            borderColor: '#aaa'
+          }
+        },
+        lineStyle: {
+          normal: {
+            color: 'source',
+            curveness: 0.5
+          }
+        },
         label: {
           normal: {
-            position: 'bottom',
-            verticalAlign: 'middle',
-            align: 'center',
-            textStyle: {
-              color: '#FFF',
-              fontWeight: 'normal',
-              fontSize: 20,
-            },
-            formatter: function(params) {
-              if (params.data.selected) {
-                const str = '当前:'
-                return `{box|${str}${params.data.name}}`;
-              } else {
-                return `${params.data.name}`;
-              }
-
-            },
-            rich: {
-              box: {
-                color: '#3FA7DC',
-                fontSize: 20,
-              }
-            }
+            color: 'white',
+            fontSize: 14,
           }
-        },
-
-        leaves: {
-          label: {
-            normal: {
-              position: 'right',
-              verticalAlign: 'middle',
-              align: 'left'
-            }
-          }
-        },
-      }]
+        }
+      }
     };
   }
 

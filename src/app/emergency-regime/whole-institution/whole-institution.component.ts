@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 import * as d3 from 'd3';
 declare var echarts: any;
 @Component({
@@ -204,8 +205,11 @@ export class WholeInstitutionComponent implements OnInit {
     }
 
   };
-
-  constructor() { }
+  click(event) {
+    // console.log(event.value[2]);
+    this.router.navigate(['/EmergencyRegime/Institutions', {Id: event.value[2]}]);
+  }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.root = d3.hierarchy(this.data)
@@ -216,7 +220,7 @@ export class WholeInstitutionComponent implements OnInit {
         return b.value - a.value;
       });
     d3.pack()
-      .size([800, 480])
+      .size([1000, 580])
       .padding(3)(this.root);
     let maxDepth = 0;
     const nodeAll = this.root.descendants();

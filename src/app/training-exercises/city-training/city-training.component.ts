@@ -83,6 +83,7 @@ export class CityTrainingComponent implements OnInit {
     }
     return res;
   };
+  // 获取上交结果
   GetResultList = function(city): any {
     const params = {
       'city': city

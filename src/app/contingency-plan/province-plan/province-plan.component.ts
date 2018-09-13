@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 declare var echarts: any;
+declare var $: any;
 
 @Component({
   selector: 'app-province-plan',
@@ -197,13 +199,27 @@ export class ProvincePlanComponent implements OnInit {
   }
     ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   onChartClick($event) {
     console.log(event);
     window.open('http://localhost:4200/src/assets/pdf/ws.pdf');
   }
 
   ngOnInit() {
+    this.http.get('/api/ProService/servlet/forecastServlet?period=24').subscribe(geoJson => {
+      console.log(geoJson);
+    });
+    // $.ajax({
+    //   url: 'http://59.46.127.110/ProService/servlet/forecastServlet?period=24',
+    //   type: 'get',
+    //   jsonp: 'callback',
+    //   dataType: 'jsonp',  // 请求方式为jsonp,
+    //   jsonpCallback: 'callbackfunction',
+    //   data: {},
+    //   success: function(data) {
+    //     console.log(data);
+    //   }
+    // });
       this.option = {
         tooltip: {
           formatter: function(param) {

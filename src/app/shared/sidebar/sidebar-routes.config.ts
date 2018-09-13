@@ -90,7 +90,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '',
+    path: '/IntegratedSupportability',
     title: '综合保障能力',
     icon: 'ft-edit',
     class: 'has-sub',
@@ -108,7 +108,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '',
+    path: '/PublicOpinionResponse',
     title: '舆情应对能力',
     icon: 'ft-message-square',
     class: 'has-sub',
@@ -121,7 +121,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '/PreventionMonitoring/VideoSurveillance',
+    path: '/PreventionMonitoring',
     title: '预防监测和监控预警系统',
     icon: 'ft-cast',
     class: 'has-sub',
@@ -145,6 +145,17 @@ export const ROUTES: RouteInfo[] = [
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
+    submenu: [
+    ]
+  },
+  {
+    path: 'http://127.0.0.1:5000/form_entry_system',
+    title: '信息上报',
+    icon: 'ft-airplay',
+    class: '',
+    badge: '',
+    badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
+    isExternalLink: true,
     submenu: [
     ]
   },

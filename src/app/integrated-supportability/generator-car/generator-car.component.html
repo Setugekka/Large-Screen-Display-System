@@ -1,2 +1,8 @@
-<div echarts [options]="bar_option" (chartClick)="onChartClick($event)" style="height:200px" ></div>
-
+<div class="row">
+  <div class="col-6">
+    <app-map></app-map>
+  </div>
+  <div class="col-6">
+    <div echarts [options]="option" (chartInit)="onChartInit($event)"></div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {toUnicode} from "punycode";
+import { ActivatedRoute}     from '@angular/router';
 import {ScreenDisplayService} from "../../screen-display/screen-display.service";
 import {EventEmitterService} from "../../screen-display/large-screen/event-emitter.service";
 declare var echarts:any;
@@ -9,12 +10,15 @@ declare var echarts:any;
   styleUrls: ['./repair.component.css']
 })
 export class RepairComponent implements OnInit {
-
+private a;
   private bar_option_repair: any;
   private current_city = null;
-  constructor(private service: ScreenDisplayService,public emitService: EventEmitterService) { }
+  constructor(private service: ScreenDisplayService,public emitService: EventEmitterService,private route:ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.route.snapshot.paramMap.get('test'))
+
+
     this.emitService.eventEmit.subscribe((value: any) => {
       // if(value == "userList") {
       //   // 这里就可以调取接口，刷新userList列表数据

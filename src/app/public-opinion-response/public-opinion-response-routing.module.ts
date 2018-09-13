@@ -3,27 +3,31 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { StatusComponent } from './status/status.component';
 import { ManagementComponent } from './management/management.component';
-
+import { PorIndexComponent } from './por-index/por-index.component';
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'Status',
-        component: StatusComponent,
-        data: {
-          title: 'GenerateReport'
-        }
-      },
-      {
-        path: 'Management',
-        component: ManagementComponent,
-        data: {
-          title: 'Management'
-        }
-      },
-    ]
-  }
+    component: PorIndexComponent,
+    data: {
+      title: 'index'
+    }
+  },
+
+  {
+    path: 'Status',
+    component: StatusComponent,
+    data: {
+      title: 'GenerateReport'
+    }
+  },
+  {
+    path: 'Management',
+    component: ManagementComponent,
+    data: {
+      title: 'Management'
+    }
+  },
+
 ];
 
 @NgModule({

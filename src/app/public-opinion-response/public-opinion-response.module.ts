@@ -7,6 +7,9 @@ import {FormsModule} from "@angular/forms";
 import {NgxEchartsModule} from "ngx-echarts";
 import {PublicOpinionResponseRoutingModule} from "./public-opinion-response-routing.module";
 import {EmergencyEventService} from "../emergency-event/emergency-event.service";
+import { PorIndexComponent } from './por-index/por-index.component';
+import {ScreenDisplayModule} from "../screen-display/screen-display.module";
+
 @NgModule({
   providers:[EmergencyEventService],
   imports: [
@@ -14,8 +17,9 @@ import {EmergencyEventService} from "../emergency-event/emergency-event.service"
     PublicOpinionResponseRoutingModule,
     NgxEchartsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ScreenDisplayModule
   ],
-  declarations: [StatusComponent, ManagementComponent]
+  declarations: [StatusComponent, ManagementComponent, PorIndexComponent]
 })
 export class PublicOpinionResponseModule { }

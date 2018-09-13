@@ -1,3 +1,8 @@
-<p>
-  alternator works!
-</p>
+<div class="row">
+  <div class="col-6">
+    <app-map></app-map>
+  </div>
+  <div class="col-6">
+    <div echarts [options]="option" (chartInit)="onChartInit($event)"></div>
+  </div>
+</div>

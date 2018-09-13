@@ -12,6 +12,7 @@ import { AlternatorComponent } from './alternator/alternator.component';
 import { LightingComponent } from './lighting/lighting.component';
 import {EventEmitterService} from "../screen-display/large-screen/event-emitter.service";
 import {ScreenDisplayModule} from "../screen-display/screen-display.module";
+import { IsIndexComponent } from './is-index/is-index.component';
 
 @NgModule({
   providers:[EventEmitterService],
@@ -22,6 +23,6 @@ import {ScreenDisplayModule} from "../screen-display/screen-display.module";
     HttpClientModule,
     ScreenDisplayModule
   ],
-  declarations: [MaterialComponent, VehicleComponent, EquipmentComponent, LogisticsMaterialComponent, GeneratorCarComponent, AlternatorComponent, LightingComponent]
+  declarations: [MaterialComponent, VehicleComponent, EquipmentComponent, LogisticsMaterialComponent, GeneratorCarComponent, AlternatorComponent, LightingComponent, IsIndexComponent]
 })
 export class IntegratedSupportabilityModule { }

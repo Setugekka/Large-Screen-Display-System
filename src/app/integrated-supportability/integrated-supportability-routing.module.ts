@@ -7,7 +7,15 @@ import { LogisticsMaterialComponent } from './logistics-material/logistics-mater
 import { GeneratorCarComponent } from './generator-car/generator-car.component';
 import { AlternatorComponent } from './alternator/alternator.component';
 import { LightingComponent } from './lighting/lighting.component';
+import { IsIndexComponent } from './is-index/is-index.component';
 const routes: Routes = [
+  {
+    path: '',
+    component: IsIndexComponent,
+    data: {
+      title: 'Index'
+    },
+  },
   {
     path: 'Material',
     component: MaterialComponent,

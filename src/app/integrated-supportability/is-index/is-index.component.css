@@ -18,8 +18,8 @@
   text-align: center;
 }
 .module-panel {
-  height: 18px;
-  margin: 5px;
+  height: 100px;
+  margin: 15px;
   border: none;
   border-radius: 5px;
   position: relative;
@@ -29,7 +29,7 @@
 }
 .person_detail{
   color: #95ffff;
-  font-size: 15px;
+  font-size: 20px;
 }
 .module-body{
   width: 100%;
@@ -37,4 +37,7 @@
 }
 .panel-body{
 
+}
+.row{
+  padding: 30px;
 }

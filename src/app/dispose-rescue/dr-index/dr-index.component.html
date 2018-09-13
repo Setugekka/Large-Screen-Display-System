@@ -6,40 +6,45 @@
   <div class="module-panel">
   <div class="panel-body">
   <div class="row">
-  <div class="person_detail col-8"><i class="icon-user mr-2"></i>应急专家队伍</div>
-  <div class="person_detail col-4">{{p_expert}}</div>
+  <div class="person_detail col-8"><i class="icon-user mr-2" style="color: white"></i>应急专家队伍</div>
+  <div class="person_detail col-4" style="color: yellow">{{p_expert}}</div>
+    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人1</div>
   </div>
   </div>
   </div>
   <div class="module-panel">
   <div class="panel-body">
   <div class="row">
-  <div class="person_detail col-8"><i class="icon-user mr-2"></i>应急抢修队伍</div>
-  <div class="person_detail col-4">{{p_repair}}</div>
+  <div class="person_detail col-8"><i class="ft-alert-triangle mr-2" style="color: white"></i>应急抢修队伍</div>
+  <div class="person_detail col-4" style="color: yellow">{{p_repair}}</div>
+    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人5</div>
   </div>
   </div>
   </div>
   <div class="module-panel">
   <div class="panel-body">
   <div class="row">
-  <div class="person_detail col-8"><i class="icon-user mr-2"></i>应急基干分队</div>
-  <div class="person_detail col-4">{{p_manager}}</div>
+  <div class="person_detail col-8"><i class="ft-users mr-2" style="color: white"></i>应急基干分队</div>
+  <div class="person_detail col-4" style="color: yellow">{{p_manager}}</div>
+    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人4</div>
   </div>
   </div>
   </div>
   <div class="module-panel">
     <div class="panel-body">
       <div class="row">
-        <div class="person_detail col-8"><i class="icon-user mr-2"></i>应急新闻分队</div>
-        <div class="person_detail col-4">{{p_manager}}</div>
+        <div class="person_detail col-8"><i class="ft-instagram mr-2" style="color: white"></i>应急新闻分队</div>
+        <div class="person_detail col-4" style="color: yellow">{{p_news}}</div>
+        <div *ngIf="condition" class="person_detail pl-3">负责人：负责人3</div>
       </div>
     </div>
   </div>
   <div class="module-panel">
     <div class="panel-body">
       <div class="row">
-        <div class="person_detail col-8"><i class="icon-user mr-2"></i>外来工人队伍</div>
-        <div class="person_detail col-4">{{p_manager}}</div>
+        <div class="person_detail col-8"><i class="ft-flag mr-2" style="color: white"></i>外来工人队伍</div>
+        <div class="person_detail col-4" style="color: yellow">{{p_worker}}</div>
+        <div *ngIf="condition" class="person_detail pl-3">负责人：负责人2</div>
       </div>
     </div>
   </div>

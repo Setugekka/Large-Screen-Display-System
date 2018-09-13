@@ -215,7 +215,7 @@ export class StatusComponent implements OnInit {
           text: '',
           textAlign: 'center',
           left: '50%',
-          top: '20',
+          top: 0,
           textStyle: {
             color: '#FFF',
             fontWeight: 'normal',
@@ -253,7 +253,7 @@ export class StatusComponent implements OnInit {
             name: '舆情分布',
             type: 'map',
             mapType: '辽宁', // 自定义扩展图表类型
-            top:100,
+            top:0,
             zoom:1,
             itemStyle:{
               normal:{label:{show:true}},

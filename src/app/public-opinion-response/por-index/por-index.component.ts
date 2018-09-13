@@ -8,12 +8,15 @@ import {EventEmitterService} from "../../screen-display/large-screen/event-emitt
   styleUrls: ['./por-index.component.css']
 })
 export class PorIndexComponent implements OnInit {
-  private detaildata;
-  private a;
-  private b;
-  private c;
-  private d;
-  private e;
+  private detaildata=" 热点识别能力　可以根据转载量、评论数量、回复量、危机程度等参数，识别出给定时间段内的热门话题。\n" +
+    "l 倾向性分析与统计　对信息的阐述的观点、主旨进行倾向性分析。以提供参考分析依据。分析的依据可根据信息的转载量、评论的回言信息时间密集度。来判别信息的发展倾向。\n" +
+    "l 主题跟踪　主题跟踪主要是指针对热点话题进行信息跟踪，并对其进行倾向性与趁势分析。跟踪的具体内容包括：信息来源、转载量、转载地址、地域分布、信息发布者等相关信息元素。其建立在倾向性与趁势分析的基础上。\n" +
+    "l 信息自动摘要功能　能够根据文档内容自动抽取文档摘要信息，这些摘要能够准确代表文章内容主题和中心思想。用户无需查看全部文章内容，通过该智能摘要即可快速了解文章大意与核心内容，提高用户信息利用效率。而且该智能摘要可以根据用户需求调整不同长度，满足不同的需求。主要包括文本信息摘要与网页信息摘要两个方面。";
+  private a="上报单位：辽阳电力公司";
+  private b="上报人：李xx";
+  private c="联系方式：17210001";
+  private d="时间：2018年9月13日 09：10：48";
+  private e="可能舆情：网上舆情的主题极为宽泛，话题的确定往往是自发、随意的。从舆情主体的范围来看，网民分布于社会各阶层和各个领域；从舆情的话题来看，涉及政治、经济、文化、军事、外交以及社会生活的各个方面；从舆情来源上看，网民可以在不受任何干扰的情况下预先写好言论，随时在网上发布，发表后的言论可以被任意评论和转载。";
   constructor(private elRef:ElementRef,private router:Router,public emitService: EventEmitterService) { }
 
   ngOnInit() {

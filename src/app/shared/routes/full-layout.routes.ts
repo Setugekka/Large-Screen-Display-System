@@ -31,10 +31,6 @@ export const FULL_ROUTES: Routes = [
     loadChildren: './emergency-event/emergency-event.module#EmergencyEventModule'
   },
   {
-    path: 'ScreenDisplay',
-    loadChildren: './screen-display/screen-display.module#ScreenDisplayModule'
-  },
-  {
     path: 'EmergencyOrganization',
     loadChildren: './emergency-organization/emergency-organization.module#EmergencyOrganizationModule'
   },

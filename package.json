@@ -1,9 +1,9 @@
 {
-  "name": "Large-Screen-Display-System",
+  "name": "large-screen-display-system",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json --port 4201",
+    "start": "ng serve --port 4201",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -76,7 +76,7 @@
     "@types/datatables.net": "^1.10.13",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
-    "@types/jquery": "^3.3.5",
+    "@types/jquery": "^3.3.9",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",

@@ -7,4 +7,8 @@ export const CONTENT_ROUTES: Routes = [
     // path: 'pages',
     // loadChildren: './pages/content-pages/content-pages.module#ContentPagesModule'
   // }
+  {
+    path: 'ScreenDisplay',
+    loadChildren: './screen-display/screen-display.module#ScreenDisplayModule'
+  },
 ];

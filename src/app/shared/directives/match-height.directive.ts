@@ -1,35 +1,34 @@
 import {
-    Directive, ElementRef, AfterViewInit,
+    Directive, ElementRef, AfterViewChecked,
     Input, HostListener, NgModule
 } from '@angular/core';
 
 @Directive({
-    selector: '[appMatchHeight]'
+    selector: '[matchHeight ]'
 })
-export class MatchHeightDirective implements AfterViewInit {
+export class MatchHeightDirective implements AfterViewChecked {
     // class name to match height
     @Input()
-    matchHeight: string;
+    matchHeight : string;
 
     constructor(private el: ElementRef) {
     }
 
-    ngAfterViewInit() {
+    ngAfterViewChecked() {
         // call our matchHeight function here
-        setTimeout(() => { this.matchHeights(this.el.nativeElement, this.matchHeight )}, 300);
+        this.matchHeights(this.el.nativeElement, this.matchHeight );
     }
 
     matchHeights(parent: HTMLElement, className: string) {
         // match height logic here
 
-        if (!parent) {return; }
+        if (!parent) return;
 
         // step 1: find all the child elements with the selected class name
         const children = parent.getElementsByClassName(className);
 
-        if (!children) {return; }
+        if (!children) return;
 
-        // Pixinvent - Match hight - fix --- comment below code
         Array.from(children).forEach((x: HTMLElement) => {
             x.style.height = 'initial';
         });

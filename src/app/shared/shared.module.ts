@@ -9,6 +9,7 @@ import {NavbarComponent} from "./navbar/navbar.component";
 import {SidebarComponent} from "./sidebar/sidebar.component";
 import {CustomizerComponent} from "./customizer/customizer.component";
 import {ToggleFullscreenDirective} from "./directives/toggle-fullscreen.directive";
+import { OrgchartComponent } from './orgchart/orgchart.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {ToggleFullscreenDirective} from "./directives/toggle-fullscreen.directiv
     NavbarComponent,
     SidebarComponent,
     CustomizerComponent,
+    OrgchartComponent,
     ToggleFullscreenDirective,
     NgbModule
   ],
@@ -31,7 +33,8 @@ import {ToggleFullscreenDirective} from "./directives/toggle-fullscreen.directiv
     NavbarComponent,
     SidebarComponent,
     CustomizerComponent,
-    ToggleFullscreenDirective
+    ToggleFullscreenDirective,
+    OrgchartComponent
   ]
 })
 export class SharedModule {

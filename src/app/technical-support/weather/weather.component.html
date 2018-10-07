@@ -1,1 +1,15 @@
-<div echarts [options]="option"  [loading]="!mapLoaded" style="height: 620px"></div>
+<div class="row">
+  <div class="col-6">
+    <div echarts [options]="option"  [loading]="!mapLoaded" style="height: 620px"></div>
+  </div>
+  <div class="col-6">
+    <div class="module" style="height: 620px">
+      <div class="person_detail pt-3 pl-1 pr-1">
+        <p style="text-align: center;font-size: 30px">{{title}}</p>
+        <p style="text-align: center;font-size: 15px">{{time}}</p>
+        <div [innerHTML]="text"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

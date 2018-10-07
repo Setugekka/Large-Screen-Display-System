@@ -1,19 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import "assets/fonts/feather/style.min.css";
-@import "assets/fonts/simple-line-icons/style.css";
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic");
-/*body,h1,h2,h3,h4,h5,h6 {font-family:"\5B8B\4F53"!important;}*/
-
-.myCustomModalClass .modal-dialog{
-  max-width: 1500px;
-  background-color: transparent;
-}
-.FileModalClass .modal-dialog{
-  max-width: 800px;
-  background-color: transparent;
-}
-.WarningModalClass .modal-dialog{
-  max-width: 800px;
-  background-color: transparent;
+/* @import url("assets/css/bootstrap.min.css"); */
+/* @import url("../src/assets/css/prism.min.css");
+@import url("../src/assets/css/sweetalert2.min.css");
+@import url("../src/assets/css/bootstrap-timepicker.min.css");
+@import url("../src/assets/css/wizard.css");
+@import url("../src/assets/css/leaflet.css");
+@import url("../src/assets/css/jquery-jvectormap-2.0.3.css");
+@import url("../src/assets/css/ng2-toastr.min.css");
+@import url("../src/assets/css/nouislider.min.css");
+@import url("../src/assets/css/data-table/index.css");
+@import url("../src/assets/css/data-table/icons.css");
+@import url("../src/assets/css/demo.css"); */
+html,body{
+  font-family:"Microsoft Yahei"!important;
 }

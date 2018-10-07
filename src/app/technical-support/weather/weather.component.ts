@@ -164,15 +164,10 @@ export class WeatherComponent implements OnInit {
                   return num / 8;
                 },
                 label: {
-                  // normal: {
-                  //   formatter: '{b}',
-                  //   position: 'right',
-                  //   show: true
-                  // },
                   normal: {
                     formatter: this.GetWeather,
                     show: true,
-                    position: 'right',
+                   // position: 'out',
                     rich: {
                       b: {
                         fontSize: 20,
@@ -203,6 +198,10 @@ export class WeatherComponent implements OnInit {
                   emphasis: {
                     show: true
                   }
+                },
+                labelLine: {
+                  length: 50,
+                  length2: 30
                 },
                 itemStyle: {
                   normal: {

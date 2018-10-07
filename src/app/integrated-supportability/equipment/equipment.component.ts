@@ -123,7 +123,7 @@ export class EquipmentComponent implements OnInit {
         // 可选，系列 index，可以是一个数组指定多个系列
         seriesIndex:0,
         name:value
-      })
+      });
     });
   }
   onChartInit(ec) {

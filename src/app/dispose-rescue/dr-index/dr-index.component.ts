@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }                 from '@angular/router';
-import {EventEmitterService} from "../../screen-display/large-screen/event-emitter.service";
+import { Router } from '@angular/router';
+import {EventEmitterService} from '../../screen-display/large-screen/event-emitter.service';
 @Component({
   selector: 'app-dr-index',
   templateUrl: './dr-index.component.html',
@@ -8,7 +8,7 @@ import {EventEmitterService} from "../../screen-display/large-screen/event-emitt
 })
 export class DrIndexComponent implements OnInit {
 
-  constructor(private router:Router,public emitService: EventEmitterService) { }
+  constructor(private router: Router, public emitService: EventEmitterService) { }
   private p_worker="100";
   private p_news="100";
   private p_expert="100";

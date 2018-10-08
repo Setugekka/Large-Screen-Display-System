@@ -7,7 +7,7 @@ import { ProvinceOrganizationComponent } from './province-organization/province-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CityOrganizationComponent } from './city-organization/city-organization.component';
 import { WholeOrganizationComponent } from './whole-organization/whole-organization.component';
-import {SharedModule} from "../shared/shared.module";
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [

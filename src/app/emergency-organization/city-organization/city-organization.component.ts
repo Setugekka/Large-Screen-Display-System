@@ -33,7 +33,8 @@ export class CityOrganizationComponent implements OnInit {
   // 初始树图（暂搁置）
   data_init = {
     'name': '沈阳市应急领导小组',
-    'children': [{
+    'children': [
+      {
       'name': '安全应急办公室',
       'children': [{
         'name': '项目管理中心',
@@ -73,7 +74,8 @@ export class CityOrganizationComponent implements OnInit {
     }]
   }
   // 组织结构图层级元素
-  data_all = [{
+  data_all = [
+    {
     name: '应急领导小组',
     value: 1
   }, {
@@ -192,6 +194,76 @@ export class CityOrganizationComponent implements OnInit {
   private chosen_name = '应急领导小组';
   private  urls = Urls;
   private  data = {};         // 后台获取数据
+  // 组织机构数据
+  private datasource = [
+    {"level":1,"data":[{'name': '应急领导小组',
+        'title': '',
+        'className': 'rd-dept'}]},
+    {"level":2,"data":[{'name': '安全应急办公室', 'title': '', 'className': 'frontend1'},{'name': '稳定应急办公室',
+        'title': '',
+        'className': 'product-dept'}]},
+    {"level":3,"data":[{'name': '办公室',
+        'title': '',
+        'className': 'yellow'},{'name': '安全监察质量部',
+        'title': '保卫部',
+        'className': 'frontend1'},{'name': '建设部',
+        'title': '项目管理中心',
+        'className': 'frontend1'},
+        {'name': '电力调度控制中心',
+          'title': '',
+          'className': 'yellow'},{'name': '运维检修部',
+          'title': '',
+          'className': 'frontend1'},{'name': '营销部',
+          'title': '农电工作部',
+          'className': 'frontend1'},{'name': '信息通信分公司',
+          'title': '',
+          'className': 'yellow'},{'name': '物资供应中心',
+          'title': '',
+          'className': 'frontend1'},{'name': '综合服务',
+          'title': '',
+          'className': 'frontend1'}]},{"level":4,"data":[{'name': '输电运检室',
+        'title': '',
+        'className': 'frontend1'},{'name': '变电运维室',
+        'title': '',
+        'className': 'frontend1'},{'name': '变电检修室',
+        'title': '',
+        'className': 'frontend1'},{'name': '配电运检室',
+        'title': '',
+        'className': 'frontend1'},{'name': '电缆运检室',
+        'title': '',
+        'className': 'frontend1'},{'name': '带电作业室',
+        'title': '',
+        'className': 'frontend1'},{'name': '和平客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '沈河客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '大东客户服务分中心',
+        'title': 'r',
+        'className': 'frontend1'},{'name': '皇姑客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '铁西客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '浑南客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '开发区客户服务分中心',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网新民市供电公司',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网沈阳市辽中区供电公司',
+        'title': 'r',
+        'className': 'frontend1'},{'name': '国网沈阳市苏家屯区供电公司',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网沈阳市沈北新区供电公司',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网沈阳市于洪区供电公司',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网沈阳市法库县供电公司',
+        'title': 'r',
+        'className': 'frontend1'},{'name': '国网沈阳市康平县供电公司',
+        'title': '',
+        'className': 'frontend1'},{'name': '国网沈阳市东陵区供电公司',
+        'title': '',
+        'className': 'frontend1'}]}];
   choosetown(city): any {
     this.city_name = city
     this.town_name = '请选择区县'
@@ -233,7 +305,7 @@ export class CityOrganizationComponent implements OnInit {
               verticalAlign: 'middle',
               align: 'center',
               textStyle: {
-                color: '#FFF',
+                color: 'black',
                 fontWeight: 'normal',
                 fontSize: 20,
               },
@@ -319,7 +391,7 @@ export class CityOrganizationComponent implements OnInit {
               verticalAlign: 'middle',
               align: 'center',
               textStyle: {
-                color: '#FFF',
+                color: 'black',
                 fontWeight: 'normal',
                 fontSize: 20,
               },
@@ -475,7 +547,7 @@ export class CityOrganizationComponent implements OnInit {
               verticalAlign: 'middle',
               align: 'center',
               textStyle: {
-                color: '#FFF',
+                color: 'black',
                 fontWeight: 'normal',
                 fontSize: 20,
               },
@@ -536,6 +608,7 @@ export class CityOrganizationComponent implements OnInit {
     }
     console.log(this.content);
   }
+
   constructor(private http: Http, public activatedRoute: ActivatedRoute ) {
   }
 
@@ -567,7 +640,7 @@ export class CityOrganizationComponent implements OnInit {
         },
         label: {
           normal: {
-            color: 'white',
+            color: 'black',
             fontSize: 14,
           }
         }

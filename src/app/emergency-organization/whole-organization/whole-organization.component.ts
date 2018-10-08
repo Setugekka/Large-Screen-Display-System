@@ -10,7 +10,8 @@ import { Router} from '@angular/router';
   styleUrls: ['./whole-organization.component.css']
 })
 export class WholeOrganizationComponent implements OnInit {
-  private datasource=[{"level":1,"data":[{'name': 'Pang Pang',
+  private datasource=[
+    {"level":1,"data":[{'name': 'Pang Pang',
       'title': 'senior engineer',
       'className': 'rd-dept'},{'name': 'Su Miao',
       'title': 'department manager',
@@ -139,7 +140,7 @@ export class WholeOrganizationComponent implements OnInit {
                 }
               },
               lineStyle: {
-                color: '#fff',
+                color: 'black',
                 width: 1,
                 type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
               }

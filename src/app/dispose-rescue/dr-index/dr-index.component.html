@@ -1,52 +1,95 @@
 <div class="row">
-<div class="col-6">
-  <app-map-extend></app-map-extend>
-</div>
-<div class="col-6 module">
-  <div class="module-panel">
-  <div class="panel-body">
-  <div class="row">
-  <div class="person_detail col-8"><i class="icon-user mr-2" style="color: white"></i>应急专家队伍</div>
-  <div class="person_detail col-4" style="color: yellow">{{p_expert}}</div>
-    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人1</div>
-  </div>
-  </div>
-  </div>
-  <div class="module-panel">
-  <div class="panel-body">
-  <div class="row">
-  <div class="person_detail col-8"><i class="ft-alert-triangle mr-2" style="color: white"></i>应急抢修队伍</div>
-  <div class="person_detail col-4" style="color: yellow">{{p_repair}}</div>
-    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人5</div>
-  </div>
-  </div>
-  </div>
-  <div class="module-panel">
-  <div class="panel-body">
-  <div class="row">
-  <div class="person_detail col-8"><i class="ft-users mr-2" style="color: white"></i>应急基干分队</div>
-  <div class="person_detail col-4" style="color: yellow">{{p_manager}}</div>
-    <div *ngIf="condition" class="person_detail pl-3">负责人：负责人4</div>
-  </div>
-  </div>
-  </div>
-  <div class="module-panel">
-    <div class="panel-body">
-      <div class="row">
-        <div class="person_detail col-8"><i class="ft-instagram mr-2" style="color: white"></i>应急新闻分队</div>
-        <div class="person_detail col-4" style="color: yellow">{{p_news}}</div>
-        <div *ngIf="condition" class="person_detail pl-3">负责人：负责人3</div>
+  <div class="col-4">
+    <div class="card gradient-blackberry">
+      <div class="card-body">
+        <div class="card-block pt-2 pb-0">
+          <div class="media">
+            <div class="media-body white text-left">
+              <h3 class="font-large-1 mb-0">{{p_expert}}</h3>
+              <span>应急专家队伍</span>
+            </div>
+            <div class="media-right white text-right">
+              <i class="icon-user font-large-1"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="module-panel">
-    <div class="panel-body">
-      <div class="row">
-        <div class="person_detail col-8"><i class="ft-flag mr-2" style="color: white"></i>外来工人队伍</div>
-        <div class="person_detail col-4" style="color: yellow">{{p_worker}}</div>
-        <div *ngIf="condition" class="person_detail pl-3">负责人：负责人2</div>
+  <div class="col-4">
+    <div class="card gradient-ibiza-sunset">
+      <div class="card-body">
+        <div class="card-block pt-2 pb-0">
+          <div class="media">
+            <div class="media-body white text-left">
+              <h3 class="font-large-1 mb-0">{{p_repair}}</h3>
+              <span>应急抢修队伍</span>
+            </div>
+            <div class="media-right white text-right">
+              <i class="ft-alert-triangle font-large-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card gradient-green-tea">
+      <div class="card-body">
+        <div class="card-block pt-2 pb-0">
+          <div class="media">
+            <div class="media-body white text-left">
+              <h3 class="font-large-1 mb-0">{{p_manager}}</h3>
+              <span>应急基干分队</span>
+            </div>
+            <div class="media-right white text-right">
+              <i class="ft-users font-large-1"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-12">
+    <app-map-extend></app-map-extend>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card gradient-green-tea">
+      <div class="card-body">
+        <div class="card-block pt-2 pb-0">
+          <div class="media">
+            <div class="media-body white text-left">
+              <h3 class="font-large-1 mb-0">{{p_news}}</h3>
+              <span>应急新闻分队</span>
+            </div>
+            <div class="media-right white text-right">
+              <i class="ft-instagram font-large-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card gradient-green-tea">
+      <div class="card-body">
+        <div class="card-block pt-2 pb-0">
+          <div class="media">
+            <div class="media-body white text-left">
+              <h3 class="font-large-1 mb-0">{{p_worker}}</h3>
+              <span>外来工人队伍</span>
+            </div>
+            <div class="media-right white text-right">
+              <i class="ft-flag font-large-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

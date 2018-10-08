@@ -150,30 +150,15 @@ export class ExpertComponent implements OnInit {
           type : 'category',
           splitLine: {show: false},
           data : data.class_list,
-          nameTextStyle:{color:'#95ffff'},
-          axisLabel:{color:'#95ffff'},
           axisLine: {
-            lineStyle: {
-              color: '#95ffff'
-            }
           },
 
         },
         yAxis: {
           name: '人数',
           type : 'value',
-          nameTextStyle:{color:'#95ffff'},
-          axisLabel:{color:'#95ffff'},
           splitLine: {
             show: true,
-            lineStyle: {
-              color: '#95ffff'
-            }
-          },
-          axisLine: {
-            lineStyle: {
-              color: '#95ffff'
-            }
           },
         },
         series: [

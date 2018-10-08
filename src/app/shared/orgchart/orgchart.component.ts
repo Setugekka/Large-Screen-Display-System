@@ -57,7 +57,10 @@ export class OrgchartComponent implements OnInit {
     for (let i of data) {
       numary.push(i.data.length)
     }
-    const maxcol = this.smallestCommons(numary) * 2;
+    this.minMulti(numary)
+
+    const maxcol = this.arr_minMulti * 2;
+
     let Maxdepth = data.length;
     // Construct the node
     let $nodeWrapper;
@@ -107,12 +110,13 @@ export class OrgchartComponent implements OnInit {
     let $nodeDiv = $('<div' + (opts.draggable ? ' draggable="true"' : '') + ( ' data-value="' + data[opts.nodeTitle] + '"') + (data.parentId ? ' data-parent="' + data.parentId + '"' : '') + '>')
       .addClass('node org-node');
     $nodeDiv.append('<div class="title" style="background-color: '+(data.className || '')+'">' + data[opts.nodeTitle] + '</div>')
-      .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content" style="border-color: '+ (data.className || '')+'">' + (data[opts.nodeContent] || '') + '</div>' : '');
+      // .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content" style="border-color: '+ (data.className || '')+'">' + (data[opts.nodeContent] || '') + '</div>' : '');
     let nodeData = $.extend({}, data);
     $nodeDiv.data('nodeData', nodeData);
     return $nodeDiv;
   }
 
+  // 该算法有bug
   smallestCommons(arr) {
     arr.sort((a, b) => {
       return a > b;
@@ -134,6 +138,50 @@ export class OrgchartComponent implements OnInit {
       }
     }
     return result;
+  }
+
+  private arr_minMulti
+  private arr_maxdivi
+  minMulti(arr){
+    var totalmulti =
+      arr.reduce((multi,curvalue) => multi * curvalue)
+    if (totalmulti === 0) {
+      this.arr_minMulti = 0
+      return
+    }
+    var marr = arr.map((item) => totalmulti/item)
+    this.maxDivisor(marr)
+    this.arr_minMulti = totalmulti / this.arr_maxdivi
+  }
+  maxDivisor(arr){
+    var min = this.getMin(arr)
+    if(min === Infinity) {
+      this.arr_maxdivi = min
+      return
+    }
+    var exparr = arr.filter(function(item){
+      return (item !== min && item !== 0)
+    })
+    if(exparr.length === 0){
+      this.arr_maxdivi = min
+      return;
+    }
+    else{
+      var modearr = arr.map(function(item){
+        return (item === min||item===0)? item:item%min
+      })
+      console.log(modearr,'modearr')
+      this.maxDivisor(modearr)
+    }
+  }
+  getMin(arr){
+    var min = Infinity
+    arr.forEach(function(item){
+      if (item && item < min) {
+        min = item
+      }
+    })
+    return min
   }
 }
 

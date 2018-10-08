@@ -10,6 +10,25 @@ import { Router} from '@angular/router';
   styleUrls: ['./whole-organization.component.css']
 })
 export class WholeOrganizationComponent implements OnInit {
+  private datasource=[{"level":1,"data":[{'name': 'Pang Pang',
+      'title': 'senior engineer',
+      'className': 'rd-dept'},{'name': 'Su Miao',
+      'title': 'department manager',
+      'className': 'middle-level'}]},{"level":2,"data":[{'name': 'Dan Dan', 'title': 'engineer', 'className': 'frontend1'},{'name': 'Li Xin',
+      'title': 'senior engineer',
+      'className': 'product-dept'}]},{"level":3,"data":[{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'yellow'},{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'frontend1'},{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'frontend1'}]},{"level":3,"data":[{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'frontend1'},{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'frontend1'},{'name': 'Xiang Xiang',
+      'title': 'UE engineer',
+      'className': 'frontend1'}]}];
   option: any;
   city_list = {};
   style = {
@@ -58,6 +77,10 @@ export class WholeOrganizationComponent implements OnInit {
   constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
+    $("#orgchart-container").on("click",".org-node",e=>{
+        const i=e.currentTarget.getAttribute("data-value")
+        this.router.navigate(['/EmergencyOrganization/CityOrganization', {Id:i}]);
+    })
     this.GetCityList().then(r => {
       this.city_list = r;
       const list = this.form_city(this.city_list)

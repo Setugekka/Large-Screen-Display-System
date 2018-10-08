@@ -59,6 +59,10 @@ export class WholePlanComponent implements OnInit {
   constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
+    $("#orgchart-container").on("click",".org-node",e=>{
+      const i=e.currentTarget.getAttribute("data-value")
+      this.router.navigate(['/ContingencyPlan/CityPlan', {Id: i}]);
+    })
     this.GetCityList().then(r => {
       this.city_list = r;
       const list = this.form_city(this.city_list)

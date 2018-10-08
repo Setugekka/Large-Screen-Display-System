@@ -28,7 +28,7 @@ import {MaterialCircleComponent} from './large-screen/material-circle/material-c
 import { MessageScatterComponent } from './large-screen/message-scatter/message-scatter.component';
 import { ClockComponent } from './large-screen/clock/clock.component';
 import { MapExtendComponent } from './large-screen/map-extend/map-extend.component';
-
+import {MapExtendWhiteComponent} from "./large-screen/map-extend-white/map-extend-white.component";
 
 
 @NgModule({
@@ -66,7 +66,8 @@ import { MapExtendComponent } from './large-screen/map-extend/map-extend.compone
     MaterialCircleComponent,
     MessageScatterComponent,
     ClockComponent,
-    MapExtendComponent
+    MapExtendComponent,
+    MapExtendWhiteComponent
   ],
   exports:[DetailviewComponent,MapExtendComponent,MapComponent]
 

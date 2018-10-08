@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4" style="color: unset;padding: 0">
+  <div class="col-3" style="color: unset;padding: 0">
     <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
       <div class="chat-sidebar-content">
         <div id="users-list" class="list-group position-relative">
@@ -126,7 +126,23 @@
                 <i></i>
               </span>
               <div class="media-body">
-                <h6 class="list-group-item-heading">舆情7</h6>
+                <h6 class="list-group-item-heading">舆情7
+                <span class="font-small-3 float-right primary">周五</span></h6>
+                <p class="list-group-item-text text-muted">
+                  <i class="ft-check primary font-small-2"></i> 已解决</p>
+              </div>
+            </span>
+            </a>
+            <a class="list-group-item no-border" (click)="SetActive($event,'chat8')">
+            <span class="media">
+              <span class="avatar avatar-md avatar-online">
+                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-1.png"
+                     alt="Generic placeholder image">
+                <i></i>
+              </span>
+              <div class="media-body">
+                <h6 class="list-group-item-heading">舆情8
+                <span class="font-small-3 float-right primary">周六</span></h6>
                 <p class="list-group-item-text text-muted">
                   <i class="ft-check primary font-small-2"></i> 已解决</p>
               </div>
@@ -137,25 +153,72 @@
       </div>
     </div>
   </div>
-  <div class="col-4">
+  <div class="col-5">
     <app-map></app-map>
-  </div>
-  <div class="col-4">
-    <div class="card" style="height: 654px">
-      <div class="card-header">舆情详情</div>
-      <div class="card-body" style="padding: 15px">
-        处置措施具体内容
-        例子：
-        <div>{{a}}</div>
-        <div>{{b}}</div>
-        <div>{{c}}</div>
-        <div>{{d}}</div>
-        <div>{{e}}</div>
-        <div>{{detaildata}}</div>
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="card-block">
+          <h4 class="card-title success">舆情应对方案</h4>
+          <p class="card-text">{{detaildata}}</p>
+          <a class="btn btn-raised btn-success">查看详情</a>
+        </div>
       </div>
-
     </div>
   </div>
+  <div class="col-md-12 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">舆情详情 </h4>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0 primary">上报单位
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{a}}</p>
+            </blockquote>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0  warning">上报人:
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{b}}</p>
+            </blockquote>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0 primary">联系方式:
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{c}} </p>
+            </blockquote>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0  warning">时间：
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{d}} </p>
+            </blockquote>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0 primary">可能舆情：
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{e}}</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="col-4">-->
+    <!--<div class="card" style="height: 654px">-->
+      <!--<div class="card-header">舆情详情</div>-->
+      <!--<div class="card-body" style="padding: 15px">-->
+        <!--处置措施具体内容-->
+        <!--例子：-->
+        <!--<div>{{a}}</div>-->
+        <!--<div>{{b}}</div>-->
+        <!--<div>{{c}}</div>-->
+        <!--<div>{{d}}</div>-->
+        <!--<div>{{e}}</div>-->
+        <!--<div>{{detaildata}}</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
 </div>
 
 

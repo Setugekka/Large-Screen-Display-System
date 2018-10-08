@@ -2,14 +2,66 @@
   <div class="col-6">
     <div echarts [options]="option"  [loading]="!mapLoaded" style="height: 620px"></div>
   </div>
-  <div class="col-6">
-    <div class="module" style="height: 620px">
-      <div class="person_detail pt-3 pl-1 pr-1">
-        <p style="text-align: center;font-size: 30px">{{title}}</p>
-        <p style="text-align: center;font-size: 15px">{{time}}</p>
-        <div [innerHTML]="text"></div>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="person_detail pt-3 pl-1 pr-1">
+          <p style="text-align: center;font-size: 30px">{{title}}</p>
+          <p style="text-align: center;font-size: 15px">{{time}}</p>
+          <div [innerHTML]="text"></div>
+        </div>
+        <div class="card-block mt-2">
+          <div class="row">
+            <div class="col-2 text-center">
+              <span class="display-block">Mon</span>
+              <i class="wi wi-day-sunny display-block primary font-large-1 my-3"></i>
+              <span class="display-block">13&deg;</span>
+            </div>
+            <div class="col-2 text-center">
+              <span class="display-block">Tue</span>
+              <i class="wi wi-day-cloudy display-block primary font-large-1 my-3"></i>
+              <span class="display-block">12&deg;</span>
+            </div>
+            <div class="col-2 text-center">
+              <span class="display-block">Wed</span>
+              <i class="wi wi-day-cloudy-gusts display-block primary font-large-1 my-3"></i>
+              <span class="display-block">10&deg;</span>
+            </div>
+            <div class="col-2 text-center">
+              <span class="display-block">Thu</span>
+              <i class="wi wi-day-cloudy-windy display-block primary font-large-1 my-3"></i>
+              <span class="display-block">12&deg;</span>
+            </div>
+            <div class="col-2 text-center">
+              <span class="display-block">Fri</span>
+              <i class="wi wi-day-fog display-block primary font-large-1 my-3"></i>
+              <span class="display-block">9&deg;</span>
+            </div>
+            <div class="col-2 text-center">
+              <span class="display-block">Sat</span>
+              <i class="wi wi-day-lightning display-block primary font-large-1 my-3"></i>
+              <span class="display-block">6&deg;</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!--<div class="module" style="height: 620px">-->
+      <!--<div class="person_detail pt-3 pl-1 pr-1">-->
+        <!--<p style="text-align: center;font-size: 30px">{{title}}</p>-->
+        <!--<p style="text-align: center;font-size: 15px">{{time}}</p>-->
+        <!--<div [innerHTML]="text"></div>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
+  <!--<div class="col-6">-->
+    <!--<div class="module" style="height: 620px">-->
+      <!--<div class="person_detail pt-3 pl-1 pr-1">-->
+        <!--<p style="text-align: center;font-size: 30px">{{title}}</p>-->
+        <!--<p style="text-align: center;font-size: 15px">{{time}}</p>-->
+        <!--<div [innerHTML]="text"></div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
 

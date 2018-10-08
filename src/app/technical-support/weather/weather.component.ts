@@ -108,13 +108,13 @@ export class WeatherComponent implements OnInit {
               text: '辽宁省24小时天气状况预报',
               x: 'center',
               textStyle: {
-                color: '#ccc',
+                color: '#009DA0',
               }
             },
             tooltip: {
               trigger: 'item',
               formatter: function (params) {
-                return params.name + '上交情况: ' + params.data['value'] + '%';
+                return params.name + ': ' + params.data['value'] + '%';
               },
             },
             visualMap: {
@@ -170,6 +170,11 @@ export class WeatherComponent implements OnInit {
                   normal: {
                     formatter: this.GetWeather,
                     show: true,
+                    padding: [4, 5],
+                    borderRadius: 3,
+                    borderWidth: 1,
+                    borderColor: 'rgba(0,0,0,0.5)',
+                    color: '#777',
                    // position: 'out',
                     rich: {
                       b: {

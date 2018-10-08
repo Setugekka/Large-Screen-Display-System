@@ -55,7 +55,7 @@ export class InstitutionsComponent implements OnInit {
       },
       series: [{
         type: 'treemap',
-        width: '80%',
+        width: '100%',
         height: '700',
         top: '100',
         roam: false, // 是否开启拖拽漫游（移动和缩放）

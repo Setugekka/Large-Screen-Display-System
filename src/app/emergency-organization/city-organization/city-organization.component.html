@@ -25,10 +25,11 @@
 </div>
 <div class="row">
 <div class="col-lg-7">
-<div echarts [options]="option_sankey"  style="height:800px" (chartClick)="show_content($event)"></div>
+ <!--<div echarts [options]="option_sankey"  style="height:800px" (chartClick)="show_content($event)"></div>-->
+  <div id="orgchart-container"><app-orgchart [data]="datasource"></app-orgchart></div>
 </div>
-<div class="col-lg-5">
-  <div class="card module">
+<div class="col-lg-5" >
+  <div class="card module" style="height: 740px">
     <div class="card-header">
       <h4 class="card-title person_detail" style="font-size: 24px">辽宁省电力有限公司应急组织体系简介</h4>
     </div>

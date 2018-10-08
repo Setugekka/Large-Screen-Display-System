@@ -187,7 +187,7 @@ export class CityPlanComponent implements OnInit {
                 },
               },
               lineStyle: {
-                color: '#fff',
+                color: 'black',
                 width: 1,
                 type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
               }
@@ -200,7 +200,7 @@ export class CityPlanComponent implements OnInit {
           },
           data: list,
           expandAndCollapse: true,
-          initialTreeDepth: 2,
+          initialTreeDepth: 3,
         }]
       };
     });

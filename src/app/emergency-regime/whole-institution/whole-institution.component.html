@@ -1,57 +1,127 @@
-<div class="row" matchHeight ="card" >
-  <div class="col-lg-7" >
-    <div class="card" style="background-color: transparent">
-      <div class="card-header">
-        <h4 class="card-title mb-0 white person_detail"></h4>
-      </div>
-      <div class="card-body">
-        <div class="card-block" >
-          <div echarts [options]="option" style="height: 700px"  (chartClick)="click($event)"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-5">
-    <div class="card module">
-      <div class="card-header">
-        <h4 class="card-title person_detail" style="font-size: 24px">辽宁省电力有限公司应急制度体系简介</h4>
-      </div>
-      <div class="card-body">
-        <div class="card-block" >
-          <div class="media">
-            <div class="media-body">
-              <h4 class="media-heading person_detail" style="font-size: 24px">基本简介</h4>
-              <p class="person_detail">应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-body">
-              <h4 class="media-heading person_detail" style="font-size: 24px">体制内涵</h4>
-              <p class="person_detail">首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；
-                其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；
-                第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-body">
-              <h4 class="media-heading person_detail" style="font-size: 24px">构成要素</h4>
-              <p class="person_detail">机构设置
-                建立健全的机构设置可以使政府各部门发展均衡，增强个别应急职能机构的自身功能，减少机构建设条块分割，降低对政府本身的依赖。 [1]
-                法制建设
-                建立起独立的、综合性的应急管理法规标准体系。制定应对各种突发事件或者紧急突发事件的配套法规。</p>
-            </div>
-          </div>
-          <div class="media">
-            <div class="media-body">
-              <h4 class="media-heading person_detail" style="font-size: 24px">体制特征</h4>
-              <p class="person_detail">应急管理作为政府的社会管理和公共服务职能，具有与其他组织管理职能相同的特征，又有不一样的特征。
-                组织集权化
-                突发事件的不确定性、破坏性和扩散性，决定了应急管理的主体行使处置权力必须快速、高效，因而要求整个组织严格按照一体化集权方式管理和运行，上下关系分明，职权明确，有令必行，有禁必止，奖罚分明。强调统一领导、统一指挥、统一行动的一体化集权管理。
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--<div class="row" matchHeight ="card" >-->
+  <!--<div class="col-lg-7" >-->
+    <!--<div class="card" style="background-color: transparent">-->
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title mb-0 white person_detail"></h4>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-block" >-->
+          <!--<div echarts [options]="option" style="height: 700px"  (chartClick)="click($event)"></div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="col-lg-5">-->
+    <!--<div class="card module">-->
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title person_detail" style="font-size: 24px">辽宁省电力有限公司应急制度体系简介</h4>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-block" >-->
+          <!--<div class="media">-->
+            <!--<div class="media-body">-->
+              <!--<h4 class="media-heading person_detail" style="font-size: 24px">基本简介</h4>-->
+              <!--<p class="person_detail">应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="media">-->
+            <!--<div class="media-body">-->
+              <!--<h4 class="media-heading person_detail" style="font-size: 24px">体制内涵</h4>-->
+              <!--<p class="person_detail">首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；-->
+                <!--其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；-->
+                <!--第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="media">-->
+            <!--<div class="media-body">-->
+              <!--<h4 class="media-heading person_detail" style="font-size: 24px">构成要素</h4>-->
+              <!--<p class="person_detail">机构设置-->
+                <!--建立健全的机构设置可以使政府各部门发展均衡，增强个别应急职能机构的自身功能，减少机构建设条块分割，降低对政府本身的依赖。 [1]-->
+                <!--法制建设-->
+                <!--建立起独立的、综合性的应急管理法规标准体系。制定应对各种突发事件或者紧急突发事件的配套法规。</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="media">-->
+            <!--<div class="media-body">-->
+              <!--<h4 class="media-heading person_detail" style="font-size: 24px">体制特征</h4>-->
+              <!--<p class="person_detail">应急管理作为政府的社会管理和公共服务职能，具有与其他组织管理职能相同的特征，又有不一样的特征。-->
+                <!--组织集权化-->
+                <!--突发事件的不确定性、破坏性和扩散性，决定了应急管理的主体行使处置权力必须快速、高效，因而要求整个组织严格按照一体化集权方式管理和运行，上下关系分明，职权明确，有令必行，有禁必止，奖罚分明。强调统一领导、统一指挥、统一行动的一体化集权管理。-->
+                <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 
+<!--</div>-->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="content-header">应急制度体系</div>
+  </div>
 </div>
+<section id="basic-usage" class="row">
+  <div class=" col-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">应急制度体系简介</h4><a class="heading-elements-toggle"></a>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <p> 应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。
+          </p>
+          <p>首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；
+            其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；
+            第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="fabs-examples">
+<div class="row" matchHeight ="card">
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-img">
+           <img class="card-img-top img-fluid" src="assets/img/photos/14.jpg" alt="Card image cap">
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">国家</h4>
+          <p class="card-text">Sweet halvah dragée jelly-o halvah carrot cake oat cake. Donut jujubes jelly chocolate cake.</p>
+          <button class="btn btn-raised btn-warning" (click)="click('国家')">查看详情</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-img">
+          <img class="card-img-top img-fluid" src="assets/img/photos/14.jpg" alt="Card image cap">
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">国家能源局</h4>
+          <p class="card-text">Sweet halvah dragée jelly-o halvah carrot cake oat cake. Donut jujubes jelly chocolate cake.</p>
+          <button class="btn btn-raised btn-warning" (click)="click('国家能源局')">查看详情</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-img">
+          <img class="card-img-top img-fluid" src="assets/img/photos/14.jpg" alt="Card image cap">
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">国网公司</h4>
+          <p class="card-text">Sweet halvah dragée jelly-o halvah carrot cake oat cake. Donut jujubes jelly chocolate cake.</p>
+          <button class="btn btn-raised btn-warning" (click)="click('国网公司')">查看详情</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

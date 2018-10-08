@@ -117,7 +117,7 @@ export class WholePlanComponent implements OnInit {
                 }
               },
               lineStyle: {
-                color: '#fff',
+                color: 'black',
                 width: 1,
                 type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
               }

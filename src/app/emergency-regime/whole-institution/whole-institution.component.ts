@@ -205,9 +205,13 @@ export class WholeInstitutionComponent implements OnInit {
     }
 
   };
-  click(event) {
-    // console.log(event.value[2]);
-    this.router.navigate(['/EmergencyRegime/Institutions', {Id: event.value[2]}]);
+  // click(event) {
+  //   // console.log(event.value[2]);
+  //   this.router.navigate(['/EmergencyRegime/Institutions', {Id: event.value[2]}]);
+  // }
+  click(id) {
+    console.log(id);
+    this.router.navigate(['/EmergencyRegime/Institutions', {Id: id}]);
   }
   constructor(private router: Router) { }
 

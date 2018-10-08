@@ -15,7 +15,6 @@ const appRoutes: Routes = [
   },
   { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: FULL_ROUTES },
   { path: '', component: ContentLayoutComponent, data: { title: 'content Views' }, children: CONTENT_ROUTES },
-  {path: 'test', component: OrgchartComponent,}
 ];
 
 @NgModule({

@@ -142,13 +142,36 @@
   <div class="col-4" (click)="clicktest">
     <app-map></app-map>
   </div>
-  <div class="col-4">
-    <div class="card" style="height: 556px">
-      <div class="card-header">预警详情</div>
-      <div class="card-body" style="padding: 15px">
-        预警具体内容
-        例子：{{detaildata}}
+  <div class="col-md-12 col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">预警详情 </h4>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+            <div class="blockquote-footer pt-1 pl-0 primary">预警简介
+            </div>
+            <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
+          </blockquote>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
+              <div class="blockquote-footer pt-1 pl-0 warning">具体预警内容
+              </div>
+              <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <!--<div class="col-4">-->
+    <!--<div class="card" style="height: 556px">-->
+      <!--<div class="card-header">预警详情</div>-->
+      <!--<div class="card-body" style="padding: 15px">-->
+        <!--预警具体内容-->
+        <!--例子：{{detaildata}}-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>

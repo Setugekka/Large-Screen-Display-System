@@ -1,8 +1,8 @@
 <div class="row" matchHeight ="card" >
 <div class="col-lg-7">
 
-        <div echarts [options]="option" (chartClick)="click($event)"></div>
-
+        <!--<div echarts [options]="option" (chartClick)="click($event)"></div>-->
+  <div id="orgchart-container"><app-orgchart [data]="datasource"></app-orgchart></div>
 </div>
   <div class="col-lg-5">
     <div class="card module">
@@ -46,5 +46,5 @@
     </div>
   </div>
 </div>
-<div id="orgchart-container"><app-orgchart [data]="datasource"></app-orgchart></div>
+
 

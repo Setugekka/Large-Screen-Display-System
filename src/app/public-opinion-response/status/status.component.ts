@@ -47,7 +47,6 @@ export class StatusComponent implements OnInit {
       axisLine: {
         show: true,
         lineStyle: {
-          color: "#063374",
           width: 1,
           type: "solid"
         }
@@ -58,9 +57,6 @@ export class StatusComponent implements OnInit {
       axisLabel: {
         show: true,
         interval:0,
-        textStyle: {
-          color: "#00c7ff",
-        }
       },
     },
     yAxis: {
@@ -71,7 +67,6 @@ export class StatusComponent implements OnInit {
       axisLine: {
         show: false,
         lineStyle: {
-          color: "#00c7ff",
           width: 1,
           type: "solid"
         },
@@ -139,7 +134,6 @@ export class StatusComponent implements OnInit {
       axisLine: {
         show: true,
         lineStyle: {
-          color: "#063374",
           width: 1,
           type: "solid"
         }
@@ -149,9 +143,6 @@ export class StatusComponent implements OnInit {
       },
       axisLabel: {
         show: true,
-        textStyle: {
-          color: "#00c7ff",
-        }
       },
     }],
     yAxis: [{
@@ -162,7 +153,6 @@ export class StatusComponent implements OnInit {
       axisLine: {
         show: false,
         lineStyle: {
-          color: "#00c7ff",
           width: 1,
           type: "solid"
         },
@@ -215,7 +205,6 @@ export class StatusComponent implements OnInit {
           text: '',
           textAlign: 'center',
           left: '50%',
-          top: 0,
           textStyle: {
             color: '#FFF',
             fontWeight: 'normal',
@@ -227,7 +216,7 @@ export class StatusComponent implements OnInit {
             formatter: '{b}<br/>舆情数量：{c}'
         },
         toolbox: {
-          show: true,
+          show: false,
             orient: 'vertical',
             left: 'right',
             top: 'center',
@@ -253,8 +242,8 @@ export class StatusComponent implements OnInit {
             name: '舆情分布',
             type: 'map',
             mapType: '辽宁', // 自定义扩展图表类型
-            top:0,
-            zoom:1,
+            top:30,
+            zoom:1.2,
             itemStyle:{
               normal:{label:{show:true}},
               emphasis:{label:{show:true}}
@@ -277,7 +266,6 @@ export class StatusComponent implements OnInit {
           text: '',
           textAlign: 'center',
           left: '50%',
-          top: '20',
           textStyle: {
             color: '#FFF',
             fontWeight: 'normal',
@@ -289,7 +277,7 @@ export class StatusComponent implements OnInit {
           formatter: '{b}<br/>舆情数量：{c}'
         },
         toolbox: {
-          show: true,
+          show: false,
           orient: 'vertical',
           left: 'right',
           top: 'center',
@@ -315,6 +303,8 @@ export class StatusComponent implements OnInit {
             name: '舆情分布',
             type: 'map',
             mapType: '辽宁', // 自定义扩展图表类型
+            top:30,
+            zoom:1.2,
             itemStyle:{
               normal:{label:{show:true}},
               emphasis:{label:{show:true}}

@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-4">
-    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
+    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
       <div class="chat-sidebar-content">
         <div id="users-list" class="list-group position-relative">
           <div class="users-list-padding">
-            <h3 style="color: white;font-weight: bold">预警</h3>
+            <h3 style="font-weight: bold">预警</h3>
             <a class="list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2" (click)="SetActive($event, 'chat1')">
             <span class="media">
               <span class="avatar avatar-md avatar-online">
@@ -83,7 +83,7 @@
               <!--</div>-->
             <!--</span>-->
             <!--</a>-->
-            <h3 style="color: white;font-weight: bold">未预警</h3>
+            <h3 style="font-weight: bold">未预警</h3>
             <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
             <span class="media">
               <span class="avatar avatar-md avatar-online">
@@ -143,9 +143,9 @@
     <app-map></app-map>
   </div>
   <div class="col-4">
-    <div class="module" style="height: 556px">
-      <div class="card-header person_detail">预警详情</div>
-      <div class="card-body person_detail">
+    <div class="card" style="height: 556px">
+      <div class="card-header">预警详情</div>
+      <div class="card-body" style="padding: 15px">
         预警具体内容
         例子：{{detaildata}}
       </div>

@@ -35,7 +35,6 @@ export class LightingComponent implements OnInit {
       axisLine: {
         show: true,
         lineStyle: {
-          color: "#063374",
           width: 1,
           type: "solid"
         }
@@ -46,9 +45,6 @@ export class LightingComponent implements OnInit {
       axisLabel: {
         show: true,
         interval:0,
-        textStyle: {
-          color: "#00c7ff",
-        }
       },
     }],
     yAxis: [{
@@ -59,7 +55,6 @@ export class LightingComponent implements OnInit {
       axisLine: {
         show: false,
         lineStyle: {
-          color: "#00c7ff",
           width: 1,
           type: "solid"
         },

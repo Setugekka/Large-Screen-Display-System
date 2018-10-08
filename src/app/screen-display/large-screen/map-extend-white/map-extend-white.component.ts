@@ -4,11 +4,11 @@ import {EventEmitterService} from '../event-emitter.service';
 declare var echarts: any;
 declare var $: any;
 @Component({
-  selector: 'app-map-extend',
-  templateUrl: './map-extend.component.html',
-  styleUrls: ['./map-extend.component.css']
+  selector: 'app-map-extend-white',
+  templateUrl: './map-extend-white.component.html',
+  styleUrls: ['./map-extend-white.component.css']
 })
-export class MapExtendComponent implements OnInit {
+export class MapExtendWhiteComponent implements OnInit {
   mapLoaded = false;
   private echartsIntance: any;
   private chartOption: any;
@@ -118,9 +118,7 @@ export class MapExtendComponent implements OnInit {
   // style
   private style = {
     font: '18px "Microsoft YaHei", sans-serif',
-    // textColor: '#eee',
-    // lineColor: 'rgba(147, 235, 248, .8)'
-    textColor: 'blue',
+    textColor: '#eee',
     lineColor: 'rgba(147, 235, 248, .8)'
   };
 
@@ -245,72 +243,39 @@ export class MapExtendComponent implements OnInit {
           normal: {
             show: true,
             textStyle: {
-              // color: '#fff'
+              color: '#fff'
             },
           },
           emphasis: {
             textStyle: {
-              // color: '#fff'
+              color: '#fff'
             }
           }
         },
         selectedMode:'single',
-        // itemStyle: {
-        //   normal: {
-        //     borderColor: 'rgba(147, 235, 248, 1)',
-        //     borderWidth: 1,
-        //     areaColor: {
-        //       type: 'radial',
-        //       x: 0.5,
-        //       y: 0.5,
-        //       r: 0.8,
-        //       colorStops: [{
-        //         offset: 0,
-        //         color: 'rgba(147, 235, 248, 0)' // 0% 处的颜色
-        //       }, {
-        //         offset: 1,
-        //         color: 'rgba(147, 235, 248, .2)' // 100% 处的颜色
-        //       }],
-        //       globalCoord: false // 缺省为 false
-        //     },
-        //     shadowColor: 'rgba(128, 217, 248, 1)',
-        //     // shadowColor: 'rgba(255, 255, 255, 1)',
-        //     shadowOffsetX: -2,
-        //     shadowOffsetY: 2,
-        //     shadowBlur: 10
-        //   },
-        //   emphasis: {
-        //     areaColor: '#389BB7',
-        //     borderWidth: 0
-        //   }
-        // },
         itemStyle: {
-          // normal: {
-          //   borderColor: 'rgba(147, 235, 248, 1)',
-          //   borderWidth: 1,
-          //   areaColor: {
-          //     type: 'radial',
-          //     x: 0.5,
-          //     y: 0.5,
-          //     r: 0.8,
-          //     colorStops: [{
-          //       offset: 0,
-          //       color: 'rgba(147, 235, 248, 0)' // 0% 处的颜色
-          //     }, {
-          //       offset: 1,
-          //       color: 'rgba(147, 235, 248, .2)' // 100% 处的颜色
-          //     }],
-          //     globalCoord: false // 缺省为 false
-          //   },
-          //   shadowColor: 'rgba(128, 217, 248, 1)',
-          //   // shadowColor: 'rgba(255, 255, 255, 1)',
-          //   shadowOffsetX: -2,
-          //   shadowOffsetY: 2,
-          //   shadowBlur: 10
-          // },
           normal: {
-            areaColor: "lightskyblue",
+            borderColor: 'rgba(147, 235, 248, 1)',
+            borderWidth: 1,
+            areaColor: {
+              type: 'radial',
+              x: 0.5,
+              y: 0.5,
+              r: 0.8,
+              colorStops: [{
+                offset: 0,
+                color: 'rgba(147, 235, 248, 0)' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: 'rgba(147, 235, 248, .2)' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            },
+            shadowColor: 'rgba(128, 217, 248, 1)',
             // shadowColor: 'rgba(255, 255, 255, 1)',
+            shadowOffsetX: -2,
+            shadowOffsetY: 2,
+            shadowBlur: 10
           },
           emphasis: {
             areaColor: '#389BB7',
@@ -330,7 +295,7 @@ export class MapExtendComponent implements OnInit {
                 normal: {
                   show: item.showLabel,
                   textStyle: {
-                    // color: '#fff'
+                    color: '#fff'
                   }
                 }
               }
@@ -518,7 +483,7 @@ export class MapExtendComponent implements OnInit {
           points: this.line
         },
         style: {
-          // stroke: '#fff',
+          stroke: '#fff',
           key: name
           // lineWidth: 2,
         },

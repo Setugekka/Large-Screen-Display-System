@@ -48,14 +48,13 @@ export class IsIndexComponent implements OnInit {
       },{
         "name": "发电机",
         "size": 300,
-        "num": "6"
-      },
-      // {
+        "num": "6"},
+      // },{
       //   "name": "后勤",
       //   "size": 300,
       //   "num": "7"
       // }
-      ],
+        ],
     "size": 77,
     "num": "0"
   };

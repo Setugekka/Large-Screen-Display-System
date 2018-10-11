@@ -129,10 +129,10 @@ export const ROUTES: RouteInfo[] = [
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
-      { path: '/PreventionMonitoring/VideoSurveillance', title: '视频监控系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/PreventionMonitoring/VideoTransmission', title: '视频传输系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/PreventionMonitoring/SystemMap', title: '全省系统图及预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/PreventionMonitoring/WarningSignals', title: '预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+     // { path: '/PreventionMonitoring/VideoSurveillance', title: '视频监控系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+     // { path: '/PreventionMonitoring/VideoTransmission', title: '视频传输系统', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+     // { path: '/PreventionMonitoring/SystemMap', title: '全省系统图及预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+     // { path: '/PreventionMonitoring/WarningSignals', title: '预警发布情况', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/DataManagement/InputFile', title: '数据模板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
 
     ]

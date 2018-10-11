@@ -44,7 +44,7 @@ export class InstitutionsComponent implements OnInit {
         top: '20',
         textAlign: 'center',
         textStyle: {
-          color: '#FFF',
+          color: '#009DA0',
           fontWeight: 'normal',
           fontSize: 36,
         }

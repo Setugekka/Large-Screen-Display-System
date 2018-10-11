@@ -153,7 +153,6 @@ export class CityPlanComponent implements OnInit {
         series: [{
           name: '树图',
           type: 'tree',
-          top: 25,
           left: 0,
           right: 0,
           orient: 'vertical', // vertical horizontal

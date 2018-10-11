@@ -16,20 +16,20 @@ export class WeatherComponent implements OnInit {
   mapLoaded = false;
   city_list = ['沈阳', '大连', '鞍山'];
   private geoCoordMap = {
-    '丹东市': [124.521, 40.4242],
+    '丹东市': [124.821, 40.62],
     '大连市': [122.2009, 39.4409],
     '沈阳市': [123.1238, 42.1216],
-    '营口市': [122.4316, 40.4297],
+    '营口市': [122.3316, 40.4],
     '葫芦岛市': [120.1575, 40.578],
-    '鞍山市': [122.85, 40.82],
-    '抚顺市': [123.97, 41.67],
-    '本溪市': [123.93, 41.3],
-    '朝阳市': [120.42, 41.58],
-    '阜新市': [121.65, 42],
-    '辽阳市': [123.17, 41.28],
-    '铁岭市': [123.85, 42.32],
-    '盘锦市': [122.07, 41.12],
-    '锦州市': [121.15, 41.13],
+    '鞍山市': [123.55, 40.32],
+    '抚顺市': [124.97, 42.27],
+    '本溪市': [124.93, 41.38],
+    '朝阳市': [119.52, 41.75],
+    '阜新市': [121.65, 42.45],
+    '辽阳市': [123.27, 41.20],
+    '铁岭市': [123.85, 43.02],
+    '盘锦市': [121.97, 41.29],
+    '锦州市': [120.85, 41.29],
 
   };
   data = [
@@ -66,7 +66,7 @@ export class WeatherComponent implements OnInit {
   };
 
   GetWeather(e) {
-    return e.name + ':' +  ' \n ' + '风向：' + e.value[3]
+    return '<p style="color: red">' + e.name + ':</p>' + '风向：' + e.value[3]
                           +  ' \n ' + '风速：' + e.value[5];
   }
 
@@ -145,11 +145,10 @@ export class WeatherComponent implements OnInit {
               top: 20,
               itemStyle: {
                 normal: {
-                  areaColor: 'transparent',
                   borderColor: '#3fdaff',
                   borderWidth: 1,
-                  shadowColor: 'rgba(63, 218, 255, 0.5)',
-                  shadowBlur: 30
+                  // shadowColor: 'rgba(63, 218, 255, 0.5)',
+                  // shadowBlur: 30
                 },
                 emphasis: {
                   areaColor: '#2B91B7',
@@ -168,15 +167,24 @@ export class WeatherComponent implements OnInit {
                 },
                 label: {
                   normal: {
-                    formatter: this.GetWeather,
+                    // formatter: this.GetWeather,
+                    formatter: function (e) {
+                      return  '{a|'+e.name+'}'+'\n'+'{hr|}' + '\n' + '风向：' + e.value[3]
+                        +  ' \n ' + '风速：' + e.value[5];
+                    },
                     show: true,
-                    padding: [4, 5],
-                    borderRadius: 3,
-                    borderWidth: 1,
-                    borderColor: 'rgba(0,0,0,0.5)',
-                    color: '#777',
-                   // position: 'out',
+                    color: '#ffffff',
+                    backgroundColor: 'rgba(26,87,178,.5)',
+                    lineHeight: 16,
+                    fontSize: 12,
+                    // height: 30,
+                    padding: [2, 5],
+                    borderRadius: 15,
+                    position: 'right',
                     rich: {
+                      a:{
+                        color:'red'
+                      },
                       b: {
                         fontSize: 20,
                         color: '#12EABE',
@@ -184,9 +192,9 @@ export class WeatherComponent implements OnInit {
                         padding: 4
                       },
                       hr: {
-                        borderColor: '#12EABE',
-                        width: '100%',
-                        borderWidth: 2,
+                        borderColor: 'white',
+                        width: '70%',
+                        borderWidth: 1,
                         height: 0
                       },
                       d: {
@@ -216,9 +224,9 @@ export class WeatherComponent implements OnInit {
                     color: function (val) {
                       const num = <number>val.data.value[2];
                       if (num < 100) {
-                        return '#FF3D00';
+                        return '#228c38';
                       } else {
-                        return '#4AFF96';
+                        return 'rgba(35,143,56,.5)';
                       }
                     },
                   }
@@ -243,17 +251,17 @@ export class WeatherComponent implements OnInit {
                 //     }
                 //   }
                 // },
-                labelLine: {
-                  normal: {
-                    show: true,
-                    length: 20,
-                    length2: 20,
-                    lineStyle: {
-                      color: '#12EABE',
-                      width: 2
-                    }
-                  }
-                },
+                // labelLine: {
+                //   normal: {
+                //     show: true,
+                //     length: 20,
+                //     length2: 20,
+                //     lineStyle: {
+                //       color: '#12EABE',
+                //       width: 2
+                //     }
+                //   }
+                // },
                 label: {
                   normal: {
                     formatter: '{c|{c}}\n{hr|}\n{d|{d}%}',

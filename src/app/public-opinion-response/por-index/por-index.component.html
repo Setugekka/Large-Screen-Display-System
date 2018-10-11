@@ -1,10 +1,17 @@
 <div class="row">
   <div class="col-3" style="color: unset;padding: 0">
-    <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
-      <div class="chat-sidebar-content">
-        <div id="users-list" class="list-group position-relative">
-          <div class="users-list-padding">
-            <a class="list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2" (click)="SetActive($event, 'chat1')">
+    <div class="card" style="height: 760px">
+      <div class="card-header">
+        <h4 class="card-title">当前舆情 </h4>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
+            <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block module" style="width: 100%">
+              <div class="chat-sidebar-content">
+                <div id="users-list" class="list-group position-relative">
+                  <div class="users-list-padding">
+                    <a class="list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2" (click)="SetActive($event, 'chat1')">
             <span class="media">
               <span class="avatar avatar-md avatar-online">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-3.png"
@@ -23,8 +30,8 @@
                 </p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat2')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat2')">
             <span class="media">
               <span class="avatar avatar-md avatar-busy">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-7.png"
@@ -44,8 +51,8 @@
                 </p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
             <span class="media">
               <span class="avatar avatar-md avatar-away">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"
@@ -65,8 +72,8 @@
                 </p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
             <span class="media">
               <span class="avatar avatar-md avatar-away">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
@@ -81,8 +88,8 @@
                   <i class="ft-check font-small-2"></i> 已解决</p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
             <span class="media">
               <span class="avatar avatar-md avatar-online">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-9.png"
@@ -101,8 +108,8 @@
                 </p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat6')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat6')">
             <span class="media">
               <span class="avatar avatar-md avatar-busy">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-4.png"
@@ -117,8 +124,8 @@
                   <i class="ft-check font-small-2"></i> 已解决</p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat7')">
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat7')">
             <span class="media">
               <span class="avatar avatar-md avatar-online">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-14.png"
@@ -132,22 +139,11 @@
                   <i class="ft-check primary font-small-2"></i> 已解决</p>
               </div>
             </span>
-            </a>
-            <a class="list-group-item no-border" (click)="SetActive($event,'chat8')">
-            <span class="media">
-              <span class="avatar avatar-md avatar-online">
-                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-1.png"
-                     alt="Generic placeholder image">
-                <i></i>
-              </span>
-              <div class="media-body">
-                <h6 class="list-group-item-heading">舆情8
-                <span class="font-small-3 float-right primary">周六</span></h6>
-                <p class="list-group-item-text text-muted">
-                  <i class="ft-check primary font-small-2"></i> 已解决</p>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </span>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -156,7 +152,7 @@
   <div class="col-5">
     <app-map></app-map>
     <div class="card text-center">
-      <div class="card-body">
+      <div class="card-body" style="height: 260px">
         <div class="card-block">
           <h4 class="card-title success">舆情应对方案</h4>
           <p class="card-text">{{detaildata}}</p>
@@ -166,37 +162,104 @@
     </div>
   </div>
   <div class="col-md-12 col-lg-4">
-    <div class="card">
-      <div class="card-header">
-        <h4 class="card-title">舆情详情 </h4>
-      </div>
+    <div class="card" style="height: 120px">
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title">舆情详情 </h4>-->
+      <!--</div>-->
       <div class="card-body">
         <div class="card-block">
           <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
               <div class="blockquote-footer pt-1 pl-0 primary">上报单位
               </div>
-              <p class="person_detail" style="font-size: 20px">{{a}}</p>
+              <div class="media" style="margin-right: 0px">
+                <div class="media-body text-left">
+                  <p class="card-text" style="font-size: 20px;font-style: normal">{{a}}</p>
+                </div>
+                <div class="media-right align-self-center">
+                  <i class="icon-cup success font-large-1 float-right"></i>
+                </div>
+              </div>
             </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="height: 120px">
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
               <div class="blockquote-footer pt-1 pl-0  warning">上报人:
               </div>
-              <p class="person_detail" style="font-size: 20px">{{b}}</p>
+                <div class="media" style="margin-right: 0px">
+                  <div class="media-body text-left">
+                    <p class="card-text" style="font-size: 20px;font-style: normal">{{b}}</p>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-user danger font-large-1 float-right"></i>
+                  </div>
+                </div>
             </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="height: 120px">
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <div class="blockquote-footer pt-1 pl-0 primary">联系方式:
+              <div class="blockquote-footer pt-1 pl-0  primary">联系方式:
               </div>
-              <p class="person_detail" style="font-size: 20px">{{c}} </p>
+              <div class="media" style="margin-right: 0px">
+                <div class="media-body text-left">
+                  <p class="card-text" style="font-size: 20px;font-style: normal">{{c}}</p>
+                </div>
+                <div class="media-right align-self-center">
+                  <i class="icon-direction success font-large-1 float-right"></i>
+                </div>
+              </div>
             </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="height: 120px">
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <div class="blockquote-footer pt-1 pl-0  warning">时间：
+              <div class="blockquote-footer pt-1 pl-0  warning">时间:
               </div>
-              <p class="person_detail" style="font-size: 20px">{{d}} </p>
+              <div class="media" style="margin-right: 0px">
+                <div class="media-body text-left">
+                  <p class="card-text" style="font-size: 20px;font-style: normal">{{d}}</p>
+                </div>
+                <div class="media-right align-self-center">
+                  <i class="icon-pie-chart danger font-large-1 float-right"></i>
+                </div>
+              </div>
             </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="height: 210px">
+      <div class="card-body">
+        <div class="card-block">
+          <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <div class="blockquote-footer pt-1 pl-0 primary">可能舆情：
+              <div class="blockquote-footer pt-1 pl-0  primary">可能舆情:
               </div>
-              <p class="person_detail" style="font-size: 20px">{{e}}</p>
+              <div class="media" >
+                <div class="media-body text-left" style="margin-right: 15px">
+                  <p class="card-text" style="font-size: 20px;font-style: normal">{{e}}</p>
+                </div>
+                <div class="media-right align-self-center">
+                  <i class="icon-book-open success font-large-1 float-right"></i>
+                </div>
+              </div>
             </blockquote>
           </div>
         </div>

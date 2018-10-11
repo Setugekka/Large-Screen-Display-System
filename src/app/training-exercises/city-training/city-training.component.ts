@@ -107,7 +107,7 @@ export class CityTrainingComponent implements OnInit {
           text: '“培训演练计划”上交情况',
           x: 'center',
           textStyle: {
-            color: '#ccc',
+            color: '#009DA0',
           }
         },
         tooltip: {
@@ -229,7 +229,7 @@ export class CityTrainingComponent implements OnInit {
         textStyle: {
           fontWeight: 'normal',
           fontSize: 20,
-          color: '#fff',
+          color: '#009DA0',
         }
       },
       xAxis: {
@@ -318,7 +318,7 @@ export class CityTrainingComponent implements OnInit {
         textStyle: {
           fontWeight: 'normal',
           fontSize: 20,
-          color: '#fff',
+          color: '#009DA0',
         }
       },
       "xAxis": {

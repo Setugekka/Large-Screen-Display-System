@@ -1,10 +1,15 @@
 <div class="row">
-  <div class="col-4">
+  <div class="col-4 ">
     <div class="module-panel" *ngFor="let city of initdata">
       <div class="panel-body">
         <div class="row">
-          <div class=" col-8" style="font-weight: bold;font-size: 20px"><i class="ft-circle mr-2"></i>{{city.name}}</div>
-          <div class=" col-4" style="color: blue;font-weight: bold;font-size: 30px">{{city.value}}</div>
+          <div class="col-10 row" style="font-size: 16px"><i class="ft-chevron-right mr-1 pt-1"></i>
+            <div style="width: 60px">{{city.name}}</div>
+            <div style="width: calc(100% - 90px);">
+              <div [ngStyle]="{width:city.value/30*100 +'%'}" style="height:100%;border-radius:5px;margin-top:2px;margin-bottom:2px;background: linear-gradient(to right, #006388 ,#00fcae );"></div>
+            </div>
+           </div>
+          <div class=" col-2" style="font-family:ds-digital;font-size: 20px;font-weight: bold">{{city.value}}</div>
         </div>
       </div>
     </div>
@@ -13,7 +18,7 @@
     <div echarts [options]="chartOption" style="height: 400px"></div>
   </div>
   <div class="col-4">
-    <div echarts [options]="zhuoption" style="height: 350px"></div>
+    <div echarts [options]="zhuoption" style="height: 370px"></div>
   </div>
 </div>
 <div class="row">

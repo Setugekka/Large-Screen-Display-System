@@ -27,6 +27,10 @@ export class StatusComponent implements OnInit {
   private chartOption={};
   private socket=SocketIO('127.0.0.1:5000/LargeScreen');
   private quxianoption={
+    grid:{
+      left:'3%',
+      right:'4%',
+    },
     xAxis: {
       type: 'category',
       data:  ['沈阳',
@@ -47,22 +51,28 @@ export class StatusComponent implements OnInit {
       axisLine: {
         show: true,
         lineStyle: {
-          width: 1,
+          width: 2,
           type: "solid"
         }
       },
       axisTick: {
-        show: true
+        show: true,
+        lineStyle: {
+          width: 2,
+          type: "solid"
+        }
       },
       axisLabel: {
         show: true,
         interval:0,
+        fontSize:20
       },
     },
     yAxis: {
       type: 'value',
       axisLabel: {
-        formatter: '{value}'
+        formatter: '{value}',
+        fontSize:20
       },
       axisLine: {
         show: false,
@@ -77,6 +87,7 @@ export class StatusComponent implements OnInit {
       splitLine: {
         lineStyle: {
           color: "#063374",
+          width:1
         }
       }
     },
@@ -104,10 +115,17 @@ export class StatusComponent implements OnInit {
           }]),
           opacity: 1,
         }
+      },
+      lineStyle:{
+        width:4
       }
     }]
   };
   private zhuoption={
+    title:{
+      text: '舆情分布情况',
+      left: 'center'
+    },
     grid: {
       left: '3%',
       right: '4%',
@@ -242,7 +260,7 @@ export class StatusComponent implements OnInit {
             name: '舆情分布',
             type: 'map',
             mapType: '辽宁', // 自定义扩展图表类型
-            top:30,
+            top:60,
             zoom:1.2,
             itemStyle:{
               normal:{label:{show:true}},

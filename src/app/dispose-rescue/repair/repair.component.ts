@@ -10,241 +10,125 @@ declare var echarts:any;
   styleUrls: ['./repair.component.css']
 })
 export class RepairComponent implements OnInit {
-private a;
-  private bar_option_repair: any;
-  private current_city = null;
-  constructor(private service: ScreenDisplayService,public emitService: EventEmitterService,private route:ActivatedRoute) { }
-
+  private last=null;
+  private option = {
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      data: ['沈阳',
+        '大连',
+        '鞍山',
+        '铁岭',
+        '抚顺',
+        '本溪',
+        '丹东',
+        '辽阳',
+        '营口',
+        '盘锦 ',
+        '阜新',
+        '锦州' ,
+        '朝阳',
+        '葫芦岛',
+      ],
+      axisLine: {
+        show: true,
+        lineStyle: {
+          width: 1,
+          type: "solid"
+        }
+      },
+      axisTick: {
+        show: true
+      },
+      axisLabel: {
+        show: true,
+        interval:0,
+      },
+    }],
+    yAxis: [{
+      type: 'value',
+      axisLabel: {
+        formatter: '{value}'
+      },
+      axisLine: {
+        show: false,
+        lineStyle: {
+          width: 1,
+          type: "solid"
+        },
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {
+        lineStyle: {
+          color: "#063374",
+        }
+      }
+    }],
+    series: [{
+      type: 'bar',
+      data: [20, 50, 80, 58, 83, 68, 57, 80, 42, 66,36,78,25,44],
+      //barWidth: 50, //柱子宽度
+      //barGap: 1, //柱子之间间距
+      itemStyle: {
+        normal: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: '#00fcae'
+          }, {
+            offset: 1,
+            color: '#006388'
+          }]),
+          opacity: 1,
+        },
+        emphasis:{
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: 'yellow'
+          }, {
+            offset: 0.5,
+            color: 'orange'
+          },{
+            offset: 1,
+            color: 'red'
+          }]),
+          opacity: 1,
+        }
+      }
+    }]
+  };
+  private ecinstance:any;
+  constructor(public emitService: EventEmitterService) { }
   ngOnInit() {
-    console.log(this.route.snapshot.paramMap.get('test'))
-
-
     this.emitService.eventEmit.subscribe((value: any) => {
       // if(value == "userList") {
       //   // 这里就可以调取接口，刷新userList列表数据
       //   alert("收到了，我立马刷新列表");
       // }
-      this.current_city=value;
-      this.service.GetRepairDist(this.current_city).then(r => {
-        const data = this.change_bar_data(r.value_list, r.class_list);
-        this.bar_option_repair={
-          tooltip : {
-            trigger: 'axis',
-            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-              type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-            },
-            formatter: function (params) {
-              var tar;
-              if (params[1].value != '-') {
-                tar = params[1];
-              }
-              else {
-                tar = params[0];
-              }
-              return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
-            }
-          },
-          grid:{left:'20%'},
-          xAxis: {
-            type : 'category',
-            splitLine: {show: false},
-            axisLine: {
-              lineStyle: {
-                color: '#95ffff'
-              }
-            },
-            data : data.class_list
-          },
-          yAxis: {
-            name: '人数',
-            type : 'value',
-            nameTextStyle:{color:'#95ffff'},
-            axisLabel:{color:'#95ffff'},
-            axisLine: {
-              lineStyle: {
-                color: '#95ffff'
-              }
-            },
-            splitLine: {
-              show: true,
-              lineStyle: {
-                color: '#95ffff'
-              }
-            },
-          },
-          series: [
-            {
-              name:'统计',
-              type: 'bar',
-              stack: '总量',
-              itemStyle: {
-                normal: {
-                  barBorderColor: 'rgba(0,0,0,0)',
-                  color: 'rgba(0,0,0,0)'
-                },
-                emphasis: {
-                  barBorderColor: 'rgba(0,0,0,0)',
-                  color: 'rgba(0,0,0,0)'
-                }
-              },
-              data: data.under_data
-            },
-            {
-              name: '人数',
-              type: 'bar',
-              stack: '总量',
-              label: {
-                normal: {
-                  show: false,
-                  position: 'top',
-                  color:'#95ffff'
-                }
-              },
-              itemStyle: {
-                normal: {
-                  barBorderRadius: 5,
-                  color: new echarts.graphic.LinearGradient(
-                    0, 0, 0, 1,
-                    [
-                      {offset: 0, color: '#14c8d4'},
-                      {offset: 1, color: '#43eec6'}
-                    ]
-                  )
-                },
-                emphasis: {
-                  color: new echarts.graphic.LinearGradient(
-                    0, 0, 0, 1,
-                    [
-                      {offset: 0, color: '#43eec6'},
-                      {offset: 0.7, color: '#13c9d5'},
-                      {offset: 1, color: '#14c8d4'}
-                    ]
-                  )
-                }
-              },
-              data: data.data
-            },
-          ]
-        };
-      });
-    });
-    this.service.GetRepairDist(this.current_city).then(r => {
-      const data = this.change_bar_data(r.value_list, r.class_list);
-      this.bar_option_repair={
-        tooltip : {
-          trigger: 'axis',
-          axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-          },
-          formatter: function (params) {
-            var tar;
-            if (params[1].value != '-') {
-              tar = params[1];
-            }
-            else {
-              tar = params[0];
-            }
-            return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
-          }
-        },
-        grid:{left:'20%'},
-        xAxis: {
-          type : 'category',
-          splitLine: {show: false},
-          axisLine: {
-            lineStyle: {
-              color: '#95ffff'
-            }
-          },
-          data : data.class_list
-        },
-        yAxis: {
-          name: '人数',
-          type : 'value',
-          nameTextStyle:{color:'#95ffff'},
-          axisLabel:{color:'#95ffff'},
-          axisLine: {
-            lineStyle: {
-              color: '#95ffff'
-            }
-          },
-          splitLine: {
-            show: true,
-            lineStyle: {
-              color: '#95ffff'
-            }
-          },
-        },
-        series: [
-          {
-            name:'统计',
-            type: 'bar',
-            stack: '总量',
-            itemStyle: {
-              normal: {
-                barBorderColor: 'rgba(0,0,0,0)',
-                color: 'rgba(0,0,0,0)'
-              },
-              emphasis: {
-                barBorderColor: 'rgba(0,0,0,0)',
-                color: 'rgba(0,0,0,0)'
-              }
-            },
-            data: data.under_data
-          },
-          {
-            name: '人数',
-            type: 'bar',
-            stack: '总量',
-            label: {
-              normal: {
-                show: false,
-                position: 'top',
-                color:'#95ffff'
-              }
-            },
-            itemStyle: {
-              normal: {
-                barBorderRadius: 5,
-                color: new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1,
-                  [
-                    {offset: 0, color: '#14c8d4'},
-                    {offset: 1, color: '#43eec6'}
-                  ]
-                )
-              },
-              emphasis: {
-                color: new echarts.graphic.LinearGradient(
-                  0, 0, 0, 1,
-                  [
-                    {offset: 0, color: '#43eec6'},
-                    {offset: 0.7, color: '#13c9d5'},
-                    {offset: 1, color: '#14c8d4'}
-                  ]
-                )
-              }
-            },
-            data: data.data
-          },
-        ]
-      };
+      if(this.last!=null){
+        this.ecinstance.dispatchAction({
+          type: 'downplay',
+          // 可选，系列 index，可以是一个数组指定多个系列
+          seriesIndex:0,
+          name:this.last
+        })}
+      this.last=value
+      this.ecinstance.dispatchAction({
+        type: 'highlight',
+        // 可选，系列 index，可以是一个数组指定多个系列
+        seriesIndex:0,
+        name:value
+      })
     });
   }
-  change_bar_data(data, class_data): any {
-    let temp = 0
-    const under_data: Array<Number> = [0];
-    for (const i of data) {
-      temp = temp + i;
-      under_data.push(temp);
-    }
-    under_data.reverse();
-    data.push(under_data[0]);
-    data.reverse();
-    under_data[0]= 0;
-    class_data.push(toUnicode('总数'));
-    class_data.reverse();
-    return {'class_list':class_data,'under_data':under_data,'data':data}
+  onChartInit(ec) {
+    this.ecinstance = ec;
   }
 
 }

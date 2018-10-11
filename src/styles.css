@@ -14,3 +14,7 @@
 html,body{
   font-family:"Microsoft Yahei"!important;
 }
+@font-face {
+  font-family: ds-digital;
+  src: url("/assets/fonts/DS-DIGII.TTF");
+}

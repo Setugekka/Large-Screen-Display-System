@@ -240,7 +240,7 @@ export class MapExtendComponent implements OnInit {
         id:0,
         map: opt.mapName,
         // roam: true,
-        zoom: 1,
+        zoom: 1.2,
         label: {
           normal: {
             show: true,
@@ -596,7 +596,7 @@ export class MapExtendComponent implements OnInit {
         zoom: count
       }
     });
-    if (count < 1) window.requestAnimationFrame(e=> {
+    if (count < 1.2) window.requestAnimationFrame(e=> {
       this.zoom(0.2,count);
     });
 

@@ -87,8 +87,11 @@ export class AlternatorComponent implements OnInit {
         emphasis:{
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
             offset: 0,
-            color: 'red'
+            color: 'yellow'
           }, {
+            offset: 0.5,
+            color: 'orange'
+          },{
             offset: 1,
             color: 'red'
           }]),

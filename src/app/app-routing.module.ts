@@ -10,7 +10,7 @@ import {OrgchartComponent} from "./shared/orgchart/orgchart.component";
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'layout',
+    redirectTo: 'EmergencyOrganization/WholeOrganization',
     pathMatch: 'full',
   },
   { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: FULL_ROUTES },

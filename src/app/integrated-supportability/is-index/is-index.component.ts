@@ -49,11 +49,13 @@ export class IsIndexComponent implements OnInit {
         "name": "发电机",
         "size": 300,
         "num": "6"
-      },{
-        "name": "后勤",
-        "size": 300,
-        "num": "7"
-      }],
+      },
+      // {
+      //   "name": "后勤",
+      //   "size": 300,
+      //   "num": "7"
+      // }
+      ],
     "size": 77,
     "num": "0"
   };
@@ -244,7 +246,7 @@ export class IsIndexComponent implements OnInit {
         return b.value - a.value;
       });
     d3.pack()
-      .size([400, 500])
+      .size([400, 400])
       .padding(3)(this.root);
     let maxDepth = 0;
     const nodeAll = this.root.descendants();

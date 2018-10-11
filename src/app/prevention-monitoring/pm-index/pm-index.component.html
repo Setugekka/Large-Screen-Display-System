@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-4">
-    <div class="card"  style="height: 300px">
+    <div class="card"  style="height: 315px">
       <div class="card-header">
-        <h4 class="card-title">预警 </h4>
+        <h4 class="card-title warning">预警 </h4>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -97,9 +97,9 @@
         </div>
       </div>
     </div>
-    <div class="card" style="height: 300px">
+    <div class="card" style="height: 315px">
       <div class="card-header">
-        <h4 class="card-title">未预警 </h4>
+        <h4 class="card-title primary">未预警 </h4>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -167,20 +167,30 @@
       </div>
     </div>
   </div>
-  <div class="col-4" (click)="clicktest">
+  <div class="col-4" (click)="clicktest" style="margin-top: 100px">
     <app-map></app-map>
   </div>
   <div class="col-md-12 col-lg-4">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">预警详情 </h4>
+        <div class="media" >
+          <div class="media-body text-left" style="margin-right: 15px">
+            <h4 class="card-title">预警详情 </h4>
+          </div>
+          <div class="media-right align-self-center">
+            <i class="ft-alert-triangle warning font-large-1 float-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"  style="height: 40px;padding-top: 10px">
+        <h4 class="card-title primary">预警简介 </h4>
       </div>
       <div class="card-body">
         <div class="card-block">
           <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-            <div class="blockquote-footer pt-1 pl-0 primary">预警简介
-            </div>
             <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
           </blockquote>
           </div>
@@ -188,12 +198,13 @@
       </div>
     </div>
     <div class="card">
+      <div class="card-header"  style="height: 40px;padding-top: 10px">
+        <h4 class="card-title warning">具体预警内容 </h4>
+      </div>
       <div class="card-body">
         <div class="card-block">
           <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <div class="blockquote-footer pt-1 pl-0 warning">具体预警内容
-              </div>
               <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
             </blockquote>
           </div>

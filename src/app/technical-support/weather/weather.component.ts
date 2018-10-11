@@ -182,8 +182,10 @@ export class WeatherComponent implements OnInit {
                     borderRadius: 15,
                     position: 'right',
                     rich: {
-                      a:{
-                        color:'red'
+                      a: {
+                        color: '#0D47A1',
+                        fontSize: 16,
+                        fontWeight: 'bold'
                       },
                       b: {
                         fontSize: 20,
@@ -194,7 +196,7 @@ export class WeatherComponent implements OnInit {
                       hr: {
                         borderColor: 'white',
                         width: '70%',
-                        borderWidth: 1,
+                        borderWidth: 2,
                         height: 0
                       },
                       d: {

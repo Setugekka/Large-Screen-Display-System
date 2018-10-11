@@ -2,17 +2,20 @@
   <div class="col-6">
     <div echarts [options]="option" (chartClick)="onChartClick($event)" (chartMouseOver)="onChartMouseOver($event)" style="height: 600px;margin-left: 100px" ></div>
   </div>
-  <div class="col-6" style="height: 600px">
+  <div class="col-6">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">综合保障能力 <small class="text-muted">简介</small></h4>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title primary">{{detail_title}}</h4>
       </div>
       <div class="card-body">
         <div class="card-block">
           <div class="card-text">
             <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <div class="blockquote-footer pt-1 pl-0 primary">{{detail_title}}
-              </div>
               <p>{{detail}}</p>
             </blockquote>
           </div>

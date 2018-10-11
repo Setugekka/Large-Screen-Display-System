@@ -22,11 +22,11 @@
   user-select: none;
   /*background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.15) 10%, rgba(0, 0, 0, 0) 10%), linear-gradient(rgba(200, 0, 0, 0.15) 10%, rgba(0, 0, 0, 0) 10%);*/
   background-size: 10px 10px;
-  border: 1px dashed rgba(0,0,0,0);
+  border: 1px dashed rgba(0, 0, 0, 0);
   padding: 20px;
 }
 
-.orgchart .hidden, .orgchart~.hidden {
+.orgchart .hidden, .orgchart ~ .hidden {
   display: none;
 }
 
@@ -46,25 +46,30 @@
   padding-left: 18px;
   text-align: left;
 }
+
 .orgchart .verticalNodes ul:first-child {
   margin-top: 2px;
 }
-.orgchart .verticalNodes>td::before {
+
+.orgchart .verticalNodes > td::before {
   content: '';
   border: 1px solid rgba(217, 83, 79, 0.8);
 }
-.orgchart .verticalNodes>td>ul>li:first-child::before {
+
+.orgchart .verticalNodes > td > ul > li:first-child::before {
   box-sizing: border-box;
   top: -4px;
   height: 30px;
   width: calc(50% - 2px);
   border-width: 2px 0 0 2px;
 }
-.orgchart .verticalNodes ul>li {
+
+.orgchart .verticalNodes ul > li {
   position: relative;
 }
-.orgchart .verticalNodes ul>li::before,
-.orgchart .verticalNodes ul>li::after {
+
+.orgchart .verticalNodes ul > li::before,
+.orgchart .verticalNodes ul > li::after {
   box-sizing: border-box;
   content: '';
   position: absolute;
@@ -73,22 +78,26 @@
   border-style: solid;
   border-width: 0 0 2px 2px;
 }
-.orgchart .verticalNodes ul>li::before {
+
+.orgchart .verticalNodes ul > li::before {
   top: -4px;
   height: 30px;
   width: 11px;
 }
-.orgchart .verticalNodes ul>li::after {
+
+.orgchart .verticalNodes ul > li::after {
   top: 1px;
   height: 100%;
 }
-.orgchart .verticalNodes ul>li:first-child::after {
+
+.orgchart .verticalNodes ul > li:first-child::after {
   box-sizing: border-box;
   top: 24px;
   width: 11px;
   border-width: 2px 0 0 2px;
 }
-.orgchart .verticalNodes ul>li:last-child::after {
+
+.orgchart .verticalNodes ul > li:last-child::after {
   box-sizing: border-box;
   border-width: 2px 0 0;
 }
@@ -99,7 +108,7 @@
   transform-origin: left top;
 }
 
-.orgchart>.spinner {
+.orgchart > .spinner {
   font-size: 100px;
   margin-top: 30px;
   color: rgba(68, 157, 68, 0.8);
@@ -110,7 +119,7 @@
   border-collapse: separate;
 }
 
-.orgchart>table:first-child{
+.orgchart > table:first-child {
   margin: 20px auto;
 }
 
@@ -120,7 +129,7 @@
   padding: 0;
 }
 
-.orgchart .lines> td {
+.orgchart .lines > td {
   box-sizing: border-box;
   height: 10px;
 }
@@ -165,7 +174,7 @@
   height: 130px;
 }
 
-.orgchart .node>.spinner {
+.orgchart .node > .spinner {
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
@@ -213,10 +222,26 @@
   /*text-overflow: ellipsis;*/
   /*white-space: nowrap;*/
   display: table-cell;
-  vertical-align:middle;
-  background-color: rgba(217, 83, 79, 0.8);
-  color: #fff;
+  vertical-align: middle;
+  /*background-color: rgba(217, 83, 79, 0.8);*/
+  /*color: #fff;*/
   border-radius: 4px 4px 0 0;
+}
+
+.orgchart .node .title {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8
+}
+
+.orgchart .node .title:hover {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b
+}
+
+.orgchart .node .title.focus, .orgchart .node .title:focus {
+  box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5)
 }
 
 .orgchart.b2t .node .title {
@@ -376,12 +401,12 @@
   opacity: 0.3;
 }
 
-.oc-export-btn:hover,.oc-export-btn:focus,.oc-export-btn:active  {
+.oc-export-btn:hover, .oc-export-btn:focus, .oc-export-btn:active {
   background-color: #449d44;
   border-color: #347a34;
 }
 
-.orgchart~.mask {
+.orgchart ~ .mask {
   position: absolute;
   top: 0;
   right: 0;
@@ -389,14 +414,14 @@
   left: 0;
   z-index: 999;
   text-align: center;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.orgchart~.mask .spinner {
+.orgchart ~ .mask .spinner {
   position: absolute;
   top: calc(50% - 54px);
   left: calc(50% - 54px);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 108px;
 }
 
@@ -443,49 +468,49 @@
 /*自定义*/
 
 .orgchart td.leftLine, .orgchart td.rightLine, .orgchart td.topLine {
-  border-color: #aaa!important;
+  border-color: #aaa !important;
 }
 
 .orgchart td > .downLine {
-  background-color: #aaa!important
+  background-color: #aaa !important
 }
 
 .orgchart .middle-level .title {
-  background-color: #069!important
+  background-color: #069 !important
 }
 
 .orgchart .middle-level .content {
-  border-color: #069!important
+  border-color: #069 !important
 }
 
 .orgchart .product-dept .title {
-  background-color: #093!important
+  background-color: #093 !important
 }
 
 .orgchart .product-dept .content {
-  border-color: #093!important
+  border-color: #093 !important
 }
 
 .orgchart .rd-dept .title {
-  background-color: #936!important
+  background-color: #936 !important
 }
 
 .orgchart .rd-dept .content {
-  border-color: #936!important
+  border-color: #936 !important
 }
 
 .orgchart .pipeline1 .title {
-  background-color: #963!important
+  background-color: #963 !important
 }
 
 .orgchart .pipeline1 .content {
-  border-color: #963!important
+  border-color: #963 !important
 }
 
 .orgchart .frontend1 .title {
-  background-color: #c06!important;
+  background-color: #c06 !important;
 }
 
 .orgchart .frontend1 .content {
-  border-color: #c06!important
+  border-color: #c06 !important
 }

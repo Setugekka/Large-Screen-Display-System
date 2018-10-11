@@ -109,7 +109,7 @@ export class OrgchartComponent implements OnInit {
     let opts = this.options
     let $nodeDiv = $('<div' + (opts.draggable ? ' draggable="true"' : '') + ( ' data-value="' + data[opts.nodeTitle] + '"') + (data.parentId ? ' data-parent="' + data.parentId + '"' : '') + '>')
       .addClass('node org-node');
-    $nodeDiv.append('<div class="title" style="background-color: '+(data.className || '')+'">' + data[opts.nodeTitle] + '</div>')
+    $nodeDiv.append('<div class="title">' + data[opts.nodeTitle] + '</div>')
       // .append(typeof opts.nodeContent !== 'undefined' ? '<div class="content" style="border-color: '+ (data.className || '')+'">' + (data[opts.nodeContent] || '') + '</div>' : '');
     let nodeData = $.extend({}, data);
     $nodeDiv.data('nodeData', nodeData);

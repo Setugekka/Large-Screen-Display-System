@@ -245,7 +245,7 @@ export class IsIndexComponent implements OnInit {
         return b.value - a.value;
       });
     d3.pack()
-      .size([400, 500])
+      .size([400, 400])
       .padding(3)(this.root);
     let maxDepth = 0;
     const nodeAll = this.root.descendants();

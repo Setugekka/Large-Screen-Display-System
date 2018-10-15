@@ -6,6 +6,7 @@ import { CityPlanComponent } from './city-plan/city-plan.component';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from '../shared/shared.module';
+import {EmergencyRegimeModule} from '../emergency-regime/emergency-regime.module';
 
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,7 +21,8 @@ import { WholePlanComponent } from './whole-plan/whole-plan.component';
     NgbModule,
     NgbModalModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    EmergencyRegimeModule
   ],
 
   declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent]

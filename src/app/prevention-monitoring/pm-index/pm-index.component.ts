@@ -30,7 +30,7 @@ export class PmIndexComponent implements OnInit {
       "\n"
   }
   clicktest(){
-    this.router.navigate(["/PublicOpinionResponse/Status"])
+    this.router.navigate(["/PublicOpinionResponse/Status"]);
   }
 
 }

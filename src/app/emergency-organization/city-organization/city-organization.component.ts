@@ -182,6 +182,7 @@ export class CityOrganizationComponent implements OnInit {
   option: any;
   option_sankey: any;
   links = [];
+  org = '应急领导小组';
   private all_content = [
     {name: '应急领导小组', value: '贯彻落实国家应急管理法律法规、方针政策及标准体系。。。'},
     {name: '安全应急办公室', value: '安全应急办公室设在公司安质部。。。'},
@@ -608,44 +609,43 @@ export class CityOrganizationComponent implements OnInit {
     }
     console.log(this.content);
   }
-
   constructor(private http: Http, public activatedRoute: ActivatedRoute ) {
   }
 
   ngOnInit() {
-    this.city_name = this.activatedRoute.snapshot.paramMap.get('Id')
-    if (this.city_name === null)  {
-      this.city_name = '沈阳';
-      // console.log(this.city_name);
-    }
-    this.setup_link(this.data_all);
-    // console.log(this.links);
-    this.option_sankey = {
-      series: {
-        type: 'sankey',
-        layout: 'none',
-        data: this.data_all,
-        links: this.links,
-        itemStyle: {
-          normal: {
-            borderWidth: 1,
-            borderColor: '#aaa'
-          }
-        },
-        lineStyle: {
-          normal: {
-            color: 'source',
-            curveness: 0.5
-          }
-        },
-        label: {
-          normal: {
-            color: 'black',
-            fontSize: 14,
-          }
-        }
-      }
-    };
+    this.org = this.activatedRoute.snapshot.paramMap.get('Id');
+    // if (this.city_name === null)  {
+    //   this.city_name = '沈阳';
+    //   // console.log(this.city_name);
+    // }
+    // this.setup_link(this.data_all);
+    // // console.log(this.links);
+    // this.option_sankey = {
+    //   series: {
+    //     type: 'sankey',
+    //     layout: 'none',
+    //     data: this.data_all,
+    //     links: this.links,
+    //     itemStyle: {
+    //       normal: {
+    //         borderWidth: 1,
+    //         borderColor: '#aaa'
+    //       }
+    //     },
+    //     lineStyle: {
+    //       normal: {
+    //         color: 'source',
+    //         curveness: 0.5
+    //       }
+    //     },
+    //     label: {
+    //       normal: {
+    //         color: 'black',
+    //         fontSize: 14,
+    //       }
+    //     }
+    //   }
+    // };
   }
 
 }

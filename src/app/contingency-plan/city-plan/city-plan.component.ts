@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { Urls} from '../../shared/model/model.url';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ActivatedRoute} from '@angular/router';
+import {FileviewComponent} from '../../emergency-regime/fileview/fileview.component';
 
 @Component({
   selector: 'app-city-plan',
@@ -110,6 +111,13 @@ export class CityPlanComponent implements OnInit {
       .toPromise()
       .then(response => response.json());
     return data;
+  }
+  // 打开预案
+  open_file(event) {
+    console.log(event);
+    // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
+     const modalRef = this.modalService.open(FileviewComponent, {windowClass: 'FileModalClass'});
+     modalRef.componentInstance.file_src = '/assets/pdf/ws.pdf';
   }
   constructor(private http: Http, private modalService: NgbModal, public activatedRoute: ActivatedRoute ) {}
 

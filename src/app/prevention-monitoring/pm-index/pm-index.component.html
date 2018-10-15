@@ -1,8 +1,9 @@
 <div class="row">
-  <div class="col-4">
-    <div class="card"  style="height: 315px">
-      <div class="card-header">
-        <h4 class="card-title warning">预警 </h4>
+  <div class="col-3">
+    <div class="card">
+      <div class="card-header title-bg-container pb-0 pl-0 pt-2">
+        <div class="warning title-bg ft-alert-triangle" style="height: 30px;font-size: 23px;width: fit-content">预警 </div>
+        <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -43,7 +44,7 @@
                   <span class="font-small-3 float-right primary">9:04 PM</span>
                 </h6>
                 <p class="list-group-item-text text-muted">
-                  <i class="ft-check primary font-small-2"></i> 红色预警
+                  <i class="ft-check primary font-small-2"></i> 橙色预警
                   <span class="float-right
                         primary">
                     <span class="badge badge-pill badge-primary"></span>
@@ -52,43 +53,43 @@
               </div>
             </span>
                     </a>
-                    <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat3')">-->
-                    <!--<span class="media">-->
-                    <!--<span class="avatar avatar-md avatar-away">-->
-                    <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"-->
-                    <!--alt="Generic placeholder image">-->
-                    <!--<i></i>-->
-                    <!--</span>-->
-                    <!--<div class="media-body">-->
-                    <!--<h6 class="list-group-item-heading">葫芦岛-->
-                    <!--<span class="font-small-3 float-right primary">2:14 AM</span>-->
-                    <!--</h6>-->
-                    <!--<p class="list-group-item-text text-muted">-->
-                    <!--<i class="ft-check font-small-2"></i> 绿色预警-->
-                    <!--<span class="float-right primary">-->
-                    <!--<i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>-->
-                    <!--<span class="badge badge-pill badge-primary"></span>-->
-                    <!--</span>-->
-                    <!--</p>-->
-                    <!--</div>-->
-                    <!--</span>-->
-                    <!--</a>-->
-                    <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat4')">-->
-                    <!--<span class="media">-->
-                    <!--<span class="avatar avatar-md avatar-away">-->
-                    <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"-->
-                    <!--alt="Generic placeholder image">-->
-                    <!--<i></i>-->
-                    <!--</span>-->
-                    <!--<div class="media-body">-->
-                    <!--<h6 class="list-group-item-heading">锦州-->
-                    <!--<span class="font-small-3 float-right primary">昨天</span>-->
-                    <!--</h6>-->
-                    <!--<p class="list-group-item-text text-muted">-->
-                    <!--<i class="ft-check font-small-2"></i> 紫色预警</p>-->
-                    <!--</div>-->
-                    <!--</span>-->
-                    <!--</a>-->
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"
+                    alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">葫芦岛
+                    <span class="font-small-3 float-right primary">2:14 AM</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <i class="ft-check font-small-2"></i> 黄色预警
+                    <span class="float-right primary">
+                    <i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>
+                    <span class="badge badge-pill badge-primary"></span>
+                    </span>
+                    </p>
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                    alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">锦州
+                    <span class="font-small-3 float-right primary">昨天</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <i class="ft-check font-small-2"></i> 蓝色预警</p>
+                    </div>
+                    </span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -96,96 +97,97 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="card" style="height: 315px">
-      <div class="card-header">
-        <h4 class="card-title primary">未预警 </h4>
+      <div style="border-top: 1px solid #cfd8dc !important;height: 40px;text-align: center;line-height: 36px">
+        <a href="#"><i class="ft-navigation"></i>查看历史预警</a>
       </div>
-      <div class="card-body">
-        <div class="card-block">
-          <div class="card-text">
-            <div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
-              <div class="chat-sidebar-content">
-                <div id="users-list2" class="list-group position-relative">
-                  <div class="users-list-padding">
-                    <a class="list-group-item no-border" (click)="SetActive($event,'chat5')">
-            <span class="media">
-              <span class="avatar avatar-md avatar-online">
-                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-9.png"
-                     alt="Generic placeholder image">
-                <i></i>
-              </span>
-              <div class="media-body">
-                <h6 class="list-group-item-heading">抚顺
-                  <span class="font-small-3 float-right primary"></span>
-                </h6>
-                <p class="list-group-item-text text-muted">
-                  <i class="ft-check font-small-2"></i>
-                  <span class="float-right primary">
-                    <span class="badge badge-pill badge-primary"></span>
-                  </span>
-                </p>
-              </div>
-            </span>
-                    </a>
-                    <a class="list-group-item no-border" (click)="SetActive($event,'chat6')">
-            <span class="media">
-              <span class="avatar avatar-md avatar-busy">
-                <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-4.png"
-                     alt="Generic placeholder image">
-                <i></i>
-              </span>
-              <div class="media-body">
-                <h6 class="list-group-item-heading">铁岭
-                  <span class="font-small-3 float-right primary"></span>
-                </h6>
-                <p class="list-group-item-text text-muted">
-                  <i class="ft-check font-small-2"></i></p>
-              </div>
-            </span>
-                    </a>
-                    <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat7')">-->
+    </div>
+    <!--<div class="card" style="height: 315px">-->
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title primary">未预警 </h4>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-block">-->
+          <!--<div class="card-text">-->
+            <!--<div class="chat-sidebar float-left d-none d-sm-none d-md-block d-lg-block" style="width: 100%">-->
+              <!--<div class="chat-sidebar-content">-->
+                <!--<div id="users-list2" class="list-group position-relative">-->
+                  <!--<div class="users-list-padding">-->
+                    <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat5')">-->
             <!--<span class="media">-->
               <!--<span class="avatar avatar-md avatar-online">-->
-                <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-14.png"-->
+                <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-9.png"-->
                      <!--alt="Generic placeholder image">-->
                 <!--<i></i>-->
               <!--</span>-->
               <!--<div class="media-body">-->
-                <!--<h6 class="list-group-item-heading">辽阳</h6>-->
+                <!--<h6 class="list-group-item-heading">抚顺-->
+                  <!--<span class="font-small-3 float-right primary"></span>-->
+                <!--</h6>-->
                 <!--<p class="list-group-item-text text-muted">-->
-                  <!--<i class="ft-check primary font-small-2"></i> </p>-->
+                  <!--<i class="ft-check font-small-2"></i>-->
+                  <!--<span class="float-right primary">-->
+                    <!--<span class="badge badge-pill badge-primary"></span>-->
+                  <!--</span>-->
+                <!--</p>-->
               <!--</div>-->
             <!--</span>-->
                     <!--</a>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    <!--<a class="list-group-item no-border" (click)="SetActive($event,'chat6')">-->
+            <!--<span class="media">-->
+              <!--<span class="avatar avatar-md avatar-busy">-->
+                <!--<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-4.png"-->
+                     <!--alt="Generic placeholder image">-->
+                <!--<i></i>-->
+              <!--</span>-->
+              <!--<div class="media-body">-->
+                <!--<h6 class="list-group-item-heading">铁岭-->
+                  <!--<span class="font-small-3 float-right primary"></span>-->
+                <!--</h6>-->
+                <!--<p class="list-group-item-text text-muted">-->
+                  <!--<i class="ft-check font-small-2"></i></p>-->
+              <!--</div>-->
+            <!--</span>-->
+                    <!--</a>-->
+                    <!--&lt;!&ndash;<a class="list-group-item no-border" (click)="SetActive($event,'chat7')">&ndash;&gt;-->
+            <!--&lt;!&ndash;<span class="media">&ndash;&gt;-->
+              <!--&lt;!&ndash;<span class="avatar avatar-md avatar-online">&ndash;&gt;-->
+                <!--&lt;!&ndash;<img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-14.png"&ndash;&gt;-->
+                     <!--&lt;!&ndash;alt="Generic placeholder image">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i></i>&ndash;&gt;-->
+              <!--&lt;!&ndash;</span>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h6 class="list-group-item-heading">辽阳</h6>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="list-group-item-text text-muted">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<i class="ft-check primary font-small-2"></i> </p>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
-  <div class="col-4" (click)="clicktest" style="margin-top: 100px">
-    <app-map></app-map>
+  <div class="col-6 card">
+    <div echarts [options]="chartOption" (chartInit)="onChartInit($event)" style="height: 600px"></div>
   </div>
-  <div class="col-md-12 col-lg-4">
-    <div class="card">
+  <div class="col-3">
+    <div class="card" style="background: url('assets/image/background.jpg');background-size: 100%">
       <div class="card-header">
         <div class="media" >
           <div class="media-body text-left" style="margin-right: 15px">
-            <h4 class="card-title">预警详情 </h4>
-          </div>
-          <div class="media-right align-self-center">
-            <i class="ft-alert-triangle warning font-large-1 float-right"></i>
+            <h4 class="card-title"><i class="ft-alert-triangle warning"></i>预警详情 </h4>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <div class="card-header"  style="height: 40px;padding-top: 10px">
-        <h4 class="card-title primary">预警简介 </h4>
+      <div class="card-header title-bg-container pb-0 pl-0 pt-2">
+        <div class="primary title-bg ft-chevrons-right" style="height: 30px;font-size: 23px;width: fit-content">预警简介 </div>
+        <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -196,10 +198,14 @@
           </div>
         </div>
       </div>
+      <div style="border-top: 1px solid #cfd8dc !important;height: 40px;text-align: center;line-height: 36px">
+        <a href="#"><i class="ft-clipboard"></i>查看详情</a>
+      </div>
     </div>
     <div class="card">
-      <div class="card-header"  style="height: 40px;padding-top: 10px">
-        <h4 class="card-title warning">具体预警内容 </h4>
+      <div class="card-header title-bg-container pb-0 pl-0 pt-2">
+        <div class="warning title-bg ft-chevrons-right" style="height: 30px;font-size: 23px;width: fit-content">具体预警内容 </div>
+        <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -209,6 +215,9 @@
             </blockquote>
           </div>
         </div>
+      </div>
+      <div style="border-top: 1px solid #cfd8dc !important;height: 40px;text-align: center;line-height: 36px">
+        <a href="#"><i class="ft-clipboard"></i>查看详情</a>
       </div>
     </div>
   </div>

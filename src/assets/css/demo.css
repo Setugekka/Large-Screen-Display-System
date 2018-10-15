@@ -84,6 +84,9 @@ my-app .main-panel .main-content .card{
 .tim-row h3{
     margin-top: 0;
 }
-.card{
-  box-shadow: 0 6px 0px 0 rgba(0, 0, 0, 0.01), 0 15px 32px 0 rgba(0, 0, 0, 0.6)!important;
+.title-bg{
+  background:url('../image/titlebg01.png') repeat-x bottom;
+}
+.title-bg-container{
+  background: url(../image/titlebg02.png) repeat-x bottom;
 }

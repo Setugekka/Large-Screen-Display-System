@@ -1,141 +1,256 @@
-<div class="card-block">
-  <div class="row">
-  <!--<p>-->
-    <!--<a style="margin: 3px" class="btn btn-raised gradient-purple-bliss white" value="应急领导小组" (click)='click("应急领导小组")'>应急领导小组</a>-->
-    <!--<a style="margin: 3px" class="btn btn-raised gradient-crystal-clear white" value="安全应急办公室" (click)='click("安全应急办公室")'>安全应急办公室</a>-->
-    <!--<a style="margin: 3px"  class="btn btn-raised gradient-nepal white" value="稳定应急办公室" (click)='click("稳定应急办公室")'>稳定应急办公室</a>-->
-  <!--</p>-->
-    <div class="col-lg-7 col-md-offset-8">
-      <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>
-  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-    <button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="content-header">应急组织体系</div>
   </div>
-  <span ngbDropdown>
-  <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>
-  <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-    <button class="dropdown-item" (click)="return()">返回上级</button>
-    <button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>
-  </div>
-    </span>
-  </div>
-      <div class="col-lg-7" style="margin-left: 100px">
-        <!--<div echarts [options]="option_sankey"  style="height:800px" (chartClick)="show_content($event)"></div>-->
-        <div id="orgchart-container"><app-orgchart [data]="datasource"></app-orgchart></div>
-      </div>
 </div>
-    <div class="col-md-12 col-lg-5" >
-      <div class="card" style="height: 60px;padding-top: 0px">
+<section id="basic-usage" class="row">
+  <div class=" col-12">
+    <div class="card">
       <div class="card-header">
-        <h4 class="card-title">辽宁省电力有限公司应急组织体系 <small class="text-muted">各部门介绍</small></h4>
+        <h4 class="card-title">{{org}}</h4><a class="heading-elements-toggle"></a>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <p> 应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。
+          </p>
+          <p>首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；
+            其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；
+            第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；
+          </p>
+        </div>
       </div>
     </div>
-      <div class="card" style="height: 120px">
-        <div class="card-header"  style="height: 40px;padding-top: 10px">
-          <h4 class="card-title primary">组织名称 </h4>
-        </div>
-        <div class="card-body">
-          <div class="card-block"  style="padding-top: 0px">
-            <div class="card-text">
-              <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-                <div class="media" style="margin-right: 0px">
-                  <div class="media-body text-left">
-                    <p class="person_detail" style="font-size: 20px;font-style: normal">{{chosen_name}}</p>
-                  </div>
-                  <div class="media-right align-self-center">
-                    <i class="icon-cup success font-large-1 float-right"></i>
-                  </div>
+  </div>
+</section>
+<section id="fabs-examples">
+<div class = "row">
+  <div class="col-xl-3 col-lg-6 col-12">
+      <div class="card bg-success">
+          <div class="card-body">
+            <div class="px-3 py-3">
+              <div class="media">
+                <div class="media-body white text-left">
+                  <h3>联系人</h3>
+                  <span>张一</span>
                 </div>
-              </blockquote>
+                <div class="media-right align-self-center">
+                  <i class="icon-user white font-large-2 float-right"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card" style="height: 145px">
-        <div class="card-header" style="height: 40px;padding-top: 10px">
-          <h4 class="card-title warning">组织简介 </h4>
-        </div>
-        <div class="card-body">
-          <div class="card-block">
-            <div class="card-text">
-              <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-                <div class="media" style="margin-right: 0px">
-                  <div class="media-body text-left">
-                    <p class="person_detail" style="font-size: 20px;font-style: normal">{{content}}</p>
-                  </div>
-                  <div class="media-right align-self-center">
-                    <i class="icon-book-open danger font-large-1 float-right"></i>
-                  </div>
+      <div class="card bg-danger" style="margin-top: 52px">
+          <div class="card-body">
+            <div class="px-3 py-3">
+              <div class="media">
+                <div class="media-left align-self-center">
+                  <i class="icon-speech white font-large-2 float-left"></i>
                 </div>
-              </blockquote>
+                <div class="media-body white text-right">
+                  <h3>联系方式</h3>
+                  <span>13030010003</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card" style="height: 120px">
-        <div class="card-header"  style="height: 40px;padding-top: 10px">
-          <h4 class="card-title primary">负责人 </h4>
-        </div>
-        <div class="card-body">
-          <div class="card-block">
-            <div class="card-text">
-              <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-                <div class="media" style="margin-right: 0px">
-                  <div class="media-body text-left">
-                    <p class="person_detail" style="font-size: 20px;font-style: normal">张一 </p>
-                  </div>
-                  <div class="media-right align-self-center">
-                    <i class="icon-user success font-large-1 float-right"></i>
-                  </div>
+      <div class="card bg-warning" style="margin-top: 52px">
+          <div class="card-body">
+            <div class="px-3 py-3">
+              <div class="media">
+                <div class="media-body white text-left">
+                  <h3>部门电话</h3>
+                  <span>024-55887799</span>
                 </div>
-              </blockquote>
+                <div class="media-right align-self-center">
+                  <i class="icon-rocket white font-large-2 float-right"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card" style="height: 120px">
-        <div class="card-header"  style="height: 40px;padding-top: 10px">
-          <h4 class="card-title warning">联系方式 </h4>
+    </div>
+  <div class="col-lg-5 col-md-6 col-sm-12">
+    <div class="card" style="height: 453px">
+      <div class="card-body">
+        <div class="card-block">
+          <h4 class="card-title">最新动态</h4>
+          <p class="card-text">最近更新于2018年10月24日</p>
         </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge bg-primary float-right">1</span> 我部门今日完成安全检查
+          </li>
+          <li class="list-group-item">
+            <span class="badge bg-info float-right">2</span> “提升责任感，为人民服务”主题培训圆满完成
+          </li>
+          <li class="list-group-item">
+            <span class="badge bg-warning float-right">3</span> 我部门今日完成党政学习
+          </li>
+          <li class="list-group-item">
+            <span class="badge bg-success float-right">4</span> 学习“中国梦”思想主题讲座圆满召开
+          </li>
+          <li class="list-group-item">
+            <span class="badge bg-danger float-right">5</span> 抢险救灾工作圆满完成
+          </li>
+        </ul>
+        <div class="card-block">
+          <a class="card-link success">查看更多</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12 col-sm-12">
+      <div class="card" style="height: 453px">
         <div class="card-body">
-          <div class="card-block">
-            <div class="card-text">
-              <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-                <div class="media" style="margin-right: 0px">
-                  <div class="media-body text-left">
-                    <p class="card-text" style="font-size: 20px;font-style: normal">13230010100</p>
-                  </div>
-                  <div class="media-right align-self-center">
-                    <i class="icon-pie-chart danger font-large-1 float-right"></i>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
+          <div class="card-img">
+            <img class="card-img-top img-fluid" src="assets/img/photos/team.jpg" alt="Card image cap">
           </div>
-        </div>
-      </div>
-      <div class="card" style="height: 145px">
-        <div class="card-header" style="height: 40px;padding-top: 10px">
-          <h4 class="card-title primary">成员组成 </h4>
-        </div>
-        <div class="card-body">
           <div class="card-block">
-            <div class="card-text">
-              <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-                <div class="media" style="margin-right: 0px">
-                  <div class="media-body text-left">
-                    <p class="person_detail" style="font-size: 20px;font-style: normal">部门由12名成员组成，其中博士生1名，硕士2名。。。。。。</p>
-                  </div>
-                  <div class="media-right align-self-center">
-                    <i class="icon-direction success font-large-1 float-right"></i>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
+            <h4 class="card-title">成员组成</h4>
+            <p class="card-text">本部门由12名成员组成，其中博士生1名，硕士2名，本科生9名。。。。。。</p>
+            <button class="btn btn-raised btn-warning">查看更多</button>
           </div>
         </div>
       </div>
     </div>
 </div>
-</div>
+</section>
+
+<!--<div class="card-block">-->
+  <!--<div class="row">-->
+    <!--<div class="col-lg-7 col-md-offset-8">-->
+      <!--<div class="dropdown btn-group mr-1 mb-1 " ngbDropdown>-->
+  <!--<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{city_name}}</button>-->
+  <!--<div ngbDropdownMenu aria-labelledby="dropdownBasic1">-->
+    <!--<button class="dropdown-item" *ngFor="let city of city_list" (click)="choosetown(city)">{{city}}</button>-->
+  <!--</div>-->
+  <!--<span ngbDropdown>-->
+  <!--<button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle style="margin: 3px">{{town_name}}</button>-->
+  <!--<div ngbDropdownMenu aria-labelledby="dropdownBasic2">-->
+    <!--<button class="dropdown-item" (click)="return()">返回上级</button>-->
+    <!--<button class="dropdown-item" *ngFor="let town of town_list" (click)="choosentown(town)">{{town}}</button>-->
+  <!--</div>-->
+    <!--</span>-->
+  <!--</div>-->
+      <!--<div class="col-lg-7" style="margin-left: 100px">-->
+        <!--&lt;!&ndash;<div echarts [options]="option_sankey"  style="height:800px" (chartClick)="show_content($event)"></div>&ndash;&gt;-->
+        <!--<div id="orgchart-container"><app-orgchart [data]="datasource"></app-orgchart></div>-->
+      <!--</div>-->
+<!--</div>-->
+    <!--<div class="col-md-12 col-lg-5" >-->
+      <!--<div class="card" style="height: 60px;padding-top: 0px">-->
+      <!--<div class="card-header">-->
+        <!--<h4 class="card-title">辽宁省电力有限公司应急组织体系 <small class="text-muted">各部门介绍</small></h4>-->
+      <!--</div>-->
+    <!--</div>-->
+      <!--<div class="card" style="height: 120px">-->
+        <!--<div class="card-header"  style="height: 40px;padding-top: 10px">-->
+          <!--<h4 class="card-title primary">组织名称 </h4>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+          <!--<div class="card-block"  style="padding-top: 0px">-->
+            <!--<div class="card-text">-->
+              <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+                <!--<div class="media" style="margin-right: 0px">-->
+                  <!--<div class="media-body text-left">-->
+                    <!--<p class="person_detail" style="font-size: 20px;font-style: normal">{{chosen_name}}</p>-->
+                  <!--</div>-->
+                  <!--<div class="media-right align-self-center">-->
+                    <!--<i class="icon-cup success font-large-1 float-right"></i>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="card" style="height: 145px">-->
+        <!--<div class="card-header" style="height: 40px;padding-top: 10px">-->
+          <!--<h4 class="card-title warning">组织简介 </h4>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+          <!--<div class="card-block">-->
+            <!--<div class="card-text">-->
+              <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+                <!--<div class="media" style="margin-right: 0px">-->
+                  <!--<div class="media-body text-left">-->
+                    <!--<p class="person_detail" style="font-size: 20px;font-style: normal">{{content}}</p>-->
+                  <!--</div>-->
+                  <!--<div class="media-right align-self-center">-->
+                    <!--<i class="icon-book-open danger font-large-1 float-right"></i>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="card" style="height: 120px">-->
+        <!--<div class="card-header"  style="height: 40px;padding-top: 10px">-->
+          <!--<h4 class="card-title primary">负责人 </h4>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+          <!--<div class="card-block">-->
+            <!--<div class="card-text">-->
+              <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+                <!--<div class="media" style="margin-right: 0px">-->
+                  <!--<div class="media-body text-left">-->
+                    <!--<p class="person_detail" style="font-size: 20px;font-style: normal">张一 </p>-->
+                  <!--</div>-->
+                  <!--<div class="media-right align-self-center">-->
+                    <!--<i class="icon-user success font-large-1 float-right"></i>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="card" style="height: 120px">-->
+        <!--<div class="card-header"  style="height: 40px;padding-top: 10px">-->
+          <!--<h4 class="card-title warning">联系方式 </h4>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+          <!--<div class="card-block">-->
+            <!--<div class="card-text">-->
+              <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+                <!--<div class="media" style="margin-right: 0px">-->
+                  <!--<div class="media-body text-left">-->
+                    <!--<p class="card-text" style="font-size: 20px;font-style: normal">13230010100</p>-->
+                  <!--</div>-->
+                  <!--<div class="media-right align-self-center">-->
+                    <!--<i class="icon-pie-chart danger font-large-1 float-right"></i>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="card" style="height: 145px">-->
+        <!--<div class="card-header" style="height: 40px;padding-top: 10px">-->
+          <!--<h4 class="card-title primary">成员组成 </h4>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+          <!--<div class="card-block">-->
+            <!--<div class="card-text">-->
+              <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+                <!--<div class="media" style="margin-right: 0px">-->
+                  <!--<div class="media-body text-left">-->
+                    <!--<p class="person_detail" style="font-size: 20px;font-style: normal">部门由12名成员组成，其中博士生1名，硕士2名。。。。。。</p>-->
+                  <!--</div>-->
+                  <!--<div class="media-right align-self-center">-->
+                    <!--<i class="icon-direction success font-large-1 float-right"></i>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</blockquote>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
 

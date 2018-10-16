@@ -1,21 +1,32 @@
 <div class="row">
   <div class="col-sm-12">
-    <div class="content-header">应急组织体系</div>
+    <div class="row">
+      <i class="icon-users primary font-large-2" style="margin: 15px 10px 0px 25px"></i>
+      <div class="content-header">应急组织体系</div>
+    </div>
+    <div class="mt-2 mb-0">
+      <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
+    </div>
   </div>
 </div>
 <section id="basic-usage" class="row">
   <div class=" col-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">{{org}}</h4><a class="heading-elements-toggle"></a>
+        <div class="row mt-0">
+          <i class="fa fa-star warning ml-1 mt-0 mr-1 font-medium-2"></i>
+          <h4 class="card-title">{{org}}</h4><a class="heading-elements-toggle"></a>
+        </div>
+        <div class="mt-1 mb-0">
+          <ngb-progressbar type="warning" [value]="10" class="progress-bar-sm"></ngb-progressbar>
+        </div>
       </div>
       <div class="card-body">
         <div class="card-block">
-          <p> 应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。
-          </p>
+          <p> 应急管理体制是指为保障公共安全，有效预防和应对突发事件，避免、减少和减缓突发事件造成的危害，消除其对社会产生的负面影响，而建立起来的以政府为核心，其他社会组织和公众共同参与的有机体系。</p>
           <p>首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；
             其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；
-            第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；
+            第三，应急管理体制是比一般制度更具有刚性的“制度"。
           </p>
         </div>
       </div>
@@ -40,7 +51,7 @@
             </div>
           </div>
         </div>
-      <div class="card bg-danger" style="margin-top: 52px">
+      <div class="card bg-danger" style="margin-top: 49px">
           <div class="card-body">
             <div class="px-3 py-3">
               <div class="media">
@@ -55,7 +66,7 @@
             </div>
           </div>
         </div>
-      <div class="card bg-warning" style="margin-top: 52px">
+      <div class="card bg-warning" style="margin-top: 49px">
           <div class="card-body">
             <div class="px-3 py-3">
               <div class="media">
@@ -70,13 +81,17 @@
             </div>
           </div>
         </div>
-    </div>
+  </div>
   <div class="col-lg-5 col-md-6 col-sm-12">
-    <div class="card" style="height: 453px">
+    <div class="card" style="height: 448px">
       <div class="card-body">
         <div class="card-block">
-          <h4 class="card-title">最新动态</h4>
+          <div class="row">
+            <i class="fa fa-th-list primary ml-2 mt-1 mr-1 font-medium-3"></i>
+            <h4 class="card-title mt-1">最新动态</h4>
+          </div>
           <p class="card-text">最近更新于2018年10月24日</p>
+          <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
         </div>
         <ul class="list-group">
           <li class="list-group-item">
@@ -102,14 +117,18 @@
     </div>
   </div>
   <div class="col-lg-4 col-md-12 col-sm-12">
-      <div class="card" style="height: 453px">
+      <div class="card" style="height: 448px">
         <div class="card-body">
           <div class="card-img">
             <img class="card-img-top img-fluid" src="assets/img/photos/team.jpg" alt="Card image cap">
           </div>
           <div class="card-block">
-            <h4 class="card-title">成员组成</h4>
-            <p class="card-text">本部门由12名成员组成，其中博士生1名，硕士2名，本科生9名。。。。。。</p>
+            <div class="row">
+              <i class="fa fa-user warning ml-2 mt-1 mr-1 font-medium-3"></i>
+              <h4 class="card-title mt-1">成员组成</h4>
+            </div>
+            <ngb-progressbar type="warning" [value]="40" class="progress-bar-sm mt-1"></ngb-progressbar>
+            <p class="card-text mt-1">本部门由12名成员组成，其中博士生1名，硕士2名，本科生9名。。。。。。</p>
             <button class="btn btn-raised btn-warning">查看更多</button>
           </div>
         </div>

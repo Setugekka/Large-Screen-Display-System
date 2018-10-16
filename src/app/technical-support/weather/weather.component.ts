@@ -13,6 +13,7 @@ export class WeatherComponent implements OnInit {
   private title;
   private text;
   private time;
+  private weather_time;
   mapLoaded = false;
   city_list = ['沈阳', '大连', '鞍山'];
   private geoCoordMap = {
@@ -50,6 +51,11 @@ export class WeatherComponent implements OnInit {
   ];
   private option = {};
   private weather_data = [];
+  weatherIcons = {
+    'Sunny': './assets/img/weather/Sunny.ico',
+    'Cloudy': './assets/img/weather/Cloudy.ico',
+    'Rain': './assets/img/weather/Rain.ico'
+  };
   convertData = function (data) {
     const res = [];
     for (let i = 0; i < data.length; i++) {
@@ -81,7 +87,8 @@ export class WeatherComponent implements OnInit {
       this.httpClient.get('/api/ProService/servlet/forecastServlet?period=24')
         .subscribe(weatherJson => {
           this.weather_data = weatherJson['data'];
-          // console.log(this.weather_data);
+          this.weather_time = weatherJson['datetime'];
+          // console.log(weatherJson['datetime']);
           for (const a in this.data) {
             if (a) {
               let city = this.data[a]['name'];
@@ -94,11 +101,21 @@ export class WeatherComponent implements OnInit {
                   this.data[a]['value'] = this.data[a]['value'].concat([i['fx2']]);
                   this.data[a]['value'] = this.data[a]['value'].concat([i['fs1']]);
                   this.data[a]['value'] = this.data[a]['value'].concat([i['fs2']]);
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['tq1']]);
+                  if (i['tq1'] === '晴') {
+                    // console.log(i['tq1']);
+                    this.data[a]['value'] = this.data[a]['value'].concat(['./assets/img/weather/Sunny.ico']);
+                  } else if (i['tq1'] === '多云') {
+                    this.data[a]['value'] = this.data[a]['value'].concat(['./assets/img/weather/Cloudy.ico']);
+                  } else {
+                    this.data[a]['value'] = this.data[a]['value'].concat(['./assets/img/weather/Rain.ico']);
+                  }
+                  this.data[a]['value'] = this.data[a]['value'].concat([i['tq2']]);
                   this.data[a]['value'] = this.data[a]['value'].concat([i['temp1']]);
                   this.data[a]['value'] = this.data[a]['value'].concat([i['temp2']]);
-                  // console.log(a['value']);
                 }
               }
+              // console.log(this.data[a]['value']);
             }
           }
           this.option = {
@@ -114,13 +131,13 @@ export class WeatherComponent implements OnInit {
             tooltip: {
               trigger: 'item',
               formatter: function (params) {
-                return params.name + ': ' + params.data['value'] + '%';
+                return params.name + ': ' + params.data['value'];
               },
             },
             visualMap: {
               show: false,
               min: 0,
-              max: 100,
+              max: 30,
               left: 'left',
               text: ['高', '低'], // 文本，默认为数值文本
               calculable: true,
@@ -169,9 +186,15 @@ export class WeatherComponent implements OnInit {
                   normal: {
                     // formatter: this.GetWeather,
                     formatter: function (e) {
-                      return  '{a|'+e.name+'}'+'\n'+'{hr|}' + '\n' + '风向：' + e.value[3]
-                        +  ' \n ' + '风速：' + e.value[5];
-                    },
+                      console.log(e)
+                      if (e.value[7] === '晴') {
+                        return  '{a|' + e.name + '}' +  '{Sunny|}';
+                      } else if (e.value[7] === '多云') {
+                        return  '{a|' + e.name + '}' +  '{Cloudy|}';
+                      } else {
+                        return  '{a|' + e.name + '}' +  '{Rainy|}';
+                      }
+                      },
                     show: true,
                     color: '#ffffff',
                     backgroundColor: 'rgba(26,87,178,.5)',
@@ -210,7 +233,25 @@ export class WeatherComponent implements OnInit {
                         color: '#fff',
                         align: 'left',
                         padding: 4
-                      }
+                      },
+                      Sunny: {
+                        height: 30,
+                        backgroundColor: {
+                          image: this.weatherIcons.Sunny
+                        }
+                      },
+                      Cloudy: {
+                        height: 30,
+                        backgroundColor: {
+                          image: this.weatherIcons.Cloudy
+                        }
+                      },
+                      Rainy: {
+                        height: 30,
+                        backgroundColor: {
+                          image: this.weatherIcons.Rain
+                        }
+                      },
                     }
                   },
                   emphasis: {

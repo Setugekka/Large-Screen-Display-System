@@ -1,8 +1,16 @@
 <div class="row">
-  <div class="col-sm-12">
-    <div class="content-header">应急预案体系</div>
-    <p class="content-sub-header"></p>
-  </div>
+      <div class="col-lg-9">
+        <div class="row">
+          <i class="ft-airplay primary font-large-2" style="margin: 15px 10px 0px 25px"></i>
+          <div class="content-header">应急预案体系</div>
+        </div>
+        <div class="mt-2 mb-0">
+          <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
+        </div>
+      </div>
+      <div class="col-lg-3 mt-0 card" style="height:100px;background-color: transparent">
+        <img class="img-fluid" src={{url}}  (click)="open_picture()" style="height: 100%;width: 100%">
+      </div>
 </div>
 <section id="taskboard">
 
@@ -19,9 +27,10 @@
                       <div class="clearfix">
                         <h5 class="text-bold-500 primary float-left">台风灾害处置应急预案</h5>
                         <div class="actions float-right">
-                          <i class="ft-external-link mr-1 info" (click)="open_file($event)"></i>
+                          <i class="ft-external-link mr-1 primary" (click)="open_file($event)"></i>
                         </div>
                       </div>
+                      <ngb-progressbar type="primary" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                       <p>预案内容</p>
                       <img src="assets/img/portrait/small/avatar-s-3.png"  class="rounded-circle width-50 mr-2"> <span class="primary">最新修订于2018年10月15日</span>
                     </div>
@@ -31,9 +40,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 primary float-left">防汛应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 primary"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
                     <p>预案内容</p>
                     <img src="assets/img/portrait/small/avatar-s-3.png"  class="rounded-circle width-50 mr-2"> <span class="primary">最新修订于2018年10月15日</span>
                   </div>
@@ -43,9 +53,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 primary float-left">雨雪冰冻处置应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 primary"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="primary" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>预案内容</p>
                     <img src="assets/img/portrait/small/avatar-s-3.png"  class="rounded-circle width-50 mr-2"> <span class="primary">最新修订于2018年10月15日</span>
                   </div>
@@ -55,9 +66,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 primary float-left">地震灾害处置应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 primary"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="primary" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>预案内容</p>
                     <img src="assets/img/portrait/small/avatar-s-3.png"  class="rounded-circle width-50 mr-2"> <span class="primary">最新修订于2018年10月15日</span>
                   </div>
@@ -67,9 +79,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 primary float-left">地质灾害处置应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 primary"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="primary" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>预案内容</p>
                     <img src="assets/img/portrait/small/avatar-s-3.png"  class="rounded-circle width-50 mr-2"> <span class="primary">最新修订于2018年10月15日</span>
                   </div>
@@ -87,6 +100,7 @@
                           <i class="ft-external-link mr-1 info"></i>
                         </div>
                       </div>
+                      <ngb-progressbar type="info" [value]="70" class="progress-bar-sm"></ngb-progressbar>
                       <p>内容</p>
                       <img src="assets/img/portrait/small/avatar-s-8.png" class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                     </div>
@@ -99,6 +113,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="75" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-8.png" class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -111,6 +126,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-8.png" class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -123,6 +139,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-8.png" class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -135,6 +152,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="95" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-8.png" class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -150,9 +168,10 @@
                       <div class="clearfix">
                         <h5 class="text-bold-500 success float-left">突发公共卫生事件处置应急预案</h5>
                         <div class="actions float-right">
-                          <i class="ft-external-link mr-1 info" (click)="open_file($event)"></i>
+                          <i class="ft-external-link mr-1 success" (click)="open_file($event)"></i>
                         </div>
                       </div>
+                      <ngb-progressbar type="success" [value]="90" class="progress-bar-sm"></ngb-progressbar>
                       <p>内容</p>
                       <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="success">最新修订于2018年10月15日</span>
                     </div>
@@ -165,6 +184,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="80" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -177,6 +197,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="90" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -189,6 +210,7 @@
                         <i class="ft-external-link mr-1 info"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="info" [value]="80" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
                   </div>
@@ -204,9 +226,10 @@
                       <div class="clearfix">
                         <h5 class="text-bold-500 warning float-left">电力服务事件处置应急预案</h5>
                         <div class="actions float-right">
-                          <i class="ft-external-link mr-1 info"></i>
+                          <i class="ft-external-link mr-1 warning"></i>
                         </div>
                       </div>
+                      <ngb-progressbar type="warning" [value]="80" class="progress-bar-sm"></ngb-progressbar>
                       <p>内容</p>
                       <img src="assets/img/portrait/small/avatar-s-14.png" class="rounded-circle width-50 mr-2"> <span class="warning">最新修订于2018年10月15日</span>
                     </div>
@@ -216,9 +239,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 warning float-left">重要保电事件应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 warning"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="warning" [value]="65" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-14.png" class="rounded-circle width-50 mr-2"> <span class="warning">最新修订于2018年10月15日</span>
                   </div>
@@ -228,9 +252,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 warning float-left">突发群体性事件处置应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 warning"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="warning" [value]="90" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-14.png" class="rounded-circle width-50 mr-2"> <span class="warning">最新修订于2018年10月15日</span>
                   </div>
@@ -240,9 +265,10 @@
                     <div class="clearfix">
                       <h5 class="text-bold-500 warning float-left">新闻突发事件处置应急预案</h5>
                       <div class="actions float-right">
-                        <i class="ft-external-link mr-1 info"></i>
+                        <i class="ft-external-link mr-1 warning"></i>
                       </div>
                     </div>
+                    <ngb-progressbar type="warning" [value]="80" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-14.png" class="rounded-circle width-50 mr-2"> <span class="warning">最新修订于2018年10月15日</span>
                   </div>

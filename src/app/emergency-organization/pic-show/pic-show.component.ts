@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class PicShowComponent implements OnInit {
   @Input() url;
+  @Input() title;
   chosen_level = '第一级';
   level_list = ['第一级', '第二级', '第三级', '第四级'];
   chosen_org = '应急领导小组';
@@ -32,7 +33,12 @@ export class PicShowComponent implements OnInit {
   }
   open_org(event): any {
     // console.log(event.target['innerText']);
-    this.router.navigate(['/EmergencyOrganization/CityOrganization', {Id: event.target['innerText']}]);
+    if (this.title === '应急组织体系图') {
+      this.router.navigate(['/EmergencyOrganization/CityOrganization', {Id: event.target['innerText']}]);
+    }
+    if (this.title === '应急预案体系图') {
+      this.router.navigate(['/ContingencyPlan/CityPlan']);
+    }
     this.activeModal.close('Close click');
   }
   constructor(public activeModal: NgbActiveModal,  private router: Router) { }

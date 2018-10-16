@@ -7,10 +7,12 @@ import {NgxEchartsModule} from 'ngx-echarts';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from '../shared/shared.module';
 import {EmergencyRegimeModule} from '../emergency-regime/emergency-regime.module';
-
+import {EmergencyOrganizationModule} from '../emergency-organization/emergency-organization.module';
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { WholePlanComponent } from './whole-plan/whole-plan.component';
+import {PicShowComponent} from '../emergency-organization/pic-show/pic-show.component';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { WholePlanComponent } from './whole-plan/whole-plan.component';
     NgbModalModule,
     HttpClientModule,
     SharedModule,
-    EmergencyRegimeModule
+    EmergencyRegimeModule,
+    EmergencyOrganizationModule
   ],
-
+  entryComponents: [PicShowComponent],
   declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent]
 })
 export class ContingencyPlanModule { }

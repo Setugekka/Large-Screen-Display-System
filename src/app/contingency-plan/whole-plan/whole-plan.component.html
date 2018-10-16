@@ -1,276 +1,561 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div class="content-header">应急预案体系</div>
-  </div>
-</div>
-<div class="row" matchHeight="card">
-  <div class="col-lg-6">
-    <!--<div echarts [options]="option" (chartClick)="click($event)"></div>-->
-    <div id="orgchart-container">
-      <div class="orgchart" style="margin-left: 100px;margin-top: 50px">
-        <table>
-          <tbody>
-          <tr>
-            <td colspan="30">
-              <div data-value="辽宁省" class="node org-node">
-                <div class="title">辽宁省</div>
-              </div>
-            </td>
-          </tr>
-          <tr class="lines">
-            <td colspan="30">
-              <div class="downLine"></div>
-            </td>
-          </tr>
-          <tr class="lines">
-            <td colspan="1" class="rightLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine topLine"></td>
-            <td colspan="1" class="rightLine topLine"></td>
-            <td colspan="1" class="leftLine"></td>
-          </tr>
-          <tr class="lines">
-            <td colspan="2">
-              <div class="downLine c_downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="省检修" class="node org-node">
-                <div class="title">省检修</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="沈阳" class="node org-node">
-                <div class="title">沈阳</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="大连" class="node org-node">
-                <div class="title" >大连</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="鞍山" class="node org-node">
-                <div class="title" >鞍山</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="抚顺" class="node org-node">
-                <div class="title" >抚顺</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="本溪" class="node org-node">
-                <div class="title" >本溪</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-            <td colspan="2">
-              <div data-value="丹东" class="node org-node">
-                <div class="title" >丹东</div>
-              </div>
-            </td>
-            <td colspan="2">
-              <div class="c_downLine downLine"></div>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div data-value="锦州" class="node org-node">
-                <div class="title" >锦州</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="营口" class="node org-node">
-                <div class="title" >营口</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="阜新" class="node org-node">
-                <div class="title" >阜新</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="辽阳" class="node org-node">
-                <div class="title" >辽阳</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="盘锦" class="node org-node">
-                <div class="title" >盘锦</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="铁岭" class="node org-node">
-                <div class="title" >铁岭</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="朝阳" class="node org-node">
-                <div class="title" >朝阳</div>
-              </div>
-            </td>
-            <td colspan="2">
-              &nbsp;
-            </td>
-            <td colspan="2">
-              <div data-value="葫芦岛" class="node org-node">
-                <div class="title" >葫芦岛</div>
-              </div>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+<div class="container-fluid">
+  <ul class="timeline">
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">沈阳市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照沈阳市“十一五”规划要求，适应沈阳中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/sy.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
       </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/dl.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">大连市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p> 按照大连市“十一五”规划要求，适应大连中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">鞍山市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照鞍山市“十一五”规划要求，适应鞍山中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/as.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" src="assets/img/photos/fs.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">抚顺市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照抚顺市“十一五”规划要求，适应抚顺中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">本溪市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照本溪市“十一五”规划要求，适应本溪中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/bx.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/dd.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">丹东市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照本溪市“十一五”规划要求，适应本溪中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">锦州市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照锦州市“十一五”规划要求，适应锦州中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/sy.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/dl.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">营口市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p> 按照营口市“十一五”规划要求，适应营口中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">阜新市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照阜新市“十一五”规划要求，适应阜新中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/as.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" src="assets/img/photos/fs.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">辽阳市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照辽阳市“十一五”规划要求，适应辽阳中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">盘锦市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照盘锦市“十一五”规划要求，适应盘锦中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/bx.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/dd.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">铁岭市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照铁岭市“十一五”规划要求，适应铁岭中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge"><i class="ft-activity"></i></div>
+      <div class="timeline-panel" >
+        <div class="row">
+          <div style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">朝阳市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>按照朝阳市“十一五”规划要求，适应朝阳中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-right: 10px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/sy.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning"><i class="ft-anchor" style="color: white"></i></div>
+      <div class="timeline-panel">
+        <div class="row">
+          <div style="width: 49%">
+            <img class="card-img-top img-fluid" style="height: 100%" src="assets/img/photos/dl.jpg" alt="Card image cap" (click)="click($event)">
+          </div>
+          <div style="width: 3px;background-color: #E0E0E0;margin-left: 7px;margin-right: 3px"></div>
+          <div class="timeline-body" style="width: 49%">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">葫芦岛市应急预案体系</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日</small></p>
+            </div>
+            <div class="timeline-body">
+              <p> 按照葫芦岛市“十一五”规划要求，适应葫芦岛中心城市特点和未来发展需要，提高政府保障公共安全和处置突发公共事件的能力，最大程度地预防和减少突发公共事件及其造成的损害。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
-    </div>
-  </div>
-  <!--<div class="col-lg-5">-->
-    <!--<div class="card module">-->
+<!--<div class="row">-->
+  <!--<div class="col-sm-12">-->
+    <!--<div class="content-header">应急预案体系</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="row" matchHeight="card">-->
+  <!--<div class="col-lg-6">-->
+    <!--&lt;!&ndash;<div echarts [options]="option" (chartClick)="click($event)"></div>&ndash;&gt;-->
+    <!--<div id="orgchart-container">-->
+      <!--<div class="orgchart" style="margin-left: 100px;margin-top: 50px">-->
+        <!--<table>-->
+          <!--<tbody>-->
+          <!--<tr>-->
+            <!--<td colspan="30">-->
+              <!--<div data-value="辽宁省" class="node org-node">-->
+                <!--<div class="title">辽宁省</div>-->
+              <!--</div>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--<tr class="lines">-->
+            <!--<td colspan="30">-->
+              <!--<div class="downLine"></div>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--<tr class="lines">-->
+            <!--<td colspan="1" class="rightLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine topLine"></td>-->
+            <!--<td colspan="1" class="rightLine topLine"></td>-->
+            <!--<td colspan="1" class="leftLine"></td>-->
+          <!--</tr>-->
+          <!--<tr class="lines">-->
+            <!--<td colspan="2">-->
+              <!--<div class="downLine c_downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="省检修" class="node org-node">-->
+                <!--<div class="title">省检修</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="沈阳" class="node org-node">-->
+                <!--<div class="title">沈阳</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="大连" class="node org-node">-->
+                <!--<div class="title" >大连</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="鞍山" class="node org-node">-->
+                <!--<div class="title" >鞍山</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="抚顺" class="node org-node">-->
+                <!--<div class="title" >抚顺</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="本溪" class="node org-node">-->
+                <!--<div class="title" >本溪</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="丹东" class="node org-node">-->
+                <!--<div class="title" >丹东</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div class="c_downLine downLine"></div>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--<tr>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="锦州" class="node org-node">-->
+                <!--<div class="title" >锦州</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="营口" class="node org-node">-->
+                <!--<div class="title" >营口</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="阜新" class="node org-node">-->
+                <!--<div class="title" >阜新</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="辽阳" class="node org-node">-->
+                <!--<div class="title" >辽阳</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="盘锦" class="node org-node">-->
+                <!--<div class="title" >盘锦</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="铁岭" class="node org-node">-->
+                <!--<div class="title" >铁岭</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="朝阳" class="node org-node">-->
+                <!--<div class="title" >朝阳</div>-->
+              <!--</div>-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--&nbsp;-->
+            <!--</td>-->
+            <!--<td colspan="2">-->
+              <!--<div data-value="葫芦岛" class="node org-node">-->
+                <!--<div class="title" >葫芦岛</div>-->
+              <!--</div>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--</tbody>-->
+        <!--</table>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;<div class="col-lg-5">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="card module">&ndash;&gt;-->
+      <!--&lt;!&ndash;<div class="card-header">&ndash;&gt;-->
+        <!--&lt;!&ndash;<h4 class="card-title person_detail" style="font-size: 24px">辽宁省电力有限公司应急预案体系简介</h4>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;<div class="card-body">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="card-block">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+              <!--&lt;!&ndash;<h4 class="media-heading person_detail" style="font-size: 24px">基本简介</h4>&ndash;&gt;-->
+              <!--&lt;!&ndash;<p class="person_detail">&ndash;&gt;-->
+                <!--&lt;!&ndash;应急预案指面对突发事件如自然灾害、重特大事故、环境公害及人为破坏的应急管理、指挥、救援计划等。它一般应建立在综合防灾规划上。其几大重要子系统为：完善的应急组织管理指挥系统；强有力的应急工程救援保障体系；综合协调、应对自如的相互支持系统；充分备灾的保障供应体系；体现综合救援的应急队伍等。</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+              <!--&lt;!&ndash;<h4 class="media-heading person_detail" style="font-size: 24px">综合应急方案</h4>&ndash;&gt;-->
+              <!--&lt;!&ndash;<p class="person_detail">综合应急预案是从总体上阐述处理事故的应急方针、政策，应急组织结构及相关应急职责，应急行动、措施和保障等基本要求和程序，是应对各类事故的综合性文件。</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+              <!--&lt;!&ndash;<h4 class="media-heading person_detail" style="font-size: 24px">专项应急预案</h4>&ndash;&gt;-->
+              <!--&lt;!&ndash;<p class="person_detail">&ndash;&gt;-->
+                <!--&lt;!&ndash;专项应急预案是针对具体的事故类别（如煤矿瓦斯爆炸、危险化学品泄漏等事故）、危险源和应急保障而制定的计划或方案，是综合应急预案的组成部分，应按照综合应急预案的程序和要求组织制定，并作为综合应急预案的附件。专项应急预案应制定明确的救援程序和具体的应急救援措施。</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+              <!--&lt;!&ndash;<h4 class="media-heading person_detail" style="font-size: 24px">现场处置方案</h4>&ndash;&gt;-->
+              <!--&lt;!&ndash;<p class="person_detail">&ndash;&gt;-->
+                <!--&lt;!&ndash;现场处置方案是针对具体的装置、场所或设施、岗位所制定的应急处置措施。现场处置方案应具体、简单、针对性强。现场处置方案应根据风险评估及危险性控制措施逐一编制，做到事故相关人员应知应会，熟练掌握，并通过应急演练，做到迅速反应、正确处置。</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--<div class="col-md-12 col-lg-6">-->
+    <!--<div class="card">-->
       <!--<div class="card-header">-->
-        <!--<h4 class="card-title person_detail" style="font-size: 24px">辽宁省电力有限公司应急预案体系简介</h4>-->
+        <!--<h4 class="card-title">应急预案体系 <small class="text-muted">简介</small></h4>-->
+        <!--<p>应急预案指面对突发事件如自然灾害、重特大事故、环境公害及人为破坏的应急管理、指挥、救援计划等。它一般应建立在综合防灾规划上。其几大重要子系统为：完善的应急组织管理指挥系统；强有力的应急工程救援保障体系；综合协调、应对自如的相互支持系统等。</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card">-->
+      <!--<div class="card-header" style="height: 50px;padding-top: 15px">-->
+        <!--<h4 class="card-title primary">综合应急方案 </h4>-->
       <!--</div>-->
       <!--<div class="card-body">-->
-        <!--<div class="card-block">-->
-          <!--<div class="media">-->
-            <!--<div class="media-body">-->
-              <!--<h4 class="media-heading person_detail" style="font-size: 24px">基本简介</h4>-->
-              <!--<p class="person_detail">-->
-                <!--应急预案指面对突发事件如自然灾害、重特大事故、环境公害及人为破坏的应急管理、指挥、救援计划等。它一般应建立在综合防灾规划上。其几大重要子系统为：完善的应急组织管理指挥系统；强有力的应急工程救援保障体系；综合协调、应对自如的相互支持系统；充分备灾的保障供应体系；体现综合救援的应急队伍等。</p>-->
-            <!--</div>-->
+        <!--<div class="card-block" style="padding-top: 10px;height:110px">-->
+          <!--<div class="card-text">-->
+            <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+              <!--<p>综合应急预案是从总体上阐述处理事故的应急方针、政策，应急组织结构及相关应急职责，应急行动、措施和保障等基本要求和程序，是应对各类事故的综合性文件。</p>-->
+            <!--</blockquote>-->
           <!--</div>-->
-          <!--<div class="media">-->
-            <!--<div class="media-body">-->
-              <!--<h4 class="media-heading person_detail" style="font-size: 24px">综合应急方案</h4>-->
-              <!--<p class="person_detail">综合应急预案是从总体上阐述处理事故的应急方针、政策，应急组织结构及相关应急职责，应急行动、措施和保障等基本要求和程序，是应对各类事故的综合性文件。</p>-->
-            <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card">-->
+      <!--<div class="card-header" style="height: 50px;padding-top: 15px">-->
+        <!--<h4 class="card-title warning">专项应急预案 </h4>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-block" style="padding-top: 10px;height:110px">-->
+          <!--<div class="card-text">-->
+            <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+              <!--<p>专项应急预案是针对具体的事故类别（如煤矿瓦斯爆炸、危险化学品泄漏等事故）、危险源和应急保障而制定的计划或方案，是综合应急预案的组成部分。</p>-->
+            <!--</blockquote>-->
           <!--</div>-->
-          <!--<div class="media">-->
-            <!--<div class="media-body">-->
-              <!--<h4 class="media-heading person_detail" style="font-size: 24px">专项应急预案</h4>-->
-              <!--<p class="person_detail">-->
-                <!--专项应急预案是针对具体的事故类别（如煤矿瓦斯爆炸、危险化学品泄漏等事故）、危险源和应急保障而制定的计划或方案，是综合应急预案的组成部分，应按照综合应急预案的程序和要求组织制定，并作为综合应急预案的附件。专项应急预案应制定明确的救援程序和具体的应急救援措施。</p>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="media">-->
-            <!--<div class="media-body">-->
-              <!--<h4 class="media-heading person_detail" style="font-size: 24px">现场处置方案</h4>-->
-              <!--<p class="person_detail">-->
-                <!--现场处置方案是针对具体的装置、场所或设施、岗位所制定的应急处置措施。现场处置方案应具体、简单、针对性强。现场处置方案应根据风险评估及危险性控制措施逐一编制，做到事故相关人员应知应会，熟练掌握，并通过应急演练，做到迅速反应、正确处置。</p>-->
-            <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="card">-->
+      <!--<div class="card-header" style="height: 50px;padding-top: 15px">-->
+        <!--<h4 class="card-title primary">现场处置方案 </h4>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<div class="card-block" style="padding-top: 10px;height:110px">-->
+          <!--<div class="card-text">-->
+            <!--<blockquote class="blockquote border-left-primary border-left-3 pl-2">-->
+              <!--<p>现场处置方案是针对具体的装置、场所或设施、岗位所制定的应急处置措施。现场处置方案应具体、简单、针对性强。现场处置方案应根据风险评估及危险性控制措施逐一编制。</p>-->
+            <!--</blockquote>-->
           <!--</div>-->
         <!--</div>-->
       <!--</div>-->
     <!--</div>-->
   <!--</div>-->
-  <div class="col-md-12 col-lg-6">
-    <div class="card">
-      <div class="card-header">
-        <h4 class="card-title">应急预案体系 <small class="text-muted">简介</small></h4>
-        <p>应急预案指面对突发事件如自然灾害、重特大事故、环境公害及人为破坏的应急管理、指挥、救援计划等。它一般应建立在综合防灾规划上。其几大重要子系统为：完善的应急组织管理指挥系统；强有力的应急工程救援保障体系；综合协调、应对自如的相互支持系统等。</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" style="height: 50px;padding-top: 15px">
-        <h4 class="card-title primary">综合应急方案 </h4>
-      </div>
-      <div class="card-body">
-        <div class="card-block" style="padding-top: 10px;height:110px">
-          <div class="card-text">
-            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <p>综合应急预案是从总体上阐述处理事故的应急方针、政策，应急组织结构及相关应急职责，应急行动、措施和保障等基本要求和程序，是应对各类事故的综合性文件。</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" style="height: 50px;padding-top: 15px">
-        <h4 class="card-title warning">专项应急预案 </h4>
-      </div>
-      <div class="card-body">
-        <div class="card-block" style="padding-top: 10px;height:110px">
-          <div class="card-text">
-            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <p>专项应急预案是针对具体的事故类别（如煤矿瓦斯爆炸、危险化学品泄漏等事故）、危险源和应急保障而制定的计划或方案，是综合应急预案的组成部分。</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" style="height: 50px;padding-top: 15px">
-        <h4 class="card-title primary">现场处置方案 </h4>
-      </div>
-      <div class="card-body">
-        <div class="card-block" style="padding-top: 10px;height:110px">
-          <div class="card-text">
-            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <p>现场处置方案是针对具体的装置、场所或设施、岗位所制定的应急处置措施。现场处置方案应具体、简单、针对性强。现场处置方案应根据风险评估及危险性控制措施逐一编制。</p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--</div>-->
 

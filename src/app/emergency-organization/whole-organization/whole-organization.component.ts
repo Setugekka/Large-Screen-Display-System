@@ -4,7 +4,7 @@ import {Http} from '@angular/http';
 import { Router} from '@angular/router';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {PicShowComponent} from '../pic-show/pic-show.component';
-import {ActivatedRoute} from '@angular/router';
+
 
 
 @Component({
@@ -145,7 +145,7 @@ export class WholeOrganizationComponent implements OnInit {
       .then(response => response.json());
     return data;
   }
-  constructor(private http: Http, private router: Router, private modalService: NgbModal, public activatedRoute: ActivatedRoute) { }
+  constructor(private http: Http, private router: Router, private modalService: NgbModal) { }
 
   ngOnInit() {
     // $("#orgchart-container").on("click",".org-node",e=>{
@@ -230,6 +230,8 @@ export class WholeOrganizationComponent implements OnInit {
     // console.log(event.target['src']);
     // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
      const modalRef = this.modalService.open(PicShowComponent, {windowClass: 'PictureModalClass'});
-     modalRef.componentInstance.url = event.target['src'];
+     // modalRef.componentInstance.url = event.target['src'];
+     modalRef.componentInstance.url = '/assets/img/sy_org.svg';
+     modalRef.componentInstance.title = '应急组织体系图';
   }
 }

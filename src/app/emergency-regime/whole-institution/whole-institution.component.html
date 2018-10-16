@@ -57,14 +57,26 @@
 <!--</div>-->
 <div class="row">
   <div class="col-sm-12">
-    <div class="content-header">应急制度体系</div>
+    <div class="row">
+      <i class="ft-clipboard primary font-large-2" style="margin: 15px 10px 0px 25px"></i>
+      <div class="content-header">应急制度体系</div>
+    </div>
+    <div class="mt-2 mb-0">
+      <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
+    </div>
   </div>
 </div>
 <section id="basic-usage" class="row">
   <div class=" col-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">应急制度体系简介</h4><a class="heading-elements-toggle"></a>
+        <div class="row mt-0">
+          <i class="fa fa-star warning ml-1 mt-0 mr-1 font-medium-2"></i>
+          <h4 class="card-title">应急制度体系简介</h4><a class="heading-elements-toggle"></a>
+        </div>
+        <div class="mt-1 mb-0">
+          <ngb-progressbar type="warning" [value]="10" class="progress-bar-sm"></ngb-progressbar>
+        </div>
       </div>
       <div class="card-body">
         <div class="card-block">
@@ -72,8 +84,7 @@
           </p>
           <p>首先，应急管理体制是经过应急管理实践检验并证明行之有效的、较为固定的方法。任何组织的工作机制，不因组织负责人的变动而随意变动，而单纯的工作方式、方法是可以根据个人主观意识而改变的；
             其次，应急管理体制本身含有制度因素，并且要求所有相关人员严格遵守，而单纯的工作方式、方法往往体现为个人做事的一种偏好或经验。例如监督机制，不仅指人人必须遵守的制度，而且应该包括各种监督的手段和方法；
-            第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。但是，应急管理体制则是一种带强制性的制度；
-          </p>
+            第三，应急管理体制是比一般制度更具有刚性的“制度"。制度虽然要求所有人都应当遵守，但它仍保留有一定的自由裁量空间，或者说，制度在执行过程中具有一定弹性。</p>
         </div>
       </div>
     </div>
@@ -87,10 +98,14 @@
         <div class="card-img">
            <img class="card-img-top img-fluid" src="assets/img/photos/gq.jpg" alt="Card image cap">
         </div>
-        <div class="card-block">
-          <h4 class="card-title">国家</h4>
+        <div class="card-block" style="height: 160px">
+          <div class="row">
+            <i class="ft-flag danger ml-2 mt-1 mr-1 font-medium-3"></i>
+            <h4 class="card-title mt-1">国家</h4>
+          </div>
+          <ngb-progressbar type="danger" [value]="20" class="progress-bar-sm"></ngb-progressbar>
           <p class="card-text">国家级别制度体系包括《中华人民共和国安全法》和中华人民共和国应急法</p>
-          <button class="btn btn-raised btn-warning" (click)="click('国家')">查看详情</button>
+          <button class="btn btn-raised btn-danger" (click)="click('国家')">查看详情</button>
         </div>
       </div>
     </div>
@@ -101,10 +116,14 @@
         <div class="card-img">
           <img class="card-img-top img-fluid" src="assets/img/photos/gjnyj.jpg" alt="Card image cap">
         </div>
-        <div class="card-block">
-          <h4 class="card-title">国家能源局</h4>
+        <div class="card-block" style="height: 160px">
+          <div class="row">
+            <i class="ft-award primary ml-2 mt-1 mr-1 font-medium-3"></i>
+            <h4 class="card-title mt-1">国家能源局</h4>
+          </div>
+          <ngb-progressbar type="primary" [value]="20" class="progress-bar-sm"></ngb-progressbar>
           <p class="card-text">国家能源局级别制度体系包括《国家能源监管局原评审及备案细则》</p>
-          <button class="btn btn-raised btn-warning" (click)="click('国家能源局')">查看详情</button>
+          <button class="btn btn-raised btn-primary" (click)="click('国家能源局')">查看详情</button>
         </div>
       </div>
     </div>
@@ -115,8 +134,12 @@
         <div class="card-img">
           <img class="card-img-top img-fluid" src="assets/img/photos/gjdw.jpg" alt="Card image cap">
         </div>
-        <div class="card-block">
-          <h4 class="card-title">国网公司</h4>
+        <div class="card-block" style="height: 160px">
+          <div class="row">
+            <i class="ft-zap warning ml-2 mt-1 mr-1 font-medium-3"></i>
+            <h4 class="card-title mt-1">国网公司</h4>
+          </div>
+          <ngb-progressbar type="warning" [value]="20" class="progress-bar-sm"></ngb-progressbar>
           <p class="card-text">国网公司级别制度体系包括《国家电网公司救援基干管理工作规定》和《国家电网公司应急预案管理办法》在内的四项制度</p>
           <button class="btn btn-raised btn-warning" (click)="click('国网公司')">查看详情</button>
         </div>

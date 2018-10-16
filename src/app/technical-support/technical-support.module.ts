@@ -4,6 +4,8 @@ import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxEchartsModule} from 'ngx-echarts';
 import { TechnicalSupportRoutingModule} from './technical-support-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { D5000Component } from './d5000/d5000.component';
 import { WeatherComponent } from './weather/weather.component';
 import { IrrigationComponent } from './irrigation/irrigation.component';
@@ -19,7 +21,8 @@ import { TrafficComponent } from './traffic/traffic.component';
     TechnicalSupportRoutingModule,
     HttpModule,
     HttpClientModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    NgbModule
   ],
   declarations: [D5000Component, WeatherComponent, IrrigationComponent, EarthquakeComponent, FirecontrolComponent, PoliceComponent, MedicalComponent, TrafficComponent]
 })

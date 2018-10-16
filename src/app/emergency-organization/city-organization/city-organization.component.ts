@@ -614,6 +614,9 @@ export class CityOrganizationComponent implements OnInit {
 
   ngOnInit() {
     this.org = this.activatedRoute.snapshot.paramMap.get('Id');
+    if (!this.org) {
+      this.org = '应急领导小组';
+    }
     // if (this.city_name === null)  {
     //   this.city_name = '沈阳';
     //   // console.log(this.city_name);

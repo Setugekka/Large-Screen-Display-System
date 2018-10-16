@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Urls} from '../../shared/model/model.url';
 import {Http} from '@angular/http';
 import { Router} from '@angular/router';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {PicShowComponent} from '../../emergency-organization/pic-show/pic-show.component';
 
 
 @Component({
@@ -47,8 +49,8 @@ export class WholePlanComponent implements OnInit {
     return data1;
   }
   click(event) {
-    console.log(event.name);
-    this.router.navigate(['/ContingencyPlan/CityPlan', {Id: event.name}]);
+    // console.log(event.name);
+    this.router.navigate(['/ContingencyPlan/CityPlan']);
   }
   GetCityList():  any {
     const data = this.http.get(this.urls.GetCityList)
@@ -56,7 +58,14 @@ export class WholePlanComponent implements OnInit {
       .then(response => response.json());
     return data;
   }
-  constructor(private http: Http, private router: Router) { }
+  open_picture(event) {
+     console.log(event.target['src']);
+    // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    const modalRef = this.modalService.open(PicShowComponent, {windowClass: 'PictureModalClass'});
+    modalRef.componentInstance.url =  '/assets/img/plan.svg';
+    modalRef.componentInstance.title = '应急预案体系图';
+  }
+  constructor(private http: Http, private router: Router,  private modalService: NgbModal) { }
 
   ngOnInit() {
     $("#orgchart-container").on("click",".org-node",e=>{

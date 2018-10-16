@@ -1,6 +1,9 @@
 <div class="modal-header">
   <!--<i class="ft-globe mr-2 primary"></i>-->
-  <h4 class="modal-title primary">应急组织体系图</h4>
+  <div class="row">
+    <i class="ft-image primary ml-2 mt-1 mr-1 font-large-1"></i>
+    <h4 class="modal-title primary mt-1">{{title}}</h4>
+  </div>
   <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -8,7 +11,7 @@
 <div class="modal-body">
   <div class="card">
     <div class="card-body">
-      <div class="card-block">
+      <div class="card-block" style="width: 900px">
         <img class="img-fluid my-4" src={{url}} alt="Card image cap">
       </div>
     </div>

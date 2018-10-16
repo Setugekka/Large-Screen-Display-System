@@ -4,6 +4,7 @@ import { Urls} from '../../shared/model/model.url';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ActivatedRoute} from '@angular/router';
 import {FileviewComponent} from '../../emergency-regime/fileview/fileview.component';
+import {PicShowComponent} from '../../emergency-organization/pic-show/pic-show.component';
 
 @Component({
   selector: 'app-city-plan',
@@ -11,6 +12,7 @@ import {FileviewComponent} from '../../emergency-regime/fileview/fileview.compon
   styleUrls: ['./city-plan.component.css']
 })
 export class CityPlanComponent implements OnInit {
+  url =  '/assets/img/plan.svg';
   city_list = ['沈阳' , '大连', '鞍山', '抚顺', '本溪', '丹东' , '锦州', '营口', '阜新', '辽阳', '盘锦' , '铁岭', '朝阳', '葫芦岛', '省检修']
   city_name = '沈阳'
   town_name = '请选择区县'
@@ -44,6 +46,12 @@ export class CityPlanComponent implements OnInit {
     }};
   private name = '';  // 专项文件名称
   private  urls = Urls;
+  open_picture() {
+    // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    const modalRef = this.modalService.open(PicShowComponent, {windowClass: 'PictureModalClass'});
+    modalRef.componentInstance.url =  this.url;
+    modalRef.componentInstance.title = '应急预案体系图';
+  }
   choosetown(city): any {
     this.city_name = city
     this.town_name = '请选择区县'

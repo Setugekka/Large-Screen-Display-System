@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import * as d3 from 'd3';
 declare var echarts: any;
+
 @Component({
   selector: 'app-whole-institution',
   templateUrl: './whole-institution.component.html',

@@ -15,7 +15,7 @@ declare var echarts:any;
 })
 export class PmIndexComponent implements OnInit {
 
-  private detaildata="预警是指在灾害或灾难以及其他需要提防的危险发生之前，根据以往的总结的规律或观测得到的可能性前兆，向相关部门发出紧急信号，报告危险情况，以避免危害在不知情或准备不足的的情况下发生，从而最大程度的减轻危害所造成的损失的行为。";
+  private detaildata="预警是指在灾害或灾难以及其他需要提防的危险发生之前，根据以往的总结的规律或观测得到的可能性前兆，向相关部门发出紧急信号，报告危险情况，以避免危害在不知情或准备不足的的情况下发生，从而最大程度的减轻危害所造成的损失的行为。按照灾害性天气气候强度标准和重大气象灾害造成的人员伤亡和财产损失程度，重大气象灾害被确定四级预警";
   constructor(private elRef:ElementRef,private router:Router,private http: HttpClient, private modalService: NgbModal) { }
   private initdata = [
     {name: '大连', value: 20},
@@ -164,12 +164,11 @@ export class PmIndexComponent implements OnInit {
       echarts.registerMap('辽宁', geoJson)
       this.chartOption = {
         title: {
-          text: '',
+          text: '全省预警图',
           textAlign: 'center',
           left: '50%',
           top: '20',
           textStyle: {
-            color: '#FFF',
             fontWeight: 'normal',
             fontSize: 36,
           }
@@ -187,7 +186,7 @@ export class PmIndexComponent implements OnInit {
           }
         },
         visualMap: {
-          show: false,
+          show: true,
           calculable: true,
           min: 0,
           max: 100,

@@ -10,7 +10,20 @@ declare var $: any;
 })
 export class MapComponent implements OnInit {
   mapLoaded = false;
-  private activeArea = [];
+  private activeArea = [{name:'朝阳',areaColor:'#FFE4A4'},
+    {name:'丹东',areaColor:'#95D5AC'},
+    {name:'大连',areaColor:'#FAF6AA'},
+    {name:'铁岭',areaColor:'#E1F2DE'},
+    {name:'沈阳',areaColor:'#C2D7EE'},
+    {name:'抚顺',areaColor:'#FFE4A4'},
+    {name:'锦州',areaColor:'#95D5AC'},
+    {name:'阜新',areaColor:'#FBC8DE'},
+    {name:'葫芦岛',areaColor:'#C2D7EE'},
+    {name:'鞍山',areaColor:'#FBC8DE'},
+    {name:'本溪',areaColor:'#FBC8DE'},
+    {name:'营口',areaColor:'#E1F2DE'},
+    {name:'辽阳',areaColor:'#FFE4A4'},
+    {name:'盘锦',areaColor:'#FFF2B7'}];
   private levelColorMap = {
     '1': 'rgba(241, 109, 115, .8)',
     '2': 'rgba(255, 235, 59, .7)',
@@ -105,14 +118,6 @@ export class MapComponent implements OnInit {
               itemStyle: {
                 normal: {
                   areaColor: item.areaColor || '#389BB7'
-                }
-              },
-              label: {
-                normal: {
-                  show: item.showLabel,
-                  textStyle: {
-                    color: '#fff'
-                  }
                 }
               }
             };

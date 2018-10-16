@@ -101,10 +101,10 @@ export const ROUTES: RouteInfo[] = [
       { path: '/IntegratedSupportability/Material', title: '应急物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/IntegratedSupportability/Vehicle', title: '应急车辆', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/IntegratedSupportability/Equipment', title: '应急装备', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/IntegratedSupportability/LogisticsMaterial', title: '后勤保障物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      // { path: '/IntegratedSupportability/LogisticsMaterial', title: '后勤保障物资', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/IntegratedSupportability/GeneratorCar', title: '应急发电车', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/IntegratedSupportability/Alternator', title: '应急照明', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/IntegratedSupportability/Lighting', title: '应急发电机', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      // { path: '/IntegratedSupportability/Alternator', title: '应急照明', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      // { path: '/IntegratedSupportability/Lighting', title: '应急发电机', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {

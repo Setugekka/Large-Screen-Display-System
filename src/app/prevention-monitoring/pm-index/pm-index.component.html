@@ -1,8 +1,7 @@
-<div class="row">
-  <div class="col-3">
-    <div class="card">
+<div class="row card-deck">
+    <div class="col-3 card">
       <div class="card-header title-bg-container pb-0 pl-0 pt-2">
-        <div class="warning title-bg ft-alert-triangle" style="height: 30px;font-size: 23px;width: fit-content">预警 </div>
+        <div class="warning title-bg ft-alert-triangle" style="height: 30px;font-size: 23px;width: fit-content">预警情况 </div>
         <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
@@ -24,7 +23,7 @@
                   <span class="font-small-3 float-right primary">4:14 AM</span>
                 </h6>
                 <p class="list-group-item-text text-muted">
-                  <i class="ft-check primary font-small-2"></i> 红色预警
+                  <i class="fa fa-star" style="color: red;"></i> 红色预警
                   <span class="float-right primary">
                     <i class="font-medium-1 icon-pin blue-grey lighten-3"></i>
                   </span>
@@ -32,7 +31,7 @@
               </div>
             </span>
                     </a>
-                    <a class="list-group-item no-border" (click)="SetActive($event,'chat2')">
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat2')">
             <span class="media">
               <span class="avatar avatar-md avatar-busy">
                 <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-7.png"
@@ -44,7 +43,7 @@
                   <span class="font-small-3 float-right primary">9:04 PM</span>
                 </h6>
                 <p class="list-group-item-text text-muted">
-                  <i class="ft-check primary font-small-2"></i> 橙色预警
+                  <i class="fa fa-star" style="color: orange;"></i> 橙色预警
                   <span class="float-right
                         primary">
                     <span class="badge badge-pill badge-primary"></span>
@@ -53,7 +52,7 @@
               </div>
             </span>
                     </a>
-                    <a class="list-group-item no-border" (click)="SetActive($event,'chat3')">
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat3')">
                     <span class="media">
                     <span class="avatar avatar-md avatar-away">
                     <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-8.png"
@@ -65,7 +64,7 @@
                     <span class="font-small-3 float-right primary">2:14 AM</span>
                     </h6>
                     <p class="list-group-item-text text-muted">
-                    <i class="ft-check font-small-2"></i> 黄色预警
+                    <i class="fa fa-star" style="color: yellow;"></i> 黄色预警
                     <span class="float-right primary">
                     <i class="font-medium-1 icon-volume-off blue-grey lighten-3 mr-1"></i>
                     <span class="badge badge-pill badge-primary"></span>
@@ -74,7 +73,7 @@
                     </div>
                     </span>
                     </a>
-                    <a class="list-group-item no-border" (click)="SetActive($event,'chat4')">
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
                     <span class="media">
                     <span class="avatar avatar-md avatar-away">
                     <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
@@ -86,7 +85,103 @@
                     <span class="font-small-3 float-right primary">昨天</span>
                     </h6>
                     <p class="list-group-item-text text-muted">
-                    <i class="ft-check font-small-2"></i> 蓝色预警</p>
+                    <i class="fa fa-star" style="color: blue;"></i> 蓝色预警</p>
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">大连
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">辽阳
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">阜新
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">抚顺
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">铁岭
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
+                    </div>
+                    </span>
+                    </a>
+                    <a class="list-group-item no-border" style="border-top: 1px solid #cfd8dc !important;" (click)="SetActive($event,'chat4')">
+                    <span class="media">
+                    <span class="avatar avatar-md avatar-away">
+                    <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-5.png"
+                         alt="Generic placeholder image">
+                    <i></i>
+                    </span>
+                    <div class="media-body">
+                    <h6 class="list-group-item-heading">本溪
+                    <span class="font-small-3 float-right primary">暂无预警</span>
+                    </h6>
+                    <p class="list-group-item-text text-muted">
+                    <!--<i class="ft-check font-small-2"></i> 蓝色预警</p>-->
                     </div>
                     </span>
                     </a>
@@ -170,9 +265,31 @@
         <!--</div>-->
       <!--</div>-->
     <!--</div>-->
-  </div>
-  <div class="col-6 card">
-    <div echarts [options]="chartOption" (chartInit)="onChartInit($event)" style="height: 600px"></div>
+  <div class="col-6 ">
+    <div class="card"><div echarts [options]="chartOption" (chartInit)="onChartInit($event)" style="height: 600px"></div></div>
+    <div class="card row">
+      <div class="card-header title-bg-container pb-0 pl-0 pt-2">
+        <div class="warning title-bg ft-chevrons-right" style="height: 30px;font-size: 23px;width: fit-content">实时预警简报 </div>
+        <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
+      </div>
+      <div class="card-body row" style="padding: 15px">
+        <div class="col-6">
+          <img class="card-img-top img-fluid" src="assets/img/photos/yujing.jpg" alt="Card image cap" (click)="open_picture($event)">
+        </div>
+        <div class="col-6">
+          <div class="timeline-heading" style="text-align: center">
+            <h4 class="timeline-title">沈阳市发布红色预警</h4>
+            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2018年10月15日 9：00AM</small></p>
+          </div>
+          <div class="timeline-body">
+            <p>沈阳市于上午9点发布红色预警，此次台风带来的强降雨全市平均降雨量134毫米，其中市区120.4毫米，最大降雨点在历城区枣林达到302毫米，超过200毫米的降雨点11处。今年以来累计降水量全市已达平均689.5毫米。</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="#">>>点击查看详情</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-3">
     <div class="card" style="background: url('assets/image/background.jpg');background-size: 100%">
@@ -190,10 +307,10 @@
         <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
-        <div class="card-block">
+        <div class="card-block pb-0">
           <div class="card-text">
-            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-            <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2 pb-0">
+            <p class="person_detail" style="font-size: 12px;font-style: normal">{{detaildata}}</p>
           </blockquote>
           </div>
         </div>
@@ -208,10 +325,10 @@
         <a href="#" style="position: absolute; top: 20px; right: 0;">更多&gt;</a>
       </div>
       <div class="card-body">
-        <div class="card-block">
+        <div class="card-block pb-0">
           <div class="card-text">
-            <blockquote class="blockquote border-left-primary border-left-3 pl-2">
-              <p class="person_detail" style="font-size: 20px">{{detaildata}}</p>
+            <blockquote class="blockquote border-left-primary border-left-3 pl-2 pb-0">
+              <p class="person_detail" style="font-size: 12px;font-style: normal">{{detaildata}}</p>
             </blockquote>
           </div>
         </div>

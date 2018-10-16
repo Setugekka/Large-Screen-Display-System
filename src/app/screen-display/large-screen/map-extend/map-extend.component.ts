@@ -94,7 +94,20 @@ export class MapExtendComponent implements OnInit {
     mapName: 'china', // 地图展示
     goDown: false, // 是否下钻
     // bgColor: '#404a59', // 画布背景色
-    activeArea: [], // 区域高亮,同echarts配置项
+    activeArea: [{name:'朝阳',areaColor:'#FFE4A4'},
+      {name:'丹东',areaColor:'#95D5AC'},
+      {name:'大连',areaColor:'#FAF6AA'},
+      {name:'铁岭',areaColor:'#E1F2DE'},
+      {name:'沈阳',areaColor:'#C2D7EE'},
+      {name:'抚顺',areaColor:'#FFE4A4'},
+      {name:'锦州',areaColor:'#95D5AC'},
+      {name:'阜新',areaColor:'#FBC8DE'},
+      {name:'葫芦岛',areaColor:'#C2D7EE'},
+      {name:'鞍山',areaColor:'#FBC8DE'},
+      {name:'本溪',areaColor:'#FBC8DE'},
+      {name:'营口',areaColor:'#E1F2DE'},
+      {name:'辽阳',areaColor:'#FFE4A4'},
+      {name:'盘锦',areaColor:'#FFF2B7'}], // 区域高亮,同echarts配置项
     data: [],
     // 下钻回调(点击的地图名、实例对象option、实例对象)
     callback: function (name, option, instance) {

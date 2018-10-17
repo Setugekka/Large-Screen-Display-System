@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Http} from '@angular/http';
+import {number} from 'ng2-validation/dist/number';
 
 declare var echarts: any;
 
@@ -51,6 +52,7 @@ export class WeatherComponent implements OnInit {
   ];
   private option = {};
   private weather_data = [];
+  private show_data = [];
   weatherIcons = {
     'Sunny': './assets/img/weather/Sunny.ico',
     'Cloudy': './assets/img/weather/Cloudy.ico',
@@ -118,11 +120,12 @@ export class WeatherComponent implements OnInit {
               // console.log(this.data[a]['value']);
             }
           }
+          console.log(this.show_data);
           this.option = {
             backgroundColor: 'transparent',
             title: {
               top: 10,
-              text: '辽宁省24小时天气状况预报',
+              text: '',
               x: 'center',
               textStyle: {
                 color: '#009DA0',
@@ -131,7 +134,20 @@ export class WeatherComponent implements OnInit {
             tooltip: {
               trigger: 'item',
               formatter: function (params) {
-                return params.name + ': ' + params.data['value'];
+                const result = "<span style = font-size : 20px; font-weight:bold>" + params.name + "</span>" +
+                  "<span style = 'color: red; line-height:30px;font-size : 25px; font-weight:bold;margin-left: 80px'>" + params.data['value'][7] + "</span>" +
+                  "<div>" +
+                  "<div style = 'float : left; padding-right:20px; border-right: solid 1px #4c4a4a;'>" +
+                  "<span >日间风向</span></br>" +
+                  "<span style = 'color : orangered; '>" + params.data['value'][2] + "</span>" +
+                  "</div>" +
+                  "<div style = 'float : right; margin-left:20px;'>" +
+                  "<span style = 'width : 100px;'>日间温度</span></br>" +
+                  "<span style = 'color : orangered; font-weight: bold'>" + params.data['value'][9] + "</span>" +
+                  "</div></div>";
+                return result;
+                // return params.name + ': ' + '\n' + '气温：' + params.data['value'][8] + '--' + params.data['value'][9] + ' 摄氏度' + '\n' +
+                //   '气温：' + params.data['value'][8] + '--' + params.data['value'][9] + ' 摄氏度';
               },
             },
             visualMap: {
@@ -198,7 +214,7 @@ export class WeatherComponent implements OnInit {
                     show: true,
                     color: '#ffffff',
                     backgroundColor: 'rgba(26,87,178,.5)',
-                    lineHeight: 16,
+                    lineHeight: 18,
                     fontSize: 12,
                     // height: 30,
                     padding: [2, 5],
@@ -206,7 +222,7 @@ export class WeatherComponent implements OnInit {
                     position: 'right',
                     rich: {
                       a: {
-                        color: '#0D47A1',
+                        color: '#FF5D33',
                         fontSize: 16,
                         fontWeight: 'bold'
                       },
@@ -235,19 +251,19 @@ export class WeatherComponent implements OnInit {
                         padding: 4
                       },
                       Sunny: {
-                        height: 30,
+                        height: 20,
                         backgroundColor: {
                           image: this.weatherIcons.Sunny
                         }
                       },
                       Cloudy: {
-                        height: 30,
+                        height: 20,
                         backgroundColor: {
                           image: this.weatherIcons.Cloudy
                         }
                       },
                       Rainy: {
-                        height: 30,
+                        height: 20,
                         backgroundColor: {
                           image: this.weatherIcons.Rain
                         }

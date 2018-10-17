@@ -3,6 +3,7 @@
         <div class="row">
           <i class="ft-airplay primary font-large-2" style="margin: 15px 10px 0px 25px"></i>
           <div class="content-header">应急预案体系</div>
+          <img class="img-fluid ml-2" src={{url}}  (click)="open_picture()" style="height: 80px">
         </div>
         <div class="mt-2 mb-0">
           <ngb-progressbar type="primary" [value]="40" class="progress-bar-sm"></ngb-progressbar>
@@ -213,6 +214,19 @@
                     <ngb-progressbar type="info" [value]="80" class="progress-bar-sm"></ngb-progressbar>
                     <p>内容</p>
                     <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="info">最新修订于2018年10月15日</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-block pt-3">
+                    <div class="clearfix">
+                      <h5 class="text-bold-500 danger float-left">总体预案</h5>
+                      <div class="actions float-right">
+                        <i class="ft-external-link mr-1 danger"></i>
+                      </div>
+                    </div>
+                    <ngb-progressbar type="danger" [value]="20" class="progress-bar-sm"></ngb-progressbar>
+                    <p>内容</p>
+                    <img src="assets/img/portrait/small/avatar-s-9.png"  class="rounded-circle width-50 mr-2"> <span class="danger">最新修订于2018年10月15日</span>
                   </div>
                 </div>
               </div>

@@ -127,7 +127,7 @@ export class PExpertBarComponent implements OnInit {
     });
     this.service.GetExpertDist(this.current_city).then(r => {
       const data = this.change_bar_data(r.value_list, r.class_list);
-      this.bar_option_expert={
+      this.bar_option_expert = {
         tooltip : {
           trigger: 'axis',
           axisPointer : {            // 坐标轴指示器，坐标轴触发有效

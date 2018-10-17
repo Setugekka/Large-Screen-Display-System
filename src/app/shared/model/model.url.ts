@@ -17,4 +17,8 @@ export const Urls = {
   GetResultList: host + '/training/get_result',
   GetCityList: host +  '/city/get_cityList',
   GetAllPlan: host +  '/plan/get_all',
+  GetAllCityManager: host +  '/c_manager/get_by_city',
+  GetAllVillageManager: host +  '/v_manager/get_by_city',
+  GetCityManager_Edu: host +  '/c_manager/get_by_edu_city',
+  GetVillageManager_Edu: host +  '/v_manager/get_by_edu_city',
 };

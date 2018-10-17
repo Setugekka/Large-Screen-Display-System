@@ -26,7 +26,7 @@ export class MaterialCircleComponent implements OnInit {
   private  root = <any>{};
   model_title:any;
   dtOptions: DataTables.Settings = {};
-  constructor(private http: Http, public emitService: EventEmitterService, private modalService:NgbModal) { }
+  constructor(private http: Http, public emitService: EventEmitterService, private modalService: NgbModal) { }
   GetAllMaterial(city= null):  any {
     const params = {
       'city': city

@@ -12,7 +12,7 @@ import {PicShowComponent} from '../../emergency-organization/pic-show/pic-show.c
   styleUrls: ['./city-plan.component.css']
 })
 export class CityPlanComponent implements OnInit {
-  url =  '/assets/img/plan.svg';
+  url =  '/assets/img/plan.png';
   city_list = ['沈阳' , '大连', '鞍山', '抚顺', '本溪', '丹东' , '锦州', '营口', '阜新', '辽阳', '盘锦' , '铁岭', '朝阳', '葫芦岛', '省检修']
   city_name = '沈阳'
   town_name = '请选择区县'

@@ -62,7 +62,7 @@ export class WholePlanComponent implements OnInit {
      console.log(event.target['src']);
     // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
     const modalRef = this.modalService.open(PicShowComponent, {windowClass: 'PictureModalClass'});
-    modalRef.componentInstance.url =  '/assets/img/plan.svg';
+    modalRef.componentInstance.url =  '/assets/img/plan.bmp';
     modalRef.componentInstance.title = '应急预案体系图';
   }
   constructor(private http: Http, private router: Router,  private modalService: NgbModal) { }

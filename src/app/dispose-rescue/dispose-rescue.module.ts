@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {DataTablesModule} from "angular-datatables";
 import {DisposeRescueModuleRoutingModule} from "./dispose-rescue-routing.module";
 import { RepairComponent } from './repair/repair.component';
 import { ManagerComponent } from './manager/manager.component';
@@ -15,6 +18,7 @@ import { McAllComponent } from './mc-all/mc-all.component';
 import { MvAllComponent } from './mv-all/mv-all.component';
 import { McEduComponent } from './mc-edu/mc-edu.component';
 import { MvEduComponent } from './mv-edu/mv-edu.component';
+import { ModalDatatableComponent } from './modal-datatable/modal-datatable.component';
 
 @NgModule({
   providers: [
@@ -25,8 +29,14 @@ import { MvEduComponent } from './mv-edu/mv-edu.component';
     CommonModule,
     DisposeRescueModuleRoutingModule,
     NgxEchartsModule,
-    ScreenDisplayModule
+    ScreenDisplayModule,
+    NgbModalModule,
+    DataTablesModule,
+    NgbModule
   ],
-  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent, McAllComponent, MvAllComponent, McEduComponent, MvEduComponent]
+  entryComponents:[
+    ModalDatatableComponent
+  ],
+  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent, McAllComponent, MvAllComponent, McEduComponent, MvEduComponent, ModalDatatableComponent]
 })
 export class DisposeRescueModule { }

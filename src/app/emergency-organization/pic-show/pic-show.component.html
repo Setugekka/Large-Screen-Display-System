@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="modal-footer">
-  <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown placement="top-right">
+  <div class="dropdown btn-group mr-1 mb-1 " ngbDropdown placement="top-right" *ngIf="title === '应急组织体系图'">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{chosen_level}}</button>
     <div ngbDropdownMenu class="dropdown-menu-right" aria-labelledby="dropdownBasic1">
       <button class="dropdown-item" *ngFor="let level of level_list" (click)="change_org_list(level)">{{level}}</button>

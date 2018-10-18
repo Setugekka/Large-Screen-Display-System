@@ -11,6 +11,10 @@ import {EventEmitterService} from "../screen-display/large-screen/event-emitter.
 import {NgxEchartsModule} from "ngx-echarts";
 import { DrIndexComponent } from './dr-index/dr-index.component';
 import {ScreenDisplayModule} from "../screen-display/screen-display.module";
+import { McAllComponent } from './mc-all/mc-all.component';
+import { MvAllComponent } from './mv-all/mv-all.component';
+import { McEduComponent } from './mc-edu/mc-edu.component';
+import { MvEduComponent } from './mv-edu/mv-edu.component';
 
 @NgModule({
   providers: [
@@ -23,6 +27,6 @@ import {ScreenDisplayModule} from "../screen-display/screen-display.module";
     NgxEchartsModule,
     ScreenDisplayModule
   ],
-  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent]
+  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent, McAllComponent, MvAllComponent, McEduComponent, MvEduComponent]
 })
 export class DisposeRescueModule { }

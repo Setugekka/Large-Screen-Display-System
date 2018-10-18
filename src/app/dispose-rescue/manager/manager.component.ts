@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {toUnicode} from "punycode";
 import {ScreenDisplayService} from "../../screen-display/screen-display.service";
 import {EventEmitterService} from "../../screen-display/large-screen/event-emitter.service";
+
+import {McAllComponent} from '../mc-all/mc-all.component';
+
 declare var echarts:any;
 @Component({
   selector: 'app-manager',
@@ -73,9 +76,9 @@ export class ManagerComponent implements OnInit {
     }],
     series: [{
       type: 'bar',
-      data: [20, 50, 80, 58, 83, 68, 57, 80, 42, 66,36,78,25,44],
-      //barWidth: 50, //柱子宽度
-      //barGap: 1, //柱子之间间距
+      data: [20, 50, 80, 58, 83, 68, 57, 80, 42, 66, 36, 78, 25, 44],
+      // barWidth: 50, //柱子宽度
+      // barGap: 1, //柱子之间间距
       itemStyle: {
         normal: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -118,7 +121,7 @@ export class ManagerComponent implements OnInit {
           seriesIndex:0,
           name:this.last
         })}
-      this.last=value
+      this.last=value;
       this.ecinstance.dispatchAction({
         type: 'highlight',
         // 可选，系列 index，可以是一个数组指定多个系列

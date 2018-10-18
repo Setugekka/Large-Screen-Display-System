@@ -1,93 +1,24 @@
-<div class="row" style="height: 540px">
-  <div class="col-6">
-    <div echarts [options]="option"  [loading]="!mapLoaded" style="height: 620px"></div>
-  </div>
-  <div class="col-lg-6 col-md-12 col-sm-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="person_detail pt-3 pl-1 pr-1">
-          <p style="text-align: center;font-size: 30px">辽宁省24小时天气状况</p>
-          <p style="text-align: center;font-size: 15px">{{weather_time}}</p>
+<div class="row">
+  <div class="col-5">
+    <div echarts [options]="option"  [loading]="!mapLoaded" style="height: 465px"></div>
+    <section id="basic-usage" class="row">
+      <div class="card" style="height: 400px">
+        <div class="card-header">
+          <div class="row mt-0">
+            <i class="fa fa-star warning ml-1 mt-0 mr-1 font-medium-2"></i>
+            <h4 class="card-title" style="font-weight: bold">{{title}}</h4><a class="heading-elements-toggle"></a>
+          </div>
+          <div class="mt-1 mb-0">
+            <ngb-progressbar type="warning" [value]="30" class="progress-bar-sm"></ngb-progressbar>
+          </div>
         </div>
-        <table class="table table-responsive text-center">
-          <thead>
-          <tr>
-            <th>区域</th>
-            <th>天气</th>
-            <th>最高气温</th>
-            <th>最低气温</th>
-            <th>风向</th>
-            <th>风速</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>11</td>
-            <td><img class="media-object round-media height-50" src="assets/img/elements/01.png" alt="Generic placeholder image" /></td>
-            <td>22</td>
-            <td>
-              <a class="btn btn-raised btn-round btn-primary">33</a>
-            </td>
-            <td>$19.94</td>
-            <td>
-              <a class="danger" data-original-title="" title="">
-                <i class="ft-x"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td><img class="media-object round-media height-50" src="assets/img/elements/01.png" alt="Generic placeholder image" /></td>
-            <td>22</td>
-            <td>
-              <a class="btn btn-raised btn-round btn-primary">33</a>
-            </td>
-            <td>$19.94</td>
-            <td>
-              <a class="danger" data-original-title="" title="">
-                <i class="ft-x"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td><img class="media-object round-media height-50" src="assets/img/elements/01.png" alt="Generic placeholder image" /></td>
-            <td>22</td>
-            <td>
-              <a class="btn btn-raised btn-round btn-primary">33</a>
-            </td>
-            <td>$19.94</td>
-            <td>
-              <a class="danger" data-original-title="" title="">
-                <i class="ft-x"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td><img class="media-object round-media height-50" src="assets/img/elements/01.png" alt="Generic placeholder image" /></td>
-            <td>22</td>
-            <td>
-              <a class="btn btn-raised btn-round btn-primary">33</a>
-            </td>
-            <td>$19.94</td>
-            <td>
-              <a class="danger" data-original-title="" title="">
-                <i class="ft-x"></i>
-              </a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="card-body">
+          <div class="card-block">
+            <div [innerHTML]="text"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!--<div class="module" style="height: 620px">-->
-      <!--<div class="person_detail pt-3 pl-1 pr-1">-->
-        <!--<p style="text-align: center;font-size: 30px">{{title}}</p>-->
-        <!--<p style="text-align: center;font-size: 15px">{{time}}</p>-->
-        <!--<div [innerHTML]="text"></div>-->
-      <!--</div>-->
-    <!--</div>-->
+    </section>
   </div>
   <!--<div class="col-6">-->
     <!--<div class="module" style="height: 620px">-->
@@ -98,25 +29,51 @@
       <!--</div>-->
     <!--</div>-->
   <!--</div>-->
-</div>
-<section id="basic-usage" class="row">
-  <div class=" col-12">
-    <div class="card" style="height: 260px">
-      <div class="card-header">
-        <div class="row mt-0">
-          <i class="fa fa-star warning ml-1 mt-0 mr-1 font-medium-2"></i>
-          <h4 class="card-title">{{title}}</h4><a class="heading-elements-toggle"></a>
-        </div>
-        <div class="mt-1 mb-0">
-          <ngb-progressbar type="warning" [value]="10" class="progress-bar-sm"></ngb-progressbar>
-        </div>
-      </div>
+  <div class="col-lg-7 col-md-12 col-sm-12">
+    <div class="card">
       <div class="card-body">
-        <div class="card-block">
-          <div [innerHTML]="text"></div>
+        <div class="person_detail pt-3 pl-1 pr-1">
+          <p style="text-align: center;font-size: 30px">辽宁省24小时天气状况</p>
+          <p style="text-align: center;font-size: 15px">{{weather_time}}</p>
         </div>
+        <table class="table table-responsive text-center ml-4" style="height: 740px">
+          <thead>
+          <tr>
+            <th>区域</th>
+            <th>日间天气</th>
+            <th>夜间天气</th>
+            <th>日间气温</th>
+            <th>夜间气温</th>
+            <th>日间风向</th>
+            <th>夜间风向</th>
+            <th>日间风速</th>
+            <th>夜间风速</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let city of data" style="height: 9px">
+            <td style="height: 9px">{{city.name}}</td>
+            <td>{{city.value[7]}}</td>
+            <td>{{city.value[5]}}</td>
+            <td class="primary"> {{city.value[9]}}</td>
+            <td class="danger"> {{city.value[8]}}</td>
+            <td>{{city.value[2]}}</td>
+            <td>{{city.value[1]}}</td>
+            <td>{{city.value[4]}}</td>
+            <td>{{city.value[3]}}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+    <!--<div class="module" style="height: 620px">-->
+    <!--<div class="person_detail pt-3 pl-1 pr-1">-->
+    <!--<p style="text-align: center;font-size: 30px">{{title}}</p>-->
+    <!--<p style="text-align: center;font-size: 15px">{{time}}</p>-->
+    <!--<div [innerHTML]="text"></div>-->
+    <!--</div>-->
+    <!--</div>-->
   </div>
-</section>
+</div>
+
 

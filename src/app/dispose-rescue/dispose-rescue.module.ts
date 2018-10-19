@@ -19,6 +19,7 @@ import { MvAllComponent } from './mv-all/mv-all.component';
 import { McEduComponent } from './mc-edu/mc-edu.component';
 import { MvEduComponent } from './mv-edu/mv-edu.component';
 import { ModalDatatableComponent } from './modal-datatable/modal-datatable.component';
+import { SingleDatatableComponent } from './single-datatable/single-datatable.component';
 
 @NgModule({
   providers: [
@@ -34,9 +35,9 @@ import { ModalDatatableComponent } from './modal-datatable/modal-datatable.compo
     DataTablesModule,
     NgbModule
   ],
-  entryComponents:[
-    ModalDatatableComponent
+  entryComponents: [
+    ModalDatatableComponent, SingleDatatableComponent
   ],
-  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent, McAllComponent, MvAllComponent, McEduComponent, MvEduComponent, ModalDatatableComponent]
+  declarations: [RepairComponent, ManagerComponent, ExpertComponent, NewsComponent, WorkerComponent, DrIndexComponent, McAllComponent, MvAllComponent, McEduComponent, MvEduComponent, ModalDatatableComponent, SingleDatatableComponent]
 })
 export class DisposeRescueModule { }

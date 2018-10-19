@@ -231,7 +231,7 @@ export class WholeOrganizationComponent implements OnInit {
     // FileModalClass自定义模态框大小，该css类写在了全局样式style.css中
      const modalRef = this.modalService.open(PicShowComponent, {windowClass: 'PictureModalClass'});
      // modalRef.componentInstance.url = event.target['src'];
-     modalRef.componentInstance.url = '/assets/img/sy_org.svg';
+     modalRef.componentInstance.url = '/assets/img/sy_org.bmp';
      modalRef.componentInstance.title = '应急组织体系图';
   }
 }

@@ -1,0 +1,4 @@
+:host ::ng-deep .tabset a.nav-link {
+  width:584px;
+  text-align: center;
+}

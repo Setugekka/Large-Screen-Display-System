@@ -18,37 +18,37 @@ export class WeatherComponent implements OnInit {
   mapLoaded = false;
   city_list = ['沈阳', '大连', '鞍山'];
   private geoCoordMap = {
-    '丹东市': [124.821, 40.62],
-    '大连市': [122.2009, 39.4409],
-    '沈阳市': [123.1238, 42.1216],
-    '营口市': [122.3316, 40.4],
-    '葫芦岛市': [120.1575, 40.578],
-    '鞍山市': [123.55, 40.32],
-    '抚顺市': [124.97, 42.27],
+    '丹东市': [124.321, 40.62],
+    '大连市': [122.10, 39.7409],
+    '沈阳市': [122.80, 42.1216],
+    '营口市': [122.02, 40.4],
+    '葫芦岛市': [120.00, 40.578],
+    '鞍山市': [123.05, 40.52],
+    '抚顺市': [124.27, 41.80],
     '本溪市': [124.93, 41.38],
-    '朝阳市': [119.52, 41.75],
-    '阜新市': [121.65, 42.45],
-    '辽阳市': [123.27, 41.20],
-    '铁岭市': [123.85, 43.02],
-    '盘锦市': [121.97, 41.29],
+    '朝阳市': [119.52, 41.35],
+    '阜新市': [121.65, 42.35],
+    '辽阳市': [123.07, 41.20],
+    '铁岭市': [123.85, 42.82],
+    '盘锦市': [121.77, 41.29],
     '锦州市': [120.85, 41.29],
 
   };
   data = [
-    {name: '沈阳市', value: ['90']},  // value值为不包括百分号的上交进度，实际值应为100%
-    {name: '大连市', value: ['85']},
-    {name: '鞍山市', value: ['95']},
-    {name: '抚顺市', value: ['50']},
-    {name: '本溪市', value: ['80']},
-    {name: '丹东市', value: ['90']},
-    {name: '盘锦市', value: ['98']},
-    {name: '营口市', value: ['50']},
-    {name: '葫芦岛市', value: ['60']},
-    {name: '朝阳市', value: ['99']},
-    {name: '阜新市', value: ['88']},
-    {name: '辽阳市', value: ['90']},
-    {name: '铁岭市', value: ['90']},
-    {name: '锦州市', value: ['95']},
+    {name: '沈阳市', value: ['10']},
+    {name: '大连市', value: ['10']},
+    {name: '鞍山市', value: ['10']},
+    {name: '抚顺市', value: ['10']},
+    {name: '本溪市', value: ['10']},
+    {name: '丹东市', value: ['10']},
+    {name: '盘锦市', value: ['10']},
+    {name: '营口市', value: ['10']},
+    {name: '葫芦岛市', value: ['10']},
+    {name: '朝阳市', value: ['10']},
+    {name: '阜新市', value: ['10']},
+    {name: '辽阳市', value: ['10']},
+    {name: '铁岭市', value: ['10']},
+    {name: '锦州市', value: ['10']},
   ];
   private option = {};
   private weather_data = [];
@@ -152,8 +152,8 @@ export class WeatherComponent implements OnInit {
             },
             visualMap: {
               show: false,
-              min: 0,
-              max: 30,
+              min: -10,
+              max: 40,
               left: 'left',
               text: ['高', '低'], // 文本，默认为数值文本
               calculable: true,
@@ -203,26 +203,26 @@ export class WeatherComponent implements OnInit {
                     // formatter: this.GetWeather,
                     formatter: function (e) {
                       console.log(e)
-                      if (e.value[7] === '晴') {
-                        return  '{a|' + e.name + '}' +  '{Sunny|}';
+                      if (e.value[9] === '晴') {
+                        return  '{a|' + e.name + '}' + '\n' +  '{Sunny|}';
                       } else if (e.value[7] === '多云') {
-                        return  '{a|' + e.name + '}' +  '{Cloudy|}';
+                        return  '{a|' + e.name + '}' + '\n' +  '{Cloudy|}';
                       } else {
-                        return  '{a|' + e.name + '}' +  '{Rainy|}';
+                        return  '{a|' + e.name + '}' + '\n' +  '{Rainy|}';
                       }
                       },
                     show: true,
                     color: '#ffffff',
-                    backgroundColor: 'rgba(26,87,178,.5)',
+                    backgroundColor: 'transparent',
                     lineHeight: 18,
                     fontSize: 12,
                     // height: 30,
                     padding: [2, 5],
-                    borderRadius: 15,
+                    borderRadius: 7,
                     position: 'right',
                     rich: {
                       a: {
-                        color: '#FF5D33',
+                        color: '#5D4037',
                         fontSize: 16,
                         fontWeight: 'bold'
                       },
@@ -251,19 +251,19 @@ export class WeatherComponent implements OnInit {
                         padding: 4
                       },
                       Sunny: {
-                        height: 20,
+                        height: 25,
                         backgroundColor: {
                           image: this.weatherIcons.Sunny
                         }
                       },
                       Cloudy: {
-                        height: 20,
+                        height: 25,
                         backgroundColor: {
                           image: this.weatherIcons.Cloudy
                         }
                       },
                       Rainy: {
-                        height: 20,
+                        height: 25,
                         backgroundColor: {
                           image: this.weatherIcons.Rain
                         }

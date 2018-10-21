@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {toUnicode} from "punycode";
+import {toUnicode} from 'punycode';
 import {ScreenDisplayService} from "../../screen-display/screen-display.service";
 import {EventEmitterService} from "../../screen-display/large-screen/event-emitter.service";
 
@@ -263,11 +263,11 @@ export class ManagerComponent implements OnInit {
       ],
     };
     this.model_title = '应急基干分队人员信息表';
-    const modalRef = this.modalService.open(ModalDatatableComponent,{windowClass:'modal-datatables'}) //myCustomModalClass自定义模态框大小，该css类写在了全局样式style.css中
+    const modalRef = this.modalService.open(ModalDatatableComponent, {windowClass:'modal-datatables'}); // myCustomModalClass自定义模态框大小，该css类写在了全局样式style.css中
     modalRef.componentInstance.dOptionscity = this.dtOptionscity;
     modalRef.componentInstance.dOptionsvillage = this.dtOptionsvillage;
     modalRef.componentInstance.model_title = this.model_title;
-  };
+  }
 
   onChartMouseOver(params): void{
     this.emitService.eventEmit.emit(params.name);
@@ -285,5 +285,5 @@ export class ManagerComponent implements OnInit {
       }
     }
     return temp;
-  };
+  }
 }

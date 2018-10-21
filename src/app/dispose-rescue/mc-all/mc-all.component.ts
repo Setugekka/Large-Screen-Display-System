@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {EventEmitterService} from '../../screen-display/large-screen/event-emitter.service';
 import { Http } from '@angular/http';
 import { Urls} from '../../shared/model/model.url';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 declare var echarts: any;
 
 @Component({
@@ -19,7 +20,7 @@ export class McAllComponent implements OnInit {
       .then(response => response.json());
     return data;
   }
-  constructor(public emitService: EventEmitterService, private http: Http) { }
+  constructor(public emitService: EventEmitterService, private http: Http, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.GetAllCityManager().then(r => {

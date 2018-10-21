@@ -1,12 +1,11 @@
-<!--<div class="row">-->
-  <!--<div class="col-12">-->
-    <!--<div echarts [options]="chartoption" (chartClick)="onChartClick($event)" [loading]="!mapLoaded" style="height: 500px;width: 100%"></div>-->
-  <!--</div>-->
+<div class="row">
+  <div class="col-12">
+    <div echarts [options]="chartoption" (chartClick)="onChartClick($event)" (chartMouseOver)="onChartMouseOver($event)" [loading]="!mapLoaded" style="height: 500px;width: 100%"></div>
+  </div>
   <!--<div class="col-12">-->
     <!--<div echarts [options]="option" (chartInit)="onChartInit($event)"></div>-->
   <!--</div>-->
 <!--</div>-->
-<div echarts [options]="chartoption" (chartClick)="onChartClick($event)" [loading]="!mapLoaded" style="height: 500px;width: 100%"></div>
 <!--<div class="col-lg-12">-->
   <!--<div class="card">-->
     <!--<div class="card-body">-->

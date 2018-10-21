@@ -194,7 +194,6 @@ export class ManagerComponent implements OnInit {
   }
 
   onChartClick(params): void{
-    // this.emitService.eventEmit.emit(params.name);
     this.dtOptionscity = {
       language: {     // 语言设置
         'paginate': {
@@ -269,6 +268,10 @@ export class ManagerComponent implements OnInit {
     modalRef.componentInstance.dOptionsvillage = this.dtOptionsvillage;
     modalRef.componentInstance.model_title = this.model_title;
   };
+
+  onChartMouseOver(params): void{
+    this.emitService.eventEmit.emit(params.name);
+  }
 
   initSeriesData(data):any{
     var temp = [];

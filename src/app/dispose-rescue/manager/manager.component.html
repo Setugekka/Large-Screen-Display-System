@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12">
-    <div echarts [options]="chartoption" (chartClick)="onChartClick($event)" [loading]="!mapLoaded" style="height: 500px;width: 100%"></div>
+    <div echarts [options]="chartoption" (chartClick)="onChartClick($event)" (chartMouseOver)="onChartMouseOver($event)" [loading]="!mapLoaded" style="height: 500px;width: 100%"></div>
   </div>
   <!--<div class="col-12">-->
     <!--<div echarts [options]="option" (chartInit)="onChartInit($event)"></div>-->

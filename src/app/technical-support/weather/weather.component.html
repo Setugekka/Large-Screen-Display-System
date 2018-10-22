@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" xmlns="http://www.w3.org/1999/html">
   <div class="col-5">
     <div echarts [options]="option"  [loading]="!mapLoaded" style="height: 465px"></div>
     <section id="basic-usage" class="row">
@@ -33,6 +33,12 @@
     <div class="card">
       <div class="card-body">
         <div class="person_detail pt-3 pl-1 pr-1">
+          <div class="dropdown btn-group" style="float: right" ngbDropdown>
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle style="margin: 3px">{{chosen_level}}</button>
+            <div ngbDropdownMenu class="dropdown-menu-right" aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" *ngFor="let level of level_list" (click)="click(level)">{{level}}</button>
+            </div>
+          </div>
           <p style="text-align: center;font-size: 30px;font-weight: bold">辽宁省24小时天气状况</p>
           <p style="text-align: center;font-size: 15px;font-weight: bold" class="warning">{{weather_time}}</p>
         </div>

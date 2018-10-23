@@ -70,6 +70,17 @@ export class MvAllComponent implements OnInit {
     this.GetAllVillageManager().then(r => {
       const data = r;
       this.bar_option = {
+        title : {
+          text: '各市基干队伍人数（县级）',
+          textStyle: {
+            color: '#009DA0',
+            fontSize: 16,
+            fontFamily: '微软雅黑',
+            fontWeight: 'normal',
+          },
+          x: '150',
+          y: '10',
+        },
         tooltip : {
           trigger: 'axis',
           axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -98,7 +109,7 @@ export class MvAllComponent implements OnInit {
 
         },
         yAxis: {
-          name: '县基干队伍人数',
+          name: '人数',
           type : 'value',
           nameTextStyle: {color: '#009DA0'},
           axisLabel: {

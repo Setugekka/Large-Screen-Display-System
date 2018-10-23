@@ -15,6 +15,9 @@ export class WeatherComponent implements OnInit {
   private text;
   private time;
   private weather_time;
+  // 刷新频率
+  chosen_level = '每一小时更新';
+  level_list = ['每半小时更新', '每一小时更新', '每三小时更新', '每五小时更新'];
   mapLoaded = false;
   city_list = ['沈阳', '大连', '鞍山'];
   private geoCoordMap = {
@@ -72,6 +75,10 @@ export class WeatherComponent implements OnInit {
     }
     return res;
   };
+  click(level): any {
+    console.log(level);
+    this.chosen_level = level;
+  }
 
   GetWeather(e) {
     return '<p style="color: red">' + e.name + ':</p>' + '风向：' + e.value[3]

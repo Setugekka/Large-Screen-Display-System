@@ -75,6 +75,17 @@ export class McEduComponent implements OnInit {
     this.GetCityManager_Edu(this.current_city).then(r => {
       const data = r;
       this.bar_option = {
+        title : {
+          text: '市级基干队伍学历分布',
+          textStyle: {
+            color: '#009DA0',
+            fontSize: 16,
+            fontFamily: '微软雅黑',
+            fontWeight: 'normal',
+          },
+          x: '150',
+          y: '10',
+        },
         tooltip : {
           trigger: 'axis',
           axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -103,7 +114,7 @@ export class McEduComponent implements OnInit {
 
         },
         yAxis: {
-          name: '市基干队伍学历',
+          name: '人数',
           type : 'value',
           nameTextStyle: {color: '#009DA0'},
           axisLabel: {
@@ -164,8 +175,20 @@ export class McEduComponent implements OnInit {
     this.emitService.eventEmit.subscribe((value: any) => {
       this.current_city = value;
       this.GetCityManager_Edu(value).then(r => {
+        console.log(r);
         const data = r;
         this.bar_option = {
+          title : {
+            text: '市级基干队伍学历分布',
+            textStyle: {
+              color: '#009DA0',
+              fontSize: 16,
+              fontFamily: '微软雅黑',
+              fontWeight: 'normal',
+            },
+            x: '150',
+            y: '10',
+          },
           tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -179,7 +202,7 @@ export class McEduComponent implements OnInit {
           xAxis: {
             type : 'category',
             splitLine: {show: false},
-            data : data.city_list,
+            data : data.education_list,
             nameTextStyle: {color: '#009DA0'},
             axisLabel: {
               color: '#009DA0',
@@ -194,7 +217,7 @@ export class McEduComponent implements OnInit {
 
           },
           yAxis: {
-            name: '市基干队伍学历',
+            name: '人数',
             type : 'value',
             nameTextStyle: {color: '#009DA0'},
             axisLabel: {

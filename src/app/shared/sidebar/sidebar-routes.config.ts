@@ -39,6 +39,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: [
       // { path: '/ContingencyPlan/ProvincePlan', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
        { path: '/ContingencyPlan/CityPlan', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ContingencyPlan/Manage', title: '应急预案管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {

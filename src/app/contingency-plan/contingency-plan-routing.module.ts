@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ProvincePlanComponent} from './province-plan/province-plan.component';
 import {CityPlanComponent} from './city-plan/city-plan.component';
 import {WholePlanComponent} from './whole-plan/whole-plan.component';
-
+import {ManageComponent} from "./manage/manage.component";
 
 const routes: Routes = [
   {
@@ -25,6 +25,13 @@ const routes: Routes = [
     component: WholePlanComponent,
     data: {
       title: 'WholePlan'
+    }
+  },
+  {
+    path: 'Manage',
+    component: ManageComponent,
+    data: {
+      title: 'Manage'
     }
   }
 

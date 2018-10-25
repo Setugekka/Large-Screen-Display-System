@@ -22,9 +22,9 @@
             <!--<li *ngFor="let menuItem of menuItems" [ngClass]="[menuItem.class]" [routerLinkActive]="menuItem.submenu.length != 0 ? '' : 'active'"-->
                 <!--[routerLinkActiveOptions]="{exact: true}">-->
                 <!--<a [routerLink]="menuItem.class === '' ? [menuItem.path] : null" *ngIf="!menuItem.isExternalLink; else externalLinkBlock">-->
-          <li *ngFor="let menuItem of menuItems" [ngClass]="[menuItem.class]" [routerLinkActive]="menuItem.submenu.length != 0 ? 'active' : 'active'"
+          <li *ngFor="let menuItem of menuItems" [ngClass]="[menuItem.class]" [routerLinkActive]="menuItem.path == '' ? '' : 'active'"
               [routerLinkActiveOptions]="{exact: true}">
-            <a [routerLink]="menuItem.class === '' ? [menuItem.path] : [menuItem.path]" *ngIf="!menuItem.isExternalLink; else externalLinkBlock">
+            <a [routerLink]="menuItem.path === '' ? null : [menuItem.path]" *ngIf="!menuItem.isExternalLink; else externalLinkBlock">
                     <i [ngClass]="[menuItem.icon]"></i>
                     <span class="menu-title">{{menuItem.title}}</span>
                     <span *ngIf="menuItem.badge != '' " [ngClass]="[menuItem.badgeClass]">{{menuItem.badge}}</span>

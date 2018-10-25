@@ -5,7 +5,6 @@ import { FullLayoutComponent } from "./layouts/full/full-layout.component";
 import { ContentLayoutComponent } from "./layouts/content/content-layout.component";
 import { FULL_ROUTES } from "./shared/routes/full-layout.routes";
 import { CONTENT_ROUTES } from "./shared/routes/content-layout.routes";
-import {OrgchartComponent} from "./shared/orgchart/orgchart.component";
 
 const appRoutes: Routes = [
   {

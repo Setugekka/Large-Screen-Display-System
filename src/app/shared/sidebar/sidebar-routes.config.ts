@@ -139,14 +139,16 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '/ScreenDisplay/LargeScreen',
+    path: '',
     title: '大屏展示',
     icon: 'ft-airplay',
-    class: '',
+    class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
+      { path: '/ScreenDisplay/LargeScreen', title: '数据面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ScreenDisplay/Prevention', title: '预警面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
     ]
   },
   {

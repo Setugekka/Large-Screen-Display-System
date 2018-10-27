@@ -30,13 +30,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'SystemMap',
-    component: SystemMapComponent,
-    data: {
-      title: 'SystemMap'
-    }
-  },
-  {
     path: 'WarningSignals',
     component: WarningSignalsComponent,
     data: {

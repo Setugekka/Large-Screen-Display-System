@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { WholePlanComponent } from './whole-plan/whole-plan.component';
 import {PicShowComponent} from '../emergency-organization/pic-show/pic-show.component';
+import { ManageComponent } from './manage/manage.component';
 
 
 @NgModule({
@@ -28,6 +29,6 @@ import {PicShowComponent} from '../emergency-organization/pic-show/pic-show.comp
     EmergencyOrganizationModule
   ],
   entryComponents: [PicShowComponent],
-  declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent]
+  declarations: [ProvincePlanComponent, CityPlanComponent, WholePlanComponent, ManageComponent]
 })
 export class ContingencyPlanModule { }

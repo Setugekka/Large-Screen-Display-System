@@ -39,6 +39,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: [
       // { path: '/ContingencyPlan/ProvincePlan', title: '省公司', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
        { path: '/ContingencyPlan/CityPlan', title: '市县级', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ContingencyPlan/Manage', title: '应急预案管理', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
   },
   {
@@ -138,14 +139,16 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '/ScreenDisplay/LargeScreen',
+    path: '',
     title: '大屏展示',
     icon: 'ft-airplay',
-    class: '',
+    class: 'has-sub',
     badge: '',
     badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1',
     isExternalLink: false,
     submenu: [
+      { path: '/ScreenDisplay/LargeScreen', title: '数据面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/ScreenDisplay/Prevention', title: '预警面板', icon: '', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] }
     ]
   },
   {

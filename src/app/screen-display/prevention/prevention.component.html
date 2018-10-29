@@ -1,3 +1,8 @@
-<p>
-  prevention works!
-</p>
+<div class="body-bg"></div>
+<div class="row">
+  <div class="col-8">
+    <div echarts [options]="chartOption" (chartClick)="onChartClick($event)" (chartInit)="onChartInit($event)" style="height: 600px"></div>
+  </div>
+</div>
+
+

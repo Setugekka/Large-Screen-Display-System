@@ -1,2 +1,6 @@
-<app-prevention-roll></app-prevention-roll>
-<app-prevention-message></app-prevention-message>
+<div class="body-bg"></div>
+<div class="row">
+  <div class="col-8">
+    <div echarts [options]="chartOption" (chartClick)="onChartClick($event)" (chartInit)="onChartInit($event)" style="height: 600px"></div>
+  </div>
+</div>

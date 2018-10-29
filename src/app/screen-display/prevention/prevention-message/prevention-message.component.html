@@ -1,0 +1,19 @@
+<div style="margin:20px" class="row">
+  <button (click)=click()>刷新数据</button>
+</div>
+
+<div id="container" style="position: absolute;height: 800px">
+  <div class="first"  id="box1" (click)="close($event)">
+    <span class="new_content" style="position: absolute; top: 20px;">111</span>
+  </div>
+  <div class="normal" id="box2" style="top: 120px" (click)="close($event)">
+    <span class="new_content" style="position: absolute; top: 20px;">222</span>
+  </div>
+  <div class="normal" id="box3" style="top: 230px" (click)="close($event)">
+    <span class="new_content" style="position: absolute; top: 20px;">333</span>
+  </div>
+  <div class="normal" id="box4" style="top: 340px" (click)="close($event)">
+    <span class="new_content" style="position: absolute; top: 20px;">444</span>
+  </div>
+</div>
+

@@ -274,7 +274,7 @@ export class PreventionComponent implements OnInit {
         ]
       }
     })
-    this.socket.on('my_response',e=>console.log(e.data))
+    this.socket.on('my_response',e=>console.log(e.data));
     this.socket.on('update_prevention',e=>{
       if(this.prevention_list.indexOf(e.city)==-1){
         if(e.p_type=='true'){

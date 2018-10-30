@@ -30,6 +30,8 @@ import { ClockComponent } from './large-screen/clock/clock.component';
 import { MapExtendComponent } from './large-screen/map-extend/map-extend.component';
 import {MapExtendWhiteComponent} from "./large-screen/map-extend-white/map-extend-white.component";
 import { PreventionComponent } from './prevention/prevention.component';
+import { PreventionMessageComponent } from './prevention/prevention-message/prevention-message.component';
+import { PreventionRollComponent } from './prevention/prevention-roll/prevention-roll.component';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { PreventionComponent } from './prevention/prevention.component';
     ClockComponent,
     MapExtendComponent,
     MapExtendWhiteComponent,
-    PreventionComponent
+    PreventionComponent,
+    PreventionMessageComponent,
+    PreventionRollComponent
   ],
   exports:[DetailviewComponent,MapExtendComponent,MapComponent]
 

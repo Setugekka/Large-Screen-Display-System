@@ -4,7 +4,7 @@
   color: white;
   display: block;
   width: 96%;
-  height: 30px;
+  height: 60px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -13,9 +13,11 @@
   position: absolute;
   top: 0;
   left: 100%;
-  line-height: 30px;
+  line-height: 60px;
   display: block;
   word-break: keep-all;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: x-large;
+  font-weight: bold;
 }

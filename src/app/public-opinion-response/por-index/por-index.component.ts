@@ -10,7 +10,7 @@ import {EventEmitterService} from "../../screen-display/large-screen/event-emitt
 export class PorIndexComponent implements OnInit {
   private detaildata=" 热点识别能力　可以根据转载量、评论数量、回复量、危机程度等参数，识别出给定时间段内的热门话题。\n" +
     "l 倾向性分析与统计　对信息的阐述的观点、主旨进行倾向性分析。以提供参考分析依据。分析的依据可根据信息的转载量、评论的回言信息时间密集度。来判别信息的发展倾向。分析的依据可根据信息的转载量、评论的回言信息时间密集度。来判别信息的发展倾向。\n" ;
-  private a="辽阳电力公司";
+  private a="国网辽阳电力公司";
   private b="李xx";
   private c="17210001001";
   private d="2018年9月13日 09：10：48";
@@ -37,7 +37,7 @@ export class PorIndexComponent implements OnInit {
     });
     //set active class for selected item
     event.currentTarget.setAttribute('class', 'list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2');
-    this.a="xxx电力公司"
+    this.a="国网沈阳电力公司"
     this.b="王xx"
     this.c="19216800100"
     this.d="2018年9月1日 12：30：28"

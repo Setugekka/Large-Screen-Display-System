@@ -21,4 +21,6 @@ export const Urls = {
   GetAllVillageManager: host +  '/v_manager/get_by_city',
   GetCityManager_Edu: host +  '/c_manager/get_by_edu_city',
   GetVillageManager_Edu: host +  '/v_manager/get_by_edu_city',
+  GetRainData: host +  '/weather_data/rain_data',
+  GetAlert: host +  '/weather_data/alert_data',
 };

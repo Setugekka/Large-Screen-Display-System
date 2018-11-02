@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+import { Http } from '@angular/http';
+import {Urls} from '../../../shared/model/model.url';
 @Component({
   selector: 'app-prevention-roll',
   templateUrl: './prevention-roll.component.html',
@@ -23,6 +24,7 @@ export class PreventionRollComponent implements OnInit {
     {name: '铁岭市', value: []},
     {name: '锦州市', value: []},
   ];
+  private  urls = Urls;
   weatherText = '';
   private weather_data = [];
   roll(): any {
@@ -37,7 +39,7 @@ export class PreventionRollComponent implements OnInit {
       $('.affiche_text').animate({'left': i + 'px'}, 15);
     }, 15);
   }
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private http: Http) { }
 
   ngOnInit() {
     this.httpClient.get('/api/ProService/servlet/forecastServlet?period=24')
@@ -67,6 +69,5 @@ export class PreventionRollComponent implements OnInit {
         $('.affiche_text')[0].innerHTML = this.weatherText;
         setTimeout(this.roll(), 750);
       });
-  }
+}}
 
-}

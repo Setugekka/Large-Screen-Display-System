@@ -62,6 +62,8 @@
               "node_modules/datatables.net-buttons/js/buttons.flash.js",
               "node_modules/datatables.net-buttons/js/buttons.html5.js",
               "node_modules/datatables.net-buttons/js/buttons.print.js",
+              "node_modules/d3/dist/d3.js",
+              "node_modules/socket.io-client/dist/socket.io.js",
               "src/assets/ckplayer/ckplayer.js"
             ]
           },

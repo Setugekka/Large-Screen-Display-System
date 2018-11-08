@@ -1,4 +1,10 @@
 
 <div id="container" style="overflow-y:auto;height: 600px">
+  <div *ngIf="this.message_id.length === 0" style="margin-top: 10px; position: absolute; top: 10px; width: 300px; background-color: rgba(0,0,0,0.5);height: 100px; " >
+    <div class="row">
+      <p class="new_content" style="position: absolute; top: 40px;left: 5px;color: white; font-size: 40px; font-weight: normal">当前无预警</p>
+      <i class="ft-check-circle primary font-large-2" style="position: absolute; top: 30px;left: 240px"></i>
+    </div>
+  </div>
 </div>
 

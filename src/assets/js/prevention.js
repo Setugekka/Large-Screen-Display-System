@@ -3,9 +3,9 @@ var colorDict={"橙色预警":"orange","红色预警":"red","蓝色预警":"blue
 var timeFormatter=d3.timeFormat("%m月%d日-%H时%M分%S秒");
 current_rect="";
 // width and height of the canvas
-var w=1600;
-var h=900;
-var padding=50
+var w=1900;
+var h=720;
+var padding=60
 // define svg
 var svg=d3.select(".container")
   .append("svg")
@@ -60,7 +60,7 @@ svg.selectAll(".cityaxis")
 //定义时间与城市轴上标签的样式
 d3.selectAll("text")
 //.attr("y", 20)
-  .attr("style", "font-size:10px")
+  .attr("style", "font-size:16px")
   .attr("stroke", "white");
 
 

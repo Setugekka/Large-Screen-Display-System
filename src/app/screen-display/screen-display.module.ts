@@ -32,6 +32,8 @@ import {MapExtendWhiteComponent} from "./large-screen/map-extend-white/map-exten
 import { PreventionComponent } from './prevention/prevention.component';
 import { PreventionMessageComponent } from './prevention/prevention-message/prevention-message.component';
 import { PreventionRollComponent } from './prevention/prevention-roll/prevention-roll.component';
+import { WeatherPreventionComponent } from './prevention/weather-prevention/weather-prevention.component';
+import { PreventionModalComponent } from './prevention/prevention-modal/prevention-modal.component';
 
 
 @NgModule({
@@ -39,7 +41,7 @@ import { PreventionRollComponent } from './prevention/prevention-roll/prevention
     ScreenDisplayService,
     EventEmitterService,
   ],
-  entryComponents:[DetailviewComponent],
+  entryComponents:[DetailviewComponent, PreventionModalComponent],
   imports: [
     CommonModule,
     ScreenDisplayRoutingModule,
@@ -73,7 +75,9 @@ import { PreventionRollComponent } from './prevention/prevention-roll/prevention
     MapExtendWhiteComponent,
     PreventionComponent,
     PreventionMessageComponent,
-    PreventionRollComponent
+    PreventionRollComponent,
+    WeatherPreventionComponent,
+    PreventionModalComponent
   ],
   exports:[DetailviewComponent,MapExtendComponent,MapComponent]
 

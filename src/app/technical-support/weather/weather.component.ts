@@ -96,7 +96,7 @@ export class WeatherComponent implements OnInit {
       this.httpClient.get('/api/ProService/servlet/forecastServlet?period=24')
         .subscribe(weatherJson => {
           this.weather_data = weatherJson['data'];
-          this.weather_time = weatherJson['datetime'];
+          this.weather_time = "更新于"+ weatherJson['datetime'];
           // console.log(weatherJson['datetime']);
           for (const a in this.data) {
             if (a) {

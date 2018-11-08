@@ -36,3 +36,7 @@ html,body{
 .modal-dialog{
   max-width: 1000px!important;
 }
+.Prevent_messageModalClass .modal-dialog{
+  max-width: 1200px!important;
+  background-color: transparent;
+}

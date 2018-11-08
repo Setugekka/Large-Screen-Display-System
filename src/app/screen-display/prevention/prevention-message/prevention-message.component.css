@@ -24,4 +24,12 @@
 /*.new {*/
 /*margin-left: 200px; margin-top: 10px; position: absolute; top: 10px; width: 200px; background-color: orangered; height: 100px; color: #00B5B8; font-size: 50px; font-weight: bold*/
 /*}*/
-
+.module {
+  border: none;
+  position: relative;
+  margin-bottom: 15px;
+  background: url("/assets/image/1-1b.png") center no-repeat;
+  background-size:100% 100%;
+  -webkit-transition: none;
+  transition: none;
+}

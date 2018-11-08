@@ -13,7 +13,8 @@ import {isUndefined} from 'util';
   styleUrls: ['./prevention-message.component.css']
 })
 export class PreventionMessageComponent implements OnInit {
-  private  message_id = ['box1', 'box2', 'box3', 'box4'];
+  private  message_id = [];
+  private length = this.message_id.length;
   private socket = SocketIO('127.0.0.1:5000/LargeScreen');
   private  urls = Urls;
   private rain_data = [];
@@ -48,12 +49,13 @@ export class PreventionMessageComponent implements OnInit {
     const new_message = '新预警' + a;
     this.message_id.unshift(new_message);
     const message_list = this.message_id;
-    $(".first").animate({top: "+=110px"}, 500);
-    $(".normal").animate({top: "+=110px"}, 500);
+    $('.first').animate({top: "+=110px"}, 500);
+    $('.normal').animate({top: "+=110px"}, 500);
     setTimeout(() => {
       $('#container').prepend('<div class="new" style="margin-left: 300px; margin-top: 10px; position: absolute; top: 10px; width: 300px; background-color: black;height: 100px; color: #00B5B8; font-size: 50px; font-weight: normal" (click)="close(event)"><p class="new_content" style="position: absolute; top: 20px;"></p><p class="content_weather" style="position: absolute; top: 40px;">降水量：</p></div>');
       $('.new_content')[0].innerHTML = new_message;
       $('.content_weather')[0].innerHTML += '0';
+      $('.new').addClass("module");
       $('.new')[0].id = new_message;
       $('.new')[0].style.opacity = '0';
       $('.new').click(function(Event) {
@@ -98,7 +100,8 @@ export class PreventionMessageComponent implements OnInit {
 
   ngOnInit() {
     this.GetRainData().then(r => {
-      this.rain_data = r;
+      console.log(r)
+      this.rain_data = r[0]['rain'];
       this.socket.on('update_prevention', e => {
         if (this.message_id.indexOf(e.city) === -1) {               // 当前城市未预警
           if (e.p_type === 'true') {
@@ -106,15 +109,16 @@ export class PreventionMessageComponent implements OnInit {
             $(".first").animate({top: "+=110px"}, 500);
             $(".normal").animate({top: "+=110px"}, 500);
             setTimeout(() => {
-              $('#container').prepend('<div class="new" style="color: white;margin-left: 310px; margin-top: 10px; position: absolute; top: 10px; width: 310px; background-color: black;height: 100px; font-size: 30px; font-weight: normal" (click)="close(event)"><div class="row" style="position: absolute; top: 20px;margin-left: 5px"><i class="ft-alert-triangle lg-2"></i><p class="new_content" style="font-size: 30px;"></p></div><p class="content_weather" style="position: absolute; top: 60px;font-size: 30px;margin-left: 36px">降水量：</p></div>');
+              $('#container').prepend('<div class="new" style="color: white;margin-left: 310px; margin-top: 10px; position: absolute; top: 10px; width: 310px; background-color: rgba(0,0,0,0.5);height: 100px; font-size: 30px; font-weight: normal" (click)="close(event)"><div class="row" style="position: absolute; top: 20px;margin-left: 5px"><i class="ft-alert-triangle lg-2"></i><p class="new_content" style="font-size: 30px;"></p></div><p class="content_weather" style="position: absolute; top: 60px;font-size: 30px;margin-left: 36px">降水量：</p></div>');
               $('.new_content')[0].innerHTML = e.city + '市：' + e.p_class;
               $('.content_weather')[0].innerHTML +=  this.GetCityRain(e.city);
+              $('.new').addClass("module");
               $('.new')[0].id = e.city;
               $('.new')[0].style.opacity = '0';
               $('.ft-alert-triangle')[0].style.color = this.set_color(e.p_class);
             }, 500);
             setTimeout(() => {
-              $(".new").animate({marginLeft: "-=310px", opacity: '0.5'}, 1000);
+              $(".new").animate({marginLeft: "-=310px", opacity: '1.0'}, 1000);
               $(".first").addClass("normal").removeClass("first");
               $(".new").addClass("first").removeClass("new");
             }, 500);
@@ -138,7 +142,7 @@ export class PreventionMessageComponent implements OnInit {
             }
             setTimeout(() => {
               this.message_id.unshift(e.city);                                                                           // 重新在预警列表中加入该城市
-              $('#container').prepend('<div class="new" style="margin-left: 310px; margin-top: 10px; position: absolute; top: 10px; width: 310px; background-color: black;height: 100px; color: white; font-size: 30px; font-weight: normal" (click)="close(event)"><div class="row" style="position: absolute; top: 20px;margin-left: 5px"><i class="ft-alert-triangle lg-2"></i><p class="new_content" style="font-size: 30px;"></p></div> <p class="content_weather" style="position: absolute; top: 60px;font-size: 30px;margin-left: 36px">降水量：</p></div>');
+              $('#container').prepend('<div class="new" style="margin-left: 310px; margin-top: 10px; position: absolute; top: 10px; width: 310px; background-color: rgba(0,0,0,0.5);height: 100px; color: white; font-size: 30px; font-weight: normal" (click)="close(event)"><div class="row" style="position: absolute; top: 20px;margin-left: 5px"><i class="ft-alert-triangle lg-2"></i><p class="new_content" style="font-size: 30px;"></p></div> <p class="content_weather" style="position: absolute; top: 60px;font-size: 30px;margin-left: 36px">降水量：</p></div>');
               $('.new_content')[0].innerHTML = e.city + '市：' + e.p_class;
               $('.new')[0].id = e.city;
               $('.new')[0].style.opacity = '0';
@@ -146,7 +150,7 @@ export class PreventionMessageComponent implements OnInit {
               $('.ft-alert-triangle')[0].style.color = this.set_color(e.p_class);
             }, 500);
             setTimeout(() => {
-              $(".new").animate({marginLeft: "-=310px", opacity: '0.5'}, 1000);
+              $(".new").animate({marginLeft: "-=310px", opacity: '1.0'}, 1000);
               $(".first").addClass("normal").removeClass("first");
               $(".new").addClass("first").removeClass("new");
             }, 500);

@@ -1,0 +1,9 @@
+.module {
+  border: none;
+  position: relative;
+  margin-bottom: 15px;
+  background: url("/assets/image/1-1b.png") center no-repeat;
+  background-size:100% 100%;
+  -webkit-transition: none;
+  transition: none;
+}

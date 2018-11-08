@@ -1,0 +1,22 @@
+<div style="margin-top:30px;color: white;font-size: 36px;font-weight: bold;margin-left: 160px">气象预警</div>
+<table class="module table table-responsive text-center ml-4" style="margin-top:60px;width:auto;color: white">
+  <thead>
+  <tr>
+    <th>城市</th>
+    <th>级别</th>
+    <th>类型</th>
+    <th>发布时间</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of this.obj" style="height: 9px">
+    <td style="height: 9px;">{{i.city}}</td>
+    <td>{{i.level}}</td>
+    <td>{{i.type}}</td>
+    <td>{{i.datatime}}</td>
+    <td (click)="open_message($event)" id ={{i.id}} > 查看</td>
+      </tr>
+  </tbody>
+</table>
+

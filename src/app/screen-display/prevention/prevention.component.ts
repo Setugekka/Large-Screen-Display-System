@@ -30,9 +30,7 @@ export class PreventionComponent implements OnInit {
   private prevention_list=[];
   private pindata=[];
   private chartOption:any={};
-  private timelineOption:any={};
   private echartsIntance:any;
-  private timelineIntance:any;
   private socket = SocketIO('127.0.0.1:5000/LargeScreen');
   constructor(private http: HttpClient) { }
 
@@ -238,24 +236,28 @@ export class PreventionComponent implements OnInit {
     this.socket.on('my_response',e=>console.log(e.data));
     this.socket.on('update_prevention',e=>{
       if(this.prevention_list.indexOf(e.city)==-1){
+        //不在预警列表中
         if(e.p_type=='true'){
           this.prevention_list.push(e.city);
           this.pindata.push({value:e.coord.concat([e.p_class,e.city]),city:e.city,visualMap:false});
         }
       }else{
-        if(e.p_type=='true'){
+        //在预警列表中
+        if(e.p_type=='true'){ //预警中
           for(let i in this.pindata){
             if(this.pindata[i].city==e.city){
               this.pindata[i].value=e.coord.concat([e.p_class,e.city])
             }
           }
-        }else {
+        }else { //取消预警
+          let ds=0;
+          this.prevention_list.splice(this.prevention_list.indexOf(e.city),1);
           for(let i in this.pindata){
             if(this.pindata[i].city==e.city){
-              this.pindata.splice(Number(i),1)
+              ds=Number(i)
             }
-            this.prevention_list.splice(this.prevention_list.indexOf(e.city),1)
           }
+          this.pindata.splice(ds,1)
         }
       }
       this.chartOption={
@@ -466,9 +468,6 @@ export class PreventionComponent implements OnInit {
   onChartInit(ec) {
     this.echartsIntance = ec;
   }
-  ontimelineInit(tc){
-    this.timelineIntance = tc;
-  }
   onChartClick(params){
   }
 
@@ -483,111 +482,113 @@ export class PreventionComponent implements OnInit {
     },500);
   }
   setpincolor(data){
-    for(let i in data){
-      const t=data[i];
-      if (t.value[2]=="红色预警"){
-        t["itemStyle"]={
-          normal: {
-            shadowColor: 'rgba(120, 36, 50, 0.5)',
-            color: {
-              type: 'radial',
-              x: 0.5,
-              y: 0.5,
-              r: 0.5,
-              colorStops: [{
-                offset: 0,
-                color: 'red' // 0% 处的颜色
-              }, {
-                offset: 0.5,
-                color: 'red' // 50% 处的颜色
-              }, {
-                offset: 1,
-                color: 'red' // 100% 处的颜色
-              }],
-              globalCoord: false // 缺省为 false
+    if(data.length!=0){
+      for(let i in data){
+        const t=data[i];
+        if (t.value[2]=="红色预警"){
+          t["itemStyle"]={
+            normal: {
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [{
+                  offset: 0,
+                  color: 'red' // 0% 处的颜色
+                }, {
+                  offset: 0.5,
+                  color: 'red' // 50% 处的颜色
+                }, {
+                  offset: 1,
+                  color: 'red' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
             }
           }
         }
-      }
-      if (t.value[2]=="橙色预警"){
-        t["itemStyle"]={
-          normal: {
-            shadowBlur: 10,
-            shadowColor: 'rgba(120, 36, 50, 0.5)',
-            shadowOffsetY: 5,
-            color: {
-              type: 'radial',
-              x: 0.5,
-              y: 0.5,
-              r: 0.5,
-              colorStops: [{
-                offset: 0,
-                color: 'orange' // 0% 处的颜色
-              }, {
-                offset: 0.5,
-                color: 'orange' // 50% 处的颜色
-              }, {
-                offset: 1,
-                color: 'orange' // 100% 处的颜色
-              }],
-              globalCoord: false // 缺省为 false
+        if (t.value[2]=="橙色预警"){
+          t["itemStyle"]={
+            normal: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [{
+                  offset: 0,
+                  color: 'orange' // 0% 处的颜色
+                }, {
+                  offset: 0.5,
+                  color: 'orange' // 50% 处的颜色
+                }, {
+                  offset: 1,
+                  color: 'orange' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
             }
           }
         }
-      }
-      if (t.value[2]=="黄色预警"){
-        t["itemStyle"]={
-          normal: {
-            shadowBlur: 10,
-            shadowColor: 'rgba(120, 36, 50, 0.5)',
-            shadowOffsetY: 5,
-            color: {
-              type: 'radial',
-              x: 0.5,
-              y: 0.5,
-              r: 0.5,
-              colorStops: [{
-                offset: 0,
-                color: 'yellow' // 0% 处的颜色
-              }, {
-                offset: 0.5,
-                color: 'yellow' // 50% 处的颜色
-              }, {
-                offset: 1,
-                color: 'yellow' // 100% 处的颜色
-              }],
-              globalCoord: false // 缺省为 false
+        if (t.value[2]=="黄色预警"){
+          t["itemStyle"]={
+            normal: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [{
+                  offset: 0,
+                  color: 'yellow' // 0% 处的颜色
+                }, {
+                  offset: 0.5,
+                  color: 'yellow' // 50% 处的颜色
+                }, {
+                  offset: 1,
+                  color: 'yellow' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
             }
           }
         }
-      }
-      if (t.value[2]=="蓝色预警"){
-        t["itemStyle"]={
-          normal: {
-            shadowBlur: 10,
-            shadowColor: 'rgba(120, 36, 50, 0.5)',
-            shadowOffsetY: 5,
-            color: {
-              type: 'radial',
-              x: 0.5,
-              y: 0.5,
-              r: 0.5,
-              colorStops: [{
-                offset: 0,
-                color: 'blue' // 0% 处的颜色
-              }, {
-                offset: 0.5,
-                color: 'blue' // 50% 处的颜色
-              }, {
-                offset: 1,
-                color: 'blue' // 100% 处的颜色
-              }],
-              globalCoord: false // 缺省为 false
+        if (t.value[2]=="蓝色预警"){
+          t["itemStyle"]={
+            normal: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.5,
+                colorStops: [{
+                  offset: 0,
+                  color: 'blue' // 0% 处的颜色
+                }, {
+                  offset: 0.5,
+                  color: 'blue' // 50% 处的颜色
+                }, {
+                  offset: 1,
+                  color: 'blue' // 100% 处的颜色
+                }],
+                globalCoord: false // 缺省为 false
+              }
             }
           }
         }
-      }
 
+      }
     }
     return data
   }

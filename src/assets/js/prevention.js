@@ -136,7 +136,7 @@ $(document).ready(function(){
       console.log(svg.selectAll("."+current_rect))
       svg.selectAll("."+current_rect)
         .transition()
-        // .duration(2000)
+        .duration(500)
         .attr("opacity",0.2)
         .attr("stroke-width",5)
         .attr("stroke-opacity",0.9);
